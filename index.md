@@ -1,8 +1,9 @@
 # Robotics Projects
 ## Deep Learning Drone Simulator(Deep learning and Simulation)
 This project is about training a deep neural network to identify and track a target in simulation so-called “follow me”. Applications like this are key to many fields of robotics and the very same techniques you apply here can be extended to scenarios like advanced cruise control in autonomous vehicles or human-robot collaboration in industry.
-* Github:[DeepLearningDroneSimulator](https://github.com/fouliex/DeepLearningDroneSimulator)
-![DeepLearningDroneSimulator](https://github.com/fouliex/DeepLearningDroneSimulator/blob/master/docs/misc/sim_screenshot.png)
+![DeepLearningDroneSimulator](./images/sim_screenshot.png)
+
+#### *Github*: [Deep Learning Drone Simulator](https://github.com/fouliex/DeepLearningDroneSimulator)
  
  
 ## Search And Sample Rover(Computer Vision and Simulation)
