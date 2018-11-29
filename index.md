@@ -8,8 +8,9 @@ This project is about training a deep neural network to identify and track a tar
  
 ## Search And Sample Rover(Computer Vision and Simulation)
 The goal of this project is to perform autonomous navigation and mapping. With each new image we receive from the rover's camera, we can make decision about sending commands like throttle, brake and steering the rover therefore it becomes autonomous.
-* Github: https://github.com/fouliex/SearchAndSampleRoverProject
-result_image.png
+![SearchAndSampleRover](./images/rover_image.gif)
+### *Github*: [Search And Sample Rover](https://github.com/fouliex/SearchAndSampleRoverProject)
+
  
 ## Robotic Perception(Computer Vision and Simulation)
 This project is modeled after Amazon Robotics Challenge. Giving a robot the ability to locate an object in a cluttered environment, pick it up and then move it to some other location is not just an interesting problem to try to solve, it's a challenge at the forefront of the robotics industry today.
