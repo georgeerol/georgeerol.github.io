@@ -13,6 +13,7 @@ The goal of this project is to perform autonomous navigation and mapping.
 With each new image we receive from the rover's camera, we can make decision about sending commands like throttle,
 brake and steering the rover therefore it becomes autonomous.
 ![SearchAndSampleRover](./images/rover_image.gif)
+
 ### *Github*: [Search And Sample Rover](https://github.com/fouliex/SearchAndSampleRoverProject)
 
  
@@ -21,6 +22,7 @@ This project is modeled after Amazon Robotics Challenge. Giving a robot the abil
 environment, pick it up and then move it to some other location is not just an interesting problem to try to solve,
 it's a challenge at the forefront of the robotics industry today.
 ![Robotic Perception](./images/PR2.gif)
+
 ### *Github*: [Robotic Perception](https://github.com/fouliex/RoboticPerception)
 
  
@@ -29,6 +31,7 @@ it's a challenge at the forefront of the robotics industry today.
 This project is to control a Robotic Arm with six degrees of freedom to perform pick and drop action using
 Forward and Inverse Kinematics.
 ![RoboticArmPickAndDrop](./images/PickAndDrop.gif)
+
 ### *Github*: [Robotic Arm Pick and Drop](https://github.com/fouliex/RoboticArmPickAndDrop)
 
   
@@ -36,6 +39,7 @@ Forward and Inverse Kinematics.
 This project is to learn more about Deep Neural Networks and Convolutional Neural Networks by cloning driving behavior.
 A model is trained, validated and tested using Keras framework.
 ![SelfDrivingCarBehavioralCloning](./images/SelfDrivingCarBehavioralCloning.gif)
+
 ### *Github*: [Self-Driving Car Behavioral Cloning](https://github.com/fouliex/SelfDrivingCarBehavioralCloning)
 
  
@@ -46,4 +50,5 @@ Two 2D occupancy grid and a 3D octomap is created from a simulated environment a
 ### *Github*: [MapAWorldWithSlamAndACustomRobot](https://github.com/fouliex/MapAWorldWithSlamAndACustomRobot)
  
 ## BlueBot (Android and Arduino)
-Bluetooth Remote Controlled Robot with Arduino and Android. Github: https://github.com/fouliex/BlueBot
+Bluetooth Remote Controlled Robot with Arduino and Android. 
+### *Github*: [BlueBot](https://github.com/fouliex/BlueBot)
