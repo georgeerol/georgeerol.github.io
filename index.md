@@ -1,9 +1,8 @@
 # Robotics Projects
-1. [Foo](#foo)
-2. [Deep Learning Drone Simulator](#Robotic)
+1. [Deep Learning Drone Simulator](#Deep)
 
 
-## Deep Learning Drone Simulator(Deep learning and Simulation)
+## Deep Learning Drone Simulator(Deep learning and Simulation) <a name="Deep"></a>
 This project is about training a deep neural network to identify and track a target in simulation so-called “follow me”.
 Applications like this are key to many fields of robotics and the very same techniques you apply here can be extended
 to scenarios like advanced cruise control in autonomous vehicles or human-robot collaboration in industry.
