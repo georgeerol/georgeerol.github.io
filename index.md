@@ -47,8 +47,11 @@ A model is trained, validated and tested using Keras framework.
 This project is about implementing SLAM(Simultaneous Localization and mapping) with RTAB-MAP(Real-Time Appearance-Base Mapping).
 Two 2D occupancy grid and a 3D octomap is created from a simulated environment and then map with a custom robot FouliexBot.
 ![MapAWorldWithSlamAndACustomRobot](./images/MapAWorldWithSlamAndACustomRobot.gif)
+
 ### *Github*: [MapAWorldWithSlamAndACustomRobot](https://github.com/fouliex/MapAWorldWithSlamAndACustomRobot)
  
 ## BlueBot (Android and Arduino)
-Bluetooth Remote Controlled Robot with Arduino and Android. 
+Bluetooth Remote Controlled Robot with Arduino and Android.
+![bluebot](./images/bluebot.gif)
+ 
 ### *Github*: [BlueBot](https://github.com/fouliex/BlueBot)
