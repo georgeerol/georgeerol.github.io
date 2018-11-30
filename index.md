@@ -1,5 +1,8 @@
 # Robotics Projects
 1. [Deep Learning Drone Simulator](#Deep)
+2. [Search And Sample Rover](#Rover)
+3. [Robotic Perception](#Perception)
+4. [Robotic Arm Pick and Drop](#Arm)
 
 
 ## Deep Learning Drone Simulator(Deep learning and Simulation) <a name="Deep"></a>
@@ -12,7 +15,7 @@ to scenarios like advanced cruise control in autonomous vehicles or human-robot 
 #### *Github*: [Deep Learning Drone Simulator](https://github.com/fouliex/DeepLearningDroneSimulator)
  
  
-## Search And Sample Rover(Computer Vision and Simulation)
+## Search And Sample Rover(Computer Vision and Simulation) <a name="Rover"></a>
 The goal of this project is to perform autonomous navigation and mapping. 
 With each new image we receive from the rover's camera, we can make decision about sending commands like throttle,
 brake and steering the rover therefore it becomes autonomous.
@@ -21,7 +24,7 @@ brake and steering the rover therefore it becomes autonomous.
 ### *Github*: [Search And Sample Rover](https://github.com/fouliex/SearchAndSampleRoverProject)
 
  
-## Robotic Perception(Computer Vision and Simulation)
+## Robotic Perception(Computer Vision and Simulation) <a name="Perception"></a>
 This project is modeled after Amazon Robotics Challenge. Giving a robot the ability to locate an object in a cluttered
 environment, pick it up and then move it to some other location is not just an interesting problem to try to solve,
 it's a challenge at the forefront of the robotics industry today.
@@ -31,7 +34,7 @@ it's a challenge at the forefront of the robotics industry today.
 
  
 
-## Robotic Arm Pick and Drop(ROS and Simulation)
+## Robotic Arm Pick and Drop(ROS and Simulation) <a name="Arm"></a>
 This project is to control a Robotic Arm with six degrees of freedom to perform pick and drop action using
 Forward and Inverse Kinematics.
 
@@ -64,5 +67,4 @@ Bluetooth Remote Controlled Robot with Arduino and Android.
 ### *Github*: [BlueBot](https://github.com/fouliex/BlueBot)
 
 
-# Foo
-lala
+
