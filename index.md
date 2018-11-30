@@ -1,8 +1,8 @@
 # Robotics Projects
 1. [Deep Learning Drone Simulator \(Deep learning and Simulation\)](#Deep)
-2. [Search And Sample Rover \(Computer Vision and Simulation)\)](#Rover)
-3. [Robotic Perception \(Computer Vision and Simulation)\)](#Perception)
-4. [Robotic Arm Pick and Drop \(ROS and Simulation)\)](#Arm)
+2. [Search And Sample Rover \(Computer Vision and Simulation\)](#Rover)
+3. [Robotic Perception \(Computer Vision and Simulation\)](#Perception)
+4. [Robotic Arm Pick and Drop \(ROS and Simulation\)](#Arm)
 5. [Self-Driving Car Behavioral Cloning \(Deep learning and Simulation\)](#Cloning)
 6. [Map a world with Slam and a Custom Robot \(ROS and Simulation\)](#Slam)
 7. [BlueBot \(Android and Arduino\)](#BlueBot)
