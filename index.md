@@ -1,6 +1,6 @@
 # Robotics Projects
 1. [Foo](#foo)
-2. [Deep Learning Drone Simulator](##Deep Learning Drone Simulator(Deep learning and Simulation))
+2. [Deep Learning Drone Simulator](##Deep)
 
 
 ## Deep Learning Drone Simulator(Deep learning and Simulation)
