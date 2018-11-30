@@ -1,8 +1,11 @@
 # Robotics Projects
-1. [Deep Learning Drone Simulator \(dsdssds\)](#Deep)
-2. [Search And Sample Rover](#Rover)
-3. [Robotic Perception](#Perception)
-4. [Robotic Arm Pick and Drop](#Arm)
+1. [Deep Learning Drone Simulator \(Deep learning and Simulation\)](#Deep)
+2. [Search And Sample Rover \(Computer Vision and Simulation)\)](#Rover)
+3. [Robotic Perception \(Computer Vision and Simulation)\)](#Perception)
+4. [Robotic Arm Pick and Drop \(ROS and Simulation)\)](#Arm)
+5. [Self-Driving Car Behavioral Cloning \(Deep learning and Simulation\)](#Cloning)
+6. [Map a world with Slam and a Custom Robot \(ROS and Simulation\)](#Slam)
+7. [BlueBot \(Android and Arduino\)](#BlueBot)
 
 
 ## Deep Learning Drone Simulator(Deep learning and Simulation) <a name="Deep"></a>
@@ -43,7 +46,7 @@ Forward and Inverse Kinematics.
 ### *Github*: [Robotic Arm Pick and Drop](https://github.com/fouliex/RoboticArmPickAndDrop)
 
   
-## Self-Driving Car Behavioral Cloning
+## Self-Driving Car Behavioral Cloning(Deep Learning andd Simulation) <a name="Cloning"></a>
 This project is to learn more about Deep Neural Networks and Convolutional Neural Networks by cloning driving behavior.
 A model is trained, validated and tested using Keras framework.
 
@@ -52,7 +55,7 @@ A model is trained, validated and tested using Keras framework.
 ### *Github*: [Self-Driving Car Behavioral Cloning](https://github.com/fouliex/SelfDrivingCarBehavioralCloning)
 
  
-## Map a world with Slam and a Custom Robot(ROS and Simulation)
+## Map a world with Slam and a Custom Robot(ROS and Simulation) <a name="Slam"></a>
 This project is about implementing SLAM(Simultaneous Localization and mapping) with RTAB-MAP(Real-Time Appearance-Base Mapping).
 Two 2D occupancy grid and a 3D octomap is created from a simulated environment and then map with a custom robot FouliexBot.
 
@@ -60,7 +63,7 @@ Two 2D occupancy grid and a 3D octomap is created from a simulated environment a
 
 ### *Github*: [MapAWorldWithSlamAndACustomRobot](https://github.com/fouliex/MapAWorldWithSlamAndACustomRobot)
  
-## BlueBot (Android and Arduino)
+## BlueBot (Android and Arduino) <a name="BlueBot"></a>
 Bluetooth Remote Controlled Robot with Arduino and Android.
 ![bluebot](./images/bluebot.gif)
  
