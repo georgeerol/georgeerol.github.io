@@ -27,24 +27,23 @@ it's a challenge at the forefront of the robotics industry today.
 
 ## Robotic Arm Pick and Drop(ROS and Simulation)
 This project is to control a Robotic Arm with six degrees of freedom to perform pick and drop action using
- Forward and Inverse Kinematics.
- ![RoboticArmPickAndDrop](./images/PickAndDrop.gif)
+Forward and Inverse Kinematics.
+![RoboticArmPickAndDrop](./images/PickAndDrop.gif)
 ### *Github*: [Robotic Arm Pick and Drop](https://github.com/fouliex/RoboticArmPickAndDrop)
 
   
 ## Self-Driving Car Behavioral Cloning
 This project is to learn more about Deep Neural Networks and Convolutional Neural Networks by cloning driving behavior.
 A model is trained, validated and tested using Keras framework.
-
+![SelfDrivingCarBehavioralCloning](./images/SelfDrivingCarBehavioralCloning.gif)
 ### *Github*: [Self-Driving Car Behavioral Cloning](https://github.com/fouliex/SelfDrivingCarBehavioralCloning)
-capturingData.png
- 
-    
+
  
 ## Map a world with Slam and a Custom Robot(ROS and Simulation)
-This project is about implementing SLAM(Simultaneous Localization and mapping) with RTAB-MAP(Real-Time Appearance-Base Mapping). Two 2D occupancy grid and a 3D octomap is created from a simulated environment and then map with a custom robot FouliexBot.
-Github: https://github.com/fouliex/MapAWorldWithSlamAndACustomRobot
-FouliexBotMappingCafe1.png
+This project is about implementing SLAM(Simultaneous Localization and mapping) with RTAB-MAP(Real-Time Appearance-Base Mapping).
+Two 2D occupancy grid and a 3D octomap is created from a simulated environment and then map with a custom robot FouliexBot.
+![MapAWorldWithSlamAndACustomRobot](./images/MapAWorldWithSlamAndACustomRobot.gif)
+### *Github*: [MapAWorldWithSlamAndACustomRobot](https://github.com/fouliex/MapAWorldWithSlamAndACustomRobot)
  
 ## BlueBot (Android and Arduino)
 Bluetooth Remote Controlled Robot with Arduino and Android. Github: https://github.com/fouliex/BlueBot
