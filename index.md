@@ -41,12 +41,13 @@ it's a challenge at the forefront of the robotics industry today.
 This project is to control a Robotic Arm with six degrees of freedom to perform pick and drop action using
 Forward and Inverse Kinematics.
 
-![RoboticArmPickAndDrop](./images/PickAndDrop.gif)
+![RoboticArmPick
+rop](./images/PickAndDrop.gif)
 
 ### *Github*: [Robotic Arm Pick and Drop](https://github.com/fouliex/RoboticArmPickAndDrop)
 
   
-## Self-Driving Car Behavioral Cloning(Deep Learning andd Simulation) <a name="Cloning"></a>
+## Self-Driving Car Behavioral Cloning(Deep Learning and Simulation) <a name="Cloning"></a>
 This project is to learn more about Deep Neural Networks and Convolutional Neural Networks by cloning driving behavior.
 A model is trained, validated and tested using Keras framework.
 
@@ -61,7 +62,7 @@ Two 2D occupancy grid and a 3D octomap is created from a simulated environment a
 
 ![MapAWorldWithSlamAndACustomRobot](./images/MapAWorldWithSlamAndACustomRobot.gif)
 
-### *Github*: [MapAWorldWithSlamAndACustomRobot](https://github.com/fouliex/MapAWorldWithSlamAndACustomRobot)
+### *Github*: [Map a World with Slam and a Custom Robot](https://github.com/fouliex/MapAWorldWithSlamAndACustomRobot)
  
 ## BlueBot (Android and Arduino) <a name="BlueBot"></a>
 Bluetooth Remote Controlled Robot with Arduino and Android.
