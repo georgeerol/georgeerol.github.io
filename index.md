@@ -10,7 +10,7 @@
 9. [Advanced Lane Finding \(Computer Vision\)](#ADL)
 10. [Deep Reinforcement Learn Arm Manipulation\(Deep Reinforcement Learning\)](#DRLARM)
 
-# Android and iOS
+
 
 
 # Robotics
