@@ -8,6 +8,7 @@
 7. [BlueBot \(Android and Arduino\)](#BlueBot)
 8. [Vehicle Detection\(Machine Learning \)](#VehicleDetection)
 9. [Advanced Lane Finding \(Computer Vision\)](#ADL)
+10. [Deep Reinforcement Learn Arm Manipulation\(Deep Reinforcement Learning\)](#DRLARM)
 
 # Android and iOS
 
@@ -87,6 +88,19 @@ This project is to write a software pipeline that detect vehicles in a video
 ![AdvanceLaneFinding](./images/AdvanceLaneFinding.gif)
  
 ### *Github*: [Advanced Lane Finding](https://github.com/georgeerol/AdvancedLaneFinding)
+
+## Deep Reinforcement Learn Arm Manipulation (Deep Reinforcement Learning) <a name="DRLARM"></a>
+This project is based on the Nvidia open source project "jetson-reinforcement" developed by Dustin Franklin. The goal of the project is to create a DQN agent and define reward functions to teach a robotic arm to carry out two primary objectives:
+1. Have any part of the robot arm touch the object of interest, with at least a 90% accuracy.
+2. Have only the gripper base of the robot arm touch the object, with at least a 80% accuracy. 
+
+![Objective1](./images/Objective1.gif)
+![Objective2](./images/Objective2.gif)
+
+ 
+### *Github*: [Deep Reinforcement Learn Arm Manipulation](https://github.com/georgeerol/DeepRLArmManipulation)
+
+
 
 
 
