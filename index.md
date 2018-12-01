@@ -6,7 +6,8 @@
 5. [Self-Driving Car Behavioral Cloning \(Deep learning and Simulation\)](#Cloning)
 6. [Map a world with Slam and a Custom Robot \(ROS and Simulation\)](#Slam)
 7. [BlueBot \(Android and Arduino\)](#BlueBot)
-8. [Vehicle Detection\(Computer Vision \)](#VehicleDetection)
+8. [Vehicle Detection\(Machine Learning \)](#VehicleDetection)
+9. [Advanced Lane Finding \(Computer Vision\)](#ADL)
 
 # Android and iOS
 
@@ -74,12 +75,18 @@ Bluetooth Remote Controlled Robot with Arduino and Android.
  
 ### *Github*: [BlueBot](https://github.com/fouliex/BlueBot)
 
-## Vehicle Detection (Computer Vision) <a name="VehicleDetection"></a>
+## Vehicle Detection (Machine Learning) <a name="VehicleDetection"></a>
 This project is to write a software pipeline that detect vehicles in a video 
 ![VehicleDetection](./images/vehicleDetection.gif)
  
 ### *Github*: [VehicleDetection](https://github.com/georgeerol/VehicleDetection)
 
+
+## Advanced Lane Finding (Computer Vision) <a name="ADL"></a>
+This project is to write a software pipeline that detect vehicles in a video 
+![AdvanceLaneFinding](./images/AdvanceLaneFinding.gif)
+ 
+### *Github*: [Advanced Lane Finding](https://github.com/georgeerol/AdvancedLaneFinding)
 
 
 
