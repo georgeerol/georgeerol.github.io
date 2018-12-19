@@ -107,8 +107,8 @@ This project is based on the Nvidia open source project "jetson-reinforcement" d
 # Native Mobile Projects
 
 ## Weather App (Android and iOS) <a name="Weather"></a>
-* [Android](https://github.com/georgeerol/AndroidAndIOSApps/tree/master/Clima/Android/Clima)
-* [IOS](https://github.com/georgeerol/AndroidAndIOSApps/tree/master/Clima/IOS/Clima)
+* [Android](https://github.com/georgeerol/AndroidAndIOSApps/tree/master/ClimaApp/Android/Clima)
+* [IOS](https://github.com/georgeerol/AndroidAndIOSApps/tree/master/ClimaApp/IOS/Clima)
 ![weather](./images/Clima.png)
 
 ## Bitcoin Ticker (Android and iOS)  <a name="Ticker"></a>
