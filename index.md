@@ -12,7 +12,7 @@
 
 # Native Mobile Projects
 1. [Weather App\(Android and iOS\)](#Weather)
-2. [Search And Sample Rover \(Computer Vision and Simulation\)](#Rover)
+2. [Bitcoin Ticker\(Android and iOs\)](#Ticker)
 
 
 
@@ -107,8 +107,13 @@ This project is based on the Nvidia open source project "jetson-reinforcement" d
 # Native Mobile Projects
 
 ## Weather App (Android and iOS) <a name="Weather"></a>
-* [Android](https://github.com/fouliex/AndroidAndIOSApps/tree/master/Clima/Android/Clima)
-* [IOS](https://github.com/fouliex/AndroidAndIOSApps/tree/master/Clima/IOS/Clima)
+* [Android](https://github.com/georgeerol/AndroidAndIOSApps/tree/master/Clima/Android/Clima)
+* [IOS](https://github.com/georgeerol/AndroidAndIOSApps/tree/master/Clima/IOS/Clima)
 ![weather](./images/Clima.png)
+
+## Bitcoin Ticker (Android and iOS)  <a name="Ticker"></a>
+* [Android](https://github.com/georgeerol/AndroidAndIOSApps/tree/master/BitcoinTickerApp/Android/BitcoinTicker)
+* [IOS](https://github.com/georgeerol/AndroidAndIOSApps/tree/master/BitcoinTickerApp/IOS/BitcoinTicker)
+![Bitcoin Ticket Image](./images/BitcoinTicker.png)
 
 
