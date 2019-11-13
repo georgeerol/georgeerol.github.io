@@ -110,20 +110,20 @@ This project is based on the Nvidia open source project "jetson-reinforcement" d
 
 # Native Mobile Projects
 ## Weather App (Android and iOS) <a name="Weather"></a>
- * [Android](https://github.com/georgeerol/AndroidAndIOSApps/tree/master/ClimaApp/Android/Clima)
- * [IOS](https://github.com/georgeerol/AndroidAndIOSApps/tree/master/ClimaApp/IOS/Clima)
+### *Github*: [Android](https://github.com/georgeerol/AndroidAndIOSApps/tree/master/ClimaApp/Android/Clima)
+### *Github*: [IOS](https://github.com/georgeerol/AndroidAndIOSApps/tree/master/ClimaApp/IOS/Clima)
  
  ![weather](./images/Clima.png)
  
  ## Bitcoin Ticker (Android and iOS)  <a name="Ticker"></a>
- * [Android](https://github.com/georgeerol/AndroidAndIOSApps/tree/master/BitcoinTickerApp/Android/BitcoinTicker)
- * [IOS](https://github.com/georgeerol/AndroidAndIOSApps/tree/master/BitcoinTickerApp/IOS/BitcoinTicker)
+### *Github*: [Android](https://github.com/georgeerol/AndroidAndIOSApps/tree/master/BitcoinTickerApp/Android/BitcoinTicker)
+### *Github*: [IOS](https://github.com/georgeerol/AndroidAndIOSApps/tree/master/BitcoinTickerApp/IOS/BitcoinTicker)
  
  ![Bitcoin Ticket Image](./images/BitcoinTicker.png)
  
  #  Full Stack Web Development
  ## Todo Application with React(Front End) and Spring Boot(Back End)<a name="TodoApp"></a>
- * [TodoApp](https://github.com/georgeerol/ToDoApp)
+### *Github*: [TodoApp](https://github.com/georgeerol/ToDoApp)
  
  ![TodoAppLoginPage](./images/LoginPage.png)
  ![TodoAppPage](./images/ToDoPage.png)
