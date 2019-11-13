@@ -125,6 +125,6 @@ This project is based on the Nvidia open source project "jetson-reinforcement" d
  ## Todo Application with React(Front End) and Spring Boot(Back End)
  * [TodoApp](https://github.com/georgeerol/ToDoApp)
  
- ![TodoAppLoginPage](./images/LogingPage.png)
- ![TodoAppPage](./images/TodoPage.png)
+ ![TodoAppLoginPage](./images/LoginPage.png)
+ ![TodoAppPage](./images/ToDoPage.png)
 
