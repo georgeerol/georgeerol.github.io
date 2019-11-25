@@ -17,6 +17,7 @@
 
 # Full Stack Web Development
 1. [Todo Application with React\(Front End\) and Spring Boot\(Back End\)](#TodoApp)
+2. [Expense Application with React\(Front End\) and Spring Boot\(Back End\)](#ExpenseApp)
 
 
 
@@ -129,4 +130,9 @@ This project is based on the Nvidia open source project "jetson-reinforcement" d
  
  ![TodoAppLoginPage](./images/LoginPage.png)
  ![TodoAppPage](./images/ToDoPage.png)
+ 
+  ## Expense Application with React(Front End) and Spring Boot(Back End)<a name="ExpenseApp"></a>
+### *Github*: [ExoenseApp](https://github.com/georgeerol/ExpenseApp)
+
+ ![ExpenseAppPage](./images/ExpensePage.png)
 
