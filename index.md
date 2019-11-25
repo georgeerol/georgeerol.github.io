@@ -118,20 +118,21 @@ This project is based on the Nvidia open source project "jetson-reinforcement" d
  
  ![weather](./images/Clima.png)
  
- ## Bitcoin Ticker (Android and iOS)  <a name="Ticker"></a>
+## Bitcoin Ticker (Android and iOS)  <a name="Ticker"></a>
 ### *Github*: [Android](https://github.com/georgeerol/AndroidAndIOSApps/tree/master/BitcoinTickerApp/Android/BitcoinTicker)
 ### *Github*: [IOS](https://github.com/georgeerol/AndroidAndIOSApps/tree/master/BitcoinTickerApp/IOS/BitcoinTicker)
  
  ![Bitcoin Ticket Image](./images/BitcoinTicker.png)
  
- #  Full Stack Web Development
- ## Todo Application with React(Front End) and Spring Boot(Back End)<a name="TodoApp"></a>
+# Full Stack Web Development
+
+## Todo Application with React(Front End) and Spring Boot(Back End)<a name="TodoApp"></a>
 ### *Github*: [TodoApp](https://github.com/georgeerol/ToDoApp)
  
  ![TodoAppLoginPage](./images/LoginPage.png)
  ![TodoAppPage](./images/ToDoPage.png)
  
-  ## Expense Application with React(Front End) and Spring Boot(Back End)<a name="ExpenseApp"></a>
+## Expense Application with React(Front End) and Spring Boot(Back End)<a name="ExpenseApp"></a>
 ### *Github*: [ExpenseApp](https://github.com/georgeerol/ExpenseApp)
 
  ![ExpenseAppPage](./images/ExpensePage.png)
