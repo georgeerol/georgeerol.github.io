@@ -132,7 +132,7 @@ This project is based on the Nvidia open source project "jetson-reinforcement" d
  ![TodoAppPage](./images/ToDoPage.png)
  
   ## Expense Application with React(Front End) and Spring Boot(Back End)<a name="ExpenseApp"></a>
-### *Github*: [ExoenseApp](https://github.com/georgeerol/ExpenseApp)
+### *Github*: [ExpenseApp](https://github.com/georgeerol/ExpenseApp)
 
  ![ExpenseAppPage](./images/ExpensePage.png)
 
