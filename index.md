@@ -1,8 +1,8 @@
 
 
 # Data Pipeline Projects
-1. [E2E Spark Flow\(Big Data\)](#Weather)
-2. [Commercing With Flink\(Big Data\)](#Ticker)
+1. [E2E Spark Flow\(Big Data\)](#Spark)
+2. [Commercing With Flink\(Big Data\)](#Flink)
 
 # Robotics Projects
 1. [Deep Learning Drone Simulator \(Deep learning and Simulation\)](#Deep)
@@ -35,13 +35,13 @@ These tools work together to take in, handle, and keep data.
 
 #### *Github*: [E2E Spark Flow](https://github.com/georgeerol/E2ESparkFlow)
 
-## CommercingWithFlink (Flink Big Dta) <a name="Spark"></a>
+## CommercingWithFlink (Flink Big Dta) <a name="Flink"></a>
 This project contains an Apache Flink application designed for real-time sales analytics, utilizing Docker Compose to orchestrate Apache Flink, Elasticsearch, and Postgres. 
 The application efficiently processes financial transaction data from Kafka, executes aggregations, and stores the results in Postgres and Elasticsearch for comprehensive analysis and view with Kibana.
 
 ![CommercingWithFlink](./images/CommercingWithFlinkArchitecture.png)
 
-#### *Github*: [E2E Spark Flow](https://github.com/georgeerol/CommercingWithFlink)
+#### *Github*: [CommercingWithFlink](https://github.com/georgeerol/CommercingWithFlink)
 
 # Robotics
 ## Deep Learning Drone Simulator(Deep learning and Simulation) <a name="Deep"></a>
