@@ -1,166 +1,159 @@
-# George Erol Fouché Porfolio!
+# George Erol Fouché Portfolio
 
-# Data Pipeline Projects
-1. [E2E Spark Flow\(Big Data\)](#Spark)
-2. [Commercing With Flink\(Big Data\)](#Flink)
+## Data Pipeline Projects
+1. [E2E Spark Flow (Big Data)](#Spark)
+2. [Commercing With Flink (Big Data)](#Flink)
 
-# Robotics Projects
-1. [Deep Learning Drone Simulator \(Deep learning and Simulation\)](#Deep)
-2. [Search And Sample Rover \(Computer Vision and Simulation\)](#Rover)
-3. [Robotic Perception \(Computer Vision and Simulation\)](#Perception)
-4. [Robotic Arm Pick and Drop \(ROS and Simulation\)](#Arm)
-5. [Self-Driving Car Behavioral Cloning \(Deep learning and Simulation\)](#Cloning)
-6. [Map a world with Slam and a Custom Robot \(ROS and Simulation\)](#Slam)
-7. [BlueBot \(Android and Arduino\)](#BlueBot)
-8. [Vehicle Detection\(Machine Learning \)](#VehicleDetection)
-9. [Advanced Lane Finding \(Computer Vision\)](#ADL)
-10. [Deep Reinforcement Learn Arm Manipulation\(Deep Reinforcement Learning\)](#DRLARM)
+## Robotics Projects
+1. [Deep Learning Drone Simulator (Deep Learning & Simulation)](#Deep)
+2. [Search And Sample Rover (Computer Vision & Simulation)](#Rover)
+3. [Robotic Perception (Computer Vision & Simulation)](#Perception)
+4. [Robotic Arm Pick and Drop (ROS & Simulation)](#Arm)
+5. [Self-Driving Car Behavioral Cloning (Deep Learning & Simulation)](#Cloning)
+6. [Map a World with Slam and a Custom Robot (ROS & Simulation)](#Slam)
+7. [BlueBot (Android & Arduino)](#BlueBot)
+8. [Vehicle Detection (Machine Learning)](#VehicleDetection)
+9. [Advanced Lane Finding (Computer Vision)](#ADL)
+10. [Deep Reinforcement Learn Arm Manipulation (Deep Reinforcement Learning)](#DRLARM)
 
-# Native Mobile Projects
-1. [Weather App\(Android and iOS\)](#Weather)
-2. [Bitcoin Ticker\(Android and iOs\)](#Ticker)
+## Native Mobile Projects
+1. [Weather App (Android & iOS)](#Weather)
+2. [Bitcoin Ticker (Android & iOS)](#Ticker)
 
+## Full Stack Web Development
+1. [Todo Application with React (Front End) & Spring Boot (Back End)](#TodoApp)
+2. [Expense Application with React (Front End) & Spring Boot (Back End)](#ExpenseApp)
+3. [Server Side Rendering Program Management Application with Spring MVC & Spring Boot](#PmApp)
 
-# Full Stack Web Development
-1. [Todo Application with React\(Front End\) and Spring Boot\(Back End\)](#TodoApp)
-2. [Expense Application with React\(Front End\) and Spring Boot\(Back End\)](#ExpenseApp)
-3. [Server Side Rendering Program Management Application with Spring MVC and Spring Boot](#PmApp)
+### Data Pipeline
 
-# Data Pipeline
-## E2E Spark Flow(Spark Airflow Big Dta) <a name="Spark"></a>
-This project handles data from start to finish using Docker, Apache Airflow, Kafka, Spark, Cassandra, and PostgreSQL.
-These tools work together to take in, handle, and keep data.
+#### E2E Spark Flow <a name="Spark"></a>
+This project utilizes Docker, Apache Airflow, Kafka, Spark, Cassandra, and PostgreSQL to manage data throughout its lifecycle.
 
 ![E2E Spark Flow](./images/SparkFlowArchitecture.png)
 
-#### *Github*: [E2E Spark Flow](https://github.com/georgeerol/E2ESparkFlow)
+**[GitHub: E2E Spark Flow](https://github.com/georgeerol/E2ESparkFlow)**
 
-## CommercingWithFlink (Flink Big Dta) <a name="Flink"></a>
-This project contains an Apache Flink application designed for real-time sales analytics, utilizing Docker Compose to orchestrate Apache Flink, Elasticsearch, and Postgres. 
-The application efficiently processes financial transaction data from Kafka, executes aggregations, and stores the results in Postgres and Elasticsearch for comprehensive analysis and view with Kibana.
+#### Commercing With Flink <a name="Flink"></a>
+Designed for real-time sales analytics, this Apache Flink application processes financial transactions, executing aggregations and storing results for analysis.
 
 ![CommercingWithFlink](./images/CommercingWithFlinkArchitecture.png)
 
-#### *Github*: [CommercingWithFlink](https://github.com/georgeerol/CommercingWithFlink)
+**[GitHub: Commercing With Flink](https://github.com/georgeerol/CommercingWithFlink)**
 
-# Robotics
-## Deep Learning Drone Simulator(Deep learning and Simulation) <a name="Deep"></a>
-This project is about training a deep neural network to identify and track a target in simulation so-called “follow me”.
-Applications like this are key to many fields of robotics and the very same techniques you apply here can be extended
-to scenarios like advanced cruise control in autonomous vehicles or human-robot collaboration in industry.
+### Robotics
+
+#### Deep Learning Drone Simulator <a name="Deep"></a>
+Train a neural network for a "follow me" feature in drones, applicable to autonomous vehicles and industrial robotics.
 
 ![DeepLearningDroneSimulator](./images/sim_screenshot.png)
 
-#### *Github*: [Deep Learning Drone Simulator](https://github.com/fouliex/DeepLearningDroneSimulator)
- 
- 
-## Search And Sample Rover(Computer Vision and Simulation) <a name="Rover"></a>
-The goal of this project is to perform autonomous navigation and mapping. 
-With each new image we receive from the rover's camera, we can make decision about sending commands like throttle,
-brake and steering the rover therefore it becomes autonomous.
+**[GitHub: Deep Learning Drone Simulator](https://github.com/fouliex/DeepLearningDroneSimulator)**
+
+#### Search And Sample Rover <a name="Rover"></a>
+Navigate and map terrains autonomously using real-time camera images to guide the rover.
+
 ![SearchAndSampleRover](./images/rover_image.gif)
 
-### *Github*: [Search And Sample Rover](https://github.com/fouliex/SearchAndSampleRoverProject)
+**[GitHub: Search And Sample Rover](https://github.com/fouliex/SearchAndSampleRoverProject)**
 
- 
-## Robotic Perception(Computer Vision and Simulation) <a name="Perception"></a>
-This project is modeled after Amazon Robotics Challenge. Giving a robot the ability to locate an object in a cluttered
-environment, pick it up and then move it to some other location is not just an interesting problem to try to solve,
-it's a challenge at the forefront of the robotics industry today.
+#### Robotic Perception <a name="Perception"></a>
+Tackle the challenge of object recognition and manipulation in cluttered environments, inspired by the Amazon Robotics Challenge.
+
 ![Robotic Perception](./images/PR2.gif)
 
-### *Github*: [Robotic Perception](https://github.com/fouliex/RoboticPerception)
+**[GitHub: Robotic Perception](https://github.com/fouliex/RoboticPerception)**
 
- 
+#### Robotic Arm Pick and Drop <a name="Arm"></a>
+Control a six-degree freedom robotic arm to perform precise pick and drop actions using kinematics.
 
-## Robotic Arm Pick and Drop(ROS and Simulation) <a name="Arm"></a>
-This project is to control a Robotic Arm with six degrees of freedom to perform pick and drop action using
-Forward and Inverse Kinematics.
+![RoboticArmPickDrop](./images/PickAndDrop.gif)
 
-![RoboticArmPick
-rop](./images/PickAndDrop.gif)
+**[GitHub: Robotic Arm Pick and Drop](https://github.com/fouliex/RoboticArmPickAndDrop)**
 
-### *Github*: [Robotic Arm Pick and Drop](https://github.com/fouliex/RoboticArmPickAndDrop)
-
-  
-## Self-Driving Car Behavioral Cloning(Deep Learning and Simulation) <a name="Cloning"></a>
-This project is to learn more about Deep Neural Networks and Convolutional Neural Networks by cloning driving behavior.
-A model is trained, validated and tested using Keras framework.
+#### Self-Driving Car Behavioral Cloning <a name="Cloning"></a>
+Learn driving behavior using deep neural networks to simulate real-world driving conditions in a test environment.
 
 ![SelfDrivingCarBehavioralCloning](./images/SelfDrivingCarBehavioralCloning.gif)
 
-### *Github*: [Self-Driving Car Behavioral Cloning](https://github.com/fouliex/SelfDrivingCarBehavioralCloning)
+**[GitHub: Self-Driving Car Behavioral Cloning](https://github.com/fouliex/SelfDrivingCarBehavioralCloning)**
 
- 
-## Map a world with Slam and a Custom Robot(ROS and Simulation) <a name="Slam"></a>
-This project is about implementing SLAM(Simultaneous Localization and mapping) with RTAB-MAP(Real-Time Appearance-Base Mapping).
-Two 2D occupancy grid and a 3D octomap is created from a simulated environment and then map with a custom robot FouliexBot.
+#### Map a World with Slam and a Custom Robot <a name="Slam"></a>
+Implement SLAM to navigate and map environments with a custom robot using RTAB-MAP for real-time localization.
 
 ![MapAWorldWithSlamAndACustomRobot](./images/MapAWorldWithSlamAndACustomRobot.gif)
 
-### *Github*: [Map a World with Slam and a Custom Robot](https://github.com/fouliex/MapAWorldWithSlamAndACustomRobot)
- 
-## BlueBot (Android and Arduino) <a name="BlueBot"></a>
-Bluetooth Remote Controlled Robot with Arduino and Android.
+**[GitHub: Map a World with Slam and a Custom Robot](https://github.com/fouliex/MapAWorldWithSlamAndACustomRobot)**
+
+#### BlueBot <a name="BlueBot"></a>
+A Bluetooth-controlled robotic project integrating Arduino and Android for remote operations.
+
 ![bluebot](./images/bluebot.gif)
- 
-### *Github*: [BlueBot](https://github.com/fouliex/BlueBot)
 
-## Vehicle Detection (Machine Learning) <a name="VehicleDetection"></a>
-This project is to write a software pipeline that detect vehicles in a video 
+**[GitHub: BlueBot](https://github.com/fouliex/BlueBot)**
+
+#### Vehicle Detection <a name="VehicleDetection"></a>
+Develop a software pipeline to detect vehicles in a video stream effectively.
+
 ![VehicleDetection](./images/vehicleDetection.gif)
- 
-### *Github*: [VehicleDetection](https://github.com/georgeerol/VehicleDetection)
 
+**[GitHub: VehicleDetection](https://github.com/georgeerol/VehicleDetection)**
 
-## Advanced Lane Finding (Computer Vision) <a name="ADL"></a>
-This project is to write a software pipeline that detect vehicles in a video 
+#### Advanced Lane Finding <a name="ADL"></a>
+Enhance road safety by detecting lane markings accurately even under varying road conditions.
+
 ![AdvanceLaneFinding](./images/AdvanceLaneFinding.gif)
- 
-### *Github*: [Advanced Lane Finding](https://github.com/georgeerol/AdvancedLaneFinding)
 
-## Deep Reinforcement Learn Arm Manipulation (Deep Reinforcement Learning) <a name="DRLARM"></a>
-This project is based on the Nvidia open source project "jetson-reinforcement" developed by Dustin Franklin. The goal of the project is to create a DQN agent and define reward functions to teach a robotic arm to carry out two primary objectives:
-1. Have any part of the robot arm touch the object of interest, with at least a 90% accuracy.
-2. Have only the gripper base of the robot arm touch the object, with at least a 80% accuracy. 
+**[GitHub: Advanced Lane Finding](https://github.com/georgeerol/AdvancedLaneFinding)**
+
+#### Deep Reinforcement Learn Arm Manipulation <a name="DRLARM"></a>
+Train a robotic arm to perform precise manipulations using deep reinforcement learning techniques.
 
 ![Objective1](./images/Objective1.gif)
 ![Objective2](./images/Objective2.gif)
 
- 
-### *Github*: [Deep Reinforcement Learn Arm Manipulation](https://github.com/georgeerol/DeepRLArmManipulation)
+**[GitHub: Deep Reinforcement Learn Arm Manipulation](https://github.com/georgeerol/DeepRLArmManipulation)**
 
+### Native Mobile Projects
 
-# Native Mobile Projects
-## Weather App (Android and iOS) <a name="Weather"></a>
-### *Github*: [Android](https://github.com/georgeerol/AndroidAndIOSApps/tree/master/ClimaApp/Android/Clima)
-### *Github*: [IOS](https://github.com/georgeerol/AndroidAndIOSApps/tree/master/ClimaApp/IOS/Clima)
- 
- ![weather](./images/Clima.png)
- 
-## Bitcoin Ticker (Android and iOS)  <a name="Ticker"></a>
-### *Github*: [Android](https://github.com/georgeerol/AndroidAndIOSApps/tree/master/BitcoinTickerApp/Android/BitcoinTicker)
-### *Github*: [IOS](https://github.com/georgeerol/AndroidAndIOSApps/tree/master/BitcoinTickerApp/IOS/BitcoinTicker)
- 
- ![Bitcoin Ticket Image](./images/BitcoinTicker.png)
- 
-# Full Stack Web Development
+#### Weather App <a name="Weather"></a>
+A cross-platform weather application providing real-time weather updates for Android and iOS.
 
-## Todo Application with React(Front End) and Spring Boot(Back End)<a name="TodoApp"></a>
-### *Github*: [TodoApp](https://github.com/georgeerol/ToDoApp)
- 
- ![TodoAppLoginPage](./images/LoginPage.png)
- ![TodoAppPage](./images/ToDoPage.png)
- 
-## Expense Application with React(Front End) and Spring Boot(Back End)<a name="ExpenseApp"></a>
-### *Github*: [ExpenseApp](https://github.com/georgeerol/ExpenseApp)
+![weather](./images/Clima.png)
 
- ![ExpenseAppPage](./images/ExpensePage.png)
- 
- ## Server Side Rendering Program Management Application with Spring MVC and Spring Boot<a name="PmApp"></a>
-### *Github*: [ProgramManagementApp](https://github.com/georgeerol/ProjectManagementApp)
+**[GitHub: Android Weather App](https://github.com/georgeerol/AndroidAndIOSApps/tree/master/ClimaApp/Android/Clima)**
+**[GitHub: iOS Weather App](https://github.com/georgeerol/AndroidAndIOSApps/tree/master/ClimaApp/IOS/Clima)**
 
- ![HomePage](./images/HomePage.png)
- ![EmployeesPage](./images/EmployeesPage.png)
- ![ProjectsPage](./images/ProjectsPage.png)
- 
+#### Bitcoin Ticker <a name="Ticker"></a>
+Monitor and display live Bitcoin exchange rates on Android and iOS devices.
+
+![Bitcoin Ticket Image](./images/BitcoinTicker.png)
+
+**[GitHub: Android Bitcoin Ticker](https://github.com/georgeerol/AndroidAndIOSApps/tree/master/BitcoinTickerApp/Android/BitcoinTicker)**
+**[GitHub: iOS Bitcoin Ticker](https://github.com/georgeerol/AndroidAndIOSApps/tree/master/BitcoinTickerApp/IOS/BitcoinTicker)**
+
+### Full Stack Web Development
+
+#### Todo Application with React & Spring Boot <a name="TodoApp"></a>
+Manage daily tasks efficiently with a user-friendly interface and robust backend.
+
+![TodoAppLoginPage](./images/LoginPage.png)
+![TodoAppPage](./images/ToDoPage.png)
+
+**[GitHub: Todo Application](https://github.com/georgeerol/ToDoApp)**
+
+#### Expense Application with React & Spring Boot <a name="ExpenseApp"></a>
+Track and manage expenses with an easy-to-use web application.
+
+![ExpenseAppPage](./images/ExpensePage.png)
+
+**[GitHub: Expense Application](https://github.com/georgeerol/ExpenseApp)**
+
+#### Server Side Rendering Program Management Application with Spring MVC & Spring Boot <a name="PmApp"></a>
+Efficiently manage projects and team assignments with a comprehensive program management tool.
+
+![HomePage](./images/HomePage.png)
+![EmployeesPage](./images/EmployeesPage.png)
+![ProjectsPage](./images/ProjectsPage.png)
+
+**[GitHub: Program Management App](https://github.com/georgeerol/ProjectManagementApp)**
