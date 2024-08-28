@@ -1,8 +1,9 @@
 # George Erol Fouché Portfolio
 
 ## Data Pipeline Projects
-1. [E2E Spark Flow (Big Data)](#Spark)
-2. [Commercing With Flink (Big Data)](#Flink)
+1. [IOT AWS SPARK(Big Data)](#IOTAWSSPARK)
+2. [E2E Spark Flow (Big Data)](#Spark)
+3. [Commercing With Flink (Big Data)](#Flink)
 
 ## Robotics Projects
 1. [Deep Learning Drone Simulator (Deep Learning & Simulation)](#Deep)
@@ -26,6 +27,13 @@
 3. [Server Side Rendering Program Management Application with Spring MVC & Spring Boot](#PmApp)
 
 ### Data Pipeline
+
+#### IOT AWS SPARK(Big Data)<a name="IOTAWSSPARK"></a>
+This project is scalable, fault-tolerant, and supports real-time processing. Docker deploys Zookeeper, Kafka, and 
+Spark in a master-worker setup, while AWS manages storage, data warehousing, and analytics, with IoT for data collection.
+
+![IOTAWSSPARK](./images/SystemArchitecture.png)
+**[GitHub:IOT AWS SPARK](https://github.com/georgeerol/IotAwsSpark)**
 
 #### E2E Spark Flow <a name="Spark"></a>
 This project utilizes Docker, Apache Airflow, Kafka, Spark, Cassandra, and PostgreSQL to manage data throughout its lifecycle.
