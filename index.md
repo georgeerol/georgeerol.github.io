@@ -1,7 +1,7 @@
 # George Erol Fouché Portfolio
 
 ## Data Pipeline Projects
-1. [IOT AWS SPARK(Big Data)](#IOTAWSSPARK)
+1. [IOT AWS SPARK (Big Data)](#IOTAWSSPARK)
 2. [E2E Spark Flow (Big Data)](#Spark)
 3. [Commercing With Flink (Big Data)](#Flink)
 
