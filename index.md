@@ -29,7 +29,9 @@
 ### Data Pipeline
 
 #### IOT AWS SPARK(Big Data)<a name="IOTAWSSPARK"></a>
-This project is scalable, fault-tolerant, and supports real-time processing. Docker deploys Zookeeper, Kafka, and 
+This project integrates Big Data, IoT, and cloud computing to enhance urban mobility. It uses a 35-mile drive from San Francisco to Dublin, CA, as a case study. It demonstrates how real-time data on vehicle performance, GPS, weather, traffic, and emergencies can optimize routes, reduce travel time, and improve safety.
+
+The architecture is scalable, fault-tolerant, and supports real-time processing. Docker deploys Zookeeper, Kafka, and 
 Spark in a master-worker setup, while AWS manages storage, data warehousing, and analytics, with IoT for data collection.
 
 ![IOTAWSSPARK](./images/SystemArchitecture.png)
@@ -67,7 +69,7 @@ Navigate and map terrains autonomously using real-time camera images to guide th
 **[GitHub: Search And Sample Rover](https://github.com/fouliex/SearchAndSampleRoverProject)**
 
 #### Robotic Perception <a name="Perception"></a>
-Tackle the challenge of object recognition and manipulation in cluttered environments, inspired by the Amazon Robotics Challenge.
+Tackle the challenge of object recognition and manipulation in cluttered environments inspired by the Amazon Robotics Challenge.
 
 ![Robotic Perception](./images/PR2.gif)
 
