@@ -36,7 +36,7 @@ Spark in a master-worker setup, while AWS manages storage, data warehousing, and
 
 ![IOTAWSSPARK](./images/SystemArchitecture.png)
 
-**[GitHub:IOT AWS SPARK](https://github.com/georgeerol/IotAwsSpark)**
+**[GitHub: IOT AWS SPARK](https://github.com/georgeerol/IotAwsSpark)**
 
 #### E2E Spark Flow <a name="Spark"></a>
 This project utilizes Docker, Apache Airflow, Kafka, Spark, Cassandra, and PostgreSQL to manage data throughout its lifecycle.
