@@ -29,7 +29,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
     <div class="hero-main">
       <h1>George Erol Fouché</h1>
       <p class="hero-subtitle">Senior Software Engineer | 10+ Years Experience</p>
-      <p class="hero-specialization">Gaming AI & Data Engineering Specialist</p>
+      <p class="hero-specialization">Backend Gaming AI & Data</p>
       
       <!-- Call to Action Buttons -->
       <div class="hero-actions">
