@@ -541,3 +541,44 @@ body > footer,
   display: block !important;
   visibility: visible !important;
 }
+
+/* Move GitHub Pages attribution to bottom with minimal styling */
+.site-footer,
+.page-footer,
+footer {
+  position: fixed !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-top: 1px solid #eee !important;
+  padding: 5px 10px !important;
+  text-align: center !important;
+  font-size: 0.7em !important;
+  color: #999 !important;
+  z-index: 50 !important;
+  height: auto !important;
+}
+
+/* Make GitHub Pages text much smaller and less prominent */
+footer p,
+footer small,
+.site-footer p,
+.page-footer p {
+  margin: 0 !important;
+  font-size: 0.7em !important;
+  color: #ccc !important;
+  text-align: center !important;
+}
+
+/* Adjust main content to account for fixed footer */
+body {
+  padding-bottom: 30px !important;
+}
+
+/* Ensure contact section appears above footer */
+.contact-section {
+  margin-bottom: 40px !important;
+  z-index: 60 !important;
+  position: relative !important;
+}
