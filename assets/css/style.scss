@@ -236,17 +236,44 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.7rem;
   margin-bottom: 25px;
   flex-wrap: nowrap;
 }
 
 .hero-specialization {
-  font-size: 1em;
+  font-size: 0.9em;
   color: var(--accent-color);
   font-weight: 600;
   margin: 0;
 }
+
+.mini-arcade {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.mini-arcade canvas {
+  border: 2px solid var(--accent-color);
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+
+.mini-arcade canvas:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.mini-arcade canvas:nth-child(1) { border-color: #0366d6; } /* Pong - Blue */
+.mini-arcade canvas:nth-child(2) { border-color: #28a745; } /* Snake - Green */
+.mini-arcade canvas:nth-child(3) { border-color: #6f42c1; } /* Tetris - Purple */
+.mini-arcade canvas:nth-child(4) { border-color: #dc3545; } /* Breakout - Red */
 
 #pongGame {
   border: 2px solid var(--accent-color);
@@ -255,6 +282,8 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   transition: all 0.3s ease;
+  width: 90px;
+  height: 60px;
 }
 
 #pongGame:hover {
@@ -758,6 +787,15 @@ body {
   #pongGame {
     width: 90px;
     height: 60px;
+  }
+  
+  .mini-arcade {
+    gap: 6px;
+  }
+  
+  .mini-arcade canvas {
+    width: 70px;
+    height: 45px;
   }
   
   .profile-image {
