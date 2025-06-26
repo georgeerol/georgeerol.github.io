@@ -39,7 +39,12 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       <p class="hero-subtitle">Senior Software Engineer | 10+ Years Experience</p>
       <div class="hero-specialization-container">
         <p class="hero-specialization">Backend Gaming AI & Data</p>
-        <canvas id="pongGame" width="120" height="80"></canvas>
+        <div class="mini-arcade">
+          <canvas id="pongGame" width="90" height="60"></canvas>
+          <canvas id="snakeGame" width="90" height="60"></canvas>
+          <canvas id="tetrisGame" width="90" height="60"></canvas>
+          <canvas id="breakoutGame" width="90" height="60"></canvas>
+        </div>
       </div>
       
       <!-- Call to Action Buttons -->
@@ -830,5 +835,261 @@ function initPongGame() {
 // Initialize Pong game when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     setTimeout(initPongGame, 500); // Small delay to ensure canvas is ready
+});
+
+// Snake Game Animation
+function initSnakeGame() {
+    const canvas = document.getElementById('snakeGame');
+    if (!canvas) return;
+    
+    const ctx = canvas.getContext('2d');
+    const gridSize = 6;
+    
+    let snake = [{x: 45, y: 30}];
+    let food = {x: 60, y: 42};
+    let dx = gridSize;
+    let dy = 0;
+    
+    function drawSnake() {
+        ctx.fillStyle = '#28a745';
+        snake.forEach(segment => {
+            ctx.fillRect(segment.x, segment.y, gridSize-1, gridSize-1);
+        });
+    }
+    
+    function drawFood() {
+        ctx.fillStyle = '#dc3545';
+        ctx.fillRect(food.x, food.y, gridSize-1, gridSize-1);
+    }
+    
+    function moveSnake() {
+        const head = {x: snake[0].x + dx, y: snake[0].y + dy};
+        
+        // Wrap around edges
+        if (head.x >= canvas.width) head.x = 0;
+        if (head.x < 0) head.x = canvas.width - gridSize;
+        if (head.y >= canvas.height) head.y = 0;
+        if (head.y < 0) head.y = canvas.height - gridSize;
+        
+        snake.unshift(head);
+        
+        // Check food collision
+        if (head.x === food.x && head.y === food.y) {
+            food = {
+                x: Math.floor(Math.random() * (canvas.width / gridSize)) * gridSize,
+                y: Math.floor(Math.random() * (canvas.height / gridSize)) * gridSize
+            };
+        } else {
+            snake.pop();
+        }
+    }
+    
+    function changeDirection() {
+        const directions = [
+            {dx: gridSize, dy: 0},
+            {dx: -gridSize, dy: 0},
+            {dx: 0, dy: gridSize},
+            {dx: 0, dy: -gridSize}
+        ];
+        const newDir = directions[Math.floor(Math.random() * directions.length)];
+        dx = newDir.dx;
+        dy = newDir.dy;
+    }
+    
+    function gameLoop() {
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        
+        moveSnake();
+        drawSnake();
+        drawFood();
+        
+        setTimeout(() => requestAnimationFrame(gameLoop), 200);
+    }
+    
+    // Change direction periodically
+    setInterval(changeDirection, 2000);
+    gameLoop();
+}
+
+// Tetris Game Animation
+function initTetrisGame() {
+    const canvas = document.getElementById('tetrisGame');
+    if (!canvas) return;
+    
+    const ctx = canvas.getContext('2d');
+    const blockSize = 6;
+    
+    let currentBlock = {
+        x: 42,
+        y: 0,
+        shape: [[1,1],[1,1]], // Square block
+        color: '#6f42c1'
+    };
+    
+    const colors = ['#0366d6', '#28a745', '#dc3545', '#ffc107', '#6f42c1'];
+    const shapes = [
+        [[1,1],[1,1]], // Square
+        [[1,1,1,1]], // Line
+        [[1,1,0],[0,1,1]], // Z-shape
+        [[0,1,1],[1,1,0]], // S-shape
+        [[1,1,1],[0,1,0]]  // T-shape
+    ];
+    
+    function drawBlock() {
+        ctx.fillStyle = currentBlock.color;
+        currentBlock.shape.forEach((row, y) => {
+            row.forEach((cell, x) => {
+                if (cell) {
+                    const drawX = currentBlock.x + x * blockSize;
+                    const drawY = currentBlock.y + y * blockSize;
+                    ctx.fillRect(drawX, drawY, blockSize-1, blockSize-1);
+                }
+            });
+        });
+    }
+    
+    function moveBlock() {
+        currentBlock.y += blockSize;
+        
+        // Reset if block reaches bottom
+        if (currentBlock.y > canvas.height - (currentBlock.shape.length * blockSize)) {
+            currentBlock.y = 0;
+            currentBlock.x = Math.random() * (canvas.width - currentBlock.shape[0].length * blockSize);
+            currentBlock.shape = shapes[Math.floor(Math.random() * shapes.length)];
+            currentBlock.color = colors[Math.floor(Math.random() * colors.length)];
+        }
+    }
+    
+    function gameLoop() {
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        
+        drawBlock();
+        setTimeout(() => requestAnimationFrame(gameLoop), 300);
+    }
+    
+    setInterval(moveBlock, 500);
+    gameLoop();
+}
+
+// Breakout Game Animation  
+function initBreakoutGame() {
+    const canvas = document.getElementById('breakoutGame');
+    if (!canvas) return;
+    
+    const ctx = canvas.getContext('2d');
+    
+    const ball = {x: 45, y: 40, dx: 1, dy: -1, radius: 2};
+    const paddle = {x: 35, y: 55, width: 20, height: 3};
+    
+    const bricks = [];
+    for(let i = 0; i < 5; i++) {
+        for(let j = 0; j < 3; j++) {
+            bricks.push({
+                x: i * 18,
+                y: j * 8 + 5,
+                width: 16,
+                height: 6,
+                visible: true
+            });
+        }
+    }
+    
+    function drawBall() {
+        ctx.fillStyle = '#28a745';
+        ctx.beginPath();
+        ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
+        ctx.fill();
+    }
+    
+    function drawPaddle() {
+        ctx.fillStyle = '#dc3545';
+        ctx.fillRect(paddle.x, paddle.y, paddle.width, paddle.height);
+    }
+    
+    function drawBricks() {
+        ctx.fillStyle = '#dc3545';
+        bricks.forEach(brick => {
+            if (brick.visible) {
+                ctx.fillRect(brick.x, brick.y, brick.width, brick.height);
+            }
+        });
+    }
+    
+    function updateBall() {
+        ball.x += ball.dx;
+        ball.y += ball.dy;
+        
+        // Wall collisions
+        if (ball.x <= ball.radius || ball.x >= canvas.width - ball.radius) {
+            ball.dx = -ball.dx;
+        }
+        if (ball.y <= ball.radius) {
+            ball.dy = -ball.dy;
+        }
+        
+        // Paddle collision
+        if (ball.y >= paddle.y - ball.radius && 
+            ball.x >= paddle.x && ball.x <= paddle.x + paddle.width) {
+            ball.dy = -Math.abs(ball.dy);
+        }
+        
+        // Reset if ball goes off bottom
+        if (ball.y > canvas.height) {
+            ball.x = 45;
+            ball.y = 40;
+            ball.dy = -Math.abs(ball.dy);
+            // Reset some bricks
+            bricks.forEach((brick, index) => {
+                if (index % 3 === 0) brick.visible = true;
+            });
+        }
+        
+        // Brick collisions
+        bricks.forEach(brick => {
+            if (brick.visible && 
+                ball.x >= brick.x && ball.x <= brick.x + brick.width &&
+                ball.y >= brick.y && ball.y <= brick.y + brick.height) {
+                brick.visible = false;
+                ball.dy = -ball.dy;
+            }
+        });
+    }
+    
+    function updatePaddle() {
+        // Simple AI - follow ball
+        const paddleCenter = paddle.x + paddle.width / 2;
+        if (ball.x < paddleCenter - 5) {
+            paddle.x = Math.max(0, paddle.x - 1);
+        } else if (ball.x > paddleCenter + 5) {
+            paddle.x = Math.min(canvas.width - paddle.width, paddle.x + 1);
+        }
+    }
+    
+    function gameLoop() {
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        
+        updateBall();
+        updatePaddle();
+        drawBall();
+        drawPaddle();
+        drawBricks();
+        
+        requestAnimationFrame(gameLoop);
+    }
+    
+    gameLoop();
+}
+
+// Initialize all games when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(() => {
+        initPongGame();
+        initSnakeGame();
+        initTetrisGame();  
+        initBreakoutGame();
+    }, 500);
 });
 </script>
