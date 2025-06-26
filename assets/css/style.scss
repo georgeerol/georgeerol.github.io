@@ -34,11 +34,11 @@ body {
   --border-radius: 8px;
 }
 
-/* Override theme main content styles */
+/* Override theme main content styles - MUCH WIDER */
 .main-content {
-  max-width: 1200px !important;
+  max-width: 1600px !important;
   margin: 0 auto !important;
-  padding: 0 20px !important;
+  padding: 0 40px !important;
 }
 
 .main-content h1, .main-content h2, .main-content h3 {
@@ -53,9 +53,9 @@ body {
 
 /* Container for better layout control */
 .container {
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 40px;
 }
 
 body {
@@ -104,7 +104,7 @@ body {
 /* Hero Section */
 .hero-section {
   text-align: center;
-  padding: 30px 20px;
+  padding: 30px 40px;
   background: linear-gradient(135deg, var(--secondary-color) 0%, #fff 100%);
   border-radius: var(--border-radius);
   margin-bottom: 25px;
@@ -125,7 +125,7 @@ body {
 /* About Section Styling */
 .about-section {
   background: #f8f9fa;
-  padding: 25px;
+  padding: 35px;
   border-radius: var(--border-radius);
   margin-bottom: 25px;
   border-left: 4px solid var(--primary-color);
@@ -133,8 +133,8 @@ body {
 
 .about-content {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 25px;
+  grid-template-columns: 1fr 2.5fr;
+  gap: 40px;
   align-items: start;
 }
 
@@ -143,11 +143,11 @@ body {
   line-height: 1.6;
 }
 
-/* Skills Grid */
+/* Skills Grid - MORE COLUMNS */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 18px;
   margin: 15px 0;
 }
 
@@ -185,15 +185,15 @@ body {
   transform: scale(1.05);
 }
 
-/* Project Grid Layout */
+/* Project Grid Layout - MORE COLUMNS */
 .projects-section {
   margin: 25px 0;
 }
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
   margin: 20px 0;
 }
 
@@ -400,6 +400,18 @@ body {
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+  .main-content {
+    max-width: 1200px !important;
+    padding: 0 30px !important;
+  }
+  
+  .about-content {
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+  }
+}
+
 @media (max-width: 768px) {
   .main-content {
     padding: 0 15px !important;
