@@ -30,14 +30,13 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
   
   <div class="about-content">
     <div class="about-text">
-      <p>I'm a passionate software engineer specializing in <strong>data engineering</strong>, <strong>robotics</strong>, and <strong>full-stack development</strong>.</p>
-      <p>With expertise spanning from IoT and big data processing to autonomous systems and web applications, I enjoy building innovative solutions that solve real-world problems.</p>
+      <p>I'm a passionate software engineer specializing in <strong>data engineering</strong>, <strong>robotics</strong>, and <strong>full-stack development</strong>. With expertise spanning from IoT and big data processing to autonomous systems and web applications, I enjoy building innovative solutions that solve real-world problems.</p>
     </div>
 
     <div class="skills-grid">
       <div class="skill-category">
         <h4>🔧 Data Engineering</h4>
-        <div>
+        <div class="tech-badges">
           <span class="tech-badge">Apache Spark</span>
           <span class="tech-badge">Kafka</span>
           <span class="tech-badge">Flink</span>
@@ -49,7 +48,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       
       <div class="skill-category">
         <h4>🤖 Robotics & AI</h4>
-        <div>
+        <div class="tech-badges">
           <span class="tech-badge">ROS</span>
           <span class="tech-badge">Computer Vision</span>
           <span class="tech-badge">Deep Learning</span>
@@ -60,7 +59,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       
       <div class="skill-category">
         <h4>📱 Mobile Development</h4>
-        <div>
+        <div class="tech-badges">
           <span class="tech-badge">Android</span>
           <span class="tech-badge">iOS</span>
           <span class="tech-badge">React Native</span>
@@ -70,7 +69,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       
       <div class="skill-category">
         <h4>🌐 Web Development</h4>
-        <div>
+        <div class="tech-badges">
           <span class="tech-badge">React</span>
           <span class="tech-badge">Spring Boot</span>
           <span class="tech-badge">Spring MVC</span>
