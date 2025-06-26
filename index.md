@@ -38,7 +38,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       <h1>George Erol Fouché</h1>
       <p class="hero-subtitle">Senior Software Engineer | 10+ Years Experience</p>
       <div class="hero-specialization-container">
-        <p class="hero-specialization">Backend Gaming AI & Data</p>
+        <p class="hero-specialization">Backend Gaming AI & Data Engineering</p>
         <div class="mini-arcade">
           <canvas id="pongGame" width="100" height="70"></canvas>
           <canvas id="snakeGame" width="100" height="70"></canvas>
@@ -584,10 +584,8 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
   <p>I'm always interested in discussing new opportunities, innovative projects, or just connecting with fellow tech enthusiasts!</p>
   
   <div class="contact-links">
-    <a href="mailto:fouliex@gmail.com">📧 Email</a>
     <a href="https://www.linkedin.com/in/georgefouche/" target="_blank">💼 LinkedIn</a>
-    <a href="https://github.com/georgeerol" target="_blank">🐱 GitHub</a>
-    <a href="tel:+18456594124">📞 (845) 659-4124</a>
+    <a href="https://github.com/georgeerol" target="_blank">💻 GitHub</a>
   </div>
 </section>
 
