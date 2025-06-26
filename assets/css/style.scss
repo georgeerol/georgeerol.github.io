@@ -238,7 +238,7 @@ body {
   justify-content: center;
   gap: 1rem;
   margin-bottom: 25px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .hero-specialization {
@@ -748,13 +748,16 @@ body {
   }
   
   .hero-specialization-container {
-    flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.7rem;
+  }
+  
+  .hero-specialization {
+    font-size: 0.9em;
   }
   
   #pongGame {
-    width: 100px;
-    height: 65px;
+    width: 90px;
+    height: 60px;
   }
   
   .profile-image {
