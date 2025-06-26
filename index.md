@@ -28,50 +28,55 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
 <section id="about" class="about-section">
   <h2>👨‍💻 About Me</h2>
   
-  <p>I'm a passionate software engineer specializing in <strong>data engineering</strong>, <strong>robotics</strong>, and <strong>full-stack development</strong>. With expertise spanning from IoT and big data processing to autonomous systems and web applications, I enjoy building innovative solutions that solve real-world problems.</p>
+  <div class="about-content">
+    <div class="about-text">
+      <p>I'm a passionate software engineer specializing in <strong>data engineering</strong>, <strong>robotics</strong>, and <strong>full-stack development</strong>.</p>
+      <p>With expertise spanning from IoT and big data processing to autonomous systems and web applications, I enjoy building innovative solutions that solve real-world problems.</p>
+    </div>
 
-  <div class="skills-grid">
-    <div class="skill-category">
-      <h4>🔧 Data Engineering</h4>
-      <div>
-        <span class="tech-badge">Apache Spark</span>
-        <span class="tech-badge">Kafka</span>
-        <span class="tech-badge">Flink</span>
-        <span class="tech-badge">AWS</span>
-        <span class="tech-badge">Docker</span>
-        <span class="tech-badge">Airflow</span>
+    <div class="skills-grid">
+      <div class="skill-category">
+        <h4>🔧 Data Engineering</h4>
+        <div>
+          <span class="tech-badge">Apache Spark</span>
+          <span class="tech-badge">Kafka</span>
+          <span class="tech-badge">Flink</span>
+          <span class="tech-badge">AWS</span>
+          <span class="tech-badge">Docker</span>
+          <span class="tech-badge">Airflow</span>
+        </div>
       </div>
-    </div>
-    
-    <div class="skill-category">
-      <h4>🤖 Robotics & AI</h4>
-      <div>
-        <span class="tech-badge">ROS</span>
-        <span class="tech-badge">Computer Vision</span>
-        <span class="tech-badge">Deep Learning</span>
-        <span class="tech-badge">Reinforcement Learning</span>
-        <span class="tech-badge">SLAM</span>
+      
+      <div class="skill-category">
+        <h4>🤖 Robotics & AI</h4>
+        <div>
+          <span class="tech-badge">ROS</span>
+          <span class="tech-badge">Computer Vision</span>
+          <span class="tech-badge">Deep Learning</span>
+          <span class="tech-badge">Reinforcement Learning</span>
+          <span class="tech-badge">SLAM</span>
+        </div>
       </div>
-    </div>
-    
-    <div class="skill-category">
-      <h4>📱 Mobile Development</h4>
-      <div>
-        <span class="tech-badge">Android</span>
-        <span class="tech-badge">iOS</span>
-        <span class="tech-badge">React Native</span>
-        <span class="tech-badge">Flutter</span>
+      
+      <div class="skill-category">
+        <h4>📱 Mobile Development</h4>
+        <div>
+          <span class="tech-badge">Android</span>
+          <span class="tech-badge">iOS</span>
+          <span class="tech-badge">React Native</span>
+          <span class="tech-badge">Flutter</span>
+        </div>
       </div>
-    </div>
-    
-    <div class="skill-category">
-      <h4>🌐 Web Development</h4>
-      <div>
-        <span class="tech-badge">React</span>
-        <span class="tech-badge">Spring Boot</span>
-        <span class="tech-badge">Spring MVC</span>
-        <span class="tech-badge">JavaScript</span>
-        <span class="tech-badge">Java</span>
+      
+      <div class="skill-category">
+        <h4>🌐 Web Development</h4>
+        <div>
+          <span class="tech-badge">React</span>
+          <span class="tech-badge">Spring Boot</span>
+          <span class="tech-badge">Spring MVC</span>
+          <span class="tech-badge">JavaScript</span>
+          <span class="tech-badge">Java</span>
+        </div>
       </div>
     </div>
   </div>
