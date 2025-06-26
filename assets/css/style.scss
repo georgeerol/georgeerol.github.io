@@ -355,21 +355,7 @@ body {
   box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
 }
 
-#pongGame {
-  border: 2px solid var(--accent-color);
-  border-radius: 8px;
-  background: rgba(0, 0, 0, 0.1);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  transition: all 0.3s ease;
-  width: 90px;
-  height: 60px;
-}
 
-#pongGame:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
 
 .hero-actions {
   display: flex;
@@ -864,10 +850,7 @@ body {
     font-size: 0.9em;
   }
   
-  #pongGame {
-    width: 90px;
-    height: 60px;
-  }
+
   
   .mini-arcade {
     gap: 6px;
