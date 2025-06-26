@@ -512,3 +512,32 @@ body {
     transform: translateY(0);
   }
 } 
+/* Hide GitHub Pages footer - not professional for portfolio */
+.site-footer, 
+.page-footer,
+footer,
+.footer-wrapper {
+  display: none !important;
+}
+
+/* Hide any GitHub Pages branding */
+p:contains("GitHub Pages"),
+small:contains("GitHub Pages"),
+.github-corner,
+.github-fork-ribbon-wrapper {
+  display: none !important;
+}
+
+/* Alternative approach - hide all footer content except our contact section */
+body > footer,
+.main-content + footer,
+.wrapper + footer {
+  display: none !important;
+}
+
+/* Ensure our custom contact section remains visible */
+#contact,
+.contact-section {
+  display: block !important;
+  visibility: visible !important;
+}
