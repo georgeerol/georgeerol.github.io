@@ -238,7 +238,7 @@ body {
   justify-content: center;
   gap: 0.7rem;
   margin-bottom: 25px;
-  flex-wrap: nowrap;
+  flex-direction: column;
 }
 
 .hero-specialization {
@@ -263,6 +263,8 @@ body {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   transition: all 0.3s ease;
+  width: 100px;
+  height: 70px;
 }
 
 .mini-arcade canvas:hover {

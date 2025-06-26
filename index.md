@@ -40,10 +40,10 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       <div class="hero-specialization-container">
         <p class="hero-specialization">Backend Gaming AI & Data</p>
         <div class="mini-arcade">
-          <canvas id="pongGame" width="90" height="60"></canvas>
-          <canvas id="snakeGame" width="90" height="60"></canvas>
-          <canvas id="tetrisGame" width="90" height="60"></canvas>
-          <canvas id="breakoutGame" width="90" height="60"></canvas>
+          <canvas id="pongGame" width="100" height="70"></canvas>
+          <canvas id="snakeGame" width="100" height="70"></canvas>
+          <canvas id="tetrisGame" width="100" height="70"></canvas>
+          <canvas id="breakoutGame" width="100" height="70"></canvas>
         </div>
       </div>
       
