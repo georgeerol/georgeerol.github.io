@@ -289,34 +289,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       </div>
     </div>
     
-    <div class="project-card">
-      <h3 class="project-title">🗺️ SLAM Mapping Robot</h3>
-      <div class="tech-badges">
-        <span class="tech-badge">SLAM</span>
-        <span class="tech-badge">ROS</span>
-        <span class="tech-badge">RTAB-MAP</span>
-        <span class="tech-badge">Localization</span>
-      </div>
-      
-      <p class="project-overview">Implement SLAM to navigate and map environments with a custom robot using RTAB-MAP for real-time localization and mapping.</p>
-      
-      <div class="project-features">
-        <h4>🎯 Key Features:</h4>
-        <ul>
-          <li>Real-time SLAM implementation</li>
-          <li>Custom robot design and simulation</li>
-          <li>RTAB-MAP integration</li>
-          <li>3D environment mapping</li>
-        </ul>
-      </div>
-      
-      <img src="./images/MapAWorldWithSlamAndACustomRobot.gif" alt="SLAM Mapping Robot" class="project-image">
-      
-      <div class="project-links">
-        <a href="https://github.com/fouliex/MapAWorldWithSlamAndACustomRobot" class="btn btn-primary" target="_blank">🔗 View GitHub</a>
-        <a href="#" class="btn btn-outline">🗺️ View Maps</a>
-      </div>
-    </div>
+
   </div>
 </section>
 
