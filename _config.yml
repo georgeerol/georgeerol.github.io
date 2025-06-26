@@ -1,6 +1,5 @@
 title: George Erol Fouché | Software Engineer
 description: Data Engineer & Robotics Specialist | Building innovative solutions with big data, IoT, autonomous systems, and full-stack development
-theme: jekyll-theme-architect
 
 # Social links
 github_username: georgeerol
@@ -11,6 +10,14 @@ lang: en
 author: George Erol Fouché
 url: https://georgeerol.github.io
 baseurl: ""
+
+# Jekyll Configuration
+markdown: kramdown
+highlighter: rouge
+permalink: /:title/
+sass:
+  sass_dir: assets/css
+  style: compressed
 
 # Additional metadata
 keywords: "software engineer, data engineering, robotics, full-stack developer, Apache Spark, AWS, machine learning, IoT, big data"
