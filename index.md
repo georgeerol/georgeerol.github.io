@@ -37,7 +37,10 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
     <div class="hero-main">
       <h1>George Erol Fouché</h1>
       <p class="hero-subtitle">Senior Software Engineer | 10+ Years Experience</p>
-      <p class="hero-specialization">Backend Gaming AI & Data</p>
+      <div class="hero-specialization-container">
+        <p class="hero-specialization">Backend Gaming AI & Data Engineering</p>
+        <canvas id="pongGame" width="120" height="80"></canvas>
+      </div>
       
       <!-- Call to Action Buttons -->
       <div class="hero-actions">
@@ -670,5 +673,162 @@ document.addEventListener('DOMContentLoaded', function() {
         card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(card);
     });
+});
+
+// Pong Game Animation
+function initPongGame() {
+    const canvas = document.getElementById('pongGame');
+    if (!canvas) return;
+    
+    const ctx = canvas.getContext('2d');
+    const width = canvas.width;
+    const height = canvas.height;
+    
+    // Game objects
+    const ball = {
+        x: width / 2,
+        y: height / 2,
+        radius: 3,
+        dx: 1.5,
+        dy: 1.2,
+        trail: []
+    };
+    
+    const paddle1 = {
+        x: 10,
+        y: height / 2 - 15,
+        width: 3,
+        height: 30,
+        dy: 0
+    };
+    
+    const paddle2 = {
+        x: width - 13,
+        y: height / 2 - 15,
+        width: 3,
+        height: 30,
+        dy: 0
+    };
+    
+    // AI for paddles
+    function updatePaddles() {
+        // Simple AI - follow the ball
+        const paddle1Center = paddle1.y + paddle1.height / 2;
+        const paddle2Center = paddle2.y + paddle2.height / 2;
+        
+        // Left paddle
+        if (ball.y < paddle1Center - 5) {
+            paddle1.dy = -1;
+        } else if (ball.y > paddle1Center + 5) {
+            paddle1.dy = 1;
+        } else {
+            paddle1.dy = 0;
+        }
+        
+        // Right paddle
+        if (ball.y < paddle2Center - 5) {
+            paddle2.dy = -1;
+        } else if (ball.y > paddle2Center + 5) {
+            paddle2.dy = 1;
+        } else {
+            paddle2.dy = 0;
+        }
+        
+        // Update positions
+        paddle1.y += paddle1.dy;
+        paddle2.y += paddle2.dy;
+        
+        // Keep paddles in bounds
+        paddle1.y = Math.max(0, Math.min(height - paddle1.height, paddle1.y));
+        paddle2.y = Math.max(0, Math.min(height - paddle2.height, paddle2.y));
+    }
+    
+    function updateBall() {
+        // Add current position to trail
+        ball.trail.push({ x: ball.x, y: ball.y });
+        if (ball.trail.length > 8) {
+            ball.trail.shift();
+        }
+        
+        ball.x += ball.dx;
+        ball.y += ball.dy;
+        
+        // Bounce off top and bottom
+        if (ball.y <= ball.radius || ball.y >= height - ball.radius) {
+            ball.dy = -ball.dy;
+        }
+        
+        // Check paddle collisions
+        if (ball.x <= paddle1.x + paddle1.width + ball.radius &&
+            ball.y >= paddle1.y && ball.y <= paddle1.y + paddle1.height) {
+            ball.dx = Math.abs(ball.dx);
+            ball.x = paddle1.x + paddle1.width + ball.radius;
+        }
+        
+        if (ball.x >= paddle2.x - ball.radius &&
+            ball.y >= paddle2.y && ball.y <= paddle2.y + paddle2.height) {
+            ball.dx = -Math.abs(ball.dx);
+            ball.x = paddle2.x - ball.radius;
+        }
+        
+        // Reset if ball goes off screen
+        if (ball.x < 0 || ball.x > width) {
+            ball.x = width / 2;
+            ball.y = height / 2;
+            ball.dx = (Math.random() > 0.5 ? 1 : -1) * 1.5;
+            ball.dy = (Math.random() - 0.5) * 2;
+            ball.trail = [];
+        }
+    }
+    
+    function draw() {
+        // Clear canvas with slight fade effect
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+        ctx.fillRect(0, 0, width, height);
+        
+        // Draw center line
+        ctx.strokeStyle = 'rgba(40, 167, 69, 0.3)';
+        ctx.setLineDash([5, 5]);
+        ctx.beginPath();
+        ctx.moveTo(width / 2, 0);
+        ctx.lineTo(width / 2, height);
+        ctx.stroke();
+        ctx.setLineDash([]);
+        
+        // Draw ball trail
+        ball.trail.forEach((pos, index) => {
+            const alpha = (index + 1) / ball.trail.length * 0.3;
+            ctx.fillStyle = `rgba(40, 167, 69, ${alpha})`;
+            ctx.beginPath();
+            ctx.arc(pos.x, pos.y, ball.radius * 0.8, 0, Math.PI * 2);
+            ctx.fill();
+        });
+        
+        // Draw ball
+        ctx.fillStyle = '#28a745';
+        ctx.beginPath();
+        ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
+        ctx.fill();
+        
+        // Draw paddles
+        ctx.fillStyle = '#0366d6';
+        ctx.fillRect(paddle1.x, paddle1.y, paddle1.width, paddle1.height);
+        ctx.fillRect(paddle2.x, paddle2.y, paddle2.width, paddle2.height);
+    }
+    
+    function gameLoop() {
+        updatePaddles();
+        updateBall();
+        draw();
+        requestAnimationFrame(gameLoop);
+    }
+    
+    // Start the game
+    gameLoop();
+}
+
+// Initialize Pong game when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(initPongGame, 500); // Small delay to ensure canvas is ready
 });
 </script>
