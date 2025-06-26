@@ -543,7 +543,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
   
   <div class="contact-links">
     <a href="mailto:your.email@domain.com">📧 Email</a>
-    <a href="https://linkedin.com/in/your-profile" target="_blank">💼 LinkedIn</a>
+    <a href="https://www.linkedin.com/in/georgefouche/" target="_blank">💼 LinkedIn</a>
     <a href="https://github.com/georgeerol" target="_blank">🐱 GitHub</a>
     <a href="#" target="_blank">📄 Resume</a>
   </div>
