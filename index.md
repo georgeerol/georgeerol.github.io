@@ -19,10 +19,16 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
 
 <!-- Hero Section -->
 <div class="hero-section">
-  <h1>George Erol Fouché</h1>
-  <p class="hero-subtitle">Senior Software Engineer | 10+ Years Experience | Gaming AI & Data Engineering</p>
-  <p>Currently at Series Entertainment • Building innovative solutions with cutting-edge technology</p>
-  <p class="location">📍 San Francisco Bay Area</p>
+  <div class="hero-content">
+    <div class="hero-main">
+      <h1>George Erol Fouché</h1>
+      <p class="hero-subtitle">Senior Software Engineer | 10+ Years Experience | Gaming AI & Data Engineering</p>
+    </div>
+    <div class="hero-details">
+      <p class="current-role">🚀 Currently at Series Entertainment</p>
+      <p class="location">📍 San Francisco Bay Area</p>
+    </div>
+  </div>
 </div>
 
 <!-- About Section -->

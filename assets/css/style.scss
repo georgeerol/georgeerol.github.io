@@ -103,30 +103,59 @@ body {
 
 /* Hero Section */
 .hero-section {
-  text-align: center;
-  padding: 30px 40px;
   background: linear-gradient(135deg, var(--secondary-color) 0%, #fff 100%);
   border-radius: var(--border-radius);
   margin-bottom: 25px;
+  padding: 20px 40px;
 }
 
-.hero-section h1 {
-  font-size: 2.2em;
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-main {
+  flex: 1;
+  text-align: left;
+}
+
+.hero-main h1 {
+  font-size: 2.4em;
   margin-bottom: 8px;
   color: var(--text-dark);
+  font-weight: 700;
 }
 
 .hero-subtitle {
-  font-size: 1.1em;
+  font-size: 1.2em;
   color: var(--text-light);
-  margin-bottom: 12px;
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+
+.hero-details {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.current-role {
+  font-size: 1.1em;
+  color: var(--primary-color);
+  font-weight: 600;
+  margin: 0;
 }
 
 .location {
   font-size: 1em;
-  color: var(--primary-color);
+  color: var(--accent-color);
   font-weight: 600;
-  margin-top: 10px;
+  margin: 0;
 }
 
 /* About Section Styling */
@@ -470,11 +499,25 @@ body {
   }
   
   .hero-section {
-    padding: 20px 15px;
+    padding: 15px 20px;
   }
   
-  .hero-section h1 {
-    font-size: 1.8em;
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .hero-main {
+    text-align: center;
+  }
+  
+  .hero-main h1 {
+    font-size: 2.0em;
+  }
+  
+  .hero-details {
+    text-align: center;
   }
   
   .about-section {
