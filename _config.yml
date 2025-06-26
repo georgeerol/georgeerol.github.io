@@ -1,3 +1,16 @@
-title: Welcome to George Erol Fouché homepage!
-description: Feel free to bookmark this to keep an eye on my project updates.
+title: George Erol Fouché | Software Engineer
+description: Data Engineer & Robotics Specialist | Building innovative solutions with big data, IoT, autonomous systems, and full-stack development
 theme: jekyll-theme-cayman
+
+# Social links
+github_username: georgeerol
+linkedin_username: your-linkedin-username
+
+# SEO Enhancement
+lang: en
+author: George Erol Fouché
+url: https://georgeerol.github.io
+baseurl: ""
+
+# Additional metadata
+keywords: "software engineer, data engineering, robotics, full-stack developer, Apache Spark, AWS, machine learning, IoT, big data"
