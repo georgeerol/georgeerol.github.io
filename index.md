@@ -81,7 +81,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
 
 <!-- About Section -->
 <section id="about" class="about-section">
-  <h2>👨‍💻 About Me</h2>
+  <h2>👨🏿‍💻 About Me</h2>
   
   <div class="about-content">
     <div class="about-text">
