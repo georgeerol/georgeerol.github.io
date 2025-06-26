@@ -20,8 +20,9 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
 <!-- Hero Section -->
 <div class="hero-section">
   <h1>George Erol Fouché</h1>
-  <p class="hero-subtitle">Software Engineer | Data Pipeline Architect | Robotics Specialist</p>
-  <p>Building innovative solutions with cutting-edge technology</p>
+  <p class="hero-subtitle">Senior Software Engineer | 10+ Years Experience | Gaming AI & Data Engineering</p>
+  <p>Currently at Series Entertainment • Building innovative solutions with cutting-edge technology</p>
+  <p class="location">📍 San Francisco Bay Area</p>
 </div>
 
 <!-- About Section -->
@@ -30,7 +31,18 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
   
   <div class="about-content">
     <div class="about-text">
-      <p>I'm a passionate software engineer specializing in <strong>data engineering</strong>, <strong>robotics</strong>, and <strong>full-stack development</strong>. With expertise spanning from IoT and big data processing to autonomous systems and web applications, I enjoy building innovative solutions that solve real-world problems.</p>
+      <p>I'm a <strong>Senior Software Engineer with 10+ years</strong> of experience specializing in <strong>Backend Development</strong>, <strong>Data Engineering</strong>, and <strong>Robotics/AI</strong>. Currently working at Series Entertainment (Gaming AI Startup), I have a proven track record of leading teams and delivering scalable solutions across Gaming, AI, Cybersecurity, and Enterprise environments.</p>
+      
+      <div class="credentials">
+        <h4>🎓 Education & Certifications</h4>
+        <ul>
+          <li><strong>B.S. Computer Engineering</strong> - Pennsylvania State University</li>
+          <li><strong>Minor:</strong> Nanotechnology</li>
+          <li><strong>Certificate:</strong> International Engineering</li>
+          <li><strong>Udacity Nanodegree:</strong> Robotic Software Engineer</li>
+          <li><strong>Udacity Nanodegree:</strong> Full Stack Web Developer</li>
+        </ul>
+      </div>
     </div>
 
     <div class="skills-grid">
@@ -40,7 +52,8 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
           <span class="tech-badge">ROS</span>
           <span class="tech-badge">Computer Vision</span>
           <span class="tech-badge">Deep Learning</span>
-          <span class="tech-badge">Reinforcement Learning</span>
+          <span class="tech-badge">TensorFlow</span>
+          <span class="tech-badge">OpenCV</span>
           <span class="tech-badge">SLAM</span>
         </div>
       </div>
@@ -50,31 +63,33 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
         <div class="tech-badges">
           <span class="tech-badge">Apache Spark</span>
           <span class="tech-badge">Kafka</span>
-          <span class="tech-badge">Flink</span>
+          <span class="tech-badge">PySpark</span>
           <span class="tech-badge">AWS</span>
-          <span class="tech-badge">Docker</span>
-          <span class="tech-badge">Airflow</span>
+          <span class="tech-badge">Azure</span>
+          <span class="tech-badge">ETL Pipelines</span>
         </div>
       </div>
       
       <div class="skill-category">
-        <h4>🌐 Web Development</h4>
+        <h4>🌐 Backend Development</h4>
         <div class="tech-badges">
-          <span class="tech-badge">React</span>
-          <span class="tech-badge">Spring Boot</span>
-          <span class="tech-badge">Spring MVC</span>
-          <span class="tech-badge">JavaScript</span>
-          <span class="tech-badge">Java</span>
+          <span class="tech-badge">Java Spring Boot</span>
+          <span class="tech-badge">Python Flask</span>
+          <span class="tech-badge">Microservices</span>
+          <span class="tech-badge">REST APIs</span>
+          <span class="tech-badge">Docker</span>
+          <span class="tech-badge">Kubernetes</span>
         </div>
       </div>
       
       <div class="skill-category">
-        <h4>📱 Mobile Development</h4>
+        <h4>📱 Mobile & Frontend</h4>
         <div class="tech-badges">
           <span class="tech-badge">Android</span>
           <span class="tech-badge">iOS</span>
-          <span class="tech-badge">React Native</span>
-          <span class="tech-badge">Flutter</span>
+          <span class="tech-badge">React</span>
+          <span class="tech-badge">Vue.js</span>
+          <span class="tech-badge">JavaScript</span>
         </div>
       </div>
     </div>
@@ -542,10 +557,10 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
   <p>I'm always interested in discussing new opportunities, innovative projects, or just connecting with fellow tech enthusiasts!</p>
   
   <div class="contact-links">
-    <a href="mailto:your.email@domain.com">📧 Email</a>
+    <a href="mailto:fouliex@gmail.com">📧 Email</a>
     <a href="https://www.linkedin.com/in/georgefouche/" target="_blank">💼 LinkedIn</a>
     <a href="https://github.com/georgeerol" target="_blank">🐱 GitHub</a>
-    <a href="#" target="_blank">📄 Resume</a>
+    <a href="tel:+18456594124">📞 (845) 659-4124</a>
   </div>
 </section>
 

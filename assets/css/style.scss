@@ -122,6 +122,13 @@ body {
   margin-bottom: 12px;
 }
 
+.location {
+  font-size: 1em;
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-top: 10px;
+}
+
 /* About Section Styling */
 .about-section {
   background: #f8f9fa;
@@ -140,6 +147,35 @@ body {
   line-height: 1.6;
   margin-bottom: 25px;
   text-align: center;
+}
+
+.credentials {
+  margin-top: 25px;
+  padding: 20px;
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border-left: 4px solid var(--accent-color);
+}
+
+.credentials h4 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-size: 1.1em;
+}
+
+.credentials ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.credentials li {
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.credentials li:last-child {
+  border-bottom: none;
 }
 
 /* Skills Grid - HORIZONTAL SIDE-BY-SIDE */
