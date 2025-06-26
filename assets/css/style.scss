@@ -236,10 +236,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.7rem;
+  gap: 1.5rem;
   margin-bottom: 25px;
-  flex-direction: column;
-  text-align: center;
+  flex-direction: row;
+  text-align: left;
 }
 
 .hero-specialization {
@@ -247,7 +247,8 @@ body {
   color: var(--accent-color);
   font-weight: 600;
   margin: 0;
-  text-align: center;
+  white-space: nowrap;
+  text-align: left;
 }
 
 .mini-arcade {
@@ -780,7 +781,7 @@ body {
   }
   
   .hero-specialization-container {
-    gap: 0.7rem;
+    gap: 1.5rem;
   }
   
   .hero-specialization {
@@ -854,7 +855,7 @@ body {
   }
   
   .contact-links {
-    flex-direction: column;
+    flex-direction: row;
     gap: 15px;
   }
 }
