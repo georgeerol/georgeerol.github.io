@@ -581,20 +581,24 @@ body {
   border-radius: 2px;
 }
 
-/* Contact Section - Updated with Blue Gradient */
+/* Contact Section - Matching Hero Section */
 .contact-section {
-  background: linear-gradient(135deg, var(--primary-color) 0%, #0052cc 100%);
-  color: white;
+  background: linear-gradient(135deg, var(--secondary-color) 0%, #fff 100%);
+  color: var(--text-dark);
   padding: 40px;
   border-radius: var(--border-radius);
   text-align: center;
   margin-top: 50px;
   position: relative;
   overflow: hidden;
+  border-left: 4px solid var(--primary-color);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 [data-theme="dark"] .contact-section {
-  background: linear-gradient(135deg, #58a6ff 0%, #1f6feb 100%);
+  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--bg-color) 100%);
+  color: var(--text-dark);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
 .contact-section::before {
@@ -604,8 +608,8 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.1) 0%, transparent 50%),
-              radial-gradient(circle at 80% 80%, rgba(255,255,255,0.1) 0%, transparent 50%);
+  background: radial-gradient(circle at 20% 20%, rgba(3, 102, 214, 0.05) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(40, 167, 69, 0.05) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -613,6 +617,7 @@ body {
 .contact-section p {
   position: relative;
   z-index: 1;
+  color: var(--text-dark);
 }
 
 .contact-links {
@@ -626,20 +631,30 @@ body {
 }
 
 .contact-links a {
-  color: white;
+  color: var(--text-dark);
   text-decoration: none;
   font-size: 1.1em;
   transition: all 0.3s ease;
-  padding: 10px 15px;
+  padding: 12px 20px;
   border-radius: var(--border-radius);
-  background: rgba(255,255,255,0.1);
-  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.8);
+  border: 2px solid var(--border-color);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-weight: 600;
+}
+
+[data-theme="dark"] .contact-links a {
+  background: rgba(22,27,34,0.8);
+  border-color: var(--border-color);
+  color: var(--text-dark);
 }
 
 .contact-links a:hover {
-  background: rgba(255,255,255,0.2);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(3, 102, 214, 0.3);
 }
 
 /* Back to Top Button */
