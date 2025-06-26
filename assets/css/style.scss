@@ -234,12 +234,12 @@ body {
 
 .hero-specialization-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.7rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.8rem;
   margin-bottom: 25px;
   flex-direction: column;
-  text-align: center;
+  text-align: left;
 }
 
 .hero-specialization {
@@ -247,7 +247,8 @@ body {
   color: var(--accent-color);
   font-weight: 600;
   margin: 0;
-  text-align: center;
+  white-space: nowrap;
+  text-align: left;
 }
 
 .mini-arcade {
@@ -255,7 +256,7 @@ body {
   gap: 10px;
   align-items: center;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .mini-arcade canvas {
@@ -780,7 +781,7 @@ body {
   }
   
   .hero-specialization-container {
-    gap: 0.7rem;
+    gap: 0.8rem;
   }
   
   .hero-specialization {
