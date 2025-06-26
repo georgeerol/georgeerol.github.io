@@ -593,6 +593,61 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
 <a href="#" class="back-to-top">↑</a>
 
 <script>
+// Theme-aware demo animation system
+let themeAwareColors = {
+    light: {
+        pong: { paddle: '#0366d6', ball: '#28a745', trail: 'rgba(40, 167, 69, 0.3)' },
+        snake: { body: '#28a745', food: '#dc3545', trail: 'rgba(40, 167, 69, 0.2)' },
+        pixel: { character: ['#ff6b35', '#ffd23f', '#06ffa5', '#b19cd9', '#ffb3ba'] }
+    },
+    dark: {
+        pong: { paddle: '#58a6ff', ball: '#7c3aed', trail: 'rgba(124, 58, 237, 0.4)' },
+        snake: { body: '#7c3aed', food: '#f59e0b', trail: 'rgba(124, 58, 237, 0.3)' },
+        pixel: { character: ['#f59e0b', '#fbbf24', '#34d399', '#a78bfa', '#fb7185'] }
+    }
+};
+
+// Get current theme colors
+function getThemeColors() {
+    const theme = document.documentElement.getAttribute('data-theme') || 'light';
+    return themeAwareColors[theme];
+}
+
+// Demo animation sequence
+function startThemeDemo() {
+    const miniArcade = document.querySelector('.mini-arcade');
+    const themeToggle = document.querySelector('.theme-toggle');
+    
+    if (!miniArcade || !themeToggle) return;
+    
+    // Step 1: Flash games to show theme awareness
+    miniArcade.classList.add('demo-sequence');
+    
+    setTimeout(() => {
+        miniArcade.classList.remove('demo-sequence');
+        
+        // Step 2: Quick theme toggle demo
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const alternateTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        // Flash to alternate theme
+        document.documentElement.setAttribute('data-theme', alternateTheme);
+        
+        setTimeout(() => {
+            // Flash back to original theme
+            document.documentElement.setAttribute('data-theme', currentTheme);
+            
+            // Step 3: Add pulsing animation to toggle button
+            themeToggle.style.animation = 'themeTogglePulse 2s ease-in-out 3';
+            
+            setTimeout(() => {
+                themeToggle.style.animation = 'themeTogglePulse 3s ease-in-out infinite';
+            }, 6000);
+            
+        }, 500);
+    }, 2000);
+}
+
 // Dark mode functionality
 function toggleTheme() {
     const currentTheme = document.documentElement.getAttribute('data-theme');
@@ -603,6 +658,15 @@ function toggleTheme() {
     
     // Add a subtle animation effect
     document.body.style.transition = 'background 0.3s ease, color 0.3s ease';
+    
+    // Flash games to show theme change
+    const miniArcade = document.querySelector('.mini-arcade');
+    if (miniArcade) {
+        miniArcade.classList.add('demo-sequence');
+        setTimeout(() => {
+            miniArcade.classList.remove('demo-sequence');
+        }, 1000);
+    }
 }
 
 // Load saved theme or set default
@@ -614,6 +678,9 @@ function loadTheme() {
 // Initialize theme on page load
 document.addEventListener('DOMContentLoaded', function() {
     loadTheme();
+    
+    // Start demo after a short delay
+    setTimeout(startThemeDemo, 3000);
 });
 
 // Smooth scrolling for navigation links
@@ -784,12 +851,14 @@ function initPongGame() {
     }
     
     function draw() {
+        const colors = getThemeColors().pong;
+        
         // Clear canvas with slight fade effect
         ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
         ctx.fillRect(0, 0, width, height);
         
         // Draw center line
-        ctx.strokeStyle = 'rgba(40, 167, 69, 0.3)';
+        ctx.strokeStyle = colors.trail;
         ctx.setLineDash([5, 5]);
         ctx.beginPath();
         ctx.moveTo(width / 2, 0);
@@ -800,20 +869,21 @@ function initPongGame() {
         // Draw ball trail
         ball.trail.forEach((pos, index) => {
             const alpha = (index + 1) / ball.trail.length * 0.3;
-            ctx.fillStyle = `rgba(40, 167, 69, ${alpha})`;
+            const trailColor = colors.trail.replace('0.3)', `${alpha})`).replace('0.4)', `${alpha})`);
+            ctx.fillStyle = trailColor;
             ctx.beginPath();
             ctx.arc(pos.x, pos.y, ball.radius * 0.8, 0, Math.PI * 2);
             ctx.fill();
         });
         
         // Draw ball
-        ctx.fillStyle = '#28a745';
+        ctx.fillStyle = colors.ball;
         ctx.beginPath();
         ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
         ctx.fill();
         
         // Draw paddles
-        ctx.fillStyle = '#0366d6';
+        ctx.fillStyle = colors.paddle;
         ctx.fillRect(paddle1.x, paddle1.y, paddle1.width, paddle1.height);
         ctx.fillRect(paddle2.x, paddle2.y, paddle2.width, paddle2.height);
     }
@@ -848,14 +918,16 @@ function initSnakeGame() {
     let dy = 0;
     
     function drawSnake() {
-        ctx.fillStyle = '#28a745';
+        const colors = getThemeColors().snake;
+        ctx.fillStyle = colors.body;
         snake.forEach(segment => {
             ctx.fillRect(segment.x, segment.y, gridSize-1, gridSize-1);
         });
     }
     
     function drawFood() {
-        ctx.fillStyle = '#dc3545';
+        const colors = getThemeColors().snake;
+        ctx.fillStyle = colors.food;
         ctx.fillRect(food.x, food.y, gridSize-1, gridSize-1);
     }
     
@@ -926,7 +998,7 @@ function initPixelCharacterGame() {
         height: 16,
         direction: 1,
         animationFrame: 0,
-        colors: ['#ff6b35', '#ffd23f', '#06ffa5', '#b19cd9', '#ffb3ba']
+        colors: getThemeColors().pixel.character
     };
     
     // Floating particles
@@ -958,13 +1030,14 @@ function initPixelCharacterGame() {
     };
     
     function createParticle() {
+        const colors = getThemeColors().pixel.character;
         particles.push({
             x: character.x + Math.random() * character.width,
             y: character.y + Math.random() * character.height,
             dx: (Math.random() - 0.5) * 2,
             dy: -Math.random() * 2,
             life: 30,
-            color: character.colors[Math.floor(Math.random() * character.colors.length)]
+            color: colors[Math.floor(Math.random() * colors.length)]
         });
     }
     
@@ -1002,6 +1075,7 @@ function initPixelCharacterGame() {
     function drawCharacter() {
         const pixelSize = 2;
         let currentSprite;
+        const colors = getThemeColors().pixel.character;
         
         // Choose sprite based on animation
         if (character.animationFrame < 20) {
@@ -1013,7 +1087,7 @@ function initPixelCharacterGame() {
         }
         
         // Draw character sprite
-        ctx.fillStyle = character.colors[Math.floor(character.animationFrame / 15) % character.colors.length];
+        ctx.fillStyle = colors[Math.floor(character.animationFrame / 15) % colors.length];
         
         currentSprite.forEach((row, y) => {
             row.forEach((pixel, x) => {
