@@ -1,3 +1,3 @@
 # georgeerol.github.io
-George Fouche Portfolio
+George Erol Fouche Portfolio
 https://georgeerol.github.io/
