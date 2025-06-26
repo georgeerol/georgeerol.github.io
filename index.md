@@ -9,10 +9,10 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
 <div class="nav-container">
   <nav class="nav-menu">
     <a href="#about">About</a>
-    <a href="#data-pipeline">Data Pipeline</a>
     <a href="#robotics">Robotics</a>
-    <a href="#mobile">Mobile</a>
+    <a href="#data-pipeline">Data Pipeline</a>
     <a href="#fullstack">Full Stack</a>
+    <a href="#mobile">Mobile</a>
     <a href="#contact">Contact</a>
   </nav>
 </div>
@@ -35,18 +35,6 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
 
     <div class="skills-grid">
       <div class="skill-category">
-        <h4>🔧 Data Engineering</h4>
-        <div class="tech-badges">
-          <span class="tech-badge">Apache Spark</span>
-          <span class="tech-badge">Kafka</span>
-          <span class="tech-badge">Flink</span>
-          <span class="tech-badge">AWS</span>
-          <span class="tech-badge">Docker</span>
-          <span class="tech-badge">Airflow</span>
-        </div>
-      </div>
-      
-      <div class="skill-category">
         <h4>🤖 Robotics & AI</h4>
         <div class="tech-badges">
           <span class="tech-badge">ROS</span>
@@ -58,12 +46,14 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       </div>
       
       <div class="skill-category">
-        <h4>📱 Mobile Development</h4>
+        <h4>🔧 Data Engineering</h4>
         <div class="tech-badges">
-          <span class="tech-badge">Android</span>
-          <span class="tech-badge">iOS</span>
-          <span class="tech-badge">React Native</span>
-          <span class="tech-badge">Flutter</span>
+          <span class="tech-badge">Apache Spark</span>
+          <span class="tech-badge">Kafka</span>
+          <span class="tech-badge">Flink</span>
+          <span class="tech-badge">AWS</span>
+          <span class="tech-badge">Docker</span>
+          <span class="tech-badge">Airflow</span>
         </div>
       </div>
       
@@ -77,111 +67,21 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
           <span class="tech-badge">Java</span>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- Data Pipeline Projects -->
-<section id="data-pipeline" class="projects-section">
-  <div class="section-header">
-    <h2>🚀 Data Pipeline Projects</h2>
-  </div>
-  
-  <div class="project-grid">
-    <div class="project-card">
-      <h3 class="project-title">🌐 IOT AWS SPARK</h3>
-      <div class="tech-badges">
-        <span class="tech-badge">Apache Spark</span>
-        <span class="tech-badge">AWS</span>
-        <span class="tech-badge">Kafka</span>
-        <span class="tech-badge">Docker</span>
-        <span class="tech-badge">IoT</span>
-        <span class="tech-badge">Zookeeper</span>
-      </div>
       
-      <p class="project-overview">Integrates Big Data, IoT, and cloud computing to enhance urban mobility using a 35-mile drive from San Francisco to Dublin, CA, as a case study.</p>
-      
-      <div class="project-features">
-        <h4>🎯 Key Features:</h4>
-        <ul>
-          <li>Real-time data processing for vehicle performance, GPS, weather, and traffic</li>
-          <li>Scalable, fault-tolerant architecture</li>
-          <li>Docker containerization for easy deployment</li>
-          <li>AWS integration for storage and analytics</li>
-        </ul>
-      </div>
-      
-      <img src="./images/SystemArchitecture.png" alt="IOT AWS SPARK Architecture" class="project-image">
-      
-      <div class="project-links">
-        <a href="https://github.com/georgeerol/IotAwsSpark" class="btn btn-primary" target="_blank">🔗 View GitHub</a>
-        <a href="#" class="btn btn-outline">📋 Live Demo</a>
-      </div>
-    </div>
-    
-    <div class="project-card">
-      <h3 class="project-title">⚡ E2E Spark Flow</h3>
-      <div class="tech-badges">
-        <span class="tech-badge">Apache Spark</span>
-        <span class="tech-badge">Airflow</span>
-        <span class="tech-badge">Kafka</span>
-        <span class="tech-badge">Cassandra</span>
-        <span class="tech-badge">PostgreSQL</span>
-        <span class="tech-badge">Docker</span>
-      </div>
-      
-      <p class="project-overview">Comprehensive data pipeline utilizing Docker, Apache Airflow, Kafka, Spark, Cassandra, and PostgreSQL to manage data throughout its entire lifecycle.</p>
-      
-      <div class="project-features">
-        <h4>🎯 Key Features:</h4>
-        <ul>
-          <li>End-to-end data processing workflow</li>
-          <li>Real-time streaming with Kafka</li>
-          <li>Automated scheduling with Airflow</li>
-          <li>Multi-database support (Cassandra + PostgreSQL)</li>
-        </ul>
-      </div>
-      
-      <img src="./images/SparkFlowArchitecture.png" alt="E2E Spark Flow Architecture" class="project-image">
-      
-      <div class="project-links">
-        <a href="https://github.com/georgeerol/E2ESparkFlow" class="btn btn-primary" target="_blank">🔗 View GitHub</a>
-        <a href="#" class="btn btn-outline">📊 Analytics Dashboard</a>
-      </div>
-    </div>
-    
-    <div class="project-card">
-      <h3 class="project-title">💰 Commercing With Flink</h3>
-      <div class="tech-badges">
-        <span class="tech-badge">Apache Flink</span>
-        <span class="tech-badge">Real-time Analytics</span>
-        <span class="tech-badge">Financial Data</span>
-        <span class="tech-badge">Stream Processing</span>
-      </div>
-      
-      <p class="project-overview">Real-time sales analytics application processing financial transactions with Apache Flink, executing complex aggregations and storing results for business analysis.</p>
-      
-      <div class="project-features">
-        <h4>🎯 Key Features:</h4>
-        <ul>
-          <li>Real-time financial transaction processing</li>
-          <li>Complex event processing and aggregations</li>
-          <li>Low-latency analytics for business insights</li>
-          <li>Scalable stream processing architecture</li>
-        </ul>
-      </div>
-      
-      <img src="./images/CommercingWithFlinkArchitecture.png" alt="Commercing With Flink Architecture" class="project-image">
-      
-      <div class="project-links">
-        <a href="https://github.com/georgeerol/CommercingWithFlink" class="btn btn-primary" target="_blank">🔗 View GitHub</a>
-        <a href="#" class="btn btn-outline">📈 Performance Metrics</a>
+      <div class="skill-category">
+        <h4>📱 Mobile Development</h4>
+        <div class="tech-badges">
+          <span class="tech-badge">Android</span>
+          <span class="tech-badge">iOS</span>
+          <span class="tech-badge">React Native</span>
+          <span class="tech-badge">Flutter</span>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Robotics Projects -->
+<!-- Robotics Projects - FIRST TO SHOWCASE IMPRESSIVE VISUALS -->
 <section id="robotics" class="projects-section">
   <div class="section-header">
     <h2>🤖 Robotics & AI Projects</h2>
@@ -366,74 +266,107 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
   </div>
 </section>
 
-<!-- Mobile Projects -->
-<section id="mobile" class="projects-section">
+<!-- Data Pipeline Projects - SECOND -->
+<section id="data-pipeline" class="projects-section">
   <div class="section-header">
-    <h2>📱 Mobile Development</h2>
+    <h2>🚀 Data Pipeline Projects</h2>
   </div>
   
   <div class="project-grid">
     <div class="project-card">
-      <h3 class="project-title">🌤️ Weather App</h3>
+      <h3 class="project-title">🌐 IOT AWS SPARK</h3>
       <div class="tech-badges">
-        <span class="tech-badge">Android</span>
-        <span class="tech-badge">iOS</span>
-        <span class="tech-badge">Cross-platform</span>
-        <span class="tech-badge">API Integration</span>
+        <span class="tech-badge">Apache Spark</span>
+        <span class="tech-badge">AWS</span>
+        <span class="tech-badge">Kafka</span>
+        <span class="tech-badge">Docker</span>
+        <span class="tech-badge">IoT</span>
+        <span class="tech-badge">Zookeeper</span>
       </div>
       
-      <p class="project-overview">Cross-platform weather application providing real-time weather updates with beautiful UI for both Android and iOS devices.</p>
+      <p class="project-overview">Integrates Big Data, IoT, and cloud computing to enhance urban mobility using a 35-mile drive from San Francisco to Dublin, CA, as a case study.</p>
       
       <div class="project-features">
         <h4>🎯 Key Features:</h4>
         <ul>
-          <li>Real-time weather data integration</li>
-          <li>Location-based forecasting</li>
-          <li>Beautiful, intuitive UI design</li>
-          <li>Cross-platform compatibility</li>
+          <li>Real-time data processing for vehicle performance, GPS, weather, and traffic</li>
+          <li>Scalable, fault-tolerant architecture</li>
+          <li>Docker containerization for easy deployment</li>
+          <li>AWS integration for storage and analytics</li>
         </ul>
       </div>
       
-      <img src="./images/Clima.png" alt="Weather App" class="project-image">
+      <img src="./images/SystemArchitecture.png" alt="IOT AWS SPARK Architecture" class="project-image">
       
       <div class="project-links">
-        <a href="https://github.com/georgeerol/AndroidAndIOSApps/tree/master/ClimaApp/Android/Clima" class="btn btn-primary" target="_blank">🤖 Android Version</a>
-        <a href="https://github.com/georgeerol/AndroidAndIOSApps/tree/master/ClimaApp/IOS/Clima" class="btn btn-outline" target="_blank">🍎 iOS Version</a>
+        <a href="https://github.com/georgeerol/IotAwsSpark" class="btn btn-primary" target="_blank">🔗 View GitHub</a>
+        <a href="#" class="btn btn-outline">📋 Live Demo</a>
       </div>
     </div>
     
     <div class="project-card">
-      <h3 class="project-title">₿ Bitcoin Ticker</h3>
+      <h3 class="project-title">⚡ E2E Spark Flow</h3>
       <div class="tech-badges">
-        <span class="tech-badge">Android</span>
-        <span class="tech-badge">iOS</span>
-        <span class="tech-badge">Cryptocurrency</span>
-        <span class="tech-badge">Real-time Data</span>
+        <span class="tech-badge">Apache Spark</span>
+        <span class="tech-badge">Airflow</span>
+        <span class="tech-badge">Kafka</span>
+        <span class="tech-badge">Cassandra</span>
+        <span class="tech-badge">PostgreSQL</span>
+        <span class="tech-badge">Docker</span>
       </div>
       
-      <p class="project-overview">Monitor and display live Bitcoin exchange rates with real-time updates on both Android and iOS devices.</p>
+      <p class="project-overview">Comprehensive data pipeline utilizing Docker, Apache Airflow, Kafka, Spark, Cassandra, and PostgreSQL to manage data throughout its entire lifecycle.</p>
       
       <div class="project-features">
         <h4>🎯 Key Features:</h4>
         <ul>
-          <li>Live Bitcoin price tracking</li>
-          <li>Multiple exchange support</li>
-          <li>Real-time market updates</li>
-          <li>Clean, modern interface</li>
+          <li>End-to-end data processing workflow</li>
+          <li>Real-time streaming with Kafka</li>
+          <li>Automated scheduling with Airflow</li>
+          <li>Multi-database support (Cassandra + PostgreSQL)</li>
         </ul>
       </div>
       
-      <img src="./images/BitcoinTicker.png" alt="Bitcoin Ticker" class="project-image">
+      <img src="./images/SparkFlowArchitecture.png" alt="E2E Spark Flow Architecture" class="project-image">
       
       <div class="project-links">
-        <a href="https://github.com/georgeerol/AndroidAndIOSApps/tree/master/BitcoinTickerApp/Android/BitcoinTicker" class="btn btn-primary" target="_blank">🤖 Android Version</a>
-        <a href="https://github.com/georgeerol/AndroidAndIOSApps/tree/master/BitcoinTickerApp/IOS/BitcoinTicker" class="btn btn-outline" target="_blank">🍎 iOS Version</a>
+        <a href="https://github.com/georgeerol/E2ESparkFlow" class="btn btn-primary" target="_blank">🔗 View GitHub</a>
+        <a href="#" class="btn btn-outline">📊 Analytics Dashboard</a>
+      </div>
+    </div>
+    
+    <div class="project-card">
+      <h3 class="project-title">💰 Commercing With Flink</h3>
+      <div class="tech-badges">
+        <span class="tech-badge">Apache Flink</span>
+        <span class="tech-badge">Real-time Analytics</span>
+        <span class="tech-badge">Financial Data</span>
+        <span class="tech-badge">Stream Processing</span>
+      </div>
+      
+      <p class="project-overview">Real-time sales analytics application processing financial transactions with Apache Flink, executing complex aggregations and storing results for business analysis.</p>
+      
+      <div class="project-features">
+        <h4>🎯 Key Features:</h4>
+        <ul>
+          <li>Real-time financial transaction processing</li>
+          <li>Complex event processing and aggregations</li>
+          <li>Low-latency analytics for business insights</li>
+          <li>Scalable stream processing architecture</li>
+        </ul>
+      </div>
+      
+      <img src="./images/CommercingWithFlinkArchitecture.png" alt="Commercing With Flink Architecture" class="project-image">
+      
+      <div class="project-links">
+        <a href="https://github.com/georgeerol/CommercingWithFlink" class="btn btn-primary" target="_blank">🔗 View GitHub</a>
+        <a href="#" class="btn btn-outline">📈 Performance Metrics</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Full Stack Projects -->
+<!-- Full Stack Projects - THIRD -->
 <section id="fullstack" class="projects-section">
   <div class="section-header">
     <h2>🌐 Full Stack Web Development</h2>
@@ -531,6 +464,73 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       <div class="project-links">
         <a href="https://github.com/georgeerol/ProjectManagementApp" class="btn btn-primary" target="_blank">🔗 View GitHub</a>
         <a href="#" class="btn btn-outline">🏢 Enterprise Demo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Mobile Projects - LAST -->
+<section id="mobile" class="projects-section">
+  <div class="section-header">
+    <h2>📱 Mobile Development</h2>
+  </div>
+  
+  <div class="project-grid">
+    <div class="project-card">
+      <h3 class="project-title">🌤️ Weather App</h3>
+      <div class="tech-badges">
+        <span class="tech-badge">Android</span>
+        <span class="tech-badge">iOS</span>
+        <span class="tech-badge">Cross-platform</span>
+        <span class="tech-badge">API Integration</span>
+      </div>
+      
+      <p class="project-overview">Cross-platform weather application providing real-time weather updates with beautiful UI for both Android and iOS devices.</p>
+      
+      <div class="project-features">
+        <h4>🎯 Key Features:</h4>
+        <ul>
+          <li>Real-time weather data integration</li>
+          <li>Location-based forecasting</li>
+          <li>Beautiful, intuitive UI design</li>
+          <li>Cross-platform compatibility</li>
+        </ul>
+      </div>
+      
+      <img src="./images/Clima.png" alt="Weather App" class="project-image">
+      
+      <div class="project-links">
+        <a href="https://github.com/georgeerol/AndroidAndIOSApps/tree/master/ClimaApp/Android/Clima" class="btn btn-primary" target="_blank">🤖 Android Version</a>
+        <a href="https://github.com/georgeerol/AndroidAndIOSApps/tree/master/ClimaApp/IOS/Clima" class="btn btn-outline" target="_blank">🍎 iOS Version</a>
+      </div>
+    </div>
+    
+    <div class="project-card">
+      <h3 class="project-title">₿ Bitcoin Ticker</h3>
+      <div class="tech-badges">
+        <span class="tech-badge">Android</span>
+        <span class="tech-badge">iOS</span>
+        <span class="tech-badge">Cryptocurrency</span>
+        <span class="tech-badge">Real-time Data</span>
+      </div>
+      
+      <p class="project-overview">Monitor and display live Bitcoin exchange rates with real-time updates on both Android and iOS devices.</p>
+      
+      <div class="project-features">
+        <h4>🎯 Key Features:</h4>
+        <ul>
+          <li>Live Bitcoin price tracking</li>
+          <li>Multiple exchange support</li>
+          <li>Real-time market updates</li>
+          <li>Clean, modern interface</li>
+        </ul>
+      </div>
+      
+      <img src="./images/BitcoinTicker.png" alt="Bitcoin Ticker" class="project-image">
+      
+      <div class="project-links">
+        <a href="https://github.com/georgeerol/AndroidAndIOSApps/tree/master/BitcoinTickerApp/Android/BitcoinTicker" class="btn btn-primary" target="_blank">🤖 Android Version</a>
+        <a href="https://github.com/georgeerol/AndroidAndIOSApps/tree/master/BitcoinTickerApp/IOS/BitcoinTicker" class="btn btn-outline" target="_blank">🍎 iOS Version</a>
       </div>
     </div>
   </div>
