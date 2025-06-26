@@ -239,6 +239,7 @@ body {
   gap: 0.7rem;
   margin-bottom: 25px;
   flex-direction: column;
+  text-align: center;
 }
 
 .hero-specialization {
@@ -246,11 +247,12 @@ body {
   color: var(--accent-color);
   font-weight: 600;
   margin: 0;
+  text-align: center;
 }
 
 .mini-arcade {
   display: flex;
-  gap: 8px;
+  gap: 10px;
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
@@ -274,8 +276,7 @@ body {
 
 .mini-arcade canvas:nth-child(1) { border-color: #0366d6; } /* Pong - Blue */
 .mini-arcade canvas:nth-child(2) { border-color: #28a745; } /* Snake - Green */
-.mini-arcade canvas:nth-child(3) { border-color: #6f42c1; } /* Tetris - Purple */
-.mini-arcade canvas:nth-child(4) { border-color: #dc3545; } /* Breakout - Red */
+.mini-arcade canvas:nth-child(3) { border-color: #ff6b35; } /* Pixel Character - Orange */
 
 #pongGame {
   border: 2px solid var(--accent-color);
