@@ -14,6 +14,14 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
     <a href="#fullstack">Full Stack</a>
     <a href="#mobile">Mobile</a>
     <a href="#contact">Contact</a>
+    
+    <!-- Dark Mode Toggle -->
+    <div class="theme-toggle" onclick="toggleTheme()">
+      <div class="theme-toggle-slider">
+        <span class="theme-icon">☀️</span>
+        <span class="theme-icon">🌙</span>
+      </div>
+    </div>
   </nav>
 </div>
 
@@ -580,23 +588,87 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
 <a href="#" class="back-to-top">↑</a>
 
 <script>
+// Dark mode functionality
+function toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    
+    // Add a subtle animation effect
+    document.body.style.transition = 'background 0.3s ease, color 0.3s ease';
+}
+
+// Load saved theme or set default
+function loadTheme() {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+}
+
+// Initialize theme on page load
+document.addEventListener('DOMContentLoaded', function() {
+    loadTheme();
+});
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
     });
 });
 
-// Show/hide back to top button
+// Show/hide back to top button with enhanced functionality
 window.addEventListener('scroll', function() {
     const backToTop = document.querySelector('.back-to-top');
+    const scrollProgress = (window.pageYOffset / (document.body.scrollHeight - window.innerHeight)) * 100;
+    
     if (window.pageYOffset > 300) {
         backToTop.style.display = 'flex';
+        backToTop.style.opacity = Math.min(scrollProgress / 20, 1);
     } else {
         backToTop.style.display = 'none';
     }
+});
+
+// Add subtle parallax effect to hero section
+window.addEventListener('scroll', function() {
+    const heroSection = document.querySelector('.hero-section');
+    const scrolled = window.pageYOffset;
+    if (heroSection && scrolled < window.innerHeight) {
+        heroSection.style.transform = `translateY(${scrolled * 0.1}px)`;
+    }
+});
+
+// Enhanced project card animations
+document.addEventListener('DOMContentLoaded', function() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+    
+    // Observe all project cards
+    document.querySelectorAll('.project-card').forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(card);
+    });
 });
 </script>
