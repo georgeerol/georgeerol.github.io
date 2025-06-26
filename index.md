@@ -42,8 +42,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
         <div class="mini-arcade">
           <canvas id="pongGame" width="100" height="70"></canvas>
           <canvas id="snakeGame" width="100" height="70"></canvas>
-          <canvas id="tetrisGame" width="100" height="70"></canvas>
-          <canvas id="breakoutGame" width="100" height="70"></canvas>
+          <canvas id="pixelCharacterGame" width="100" height="70"></canvas>
         </div>
       </div>
       
@@ -912,170 +911,159 @@ function initSnakeGame() {
     gameLoop();
 }
 
-// Tetris Game Animation
-function initTetrisGame() {
-    const canvas = document.getElementById('tetrisGame');
+// Pixel Character Animation
+function initPixelCharacterGame() {
+    const canvas = document.getElementById('pixelCharacterGame');
     if (!canvas) return;
     
     const ctx = canvas.getContext('2d');
-    const blockSize = 6;
+    const width = canvas.width;
+    const height = canvas.height;
     
-    let currentBlock = {
-        x: 42,
-        y: 0,
-        shape: [[1,1],[1,1]], // Square block
-        color: '#6f42c1'
+    // Character properties
+    const character = {
+        x: 20,
+        y: height - 20,
+        width: 12,
+        height: 16,
+        direction: 1,
+        animationFrame: 0,
+        colors: ['#ff6b35', '#ffd23f', '#06ffa5', '#b19cd9', '#ffb3ba']
     };
     
-    const colors = ['#0366d6', '#28a745', '#dc3545', '#ffc107', '#6f42c1'];
-    const shapes = [
-        [[1,1],[1,1]], // Square
-        [[1,1,1,1]], // Line
-        [[1,1,0],[0,1,1]], // Z-shape
-        [[0,1,1],[1,1,0]], // S-shape
-        [[1,1,1],[0,1,0]]  // T-shape
-    ];
+    // Floating particles
+    const particles = [];
     
-    function drawBlock() {
-        ctx.fillStyle = currentBlock.color;
-        currentBlock.shape.forEach((row, y) => {
-            row.forEach((cell, x) => {
-                if (cell) {
-                    const drawX = currentBlock.x + x * blockSize;
-                    const drawY = currentBlock.y + y * blockSize;
-                    ctx.fillRect(drawX, drawY, blockSize-1, blockSize-1);
+    // Character sprite patterns (simple pixel art)
+    const sprites = {
+        idle: [
+            [0,1,1,0],
+            [1,1,1,1],
+            [0,1,1,0],
+            [0,1,1,0],
+            [1,0,0,1]
+        ],
+        walk1: [
+            [0,1,1,0],
+            [1,1,1,1],
+            [0,1,1,0],
+            [1,1,0,0],
+            [0,0,1,1]
+        ],
+        walk2: [
+            [0,1,1,0],
+            [1,1,1,1],
+            [0,1,1,0],
+            [0,0,1,1],
+            [1,1,0,0]
+        ]
+    };
+    
+    function createParticle() {
+        particles.push({
+            x: character.x + Math.random() * character.width,
+            y: character.y + Math.random() * character.height,
+            dx: (Math.random() - 0.5) * 2,
+            dy: -Math.random() * 2,
+            life: 30,
+            color: character.colors[Math.floor(Math.random() * character.colors.length)]
+        });
+    }
+    
+    function updateCharacter() {
+        // Move character
+        character.x += character.direction * 0.5;
+        
+        // Bounce off edges
+        if (character.x <= 0 || character.x >= width - character.width) {
+            character.direction *= -1;
+        }
+        
+        // Update animation frame
+        character.animationFrame = (character.animationFrame + 1) % 60;
+        
+        // Create particles occasionally
+        if (Math.random() < 0.3) {
+            createParticle();
+        }
+    }
+    
+    function updateParticles() {
+        for (let i = particles.length - 1; i >= 0; i--) {
+            const particle = particles[i];
+            particle.x += particle.dx;
+            particle.y += particle.dy;
+            particle.life--;
+            
+            if (particle.life <= 0) {
+                particles.splice(i, 1);
+            }
+        }
+    }
+    
+    function drawCharacter() {
+        const pixelSize = 2;
+        let currentSprite;
+        
+        // Choose sprite based on animation
+        if (character.animationFrame < 20) {
+            currentSprite = sprites.idle;
+        } else if (character.animationFrame < 40) {
+            currentSprite = sprites.walk1;
+        } else {
+            currentSprite = sprites.walk2;
+        }
+        
+        // Draw character sprite
+        ctx.fillStyle = character.colors[Math.floor(character.animationFrame / 15) % character.colors.length];
+        
+        currentSprite.forEach((row, y) => {
+            row.forEach((pixel, x) => {
+                if (pixel) {
+                    ctx.fillRect(
+                        character.x + x * pixelSize,
+                        character.y + y * pixelSize,
+                        pixelSize,
+                        pixelSize
+                    );
                 }
             });
         });
+        
+        // Draw eyes
+        ctx.fillStyle = '#000';
+        ctx.fillRect(character.x + 2, character.y + 2, 1, 1);
+        ctx.fillRect(character.x + 6, character.y + 2, 1, 1);
     }
     
-    function moveBlock() {
-        currentBlock.y += blockSize;
-        
-        // Reset if block reaches bottom
-        if (currentBlock.y > canvas.height - (currentBlock.shape.length * blockSize)) {
-            currentBlock.y = 0;
-            currentBlock.x = Math.random() * (canvas.width - currentBlock.shape[0].length * blockSize);
-            currentBlock.shape = shapes[Math.floor(Math.random() * shapes.length)];
-            currentBlock.color = colors[Math.floor(Math.random() * colors.length)];
+    function drawParticles() {
+        particles.forEach(particle => {
+            const alpha = particle.life / 30;
+            ctx.fillStyle = particle.color + Math.floor(alpha * 255).toString(16).padStart(2, '0');
+            ctx.fillRect(particle.x, particle.y, 1, 1);
+        });
+    }
+    
+    function drawBackground() {
+        // Create a subtle pixel ground
+        ctx.fillStyle = '#4a5568';
+        for (let x = 0; x < width; x += 4) {
+            if (Math.random() < 0.1) {
+                ctx.fillRect(x, height - 2, 2, 2);
+            }
         }
     }
     
     function gameLoop() {
-        ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-        
-        drawBlock();
-        setTimeout(() => requestAnimationFrame(gameLoop), 300);
-    }
-    
-    setInterval(moveBlock, 500);
-    gameLoop();
-}
-
-// Breakout Game Animation  
-function initBreakoutGame() {
-    const canvas = document.getElementById('breakoutGame');
-    if (!canvas) return;
-    
-    const ctx = canvas.getContext('2d');
-    
-    const ball = {x: 45, y: 40, dx: 1, dy: -1, radius: 2};
-    const paddle = {x: 35, y: 55, width: 20, height: 3};
-    
-    const bricks = [];
-    for(let i = 0; i < 5; i++) {
-        for(let j = 0; j < 3; j++) {
-            bricks.push({
-                x: i * 18,
-                y: j * 8 + 5,
-                width: 16,
-                height: 6,
-                visible: true
-            });
-        }
-    }
-    
-    function drawBall() {
-        ctx.fillStyle = '#28a745';
-        ctx.beginPath();
-        ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
-        ctx.fill();
-    }
-    
-    function drawPaddle() {
-        ctx.fillStyle = '#dc3545';
-        ctx.fillRect(paddle.x, paddle.y, paddle.width, paddle.height);
-    }
-    
-    function drawBricks() {
-        ctx.fillStyle = '#dc3545';
-        bricks.forEach(brick => {
-            if (brick.visible) {
-                ctx.fillRect(brick.x, brick.y, brick.width, brick.height);
-            }
-        });
-    }
-    
-    function updateBall() {
-        ball.x += ball.dx;
-        ball.y += ball.dy;
-        
-        // Wall collisions
-        if (ball.x <= ball.radius || ball.x >= canvas.width - ball.radius) {
-            ball.dx = -ball.dx;
-        }
-        if (ball.y <= ball.radius) {
-            ball.dy = -ball.dy;
-        }
-        
-        // Paddle collision
-        if (ball.y >= paddle.y - ball.radius && 
-            ball.x >= paddle.x && ball.x <= paddle.x + paddle.width) {
-            ball.dy = -Math.abs(ball.dy);
-        }
-        
-        // Reset if ball goes off bottom
-        if (ball.y > canvas.height) {
-            ball.x = 45;
-            ball.y = 40;
-            ball.dy = -Math.abs(ball.dy);
-            // Reset some bricks
-            bricks.forEach((brick, index) => {
-                if (index % 3 === 0) brick.visible = true;
-            });
-        }
-        
-        // Brick collisions
-        bricks.forEach(brick => {
-            if (brick.visible && 
-                ball.x >= brick.x && ball.x <= brick.x + brick.width &&
-                ball.y >= brick.y && ball.y <= brick.y + brick.height) {
-                brick.visible = false;
-                ball.dy = -ball.dy;
-            }
-        });
-    }
-    
-    function updatePaddle() {
-        // Simple AI - follow ball
-        const paddleCenter = paddle.x + paddle.width / 2;
-        if (ball.x < paddleCenter - 5) {
-            paddle.x = Math.max(0, paddle.x - 1);
-        } else if (ball.x > paddleCenter + 5) {
-            paddle.x = Math.min(canvas.width - paddle.width, paddle.x + 1);
-        }
-    }
-    
-    function gameLoop() {
+        // Clear with fade effect
         ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.fillRect(0, 0, width, height);
         
-        updateBall();
-        updatePaddle();
-        drawBall();
-        drawPaddle();
-        drawBricks();
+        drawBackground();
+        updateCharacter();
+        updateParticles();
+        drawCharacter();
+        drawParticles();
         
         requestAnimationFrame(gameLoop);
     }
@@ -1088,8 +1076,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
         initPongGame();
         initSnakeGame();
-        initTetrisGame();  
-        initBreakoutGame();
+        initPixelCharacterGame();
     }, 500);
 });
 </script>
