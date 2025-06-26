@@ -1,9 +1,7 @@
 ---
 ---
 
-@import "{{ site.theme }}";
-
-/* Reset and override theme defaults */
+/* Custom Portfolio Styles */
 * {
   box-sizing: border-box;
 }
@@ -101,12 +99,12 @@ body {
   transform: translateY(-2px);
 }
 
-/* Hero Section */
+/* Enhanced Hero Section */
 .hero-section {
   background: linear-gradient(135deg, var(--secondary-color) 0%, #fff 100%);
   border-radius: var(--border-radius);
   margin-bottom: 25px;
-  padding: 20px 40px;
+  padding: 30px 40px;
 }
 
 .hero-content {
@@ -118,9 +116,33 @@ body {
   margin: 0 auto;
 }
 
+.hero-left {
+  display: flex;
+  align-items: center;
+}
+
+.hero-profile {
+  position: relative;
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--primary-color);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+}
+
 .hero-main {
   flex: 1;
   text-align: left;
+  padding-left: 20px;
 }
 
 .hero-main h1 {
@@ -133,22 +155,44 @@ body {
 .hero-subtitle {
   font-size: 1.2em;
   color: var(--text-light);
-  margin-bottom: 0;
+  margin-bottom: 8px;
   line-height: 1.4;
+}
+
+.hero-specialization {
+  font-size: 1em;
+  color: var(--accent-color);
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 .hero-details {
   text-align: right;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 20px;
+}
+
+.status-badge {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--primary-color);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .current-role {
   font-size: 1.1em;
   color: var(--primary-color);
   font-weight: 600;
-  margin: 0;
+  margin: 0 0 5px 0;
 }
 
 .location {
@@ -156,6 +200,36 @@ body {
   color: var(--accent-color);
   font-weight: 600;
   margin: 0;
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.stat {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 12px 8px;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.stat-number {
+  display: block;
+  font-size: 1.4em;
+  font-weight: 700;
+  color: var(--primary-color);
+  line-height: 1;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.8em;
+  color: var(--text-light);
+  margin-top: 4px;
 }
 
 /* About Section Styling */
@@ -499,25 +573,56 @@ body {
   }
   
   .hero-section {
-    padding: 15px 20px;
+    padding: 20px 15px;
   }
   
   .hero-content {
     flex-direction: column;
     text-align: center;
-    gap: 15px;
+    gap: 20px;
+  }
+  
+  .hero-left {
+    order: 1;
+    justify-content: center;
+  }
+  
+  .profile-image {
+    width: 100px;
+    height: 100px;
   }
   
   .hero-main {
+    order: 2;
     text-align: center;
+    padding-left: 0;
   }
   
   .hero-main h1 {
     font-size: 2.0em;
   }
   
+  .hero-actions {
+    justify-content: center;
+  }
+  
   .hero-details {
+    order: 3;
     text-align: center;
+    gap: 15px;
+  }
+  
+  .hero-stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+  
+  .stat {
+    padding: 8px 4px;
+  }
+  
+  .stat-number {
+    font-size: 1.2em;
   }
   
   .about-section {

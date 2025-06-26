@@ -17,16 +17,49 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
   </nav>
 </div>
 
-<!-- Hero Section -->
+<!-- Enhanced Hero Section -->
 <div class="hero-section">
   <div class="hero-content">
+    <div class="hero-left">
+      <div class="hero-profile">
+        <img src="./images/me.jpeg" alt="George Erol Fouché" class="profile-image">
+      </div>
+    </div>
+    
     <div class="hero-main">
       <h1>George Erol Fouché</h1>
-      <p class="hero-subtitle">Senior Software Engineer | 10+ Years Experience | Gaming AI & Data Engineering</p>
+      <p class="hero-subtitle">Senior Software Engineer | 10+ Years Experience</p>
+      <p class="hero-specialization">Gaming AI & Data Engineering Specialist</p>
+      
+      <!-- Call to Action Buttons -->
+      <div class="hero-actions">
+        <a href="#robotics" class="btn btn-primary">🚀 View Projects</a>
+        <a href="https://github.com/georgeerol" class="btn btn-outline" target="_blank">📂 GitHub</a>
+        <a href="#contact" class="btn btn-outline">📧 Contact</a>
+      </div>
     </div>
+    
     <div class="hero-details">
-      <p class="current-role">🚀 Currently at Series Entertainment</p>
-      <p class="location">📍 San Francisco Bay Area</p>
+      <div class="status-badge">
+        <p class="current-role">🚀 Currently at Series Entertainment</p>
+        <p class="location">📍 San Francisco Bay Area</p>
+      </div>
+      
+      <!-- Quick Stats -->
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">15+</span>
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">5</span>
+          <span class="stat-label">Tech Domains</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">10+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+      </div>
     </div>
   </div>
 </div>
