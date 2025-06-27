@@ -619,10 +619,9 @@ body {
 
 .project-features {
   margin: 15px 0;
-  min-height: 180px !important; /* Increased height for longer content + force override */
-  display: flex !important;
-  flex-direction: column !important;
-  border: 2px dashed rgba(255, 0, 0, 0.3) !important; /* TEMP: Visual debugging border */
+  min-height: 140px; /* Consistent height across all Key Features sections */
+  display: flex;
+  flex-direction: column;
 }
 
 .project-features h4 {
@@ -630,12 +629,9 @@ body {
 }
 
 .project-features ul {
-  padding-left: 0 !important;
-  list-style: none !important;
-  flex-grow: 1 !important; /* Fill the available space within the consistent height */
-  margin: 0 !important;
-  display: flex !important;
-  flex-direction: column !important;
+  padding-left: 0;
+  list-style: none;
+  flex-grow: 1; /* Fill the available space within the consistent height */
 }
 
 .project-features li {
