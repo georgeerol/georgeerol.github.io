@@ -10,6 +10,7 @@ lang: en
 author: George Erol Fouché
 url: https://georgeerol.github.io
 baseurl: ""
+google_analytics: G-L4G7PPE4VC
 
 # Jekyll Configuration
 markdown: kramdown
