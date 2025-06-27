@@ -523,18 +523,6 @@ body {
   margin-bottom: 15px;
 }
 
-/* Project tech badges - consistent height for perfect alignment */
-.project-card .tech-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  justify-content: flex-start;
-  min-height: 70px; /* Consistent height across all cards */
-  align-items: flex-start;
-  align-content: flex-start;
-  margin-bottom: 15px;
-}
-
 /* Technology Badges */
 .tech-badge {
   display: inline-block;
