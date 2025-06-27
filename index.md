@@ -183,7 +183,6 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       
       <div class="project-links">
         <a href="https://github.com/fouliex/DeepLearningDroneSimulator" class="btn btn-primary" target="_blank">🔗 View GitHub</a>
-        <a href="#" class="btn btn-outline">🎮 Try Simulation</a>
       </div>
     </div>
     
@@ -212,7 +211,6 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       
       <div class="project-links">
         <a href="https://github.com/fouliex/SearchAndSampleRoverProject" class="btn btn-primary" target="_blank">🔗 View GitHub</a>
-        <a href="#" class="btn btn-outline">📹 Watch Demo</a>
       </div>
     </div>
     
@@ -242,7 +240,6 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       
       <div class="project-links">
         <a href="https://github.com/fouliex/RoboticPerception" class="btn btn-primary" target="_blank">🔗 View GitHub</a>
-        <a href="#" class="btn btn-outline">🔬 Technical Details</a>
       </div>
     </div>
     
@@ -271,7 +268,6 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       
       <div class="project-links">
         <a href="https://github.com/fouliex/RoboticArmPickAndDrop" class="btn btn-primary" target="_blank">🔗 View GitHub</a>
-        <a href="#" class="btn btn-outline">⚙️ Kinematics Calculator</a>
       </div>
     </div>
     
@@ -300,7 +296,6 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       
       <div class="project-links">
         <a href="https://github.com/fouliex/SelfDrivingCarBehavioralCloning" class="btn btn-primary" target="_blank">🔗 View GitHub</a>
-        <a href="#" class="btn btn-outline">🏁 Test Drive</a>
       </div>
     </div>
     
@@ -342,7 +337,6 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       
       <div class="project-links">
         <a href="https://github.com/georgeerol/IotAwsSpark" class="btn btn-primary" target="_blank">🔗 View GitHub</a>
-        <a href="#" class="btn btn-outline">📋 Live Demo</a>
       </div>
     </div>
     
@@ -373,7 +367,6 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       
       <div class="project-links">
         <a href="https://github.com/georgeerol/E2ESparkFlow" class="btn btn-primary" target="_blank">🔗 View GitHub</a>
-        <a href="#" class="btn btn-outline">📊 Analytics Dashboard</a>
       </div>
     </div>
     
@@ -402,7 +395,6 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       
       <div class="project-links">
         <a href="https://github.com/georgeerol/CommercingWithFlink" class="btn btn-primary" target="_blank">🔗 View GitHub</a>
-        <a href="#" class="btn btn-outline">📈 Performance Metrics</a>
       </div>
     </div>
   </div>
@@ -443,7 +435,6 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       
       <div class="project-links">
         <a href="https://github.com/georgeerol/ToDoApp" class="btn btn-primary" target="_blank">🔗 View GitHub</a>
-        <a href="#" class="btn btn-outline">🚀 Live Demo</a>
       </div>
     </div>
     
@@ -472,7 +463,6 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       
       <div class="project-links">
         <a href="https://github.com/georgeerol/ExpenseApp" class="btn btn-primary" target="_blank">🔗 View GitHub</a>
-        <a href="#" class="btn btn-outline">📊 View Analytics</a>
       </div>
     </div>
     
@@ -505,7 +495,6 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       
       <div class="project-links">
         <a href="https://github.com/georgeerol/ProjectManagementApp" class="btn btn-primary" target="_blank">🔗 View GitHub</a>
-        <a href="#" class="btn btn-outline">🏢 Enterprise Demo</a>
       </div>
     </div>
   </div>
