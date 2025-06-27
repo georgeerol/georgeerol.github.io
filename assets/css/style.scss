@@ -596,6 +596,7 @@ body {
   font-size: 1em;
   line-height: 1.6;
   margin-bottom: 15px;
+  flex-grow: 1; /* Expand to fill space, pushing content below to align horizontally */
 }
 
 .project-features {
