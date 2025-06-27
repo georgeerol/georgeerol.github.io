@@ -531,8 +531,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       <img src="./images/Clima.png" alt="Weather App" class="project-image">
       
       <div class="project-links">
-        <a href="https://github.com/georgeerol/AndroidAndIOSApps/tree/master/ClimaApp/Android/Clima" class="btn btn-primary" target="_blank">🤖 Android Version</a>
-        <a href="https://github.com/georgeerol/AndroidAndIOSApps/tree/master/ClimaApp/IOS/Clima" class="btn btn-outline" target="_blank">🍎 iOS Version</a>
+        <a href="https://github.com/georgeerol/AndroidAndIOSApps" class="btn btn-primary" target="_blank">🔗 View GitHub</a>
       </div>
     </div>
     
@@ -560,8 +559,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       <img src="./images/BitcoinTicker.png" alt="Bitcoin Ticker" class="project-image">
       
       <div class="project-links">
-        <a href="https://github.com/georgeerol/AndroidAndIOSApps/tree/master/BitcoinTickerApp/Android/BitcoinTicker" class="btn btn-primary" target="_blank">🤖 Android Version</a>
-        <a href="https://github.com/georgeerol/AndroidAndIOSApps/tree/master/BitcoinTickerApp/IOS/BitcoinTicker" class="btn btn-outline" target="_blank">🍎 iOS Version</a>
+        <a href="https://github.com/georgeerol/AndroidAndIOSApps" class="btn btn-primary" target="_blank">🔗 View GitHub</a>
       </div>
     </div>
   </div>
