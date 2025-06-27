@@ -630,24 +630,10 @@ body {
   align-items: stretch;
 }
 
-/* For mobile section with two buttons, use grid layout */
-#mobile .project-links {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-
 /* Single buttons should be centered and not too wide */
 .project-links .btn:only-child {
   max-width: 200px;
   width: 100%;
-}
-
-/* Mobile section buttons styling - smaller to fit longer text */
-#mobile .project-links .btn {
-  font-size: 0.8em;
-  padding: 10px 12px;
-  min-width: 140px;
 }
 
 /* Enhanced button styles with consistent sizing */
@@ -1001,24 +987,11 @@ body {
     max-width: 250px;
   }
   
-  /* Mobile section keeps its grid layout on mobile */
-  #mobile .project-links {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-  
   .btn {
     min-height: 48px;
     font-size: 0.85em;
     padding: 10px 16px;
     min-width: 140px;
-  }
-  
-  #mobile .project-links .btn {
-    font-size: 0.8em;
-    padding: 10px 12px;
-    min-width: 120px;
   }
   
   .contact-links {
