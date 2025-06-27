@@ -511,18 +511,6 @@ body {
   justify-content: center;
 }
 
-/* Project tech badges - consistent height for perfect alignment */
-.project-card .tech-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  justify-content: flex-start;
-  min-height: 70px; /* Consistent height across all cards */
-  align-items: flex-start;
-  align-content: flex-start;
-  margin-bottom: 15px;
-}
-
 /* Technology Badges */
 .tech-badge {
   display: inline-block;
@@ -608,13 +596,7 @@ body {
   font-size: 1em;
   line-height: 1.6;
   margin-bottom: 15px;
-  /* Content length management for perfect alignment */
-  display: -webkit-box;
-  -webkit-line-clamp: 3; /* Limit to 3 lines max */
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  min-height: 4.8em; /* 3 lines × 1.6 line-height = consistent height */
-  /* Note: Removed flex-grow since we now have consistent content heights */
+  flex-grow: 1; /* Expand to fill space, pushing content below to align horizontally */
 }
 
 .project-features {
@@ -738,23 +720,14 @@ body {
   border-color: var(--text-light);
 }
 
-/* Project Images - Consistent aspect ratio */
+/* Project Images */
 .project-image {
   width: 100%;
-  aspect-ratio: 16/9; /* Consistent aspect ratio for all images */
+  height: 200px;
   object-fit: cover;
-  object-position: center;
   border-radius: var(--border-radius);
   margin: 15px 0;
   transition: transform 0.3s ease;
-  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-  background-size: 200% 100%;
-}
-
-/* Dark theme image loading background */
-[data-theme="dark"] .project-image {
-  background: linear-gradient(90deg, #2d3748 25%, #4a5568 50%, #2d3748 75%);
-  background-size: 200% 100%;
 }
 
 .project-image:hover {
