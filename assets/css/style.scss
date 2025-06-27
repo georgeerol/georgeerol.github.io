@@ -552,6 +552,9 @@ body {
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   position: relative;
   overflow: hidden;
+  /* Flex layout to push buttons to bottom */
+  display: flex;
+  flex-direction: column;
 }
 
 [data-theme="dark"] .project-card {
@@ -626,7 +629,8 @@ body {
   display: flex;
   justify-content: center;
   gap: 12px;
-  margin-top: 20px;
+  margin-top: auto; /* Push buttons to bottom of card */
+  padding-top: 20px; /* Add space above buttons */
   align-items: stretch;
 }
 
