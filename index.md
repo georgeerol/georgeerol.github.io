@@ -179,7 +179,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
         </ul>
       </div>
       
-      <img src="./images/sim_screenshot.png" alt="Deep Learning Drone Simulator" class="project-image">
+      <img src="./images/FollowMeGif.gif" alt="Deep Learning Drone Simulator" class="project-image">
       
       <div class="project-links">
         <a href="https://github.com/fouliex/DeepLearningDroneSimulator" class="btn btn-primary" target="_blank">🔗 View GitHub</a>
