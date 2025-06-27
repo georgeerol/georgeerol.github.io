@@ -622,6 +622,7 @@ body {
   min-height: 140px; /* Consistent height across all Key Features sections */
   display: flex;
   flex-direction: column;
+  /* Cache refresh trigger - no visual impact */
 }
 
 .project-features h4 {
