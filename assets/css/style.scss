@@ -633,7 +633,8 @@ body {
 /* Single buttons should be centered and not too wide */
 .project-links .btn:only-child {
   max-width: 200px;
-  width: 100%;
+  width: auto;
+  flex: none; /* Don't grow to fill container */
 }
 
 /* Enhanced button styles with consistent sizing */
@@ -655,8 +656,7 @@ body {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  flex: 1; /* Allow buttons to grow in flex container */
-  min-width: 160px; /* Minimum width for good appearance */
+  min-width: 180px; /* Minimum width for good appearance */
 }
 
 /* Button hover animation effect */
@@ -985,6 +985,8 @@ body {
   
   .project-links .btn:only-child {
     max-width: 250px;
+    width: 100%;
+    flex: none;
   }
   
   .btn {
@@ -992,6 +994,8 @@ body {
     font-size: 0.85em;
     padding: 10px 16px;
     min-width: 140px;
+    width: 100%;
+    max-width: 250px;
   }
   
   .contact-links {
