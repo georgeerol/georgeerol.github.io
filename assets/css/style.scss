@@ -619,11 +619,19 @@ body {
 
 .project-features {
   margin: 15px 0;
+  min-height: 140px; /* Consistent height across all Key Features sections */
+  display: flex;
+  flex-direction: column;
+}
+
+.project-features h4 {
+  margin-bottom: 10px;
 }
 
 .project-features ul {
   padding-left: 0;
   list-style: none;
+  flex-grow: 1; /* Fill the available space within the consistent height */
 }
 
 .project-features li {
