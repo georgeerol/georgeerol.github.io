@@ -757,6 +757,26 @@ body {
   background-size: 200% 100%;
 }
 
+/* Standardize ALL image containers for perfect symmetry */
+.project-card .project-image,
+.project-card > div[style*="grid-template-columns"] {
+  min-height: 180px; /* Consistent height for all image sections */
+}
+
+/* Ensure images in grid containers fill height properly */
+.project-card > div[style*="grid-template-columns"] {
+  display: grid !important; /* Ensure grid layout */
+  align-items: stretch;
+}
+
+.project-card > div[style*="grid-template-columns"] img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: unset; /* Override aspect-ratio for grid images */
+  min-height: 180px;
+}
+
 .project-image:hover {
   transform: scale(1.02);
 }
