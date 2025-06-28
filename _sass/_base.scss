@@ -1,0 +1,44 @@
+/* Base styles and CSS variables for the portfolio */
+
+/* Light/Dark mode variables */
+:root {
+  --primary-color: #0366d6;
+  --secondary-color: #f1f8ff;
+  --accent-color: #28a745;
+  --text-dark: #24292e;
+  --text-light: #586069;
+  --border-color: #e1e4e8;
+  --shadow: 0 4px 12px rgba(0,0,0,0.1);
+  --border-radius: 8px;
+  --bg-color: #fff;
+  --card-bg: #fff;
+  --about-bg: #f8f9fa;
+}
+
+[data-theme="dark"] {
+  --primary-color: #58a6ff;
+  --secondary-color: #1e2731;
+  --accent-color: #56d364;
+  --text-dark: #f0f6fc;
+  --text-light: #c9d1d9;
+  --border-color: #30363d;
+  --shadow: 0 4px 12px rgba(0,0,0,0.3);
+  --bg-color: #0d1117;
+  --card-bg: #161b22;
+  --about-bg: #161b22;
+}
+
+/* Global base styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif !important;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: var(--bg-color);
+  color: var(--text-dark);
+  transition: background 0.3s ease, color 0.3s ease;
+} 

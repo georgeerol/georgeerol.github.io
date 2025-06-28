@@ -1,7 +1,10 @@
 ---
 ---
 
-/* Custom Portfolio Styles */
+/* Custom Portfolio Styles - Now with modular _sass support! */
+// @import "base"; // Commented out for now - testing _sass structure
+
+/* Current monolithic styles (to be modularized incrementally) */
 * {
   box-sizing: border-box;
 }
