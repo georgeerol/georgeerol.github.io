@@ -1,9 +1,9 @@
 source "https://rubygems.org"
 
-# Jekyll
-gem "jekyll", "~> 4.3"
+# GitHub Pages compatible Jekyll setup
+gem "github-pages", group: :jekyll_plugins
 
-# Essential Jekyll plugins
+# Essential SEO plugins (GitHub Pages compatible)
 group :jekyll_plugins do
   gem "jekyll-feed"
   gem "jekyll-sitemap"
