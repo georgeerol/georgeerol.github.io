@@ -17,8 +17,23 @@ markdown: kramdown
 highlighter: rouge
 permalink: /:title/
 sass:
-  sass_dir: assets/css
+  sass_dir: _sass
   style: compressed
+
+# GitHub Pages compatible plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
 
 # Additional metadata
 keywords: "software engineer, data engineering, robotics, full-stack developer, Apache Spark, AWS, machine learning, IoT, big data"
+
+# SEO tag settings
+seo:
+  name: George Erol Fouché
+  type: Person
+
+# Feed settings
+feed:
+  path: atom.xml
