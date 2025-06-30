@@ -1,10 +1,10 @@
 # George Erol Fouché Portfolio
 
-🚀 **Live Site**: [https://georgeerol.github.io/](https://georgeerol.github.io/)
+**Live Site**: [https://georgeerol.github.io/](https://georgeerol.github.io/)
 
 A modern, responsive portfolio website showcasing software engineering projects across **Robotics & AI**, **Data Engineering**, **Full-Stack Development**, and **Mobile Development**.
 
-## ✨ Features
+## Features
 
 - **🎨 Modern Design**: Clean, professional layout with dark/light theme toggle
 - **📱 Fully Responsive**: Optimized for all device sizes
