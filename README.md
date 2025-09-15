@@ -90,6 +90,26 @@ bundle exec jekyll serve
 # Open http://localhost:4000
 ```
 
+## 🐳 Local Development with Docker
+
+Prerequisite: Docker Desktop running.
+
+```bash
+# Build the image (first time or after Dockerfile changes)
+docker build -t local-jekyll-dev .
+
+# Start the server (detached)
+docker run --rm -d -p 4000:4000 -v "$PWD":/site -w /site --name jekyll_site local-jekyll-dev
+
+# View logs
+docker logs -f jekyll_site
+
+# Stop the server
+docker stop jekyll_site
+
+# Open http://localhost:4000
+```
+
 ## 📈 Analytics & SEO
 
 - **Google Analytics**: Configured via `_config.yml`
