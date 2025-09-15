@@ -508,6 +508,41 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
   
   <div class="project-grid">
     <div class="project-card">
+      <h3 class="project-title">🍷 VinNow — Wine Recommendation & Club</h3>
+      <div class="tech-badges">
+        <span class="tech-badge">React Native (Expo)</span>
+        <span class="tech-badge">TypeScript</span>
+        <span class="tech-badge">Flask</span>
+        <span class="tech-badge">PostgreSQL</span>
+        <span class="tech-badge">Stripe</span>
+      </div>
+
+      <p class="project-overview">A modern mobile app for discovering wines with reviews, favorites, cart/ordering, and an integrated Epic Society wine club with Stripe-powered subscriptions.</p>
+
+      <div class="project-features">
+        <h4>🎯 Key Features:</h4>
+        <ul>
+          <li>Wine discovery with detailed profiles and user reviews</li>
+          <li>Favorites, shopping cart, and order history</li>
+          <li>Epic Society membership tiers (Corks Crew, Curator)</li>
+          <li>Preferences (mixed, all red, all white) and member dashboard</li>
+          <li>Secure payments via Stripe subscriptions</li>
+        </ul>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+        <video controls preload="metadata" playsinline style="width: 100%; border-radius: var(--border-radius); background: #000;">
+          <source src="./images/Vintage.web.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <video controls preload="metadata" playsinline style="width: 100%; border-radius: var(--border-radius); background: #000;">
+          <source src="./images/VintageAI.web.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+
+    <div class="project-card">
       <h3 class="project-title">🌤️ Weather App</h3>
       <div class="tech-badges">
         <span class="tech-badge">Android</span>
