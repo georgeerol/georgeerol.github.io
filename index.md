@@ -508,7 +508,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
   
   <div class="project-grid">
     <div class="project-card">
-      <h3 class="project-title">🍷 VinNow — Wine Recommendation & Club</h3>
+      <h3 class="project-title">🍷 Vintage — Wine Recommendation & Club</h3>
       <div class="tech-badges">
         <span class="tech-badge">React Native (Expo)</span>
         <span class="tech-badge">TypeScript</span>
@@ -539,6 +539,9 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
           <source src="./images/VintageAI.web.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
+      </div>
+      <div class="project-links">
+        <a href="https://barnyardwinebar.com/" class="btn btn-primary" target="_blank">🍷 Live Website</a>
       </div>
     </div>
 
