@@ -418,7 +418,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
     <div class="project-card featured-card">
       <div class="featured-content">
         <div class="client-badge">🏢 Client Project</div>
-        <h3 class="project-title">🍕 SLIVER Pizzeria – Full Stack Platform</h3>
+        <h3 class="project-title">🍕 Full-Stack Restaurant Platform • Bay Area Sourdough Crust Pizzeria</h3>
         <div class="tech-badges">
           <span class="tech-badge">Next.js 14</span>
           <span class="tech-badge">TypeScript</span>
@@ -453,7 +453,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
         <div class="demo-item">
           <h5>🌐 Web Experience</h5>
           <video controls preload="metadata" playsinline class="demo-video">
-            <source src="./images/WebDec3.mp4" type="video/mp4">
+            <source src="./images/WebDec3.mp4#t=8" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
@@ -482,10 +482,12 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       <p class="project-overview">Secure admin panel for restaurant staff to manage daily operations including Pizza of the Day updates, location management, and real-time content updates.</p>
       
       <!-- Admin Demo Video - Moved up for better visual balance -->
-      <video controls preload="metadata" playsinline class="demo-video project-image">
-        <source src="./images/adminDec3.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+      <div class="demo-item">
+        <video controls preload="metadata" playsinline class="demo-video project-image">
+          <source src="./images/adminDec3.mp4#t=3" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
       
       <div class="project-links">
         <a href="https://sliverpizzeria-web-production.up.railway.app/admin" class="btn btn-primary" target="_blank">🔐 Admin Panel</a>
@@ -507,10 +509,12 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       <p class="project-overview">Production-ready infrastructure with containerized development, automated deployments, and cloud-native architecture for scalability and reliability.</p>
       
       <!-- Deployment Demo Video - Moved up for better visual balance -->
-      <video controls preload="metadata" playsinline class="demo-video project-image">
-        <source src="./images/DeployDec3.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+      <div class="demo-item">
+        <video controls preload="metadata" playsinline class="demo-video project-image">
+          <source src="./images/DeployDec3.mp4#t=5" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
       
       <div class="project-links">
         <a href="https://sliverpizzeria-api-production.up.railway.app/" class="btn btn-primary" target="_blank">⚡ Backend API</a>

@@ -1059,6 +1059,53 @@ body {
   border-left: 4px solid #FF6B35;
 }
 
+/* SLIVER - All blue becomes orange */
+.sliver-theme .project-card {
+  border-left: 4px solid #FF6B35;
+}
+
+.sliver-theme .project-card::before {
+  background: #FF6B35;
+}
+
+.sliver-theme .tech-badge {
+  border-color: #FF6B35;
+  color: #FF6B35;
+}
+
+.sliver-theme .tech-badge:hover {
+  background: #FF6B35;
+  color: white;
+}
+
+.sliver-theme .btn-primary {
+  background: #FF6B35;
+  border-color: #FF6B35;
+}
+
+.sliver-theme .btn-primary:hover {
+  background: #E55A28;
+  border-color: #E55A28;
+}
+
+.sliver-theme .btn:hover {
+  border-color: #FF6B35;
+}
+
+.sliver-theme .btn-secondary:hover {
+  background: rgba(255, 107, 53, 0.1);
+  border-color: #FF6B35;
+  color: #FF6B35;
+}
+
+.sliver-theme .project-features li::before {
+  color: #FF6B35;
+}
+
+.sliver-theme .project-card:hover {
+  border-color: #FF6B35;
+}
+
 [data-theme="dark"] .sliver-theme {
   background: linear-gradient(135deg, rgba(255, 107, 53, 0.08) 0%, rgba(76, 175, 80, 0.08) 100%);
 }
@@ -1071,6 +1118,53 @@ body {
 
 [data-theme="dark"] .vintage-theme {
   background: linear-gradient(135deg, rgba(128, 0, 32, 0.08) 0%, rgba(139, 69, 19, 0.08) 100%);
+}
+
+/* VINTAGE - All blue becomes burgundy/wine red */
+.vintage-theme .project-card {
+  border-left: 4px solid #722F37;
+}
+
+.vintage-theme .project-card::before {
+  background: #722F37;
+}
+
+.vintage-theme .tech-badge {
+  border-color: #722F37;
+  color: #722F37;
+}
+
+.vintage-theme .tech-badge:hover {
+  background: #722F37;
+  color: white;
+}
+
+.vintage-theme .btn-primary {
+  background: #722F37;
+  border-color: #722F37;
+}
+
+.vintage-theme .btn-primary:hover {
+  background: #5A252C;
+  border-color: #5A252C;
+}
+
+.vintage-theme .btn:hover {
+  border-color: #722F37;
+}
+
+.vintage-theme .btn-secondary:hover {
+  background: rgba(114, 47, 55, 0.1);
+  border-color: #722F37;
+  color: #722F37;
+}
+
+.vintage-theme .project-features li::before {
+  color: #722F37;
+}
+
+.vintage-theme .project-card:hover {
+  border-color: #722F37;
 }
 
 /* Client Project Grid - Custom layout for featured + supporting cards */
@@ -1167,8 +1261,28 @@ body {
 
 .client-project-subsection .project-card:not(.featured-card) .demo-video {
   flex-grow: 1;
-  min-height: 180px;
-  object-fit: cover;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: #1a1a1a;
+}
+
+/* Demo item wrapper for supporting cards - SLIVER orange */
+.sliver-theme .project-card:not(.featured-card) .demo-item {
+  background: linear-gradient(145deg, #FFF5F0 0%, #FFEDE5 100%);
+  border: 1px solid rgba(255, 107, 53, 0.35);
+  box-shadow: 0 3px 12px rgba(255, 107, 53, 0.12);
+  padding: 15px;
+  border-radius: var(--border-radius);
+}
+
+/* SLIVER admin video - orange background to match video content */
+.sliver-theme .project-card:not(.featured-card) .demo-video {
+  background: #E86F3A;
+}
+
+/* DevOps video - dark background to match Railway UI */
+.sliver-theme .project-card:nth-child(3) .demo-video {
+  background: #1a1a2e;
 }
 
 .client-project-subsection .project-card:not(.featured-card) .project-links {
