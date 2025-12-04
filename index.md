@@ -11,7 +11,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
     <a href="#about">About</a>
     <a href="#robotics">Robotics</a>
     <a href="#data-pipeline">Data Pipeline</a>
-    <a href="#sliver-pizzeria">Client Work</a>
+    <a href="#client-work">Client Work</a>
     <a href="#fullstack">Full Stack</a>
     <a href="#mobile">Mobile</a>
     <a href="#contact">Contact</a>
@@ -401,12 +401,17 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
   </div>
 </section>
 
-<!-- SLIVER Pizzeria - CLIENT PROJECT -->
-<section id="sliver-pizzeria" class="projects-section client-project-section">
+<!-- CLIENT WORK SECTION -->
+<section id="client-work" class="projects-section">
   <div class="section-header">
-    <h2>🍕 Client Work: SLIVER Pizzeria</h2>
-    <p class="section-subtitle">Full-Stack Restaurant Platform • Bay Area Vegetarian Pizzeria</p>
+    <h2>💼 Client Work</h2>
+    <p class="section-subtitle">Production Applications Built for Real Businesses</p>
   </div>
+
+<!-- SLIVER Pizzeria - CLIENT PROJECT -->
+<div id="sliver-pizzeria" class="client-project-subsection sliver-theme">
+  <h3 class="client-project-title">🍕 SLIVER Pizzeria</h3>
+  <p class="client-project-subtitle">Full-Stack Restaurant Platform • Bay Area Vegetarian Pizzeria</p>
   
   <div class="project-grid">
     <div class="project-card featured-card">
@@ -530,7 +535,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
   </div>
   
   <!-- SLIVER Brand Info -->
-  <div class="client-info-card">
+  <div class="client-info-card sliver-info">
     <div class="client-logo">🍕</div>
     <div class="client-details">
       <h4>About SLIVER Pizzeria</h4>
@@ -543,6 +548,131 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       </div>
     </div>
   </div>
+</div>
+
+<!-- Vintage Wine - CLIENT PROJECT -->
+<div id="vintage-wine" class="client-project-subsection vintage-theme">
+  <h3 class="client-project-title">🍷 Vintage Wine</h3>
+  <p class="client-project-subtitle">Mobile Wine Club & E-Commerce Platform • Barnyard Wine Bar</p>
+  
+  <div class="project-grid">
+    <div class="project-card featured-card vintage-featured">
+      <div class="client-badge vintage-badge">🏢 Client Project</div>
+      <h3 class="project-title">🍷 Vintage — Wine Recommendation & Club</h3>
+      <div class="tech-badges">
+        <span class="tech-badge">React Native (Expo)</span>
+        <span class="tech-badge">TypeScript</span>
+        <span class="tech-badge">Flask</span>
+        <span class="tech-badge">PostgreSQL</span>
+        <span class="tech-badge">Stripe</span>
+        <span class="tech-badge">AI Recommendations</span>
+      </div>
+      
+      <p class="project-overview">A modern mobile app built for <strong>Barnyard Wine Bar</strong> — featuring wine discovery, user reviews, shopping cart, and an integrated <strong>Epic Society</strong> wine club with Stripe-powered subscriptions and AI-powered recommendations.</p>
+      
+      <div class="project-features">
+        <h4>🎯 Key Features:</h4>
+        <ul>
+          <li><strong>Wine Discovery:</strong> Detailed profiles, tasting notes, and user reviews</li>
+          <li><strong>E-Commerce:</strong> Shopping cart, favorites, and order history</li>
+          <li><strong>Epic Society Club:</strong> Membership tiers (Corks Crew, Curator) with preferences</li>
+          <li><strong>AI Recommendations:</strong> Personalized wine suggestions based on taste profile</li>
+        </ul>
+      </div>
+      
+      <!-- Wine App Demo Videos -->
+      <div class="sliver-demo-grid">
+        <div class="demo-item">
+          <h5>🍷 Wine Discovery & Cart</h5>
+          <video controls preload="metadata" playsinline class="demo-video">
+            <source src="./images/Vintage.web.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="demo-item">
+          <h5>🤖 AI Recommendations</h5>
+          <video controls preload="metadata" playsinline class="demo-video">
+            <source src="./images/VintageAI.web.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      
+      <div class="project-links">
+        <a href="https://barnyardwinebar.com/" class="btn btn-primary" target="_blank">🍷 Live Website</a>
+      </div>
+    </div>
+    
+    <div class="project-card">
+      <h3 class="project-title">🔐 Backend & Payments</h3>
+      <div class="tech-badges">
+        <span class="tech-badge">Flask</span>
+        <span class="tech-badge">SQLAlchemy</span>
+        <span class="tech-badge">Stripe API</span>
+        <span class="tech-badge">JWT Auth</span>
+        <span class="tech-badge">REST API</span>
+      </div>
+      
+      <p class="project-overview">Secure backend powering the wine club with subscription management, payment processing, and user authentication.</p>
+      
+      <div class="project-features">
+        <h4>🎯 Backend Features:</h4>
+        <ul>
+          <li>Stripe subscription integration for recurring payments</li>
+          <li>JWT-based user authentication</li>
+          <li>Wine inventory and order management</li>
+          <li>Member preference tracking</li>
+        </ul>
+      </div>
+      
+      <div class="project-links">
+        <a href="https://barnyardwinebar.com/" class="btn btn-primary" target="_blank">🌐 Visit Site</a>
+      </div>
+    </div>
+    
+    <div class="project-card">
+      <h3 class="project-title">🍇 Epic Society Wine Club</h3>
+      <div class="tech-badges">
+        <span class="tech-badge">Subscriptions</span>
+        <span class="tech-badge">Member Dashboard</span>
+        <span class="tech-badge">Wine Preferences</span>
+        <span class="tech-badge">Curated Selections</span>
+      </div>
+      
+      <p class="project-overview">Exclusive wine club membership system with multiple tiers, personalized selections, and member benefits.</p>
+      
+      <div class="project-features">
+        <h4>🎯 Club Features:</h4>
+        <ul>
+          <li><strong>Tiers:</strong> Corks Crew & Curator memberships</li>
+          <li><strong>Preferences:</strong> Mixed, All Red, or All White</li>
+          <li><strong>Dashboard:</strong> Track shipments and manage subscription</li>
+          <li><strong>Benefits:</strong> Member discounts and early access</li>
+        </ul>
+      </div>
+      
+      <div class="project-links">
+        <a href="https://barnyardwinebar.com/" class="btn btn-primary" target="_blank">🍷 Join Club</a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Vintage Brand Info -->
+  <div class="client-info-card vintage-info">
+    <div class="client-logo vintage-logo">🍷</div>
+    <div class="client-details">
+      <h4>About Barnyard Wine Bar</h4>
+      <p><em>"Where every glass tells a story"</em> — Barnyard Wine Bar brings curated wine experiences to wine enthusiasts through their Epic Society wine club. Members enjoy personalized selections, exclusive tastings, and a community of fellow wine lovers.</p>
+      <div class="tech-badges location-badges vintage-badges">
+        <span class="tech-badge">🍇 Curated Wines</span>
+        <span class="tech-badge">📦 Monthly Shipments</span>
+        <span class="tech-badge">🎉 Member Events</span>
+        <span class="tech-badge">💳 Stripe Payments</span>
+      </div>
+    </div>
+  </div>
+</div>
+
 </section>
 
 <!-- Full Stack Projects - THIRD -->
@@ -652,44 +782,6 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
   </div>
   
   <div class="project-grid">
-    <div class="project-card">
-      <h3 class="project-title">🍷 Vintage — Wine Recommendation & Club</h3>
-      <div class="tech-badges">
-        <span class="tech-badge">React Native (Expo)</span>
-        <span class="tech-badge">TypeScript</span>
-        <span class="tech-badge">Flask</span>
-        <span class="tech-badge">PostgreSQL</span>
-        <span class="tech-badge">Stripe</span>
-      </div>
-
-      <p class="project-overview">A modern mobile app for discovering wines with reviews, favorites, cart/ordering, and an integrated Epic Society wine club with Stripe-powered subscriptions.</p>
-
-      <div class="project-features">
-        <h4>🎯 Key Features:</h4>
-        <ul>
-          <li>Wine discovery with detailed profiles and user reviews</li>
-          <li>Favorites, shopping cart, and order history</li>
-          <li>Epic Society membership tiers (Corks Crew, Curator)</li>
-          <li>Preferences (mixed, all red, all white) and member dashboard</li>
-          <li>Secure payments via Stripe subscriptions</li>
-        </ul>
-      </div>
-
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-        <video controls preload="metadata" playsinline style="width: 100%; border-radius: var(--border-radius); background: #000;">
-          <source src="./images/Vintage.web.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <video controls preload="metadata" playsinline style="width: 100%; border-radius: var(--border-radius); background: #000;">
-          <source src="./images/VintageAI.web.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div class="project-links">
-        <a href="https://barnyardwinebar.com/" class="btn btn-primary" target="_blank">🍷 Live Website</a>
-      </div>
-    </div>
-
     <div class="project-card">
       <h3 class="project-title">🌤️ Weather App</h3>
       <div class="tech-badges">

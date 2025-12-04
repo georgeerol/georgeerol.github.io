@@ -1030,19 +1030,47 @@ body {
 }
 
 /* ========================================
-   CLIENT PROJECT SECTION - SLIVER PIZZERIA
+   CLIENT WORK SECTION - MULTIPLE PROJECTS
    ======================================== */
 
-.client-project-section {
-  background: linear-gradient(135deg, rgba(255, 107, 53, 0.03) 0%, rgba(76, 175, 80, 0.03) 100%);
+/* Client Project Subsections */
+.client-project-subsection {
   border-radius: var(--border-radius);
   padding: 30px;
   margin: 25px 0;
+}
+
+.client-project-title {
+  font-size: 1.8em;
+  margin-bottom: 8px;
+  color: var(--text-dark);
+}
+
+.client-project-subtitle {
+  color: var(--text-light);
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+/* SLIVER Theme (Orange) */
+.sliver-theme {
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.03) 0%, rgba(76, 175, 80, 0.03) 100%);
   border-left: 4px solid #FF6B35;
 }
 
-[data-theme="dark"] .client-project-section {
+[data-theme="dark"] .sliver-theme {
   background: linear-gradient(135deg, rgba(255, 107, 53, 0.08) 0%, rgba(76, 175, 80, 0.08) 100%);
+}
+
+/* Vintage Wine Theme (Burgundy) */
+.vintage-theme {
+  background: linear-gradient(135deg, rgba(128, 0, 32, 0.03) 0%, rgba(139, 69, 19, 0.03) 100%);
+  border-left: 4px solid #722F37;
+}
+
+[data-theme="dark"] .vintage-theme {
+  background: linear-gradient(135deg, rgba(128, 0, 32, 0.08) 0%, rgba(139, 69, 19, 0.08) 100%);
 }
 
 .section-subtitle {
@@ -1066,6 +1094,12 @@ body {
   box-shadow: 0 2px 8px rgba(255, 107, 53, 0.3);
 }
 
+/* Vintage Wine Badge */
+.vintage-badge {
+  background: linear-gradient(135deg, #722F37 0%, #8B4557 100%);
+  box-shadow: 0 2px 8px rgba(114, 47, 55, 0.3);
+}
+
 .featured-card {
   grid-column: span 1;
   border: 2px solid #FF6B35;
@@ -1075,6 +1109,16 @@ body {
 .featured-card::before {
   background: linear-gradient(90deg, #FF6B35, #4CAF50);
   height: 5px;
+}
+
+/* Vintage Featured Card */
+.vintage-featured {
+  border: 2px solid #722F37;
+  background: linear-gradient(180deg, var(--card-bg) 0%, rgba(114, 47, 55, 0.02) 100%);
+}
+
+.vintage-featured::before {
+  background: linear-gradient(90deg, #722F37, #8B4557);
 }
 
 /* SLIVER Demo Grid - Side by side videos */
@@ -1165,6 +1209,28 @@ body {
   background: rgba(255, 107, 53, 0.2);
   color: #ff8c5a;
   border-color: #ff8c5a;
+}
+
+/* Vintage Wine Info Card */
+.vintage-info {
+  border: 1px solid rgba(114, 47, 55, 0.3);
+}
+
+.vintage-logo {
+  background: linear-gradient(135deg, #722F37 0%, #8B4557 100%);
+  box-shadow: 0 4px 15px rgba(114, 47, 55, 0.3);
+}
+
+.vintage-badges .tech-badge {
+  background: rgba(114, 47, 55, 0.1);
+  color: #722F37;
+  border-color: #722F37;
+}
+
+[data-theme="dark"] .vintage-badges .tech-badge {
+  background: rgba(114, 47, 55, 0.2);
+  color: #a85c67;
+  border-color: #a85c67;
 }
 
 /* Responsive styles for SLIVER section */
