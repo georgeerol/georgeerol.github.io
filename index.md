@@ -11,6 +11,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
     <a href="#about">About</a>
     <a href="#robotics">Robotics</a>
     <a href="#data-pipeline">Data Pipeline</a>
+    <a href="#client-work">Client Work</a>
     <a href="#fullstack">Full Stack</a>
     <a href="#mobile">Mobile</a>
     <a href="#contact">Contact</a>
@@ -400,6 +401,268 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
   </div>
 </section>
 
+<!-- CLIENT WORK SECTION -->
+<section id="client-work" class="projects-section">
+  <div class="section-header">
+    <h2>💼 Client Work</h2>
+    <p class="section-subtitle">Production Applications Built for Real Businesses</p>
+  </div>
+
+<!-- SLIVER Pizzeria - CLIENT PROJECT -->
+<div id="sliver-pizzeria" class="client-project-subsection sliver-theme">
+  <h3 class="client-project-title">🍕 SLIVER Pizzeria</h3>
+  <p class="client-project-subtitle">Full-Stack Restaurant Platform • Bay Area Vegetarian Pizzeria</p>
+  
+  <div class="project-grid">
+    <!-- Featured Card - Full Width with 2-column layout -->
+    <div class="project-card featured-card">
+      <div class="featured-content">
+        <div class="client-header">
+          <img src="./images/sliver-logo.png" alt="SLIVER Pizzeria Logo" class="client-logo">
+          <div class="client-badge">🏢 Client Project</div>
+        </div>
+        <h3 class="project-title">Full-Stack Restaurant Platform • Bay Area Sourdough Crust Pizzeria</h3>
+        <div class="tech-badges">
+          <span class="tech-badge">Next.js 14</span>
+          <span class="tech-badge">TypeScript</span>
+          <span class="tech-badge">FastAPI</span>
+          <span class="tech-badge">PostgreSQL</span>
+          <span class="tech-badge">Tailwind CSS</span>
+          <span class="tech-badge">Docker</span>
+          <span class="tech-badge">Railway</span>
+          <span class="tech-badge">JWT Auth</span>
+          <span class="tech-badge">Cloudinary</span>
+        </div>
+        
+        <p class="project-overview">A modern, full-stack restaurant website built for <strong>SLIVER Pizzeria</strong> — a beloved Bay Area vegetarian pizzeria with 6 locations. Features a beautiful customer-facing site and a powerful admin dashboard for managing daily operations.</p>
+        
+        <div class="project-features">
+          <h4>🎯 Key Features:</h4>
+          <ul>
+            <li><strong>Public Website:</strong> Modern responsive homepage, 6 Bay Area locations, delivery partner integration</li>
+            <li><strong>Pizza of the Day:</strong> Dynamic daily specials with image uploads and location-specific pricing</li>
+            <li><strong>Admin Dashboard:</strong> JWT authentication, pizza management, location updates</li>
+            <li><strong>Infrastructure:</strong> Docker containerization, Railway deployment, CI/CD pipeline</li>
+          </ul>
+        </div>
+        
+        <div class="project-links">
+          <a href="https://sliverpizzeria-web-production.up.railway.app/" class="btn btn-primary" target="_blank">🚀 Live Demo</a>
+          <a href="https://www.sliverpizzeria.com/" class="btn btn-outline" target="_blank">🍕 Current Site</a>
+        </div>
+      </div>
+      
+      <div class="featured-media">
+        <div class="demo-item">
+          <h5>🌐 Web Experience</h5>
+          <video controls preload="metadata" playsinline class="demo-video">
+            <source src="./images/WebDec3.mp4#t=8" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="demo-item">
+          <h5>📱 Mobile Responsive</h5>
+          <video controls preload="metadata" playsinline class="demo-video">
+            <source src="./images/MobileDec3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Admin Dashboard Card -->
+    <div class="project-card">
+      <h3 class="project-title">🔐 Admin Dashboard & API</h3>
+      <div class="tech-badges">
+        <span class="tech-badge">FastAPI</span>
+        <span class="tech-badge">SQLAlchemy</span>
+        <span class="tech-badge">psycopg3</span>
+        <span class="tech-badge">Pydantic</span>
+        <span class="tech-badge">JWT</span>
+        <span class="tech-badge">REST API</span>
+      </div>
+      
+      <p class="project-overview">Secure admin panel for restaurant staff to manage daily operations including Pizza of the Day updates, location management, and real-time content updates.</p>
+      
+      <!-- Admin Demo Video - Moved up for better visual balance -->
+      <div class="demo-item">
+        <video controls preload="metadata" playsinline class="demo-video project-image">
+          <source src="./images/adminDec3.mp4#t=3" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      
+      <div class="project-links">
+        <a href="https://sliverpizzeria-web-production.up.railway.app/admin" class="btn btn-primary" target="_blank">🔐 Admin Panel</a>
+        <a href="https://sliverpizzeria-api-production.up.railway.app/docs" class="btn btn-outline" target="_blank">📚 API Docs</a>
+      </div>
+    </div>
+    
+    <!-- DevOps Card -->
+    <div class="project-card">
+      <h3 class="project-title">🚀 DevOps & Deployment</h3>
+      <div class="tech-badges">
+        <span class="tech-badge">Docker Compose</span>
+        <span class="tech-badge">Railway</span>
+        <span class="tech-badge">GitHub Actions</span>
+        <span class="tech-badge">PostgreSQL</span>
+        <span class="tech-badge">Cloudinary</span>
+      </div>
+      
+      <p class="project-overview">Production-ready infrastructure with containerized development, automated deployments, and cloud-native architecture for scalability and reliability.</p>
+      
+      <!-- Deployment Demo Video - Moved up for better visual balance -->
+      <div class="demo-item">
+        <video controls preload="metadata" playsinline class="demo-video project-image">
+          <source src="./images/DeployDec3.mp4#t=5" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      
+      <div class="project-links">
+        <a href="https://sliverpizzeria-api-production.up.railway.app/" class="btn btn-primary" target="_blank">⚡ Backend API</a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- SLIVER Brand Info -->
+  <div class="client-info-card sliver-info">
+    <div class="client-logo">🍕</div>
+    <div class="client-details">
+      <h4>About SLIVER Pizzeria</h4>
+      <p><em>"An experiment in culinary happiness"</em> — SLIVER offers a healthier alternative focusing on fresh produce, 100% vegetarian with sourdough crust pizza. Family owned & operated with 6 Bay Area locations serving Berkeley, Oakland, Lafayette, and Fremont.</p>
+      <div class="tech-badges location-badges">
+        <span class="tech-badge">📍 Berkeley (2)</span>
+        <span class="tech-badge">📍 Oakland (2)</span>
+        <span class="tech-badge">📍 Lafayette</span>
+        <span class="tech-badge">📍 Fremont</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Vintage Wine - CLIENT PROJECT -->
+<div id="vintage-wine" class="client-project-subsection vintage-theme">
+  <h3 class="client-project-title">🍷 Vintage Wine</h3>
+  <p class="client-project-subtitle">Mobile Wine Club & E-Commerce Platform • Barnyard Wine Bar</p>
+  
+  <div class="project-grid">
+    <!-- Featured Card - Full Width with 2-column layout -->
+    <div class="project-card featured-card vintage-featured">
+      <div class="featured-content">
+        <div class="client-header">
+          <img src="./images/TheBarnyardLogo.png" alt="The Barnyard Wine Bar Logo" class="client-logo">
+          <div class="client-badge vintage-badge">🏢 Client Project</div>
+        </div>
+        <h3 class="project-title">Vintage — Wine Recommendation & Club</h3>
+        <div class="tech-badges">
+          <span class="tech-badge">React Native (Expo)</span>
+          <span class="tech-badge">TypeScript</span>
+          <span class="tech-badge">Flask</span>
+          <span class="tech-badge">PostgreSQL</span>
+          <span class="tech-badge">Stripe</span>
+          <span class="tech-badge">AI Recommendations</span>
+        </div>
+        
+        <p class="project-overview">A modern mobile app built for <strong>Barnyard Wine Bar</strong> — featuring wine discovery, user reviews, shopping cart, and an integrated <strong>Epic Society</strong> wine club with Stripe-powered subscriptions and AI-powered recommendations.</p>
+        
+        <div class="project-features">
+          <h4>🎯 Key Features:</h4>
+          <ul>
+            <li><strong>Wine Discovery:</strong> Detailed profiles, tasting notes, and user reviews</li>
+            <li><strong>E-Commerce:</strong> Shopping cart, favorites, and order history</li>
+            <li><strong>Epic Society Club:</strong> Membership tiers (Corks Crew, Curator) with preferences</li>
+            <li><strong>AI Recommendations:</strong> Personalized wine suggestions based on taste profile</li>
+          </ul>
+        </div>
+        
+        <div class="project-links">
+          <a href="https://barnyardwinebar.com/" class="btn btn-primary" target="_blank">🍷 Live Website</a>
+        </div>
+      </div>
+      
+      <div class="featured-media">
+        <div class="demo-item">
+          <h5>🍷 Wine Discovery & Cart</h5>
+          <video controls preload="metadata" playsinline class="demo-video mobile-demo">
+            <source src="./images/Vintage.web.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="demo-item">
+          <h5>🤖 AI Recommendations</h5>
+          <video controls preload="metadata" playsinline class="demo-video mobile-demo">
+            <source src="./images/VintageAI.web.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Backend Card with Icon -->
+    <div class="project-card compact-card">
+      <div class="card-icon">💳</div>
+      <h3 class="project-title">Backend & Payments</h3>
+      <div class="tech-badges">
+        <span class="tech-badge">Flask</span>
+        <span class="tech-badge">SQLAlchemy</span>
+        <span class="tech-badge">Stripe API</span>
+        <span class="tech-badge">JWT Auth</span>
+      </div>
+      
+      <ul class="compact-features">
+        <li>✓ Stripe subscription integration</li>
+        <li>✓ JWT-based authentication</li>
+        <li>✓ Wine inventory management</li>
+        <li>✓ Member preference tracking</li>
+      </ul>
+      
+      <div class="project-links">
+        <a href="https://barnyardwinebar.com/" class="btn btn-primary" target="_blank">🌐 Visit Site</a>
+      </div>
+    </div>
+    
+    <!-- Wine Club Card with Icon -->
+    <div class="project-card compact-card">
+      <div class="card-icon">🍇</div>
+      <h3 class="project-title">Epic Society Wine Club</h3>
+      <div class="tech-badges">
+        <span class="tech-badge">Subscriptions</span>
+        <span class="tech-badge">Member Dashboard</span>
+        <span class="tech-badge">Curated Selections</span>
+      </div>
+      
+      <ul class="compact-features">
+        <li>✓ Corks Crew & Curator tiers</li>
+        <li>✓ Mixed, Red, or White preferences</li>
+        <li>✓ Shipment tracking dashboard</li>
+        <li>✓ Member discounts & early access</li>
+      </ul>
+      
+      <div class="project-links">
+        <a href="https://barnyardwinebar.com/" class="btn btn-primary" target="_blank">🍷 Join Club</a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Vintage Brand Info -->
+  <div class="client-info-card vintage-info">
+    <div class="client-logo vintage-logo">🍷</div>
+    <div class="client-details">
+      <h4>About Barnyard Wine Bar</h4>
+      <p><em>"Where every glass tells a story"</em> — Barnyard Wine Bar brings curated wine experiences to wine enthusiasts through their Epic Society wine club. Members enjoy personalized selections, exclusive tastings, and a community of fellow wine lovers.</p>
+      <div class="tech-badges location-badges vintage-badges">
+        <span class="tech-badge">🍇 Curated Wines</span>
+        <span class="tech-badge">📦 Monthly Shipments</span>
+        <span class="tech-badge">🎉 Member Events</span>
+        <span class="tech-badge">💳 Stripe Payments</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+</section>
+
 <!-- Full Stack Projects - THIRD -->
 <section id="fullstack" class="projects-section">
   <div class="section-header">
@@ -507,44 +770,6 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
   </div>
   
   <div class="project-grid">
-    <div class="project-card">
-      <h3 class="project-title">🍷 Vintage — Wine Recommendation & Club</h3>
-      <div class="tech-badges">
-        <span class="tech-badge">React Native (Expo)</span>
-        <span class="tech-badge">TypeScript</span>
-        <span class="tech-badge">Flask</span>
-        <span class="tech-badge">PostgreSQL</span>
-        <span class="tech-badge">Stripe</span>
-      </div>
-
-      <p class="project-overview">A modern mobile app for discovering wines with reviews, favorites, cart/ordering, and an integrated Epic Society wine club with Stripe-powered subscriptions.</p>
-
-      <div class="project-features">
-        <h4>🎯 Key Features:</h4>
-        <ul>
-          <li>Wine discovery with detailed profiles and user reviews</li>
-          <li>Favorites, shopping cart, and order history</li>
-          <li>Epic Society membership tiers (Corks Crew, Curator)</li>
-          <li>Preferences (mixed, all red, all white) and member dashboard</li>
-          <li>Secure payments via Stripe subscriptions</li>
-        </ul>
-      </div>
-
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-        <video controls preload="metadata" playsinline style="width: 100%; border-radius: var(--border-radius); background: #000;">
-          <source src="./images/Vintage.web.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <video controls preload="metadata" playsinline style="width: 100%; border-radius: var(--border-radius); background: #000;">
-          <source src="./images/VintageAI.web.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div class="project-links">
-        <a href="https://barnyardwinebar.com/" class="btn btn-primary" target="_blank">🍷 Live Website</a>
-      </div>
-    </div>
-
     <div class="project-card">
       <h3 class="project-title">🌤️ Weather App</h3>
       <div class="tech-badges">

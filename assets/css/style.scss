@@ -1027,6 +1027,513 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* ========================================
+   CLIENT WORK SECTION - MULTIPLE PROJECTS
+   ======================================== */
+
+/* Client Project Subsections */
+.client-project-subsection {
+  border-radius: var(--border-radius);
+  padding: 30px;
+  margin: 25px 0;
+}
+
+.client-project-title {
+  font-size: 1.8em;
+  margin-bottom: 8px;
+  color: var(--text-dark);
+}
+
+.client-project-subtitle {
+  color: var(--text-light);
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+/* SLIVER Theme (Orange) */
+.sliver-theme {
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.03) 0%, rgba(76, 175, 80, 0.03) 100%);
+  border-left: 4px solid #FF6B35;
+}
+
+/* SLIVER - All blue becomes orange */
+.sliver-theme .project-card {
+  border-left: 4px solid #FF6B35;
+}
+
+.sliver-theme .project-card::before {
+  background: #FF6B35;
+}
+
+.sliver-theme .tech-badge {
+  border-color: #FF6B35;
+  color: #FF6B35;
+}
+
+.sliver-theme .tech-badge:hover {
+  background: #FF6B35;
+  color: white;
+}
+
+.sliver-theme .btn-primary {
+  background: #FF6B35;
+  border-color: #FF6B35;
+}
+
+.sliver-theme .btn-primary:hover {
+  background: #E55A28;
+  border-color: #E55A28;
+}
+
+.sliver-theme .btn:hover {
+  border-color: #FF6B35;
+}
+
+.sliver-theme .btn-secondary:hover {
+  background: rgba(255, 107, 53, 0.1);
+  border-color: #FF6B35;
+  color: #FF6B35;
+}
+
+.sliver-theme .project-features li::before {
+  color: #FF6B35;
+}
+
+.sliver-theme .project-card:hover {
+  border-color: #FF6B35;
+}
+
+[data-theme="dark"] .sliver-theme {
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.08) 0%, rgba(76, 175, 80, 0.08) 100%);
+}
+
+/* Vintage Wine Theme (Burgundy) */
+.vintage-theme {
+  background: linear-gradient(135deg, rgba(128, 0, 32, 0.03) 0%, rgba(139, 69, 19, 0.03) 100%);
+  border-left: 4px solid #722F37;
+}
+
+[data-theme="dark"] .vintage-theme {
+  background: linear-gradient(135deg, rgba(128, 0, 32, 0.08) 0%, rgba(139, 69, 19, 0.08) 100%);
+}
+
+/* VINTAGE - All blue becomes burgundy/wine red */
+.vintage-theme .project-card {
+  border-left: 4px solid #722F37;
+}
+
+.vintage-theme .project-card::before {
+  background: #722F37;
+}
+
+.vintage-theme .tech-badge {
+  border-color: #722F37;
+  color: #722F37;
+}
+
+.vintage-theme .tech-badge:hover {
+  background: #722F37;
+  color: white;
+}
+
+.vintage-theme .btn-primary {
+  background: #722F37;
+  border-color: #722F37;
+}
+
+.vintage-theme .btn-primary:hover {
+  background: #5A252C;
+  border-color: #5A252C;
+}
+
+.vintage-theme .btn:hover {
+  border-color: #722F37;
+}
+
+.vintage-theme .btn-secondary:hover {
+  background: rgba(114, 47, 55, 0.1);
+  border-color: #722F37;
+  color: #722F37;
+}
+
+.vintage-theme .project-features li::before {
+  color: #722F37;
+}
+
+.vintage-theme .project-card:hover {
+  border-color: #722F37;
+}
+
+/* Client Project Grid - Custom layout for featured + supporting cards */
+.client-project-subsection .project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+/* Featured card spans full width with 2-column internal layout */
+.client-project-subsection .featured-card {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: start;
+  padding: 25px;
+}
+
+.client-project-subsection .featured-card::before {
+  grid-column: 1 / -1;
+}
+
+.featured-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.featured-content .project-title {
+  margin-bottom: 5px;
+}
+
+.featured-content .project-overview {
+  margin-bottom: 10px;
+  flex-grow: 0;
+}
+
+.featured-content .project-links {
+  margin-top: 15px;
+  padding-top: 0;
+}
+
+.featured-media {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.featured-media .demo-item {
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.08) 0%, rgba(255, 140, 90, 0.05) 100%);
+  padding: 15px;
+  border-radius: var(--border-radius);
+  border: 1px solid rgba(255, 107, 53, 0.2);
+}
+
+/* SLIVER orange theme for demo items */
+.sliver-theme .featured-media .demo-item {
+  background: linear-gradient(145deg, #FFF5F0 0%, #FFEDE5 100%);
+  border: 1px solid rgba(255, 107, 53, 0.35);
+  box-shadow: 0 3px 12px rgba(255, 107, 53, 0.12);
+}
+
+/* Vintage burgundy theme for demo items */
+.vintage-theme .featured-media .demo-item {
+  background: linear-gradient(145deg, #FBF4F6 0%, #F8EEF1 100%);
+  border: 1px solid rgba(128, 0, 32, 0.35);
+  box-shadow: 0 3px 12px rgba(128, 0, 32, 0.12);
+}
+
+.featured-media .demo-item h5 {
+  margin-bottom: 10px;
+  color: var(--text-dark);
+  font-size: 0.95em;
+}
+
+.featured-media .demo-video {
+  margin: 0;
+  max-height: none;
+}
+
+/* Supporting cards - compact with video prominent */
+.client-project-subsection .project-card:not(.featured-card) {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.client-project-subsection .project-card:not(.featured-card) .project-overview {
+  flex-grow: 0;
+  margin-bottom: 15px;
+}
+
+.client-project-subsection .project-card:not(.featured-card) .demo-video {
+  flex-grow: 1;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: #1a1a1a;
+}
+
+/* Demo item wrapper for supporting cards - SLIVER orange */
+.sliver-theme .project-card:not(.featured-card) .demo-item {
+  background: linear-gradient(145deg, #FFF5F0 0%, #FFEDE5 100%);
+  border: 1px solid rgba(255, 107, 53, 0.35);
+  box-shadow: 0 3px 12px rgba(255, 107, 53, 0.12);
+  padding: 15px;
+  border-radius: var(--border-radius);
+}
+
+/* SLIVER admin video - orange background to match video content */
+.sliver-theme .project-card:not(.featured-card) .demo-video {
+  background: #E86F3A;
+}
+
+/* DevOps video - dark background to match Railway UI */
+.sliver-theme .project-card:nth-child(3) .demo-video {
+  background: #1a1a2e;
+}
+
+.client-project-subsection .project-card:not(.featured-card) .project-links {
+  margin-top: 15px;
+}
+
+/* Compact cards with icons for supporting cards without videos */
+.compact-card {
+  text-align: center;
+  padding: 25px 20px !important;
+}
+
+.compact-card .card-icon {
+  font-size: 3em;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.compact-card .project-title {
+  justify-content: center;
+  font-size: 1.2em;
+  margin-bottom: 12px;
+}
+
+.compact-card .tech-badges {
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.compact-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px 0;
+  text-align: left;
+}
+
+.compact-features li {
+  padding: 6px 0;
+  color: var(--text-light);
+  font-size: 0.95em;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.compact-features li:last-child {
+  border-bottom: none;
+}
+
+.compact-card .project-links {
+  margin-top: auto;
+}
+
+@media (max-width: 900px) {
+  .client-project-subsection .project-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .client-project-subsection .featured-card {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+  
+  .featured-media .demo-video {
+    max-height: none;
+  }
+}
+
+.section-subtitle {
+  color: var(--text-light);
+  font-size: 1.1em;
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+.client-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.client-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.client-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #FF6B35 0%, #ff8c5a 100%);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85em;
+  font-weight: 700;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(255, 107, 53, 0.3);
+}
+
+/* Vintage Wine Badge */
+.vintage-badge {
+  background: linear-gradient(135deg, #722F37 0%, #8B4557 100%);
+  box-shadow: 0 2px 8px rgba(114, 47, 55, 0.3);
+}
+
+.featured-card {
+  grid-column: span 1;
+  border: 2px solid #FF6B35;
+  background: linear-gradient(180deg, var(--card-bg) 0%, rgba(255, 107, 53, 0.02) 100%);
+}
+
+.featured-card::before {
+  background: linear-gradient(90deg, #FF6B35, #4CAF50);
+  height: 5px;
+}
+
+/* Vintage Featured Card */
+.vintage-featured {
+  border: 2px solid #722F37;
+  background: linear-gradient(180deg, var(--card-bg) 0%, rgba(114, 47, 55, 0.02) 100%);
+}
+
+.vintage-featured::before {
+  background: linear-gradient(90deg, #722F37, #8B4557);
+}
+
+/* SLIVER Demo Grid - Side by side videos */
+.sliver-demo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.demo-item {
+  text-align: center;
+}
+
+.demo-item h5 {
+  color: var(--text-dark);
+  margin-bottom: 10px;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.demo-video {
+  width: 100%;
+  border-radius: var(--border-radius);
+  background: #1a1a1a;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  object-fit: cover;
+  object-position: center 40%;
+}
+
+
+[data-theme="dark"] .demo-video {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* Client Info Card */
+.client-info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: var(--border-radius);
+  margin-top: 25px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
+}
+
+/* Client logo in info card - using actual image now */
+
+.client-details {
+  flex: 1;
+}
+
+.client-details h4 {
+  color: var(--text-dark);
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.client-details p {
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.location-badges {
+  margin-top: 10px;
+}
+
+.location-badges .tech-badge {
+  background: rgba(255, 107, 53, 0.1);
+  color: #FF6B35;
+  border-color: #FF6B35;
+}
+
+[data-theme="dark"] .location-badges .tech-badge {
+  background: rgba(255, 107, 53, 0.2);
+  color: #ff8c5a;
+  border-color: #ff8c5a;
+}
+
+/* Vintage Wine Info Card */
+.vintage-info {
+  border: 1px solid rgba(114, 47, 55, 0.3);
+}
+
+.vintage-logo {
+  background: linear-gradient(135deg, #722F37 0%, #8B4557 100%);
+  box-shadow: 0 4px 15px rgba(114, 47, 55, 0.3);
+}
+
+.vintage-badges .tech-badge {
+  background: rgba(114, 47, 55, 0.1);
+  color: #722F37;
+  border-color: #722F37;
+}
+
+[data-theme="dark"] .vintage-badges .tech-badge {
+  background: rgba(114, 47, 55, 0.2);
+  color: #a85c67;
+  border-color: #a85c67;
+}
+
+/* Responsive styles for SLIVER section */
+@media (max-width: 768px) {
+  .sliver-demo-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .client-info-card {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .client-logo {
+    width: 60px;
+    height: 60px;
+    font-size: 2em;
+  }
+  
+  .client-project-section {
+    padding: 20px 15px;
+  }
 } 
 /* Hide GitHub Pages footer - not professional for portfolio */
 .site-footer, 
