@@ -417,8 +417,11 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
     <!-- Featured Card - Full Width with 2-column layout -->
     <div class="project-card featured-card">
       <div class="featured-content">
-        <div class="client-badge">🏢 Client Project</div>
-        <h3 class="project-title">🍕 Full-Stack Restaurant Platform • Bay Area Sourdough Crust Pizzeria</h3>
+        <div class="client-header">
+          <img src="./images/sliver-logo.png" alt="SLIVER Pizzeria Logo" class="client-logo">
+          <div class="client-badge">🏢 Client Project</div>
+        </div>
+        <h3 class="project-title">Full-Stack Restaurant Platform • Bay Area Sourdough Crust Pizzeria</h3>
         <div class="tech-badges">
           <span class="tech-badge">Next.js 14</span>
           <span class="tech-badge">TypeScript</span>
@@ -547,8 +550,11 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
     <!-- Featured Card - Full Width with 2-column layout -->
     <div class="project-card featured-card vintage-featured">
       <div class="featured-content">
-        <div class="client-badge vintage-badge">🏢 Client Project</div>
-        <h3 class="project-title">🍷 Vintage — Wine Recommendation & Club</h3>
+        <div class="client-header">
+          <img src="./images/TheBarnyardLogo.png" alt="The Barnyard Wine Bar Logo" class="client-logo">
+          <div class="client-badge vintage-badge">🏢 Client Project</div>
+        </div>
+        <h3 class="project-title">Vintage — Wine Recommendation & Club</h3>
         <div class="tech-badges">
           <span class="tech-badge">React Native (Expo)</span>
           <span class="tech-badge">TypeScript</span>

@@ -1356,6 +1356,19 @@ body {
   font-weight: 500;
 }
 
+.client-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.client-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
 .client-badge {
   display: inline-block;
   background: linear-gradient(135deg, #FF6B35 0%, #ff8c5a 100%);
@@ -1364,7 +1377,7 @@ body {
   border-radius: 20px;
   font-size: 0.85em;
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-bottom: 0;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   box-shadow: 0 2px 8px rgba(255, 107, 53, 0.3);
@@ -1443,18 +1456,7 @@ body {
   box-shadow: var(--shadow);
 }
 
-.client-logo {
-  font-size: 3em;
-  background: linear-gradient(135deg, #FF6B35 0%, #ff8c5a 100%);
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
-}
+/* Client logo in info card - using actual image now */
 
 .client-details {
   flex: 1;
