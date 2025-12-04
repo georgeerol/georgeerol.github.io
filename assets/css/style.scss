@@ -1115,9 +1115,10 @@ body {
 }
 
 .featured-media {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
+  align-items: start;
 }
 
 .featured-media .demo-item {
@@ -1149,7 +1150,7 @@ body {
 
 .featured-media .demo-video {
   margin: 0;
-  max-height: 200px;
+  max-height: none;
 }
 
 /* Supporting cards - compact with video prominent */
@@ -1304,11 +1305,12 @@ body {
 .demo-video {
   width: 100%;
   border-radius: var(--border-radius);
-  background: #000;
+  background: #1a1a1a;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  max-height: 280px;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center 40%;
 }
+
 
 [data-theme="dark"] .demo-video {
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);

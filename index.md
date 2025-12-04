@@ -574,14 +574,14 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       <div class="featured-media">
         <div class="demo-item">
           <h5>🍷 Wine Discovery & Cart</h5>
-          <video controls preload="metadata" playsinline class="demo-video">
+          <video controls preload="metadata" playsinline class="demo-video mobile-demo">
             <source src="./images/Vintage.web.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
         <div class="demo-item">
           <h5>🤖 AI Recommendations</h5>
-          <video controls preload="metadata" playsinline class="demo-video">
+          <video controls preload="metadata" playsinline class="demo-video mobile-demo">
             <source src="./images/VintageAI.web.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
