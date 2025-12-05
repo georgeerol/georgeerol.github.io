@@ -7,7 +7,8 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
 
 <!-- Navigation -->
 <div class="nav-container">
-  <nav class="nav-menu">
+  <!-- Desktop: Full nav with all links -->
+  <nav class="nav-desktop">
     <a href="#about">About</a>
     <a href="#client-work">Client Work</a>
     <a href="#robotics">Robotics</a>
@@ -15,8 +16,37 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
     <a href="#fullstack">Full Stack</a>
     <a href="#mobile">Mobile</a>
     <a href="#contact">Contact</a>
-    
-    <!-- Dark Mode Toggle -->
+    <div class="theme-toggle" onclick="toggleTheme()">
+      <div class="theme-toggle-slider">
+        <span class="theme-icon">☀️</span>
+        <span class="theme-icon">🌙</span>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Mobile: Partial nav + hamburger -->
+  <nav class="nav-mobile">
+    <a href="#about">About</a>
+    <a href="#client-work">Client Work</a>
+    <a href="#robotics">Robotics</a>
+    <a href="#data-pipeline">Data Pipeline</a>
+  </nav>
+  
+  <!-- Hamburger Menu Button (Mobile Only) -->
+  <button class="hamburger" id="hamburger" aria-label="More sections" onclick="toggleMobileMenu()">
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+  </button>
+  
+  <!-- Mobile Menu Overlay -->
+  <div class="menu-overlay" id="menuOverlay" onclick="closeMobileMenu()"></div>
+  
+  <!-- Hamburger Menu Content -->
+  <nav class="nav-menu" id="navMenu">
+    <a href="#fullstack" class="nav-link" onclick="closeMobileMenu()">Full Stack</a>
+    <a href="#mobile" class="nav-link" onclick="closeMobileMenu()">Mobile</a>
+    <a href="#contact" class="nav-link" onclick="closeMobileMenu()">Contact</a>
     <div class="theme-toggle" onclick="toggleTheme()">
       <div class="theme-toggle-slider">
         <span class="theme-icon">☀️</span>
@@ -25,6 +55,36 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
     </div>
   </nav>
 </div>
+
+<script>
+// Inline hamburger menu functions (no external JS dependency)
+function toggleMobileMenu() {
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('navMenu');
+  const overlay = document.getElementById('menuOverlay');
+  
+  hamburger.classList.toggle('active');
+  navMenu.classList.toggle('active');
+  overlay.classList.toggle('active');
+  document.body.classList.toggle('menu-open');
+}
+
+function closeMobileMenu() {
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('navMenu');
+  const overlay = document.getElementById('menuOverlay');
+  
+  hamburger.classList.remove('active');
+  navMenu.classList.remove('active');
+  overlay.classList.remove('active');
+  document.body.classList.remove('menu-open');
+}
+
+// Close on Escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeMobileMenu();
+});
+</script>
 
 <!-- Enhanced Hero Section -->
 <div class="hero-section">
