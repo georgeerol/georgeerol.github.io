@@ -1252,7 +1252,6 @@ body {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  min-height: 520px; /* Ensure equal card heights */
 }
 
 .client-project-subsection .project-card:not(.featured-card) .project-overview {
@@ -1261,10 +1260,9 @@ body {
 }
 
 .client-project-subsection .project-card:not(.featured-card) .demo-video {
-  flex-grow: 1;
-  aspect-ratio: 1 / 1;
-  object-fit: contain;
-  background: #1a1a1a;
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
 }
 
 /* Demo item wrapper for supporting cards - SLIVER orange */

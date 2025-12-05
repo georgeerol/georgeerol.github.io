@@ -511,12 +511,9 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       
       <p class="project-overview">Production-ready infrastructure with containerized development, automated deployments, and cloud-native architecture for scalability and reliability.</p>
       
-      <!-- Deployment Demo Video - Moved up for better visual balance -->
+      <!-- Deployment Screenshot -->
       <div class="demo-item">
-        <video controls preload="metadata" playsinline class="demo-video project-image">
-          <source src="./images/DeployDec3.mp4#t=5" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+        <img src="./images/railway-deploy.png" alt="Railway Deployment - SLIVER Pizzeria Production" class="demo-video project-image">
       </div>
       
       <div class="project-links">
