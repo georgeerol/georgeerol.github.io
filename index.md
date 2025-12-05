@@ -205,14 +205,14 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       <div class="featured-media">
         <div class="demo-item">
           <h5>🌐 Web Experience</h5>
-          <video controls preload="metadata" playsinline class="demo-video">
-            <source src="./images/WebDec3.mp4#t=8" type="video/mp4">
+          <video autoplay muted loop playsinline class="demo-video">
+            <source src="./images/WebDec3.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
         <div class="demo-item">
           <h5>📱 Mobile Responsive</h5>
-          <video controls preload="metadata" playsinline class="demo-video">
+          <video autoplay muted loop playsinline class="demo-video">
             <source src="./images/MobileDec3.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
@@ -235,8 +235,8 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       <p class="project-overview">Secure admin panel for restaurant staff to manage daily operations including Pizza of the Day updates, location management, and real-time content updates.</p>
       
       <div class="demo-item">
-        <video controls preload="metadata" playsinline class="demo-video project-image">
-          <source src="./images/adminDec3.mp4#t=3" type="video/mp4">
+        <video autoplay muted loop playsinline class="demo-video project-image">
+          <source src="./images/adminDec3.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       </div>
@@ -328,14 +328,14 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       <div class="featured-media">
         <div class="demo-item">
           <h5>🍷 Wine Discovery & Cart</h5>
-          <video controls preload="metadata" playsinline class="demo-video mobile-demo">
+          <video autoplay muted loop playsinline class="demo-video mobile-demo">
             <source src="./images/Vintage.web.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
         <div class="demo-item">
           <h5>🤖 AI Recommendations</h5>
-          <video controls preload="metadata" playsinline class="demo-video mobile-demo">
+          <video autoplay muted loop playsinline class="demo-video mobile-demo">
             <source src="./images/VintageAI.web.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
