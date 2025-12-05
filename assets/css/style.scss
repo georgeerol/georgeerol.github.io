@@ -1154,6 +1154,17 @@ body {
   color: #FF6B35;
 }
 
+.sliver-theme .btn-outline {
+  border-color: #FF6B35;
+  color: #FF6B35;
+}
+
+.sliver-theme .btn-outline:hover {
+  background: #FF6B35;
+  border-color: #FF6B35;
+  color: white;
+}
+
 .sliver-theme .project-features li::before {
   color: #FF6B35;
 }
@@ -1213,6 +1224,17 @@ body {
   background: rgba(114, 47, 55, 0.1);
   border-color: #722F37;
   color: #722F37;
+}
+
+.vintage-theme .btn-outline {
+  border-color: #722F37;
+  color: #722F37;
+}
+
+.vintage-theme .btn-outline:hover {
+  background: #722F37;
+  border-color: #722F37;
+  color: white;
 }
 
 .vintage-theme .project-features li::before {
