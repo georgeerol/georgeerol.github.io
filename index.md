@@ -527,7 +527,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
   
   <!-- SLIVER Brand Info -->
   <div class="client-info-card sliver-info">
-    <div class="client-logo">🍕</div>
+    <img src="./images/sliver-mini-logo.png" alt="SLIVER Pizzeria Logo" class="client-logo sliver-logo-img">
     <div class="client-details">
       <h4>About SLIVER Pizzeria</h4>
       <p><em>"An experiment in culinary happiness"</em> — SLIVER offers a healthier alternative focusing on fresh produce, 100% vegetarian with sourdough crust pizza. Family owned & operated with 6 Bay Area locations serving Berkeley, Oakland, Lafayette, and Fremont.</p>
@@ -647,7 +647,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
   
   <!-- Vintage Brand Info -->
   <div class="client-info-card vintage-info">
-    <div class="client-logo vintage-logo">🍷</div>
+    <img src="./images/TheBarnyardLogo.png" alt="The Barnyard Wine Bar Logo" class="client-logo vintage-logo-img">
     <div class="client-details">
       <h4>About Barnyard Wine Bar</h4>
       <p><em>"Where every glass tells a story"</em> — Barnyard Wine Bar brings curated wine experiences to wine enthusiasts through their Epic Society wine club. Members enjoy personalized selections, exclusive tastings, and a community of fellow wine lovers.</p>

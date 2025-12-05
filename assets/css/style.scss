@@ -1252,6 +1252,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: 20px;
+  min-height: 520px; /* Ensure equal card heights */
 }
 
 .client-project-subsection .project-card:not(.featured-card) .project-overview {
@@ -1490,9 +1491,34 @@ body {
   border-color: #ff8c5a;
 }
 
+/* SLIVER Logo in Info Card */
+.sliver-logo-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FF6B35 0%, #ff8c5a 100%);
+  padding: 10px;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+.sliver-info {
+  border: 1px solid rgba(255, 107, 53, 0.3);
+}
+
 /* Vintage Wine Info Card */
 .vintage-info {
   border: 1px solid rgba(114, 47, 55, 0.3);
+}
+
+.vintage-logo-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #722F37 0%, #8B4557 100%);
+  padding: 8px;
+  box-shadow: 0 4px 15px rgba(114, 47, 55, 0.3);
 }
 
 .vintage-logo {
