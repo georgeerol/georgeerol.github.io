@@ -42,8 +42,12 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
   <!-- Mobile Menu Overlay -->
   <div class="menu-overlay" id="menuOverlay" onclick="closeMobileMenu()"></div>
   
-  <!-- Hamburger Menu Content -->
+  <!-- Hamburger Menu Content (Full Navigation) -->
   <nav class="nav-menu" id="navMenu">
+    <a href="#about" class="nav-link" onclick="closeMobileMenu()">About</a>
+    <a href="#client-work" class="nav-link" onclick="closeMobileMenu()">Client Work</a>
+    <a href="#robotics" class="nav-link" onclick="closeMobileMenu()">Robotics</a>
+    <a href="#data-pipeline" class="nav-link" onclick="closeMobileMenu()">Data Pipeline</a>
     <a href="#fullstack" class="nav-link" onclick="closeMobileMenu()">Full Stack</a>
     <a href="#mobile" class="nav-link" onclick="closeMobileMenu()">Mobile</a>
     <a href="#contact" class="nav-link" onclick="closeMobileMenu()">Contact</a>
@@ -57,28 +61,53 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
 </div>
 
 <script>
-// Inline hamburger menu functions (no external JS dependency)
-function toggleMobileMenu() {
-  const hamburger = document.getElementById('hamburger');
-  const navMenu = document.getElementById('navMenu');
-  const overlay = document.getElementById('menuOverlay');
+// Hamburger menu functions
+function toggleMobileMenu(e) {
+  if (e) e.preventDefault();
+  var hamburger = document.getElementById('hamburger');
+  var navMenu = document.getElementById('navMenu');
+  var overlay = document.getElementById('menuOverlay');
+  
+  if (!hamburger || !navMenu || !overlay) {
+    console.log('Missing elements:', {hamburger: !!hamburger, navMenu: !!navMenu, overlay: !!overlay});
+    return;
+  }
   
   hamburger.classList.toggle('active');
   navMenu.classList.toggle('active');
   overlay.classList.toggle('active');
   document.body.classList.toggle('menu-open');
+  console.log('Menu toggled, active:', navMenu.classList.contains('active'));
 }
 
 function closeMobileMenu() {
-  const hamburger = document.getElementById('hamburger');
-  const navMenu = document.getElementById('navMenu');
-  const overlay = document.getElementById('menuOverlay');
+  var hamburger = document.getElementById('hamburger');
+  var navMenu = document.getElementById('navMenu');
+  var overlay = document.getElementById('menuOverlay');
   
-  hamburger.classList.remove('active');
-  navMenu.classList.remove('active');
-  overlay.classList.remove('active');
+  if (hamburger) hamburger.classList.remove('active');
+  if (navMenu) navMenu.classList.remove('active');
+  if (overlay) overlay.classList.remove('active');
   document.body.classList.remove('menu-open');
 }
+
+// Initialize when DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+  var hamburger = document.getElementById('hamburger');
+  if (hamburger) {
+    hamburger.addEventListener('click', toggleMobileMenu);
+    hamburger.addEventListener('touchend', function(e) {
+      e.preventDefault();
+      toggleMobileMenu();
+    });
+    console.log('Hamburger initialized');
+  }
+  
+  var overlay = document.getElementById('menuOverlay');
+  if (overlay) {
+    overlay.addEventListener('click', closeMobileMenu);
+  }
+});
 
 // Close on Escape key
 document.addEventListener('keydown', function(e) {
