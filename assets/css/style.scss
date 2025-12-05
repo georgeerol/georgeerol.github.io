@@ -889,13 +889,34 @@ body {
     padding: 0 15px !important;
   }
   
+  /* Mobile Navigation - Scrollable */
+  .nav-container {
+    padding: 10px 0;
+  }
+  
   .nav-menu {
-    gap: 10px;
+    gap: 8px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 0 10px;
+    justify-content: flex-start;
+  }
+  
+  .nav-menu::-webkit-scrollbar {
+    display: none;
   }
   
   .nav-menu a {
-    padding: 6px 12px;
-    font-size: 0.9em;
+    padding: 6px 10px;
+    font-size: 0.8em;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  
+  .theme-toggle {
+    margin-left: 10px;
+    flex-shrink: 0;
   }
   
   .hero-section {
@@ -915,10 +936,33 @@ body {
   
   .hero-specialization-container {
     gap: 0.8rem;
+    align-items: center;
   }
   
   .hero-specialization {
     font-size: 0.9em;
+    text-align: center;
+  }
+  
+  /* Featured card media - stack on mobile */
+  .featured-media {
+    grid-template-columns: 1fr !important;
+    gap: 15px;
+  }
+  
+  /* Featured card - single column layout on mobile */
+  .client-project-subsection .featured-card {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+  
+  /* Section headers smaller on mobile */
+  .section-header h2 {
+    font-size: 1.5em;
+  }
+  
+  .client-project-title {
+    font-size: 1.4em;
   }
   
 
@@ -1557,6 +1601,96 @@ body {
   
   .client-project-section {
     padding: 20px 15px;
+  }
+}
+
+/* Extra small screens (phones in portrait) */
+@media (max-width: 480px) {
+  .hero-main h1 {
+    font-size: 1.6em;
+  }
+  
+  .hero-subtitle {
+    font-size: 1em;
+  }
+  
+  .profile-image {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .mini-arcade {
+    gap: 4px;
+  }
+  
+  .mini-arcade canvas {
+    width: 55px;
+    height: 38px;
+  }
+  
+  .hero-stats {
+    gap: 5px;
+  }
+  
+  .stat {
+    padding: 8px 4px;
+  }
+  
+  .stat-number {
+    font-size: 1.1em;
+  }
+  
+  .stat-label {
+    font-size: 0.7em;
+  }
+  
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero-actions .btn {
+    width: 100%;
+    max-width: 220px;
+  }
+  
+  .about-section {
+    padding: 20px 15px;
+  }
+  
+  .about-section h2 {
+    font-size: 1.4em;
+  }
+  
+  .credentials {
+    padding: 15px;
+  }
+  
+  .tech-badge {
+    font-size: 0.75em;
+    padding: 3px 8px;
+  }
+  
+  .project-title {
+    font-size: 1.1em;
+    word-wrap: break-word;
+  }
+  
+  /* Ensure featured content doesn't overflow */
+  .featured-content .project-title {
+    font-size: 1.2em;
+  }
+  
+  .project-card {
+    padding: 15px;
+  }
+  
+  .contact-section {
+    padding: 25px 15px;
+  }
+  
+  .contact-section h2 {
+    font-size: 1.4em;
   }
 } 
 /* Hide GitHub Pages footer - not professional for portfolio */
