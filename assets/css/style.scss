@@ -1454,6 +1454,37 @@ body {
   }
 }
 
+/* Mobile: Make client cards full-width like other sections */
+@media (max-width: 768px) {
+  .client-project-subsection {
+    padding: 15px 8px;
+    margin: 15px 0;
+    border-radius: 8px;
+    border-left-width: 3px;
+  }
+  
+  .client-project-subsection .project-card {
+    border-left-width: 3px;
+  }
+  
+  .client-project-subsection .featured-card {
+    padding: 12px;
+  }
+  
+  .client-project-subsection .project-card:not(.featured-card) {
+    padding: 12px;
+  }
+  
+  .client-project-title {
+    font-size: 1.3em;
+  }
+  
+  .client-project-subtitle {
+    font-size: 0.95em;
+    margin-bottom: 15px;
+  }
+}
+
 .section-subtitle {
   color: var(--text-light);
   font-size: 1.1em;

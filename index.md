@@ -161,7 +161,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
 <!-- SLIVER Pizzeria - CLIENT PROJECT -->
 <div id="sliver-pizzeria" class="client-project-subsection sliver-theme">
   <h3 class="client-project-title">🍕 SLIVER Pizzeria</h3>
-  <p class="client-project-subtitle">Full-Stack Restaurant Platform • Bay Area Vegetarian Pizzeria</p>
+  <p class="client-project-subtitle">Full-Stack Restaurant Platform • Bay Area Sourdough Crust Pizzeria</p>
   
   <div class="project-grid">
     <!-- Featured Card - Full Width with 2-column layout -->
@@ -171,7 +171,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
           <img src="./images/sliver-logo.png" alt="SLIVER Pizzeria Logo" class="client-logo">
           <div class="client-badge">🏢 Client Project</div>
         </div>
-        <h3 class="project-title">Full-Stack Restaurant Platform • Bay Area Sourdough Crust Pizzeria</h3>
+        <h3 class="project-title">Web Platform & Operations Dashboard</h3>
         <div class="tech-badges">
           <span class="tech-badge">Next.js 14</span>
           <span class="tech-badge">TypeScript</span>
