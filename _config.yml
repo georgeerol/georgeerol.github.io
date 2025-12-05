@@ -12,6 +12,9 @@ url: https://georgeerol.github.io
 baseurl: ""
 google_analytics: G-L4G7PPE4VC
 
+# Social Sharing Image
+image: /images/me.jpeg
+
 # Jekyll Configuration
 markdown: kramdown
 highlighter: rouge
