@@ -382,6 +382,11 @@ body {
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
+[data-theme="dark"] .status-badge {
+  background: var(--card-bg);
+  box-shadow: var(--shadow);
+}
+
 .current-role {
   font-size: 1.1em;
   color: var(--primary-color);
@@ -409,6 +414,11 @@ body {
   border-radius: var(--border-radius);
   border: 1px solid var(--border-color);
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+[data-theme="dark"] .stat {
+  background: var(--card-bg);
+  box-shadow: var(--shadow);
 }
 
 .stat-number {
@@ -1275,11 +1285,23 @@ body {
   box-shadow: 0 3px 12px rgba(255, 107, 53, 0.12);
 }
 
+[data-theme="dark"] .sliver-theme .featured-media .demo-item {
+  background: linear-gradient(145deg, rgba(255, 107, 53, 0.15) 0%, rgba(255, 107, 53, 0.08) 100%);
+  border: 1px solid rgba(255, 107, 53, 0.4);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
+}
+
 /* Vintage burgundy theme for demo items */
 .vintage-theme .featured-media .demo-item {
   background: linear-gradient(145deg, #FBF4F6 0%, #F8EEF1 100%);
   border: 1px solid rgba(128, 0, 32, 0.35);
   box-shadow: 0 3px 12px rgba(128, 0, 32, 0.12);
+}
+
+[data-theme="dark"] .vintage-theme .featured-media .demo-item {
+  background: linear-gradient(145deg, rgba(114, 47, 55, 0.15) 0%, rgba(114, 47, 55, 0.08) 100%);
+  border: 1px solid rgba(114, 47, 55, 0.4);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
 }
 
 .featured-media .demo-item h5 {
@@ -1318,6 +1340,12 @@ body {
   box-shadow: 0 3px 12px rgba(255, 107, 53, 0.12);
   padding: 15px;
   border-radius: var(--border-radius);
+}
+
+[data-theme="dark"] .sliver-theme .project-card:not(.featured-card) .demo-item {
+  background: linear-gradient(145deg, rgba(255, 107, 53, 0.12) 0%, rgba(255, 107, 53, 0.06) 100%);
+  border: 1px solid rgba(255, 107, 53, 0.35);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
 }
 
 /* SLIVER admin video - orange background to match video content */
