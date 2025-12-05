@@ -1394,9 +1394,19 @@ body {
 
 .compact-features li {
   padding: 6px 0;
-  color: var(--text-light);
+  color: var(--text-dark);
   font-size: 0.95em;
   border-bottom: 1px solid var(--border-color);
+}
+
+/* Vintage theme checkmark color */
+.vintage-theme .compact-features li {
+  color: var(--text-dark);
+}
+
+.vintage-theme .compact-features li::first-letter {
+  color: #722F37;
+  font-weight: bold;
 }
 
 .compact-features li:last-child {
