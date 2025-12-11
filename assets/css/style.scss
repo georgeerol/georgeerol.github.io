@@ -858,31 +858,6 @@ body {
   box-shadow: 0 8px 25px rgba(3, 102, 214, 0.3);
 }
 
-/* Back to Top Button */
-.back-to-top {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background: var(--primary-color);
-  color: white;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  font-size: 1.2em;
-  box-shadow: var(--shadow);
-  transition: all 0.3s ease;
-  z-index: 100;
-}
-
-.back-to-top:hover {
-  background: var(--accent-color);
-  transform: translateY(-3px);
-}
-
 /* Responsive Design */
 @media (max-width: 1200px) {
   .main-content {
