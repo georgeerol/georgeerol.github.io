@@ -32,7 +32,7 @@ class AIAssistant {
                         <div class="ai-avatar-icon">🤖</div>
                         <div class="ai-header-text">
                             <h4>AI Assistant</h4>
-                            <span class="status-online">● Online</span>
+                            <span class="status-online">Online</span>
                         </div>
                     </div>
                     <button class="ai-close-btn" id="aiCloseBtn">✕</button>
