@@ -50,7 +50,7 @@ class AIAssistant {
                 </div>
 
                 <div class="ai-chat-input">
-                    <input type="text" id="aiChatInput" placeholder="Ask me anything..." />
+                    <input type="text" id="aiChatInput" placeholder="Ask me anything about George..." />
                     <button id="aiSendBtn">➤</button>
                 </div>
             </div>
