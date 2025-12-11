@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  jekyll:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: georgeerol-portfolio
+    ports:
+      - "4000:4000"
+      - "35729:35729"  # LiveReload port
+    volumes:
+      - .:/site
+      - bundle_cache:/bundle
+    environment:
+      - JEKYLL_ENV=development
+    command: bundle exec jekyll serve --livereload --host 0.0.0.0 --force_polling
+    stdin_open: true
+    tty: true
+
+volumes:
+  bundle_cache:
+

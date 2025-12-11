@@ -102,19 +102,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Show/hide back to top button with enhanced functionality
-window.addEventListener('scroll', function() {
-    const backToTop = document.querySelector('.back-to-top');
-    const scrollProgress = (window.pageYOffset / (document.body.scrollHeight - window.innerHeight)) * 100;
-    
-    if (window.pageYOffset > 300) {
-        backToTop.style.display = 'flex';
-        backToTop.style.opacity = Math.min(scrollProgress / 20, 1);
-    } else {
-        backToTop.style.display = 'none';
-    }
-});
-
 // Add subtle parallax effect to hero section
 window.addEventListener('scroll', function() {
     const heroSection = document.querySelector('.hero-section');

@@ -830,6 +830,3 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
     <a href="https://github.com/georgeerol" target="_blank">💻 GitHub</a>
   </div>
 </section>
-
-<!-- Back to Top Button -->
-<a href="#" class="back-to-top">↑</a>
