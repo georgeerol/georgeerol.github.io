@@ -111,7 +111,11 @@ class AIAssistant {
         
         messageDiv.appendChild(messageContent);
         messagesContainer.appendChild(messageDiv);
-        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        
+        // Scroll to show the START of the new message (top of the message)
+        setTimeout(() => {
+            messageDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
 
         this.messages.push({ text, sender, timestamp: Date.now() });
     }
@@ -133,11 +137,11 @@ class AIAssistant {
 
     handleQuickAction(action) {
         const actions = {
-            experience: "🎮 Series Entertainment (2024-2025)\nGaming AI Startup - Sr. Software Engineer\nSole Data Engineer for Pixelberry Studio\n\n🔒 Sphere Technology (2022-2024)\nCybersecurity - Lead architect for event-driven systems\n\n🤖 CalypsoAI (2020-2022)\nAI Startup - Sole US Engineer\n\n🏭 General Electric (2013-2020)\nData & AI/Analytics, Mobile, IoT",
+            experience: "🎮 Series Entertainment (2024-2025)\nGaming AI - Sr. Software Engineer\nData Engineer for Pixelberry Studio\n\n🔒 Sphere Technology (2022-2024)\nCybersecurity - Lead architect\n\n🤖 CalypsoAI (2020-2022)\nAI Startup - Sole US Engineer\n\n🏭 GE (2013-2020)\nData & AI, Mobile, IoT",
             
-            skills: "🔧 Backend:\nJava Spring Boot, Python Flask\n\n📊 Data Engineering:\nSpark, Kafka, SQS, Redshift\n\n☁️ Cloud:\nAWS, Azure\n\n🤖 Robotics/AI:\nROS, TensorFlow, OpenCV\n\n📱 Mobile:\nAndroid, iOS, React Native",
+            skills: "🔧 Backend:\nJava Spring Boot, Python Flask\n\n📊 Data:\nSpark, Kafka, Redshift\n\n☁️ Cloud:\nAWS, Azure\n\n🤖 AI/Robotics:\nROS, TensorFlow, OpenCV\n\n📱 Mobile:\nAndroid, iOS, React Native",
             
-            projects: "💼 Client Work:\n🍕 SLIVER Pizzeria - Restaurant platform\n🍷 Vintage Wine - Mobile wine club\n\n🤖 Robotics:\n🚁 Deep Learning Drone\n🔍 Search & Sample Rover\n🦾 Robotic Arm Pick & Drop\n\n📊 Data:\n☁️ IoT AWS Spark (billions of events)\n⚡ Real-time Analytics",
+            projects: "💼 Client Work:\n🍕 SLIVER Pizzeria\n🍷 Vintage Wine\n\n🤖 Robotics:\n🚁 Deep Learning Drone\n🔍 Search & Sample Rover\n🦾 Robotic Arm\n\n📊 Data:\n☁️ IoT AWS Spark\n⚡ Real-time Analytics",
             
             contact: "📧 fouliex@gmail.com\n💼 linkedin.com/in/georgefouche\n💻 github.com/georgeerol\n🌐 georgeerol.github.io\n📱 (845) 659-4124\n📍 San Francisco Bay Area\n\n✨ Open to opportunities!"
         };
