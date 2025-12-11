@@ -29,7 +29,7 @@
 }
 
 .ai-assistant-button:hover {
-  transform: scale(1.1) rotate(10deg);
+  transform: scale(1.15) rotate(-5deg);
   box-shadow: 0 12px 35px rgba(3, 102, 214, 0.5);
 }
 
@@ -41,6 +41,28 @@
   transform: scale(0);
   opacity: 0;
   pointer-events: none;
+}
+
+/* Robot Icon in Button */
+.ai-robot-icon {
+  font-size: 36px;
+  animation: robotBounce 3s ease-in-out infinite;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+
+@keyframes robotBounce {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-3px) rotate(-5deg);
+  }
+  50% {
+    transform: translateY(0) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-3px) rotate(5deg);
+  }
 }
 
 .ai-arrow-icon {
@@ -363,9 +385,8 @@
     right: 20px;
   }
 
-  .ai-arrow-icon {
-    width: 28px;
-    height: 28px;
+  .ai-robot-icon {
+    font-size: 30px;
   }
 
   .ai-chat-window {
