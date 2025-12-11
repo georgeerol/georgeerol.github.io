@@ -133,10 +133,13 @@ class AIAssistant {
 
     handleQuickAction(action) {
         const actions = {
-            experience: "George is a Senior Software Engineer with 10+ years of experience. He most recently worked at Series Entertainment (Gaming AI Startup) and has expertise in Backend Development, Data Engineering, and Robotics/AI.",
-            skills: "George specializes in: \n🤖 ROS, Computer Vision, Deep Learning\n🔧 Apache Spark, Kafka, AWS\n🌐 Java Spring Boot, Python Flask\n📱 Android, iOS, React",
-            projects: "George has worked on amazing projects including:\n💼 SLIVER Pizzeria - Full-stack restaurant platform\n🍷 Vintage Wine - Mobile wine club app\n🤖 Multiple robotics & AI projects\n🚀 Data pipeline systems",
-            contact: "You can reach George at:\n📧 LinkedIn: linkedin.com/in/georgefouche\n💻 GitHub: github.com/georgeerol"
+            experience: "🎮 Series Entertainment (2024-2025)\nGaming AI Startup - Sr. Software Engineer\nSole Data Engineer for Pixelberry Studio\n\n🔒 Sphere Technology (2022-2024)\nCybersecurity - Lead architect for event-driven systems\n\n🤖 CalypsoAI (2020-2022)\nAI Startup - Sole US Engineer\n\n🏭 General Electric (2013-2020)\nData & AI/Analytics, Mobile, IoT",
+            
+            skills: "🔧 Backend:\nJava Spring Boot, Python Flask\n\n📊 Data Engineering:\nSpark, Kafka, SQS, Redshift\n\n☁️ Cloud:\nAWS, Azure\n\n🤖 Robotics/AI:\nROS, TensorFlow, OpenCV\n\n📱 Mobile:\nAndroid, iOS, React Native",
+            
+            projects: "💼 Client Work:\n🍕 SLIVER Pizzeria - Restaurant platform\n🍷 Vintage Wine - Mobile wine club\n\n🤖 Robotics:\n🚁 Deep Learning Drone\n🔍 Search & Sample Rover\n🦾 Robotic Arm Pick & Drop\n\n📊 Data:\n☁️ IoT AWS Spark (billions of events)\n⚡ Real-time Analytics",
+            
+            contact: "📧 fouliex@gmail.com\n💼 linkedin.com/in/georgefouche\n💻 github.com/georgeerol\n🌐 georgeerol.github.io\n📱 (845) 659-4124\n📍 San Francisco Bay Area\n\n✨ Open to opportunities!"
         };
 
         this.addMessage(actions[action], 'bot');
@@ -147,46 +150,71 @@ class AIAssistant {
 
         // Experience related
         if (msg.includes('experience') || msg.includes('background') || msg.includes('work')) {
-            return "George has 10+ years of experience as a Senior Software Engineer. He specializes in Backend Development, Data Engineering, and Robotics/AI. Most recently, he worked at Series Entertainment, a Gaming AI startup!";
+            return "George is a Product-focused Software Engineer with 10+ years of experience in Backend, Data Engineering, and Robotics/AI. Most recently, he was a Sr. Software Engineer at Series Entertainment (Gaming AI Startup) from Nov 2024 - Oct 2025, where he was the Backend and sole Data Engineer for Pixelberry Studio.";
         }
 
         // Skills related
         if (msg.includes('skill') || msg.includes('technology') || msg.includes('tech stack')) {
-            return "George's tech stack includes: ROS, Apache Spark, Kafka, Java Spring Boot, Python Flask, Docker, Kubernetes, TensorFlow, and much more! Check out the skills section below for the full list.";
+            return "George's tech stack includes:\n🔧 Backend: Java Spring Boot, Python Flask\n📊 Data: Apache Spark, PySpark, Kafka, SQS\n💾 Databases: Cassandra, DynamoDB, Redshift, PostgreSQL\n☁️ Cloud: AWS, Azure\n🤖 AI/ML: TensorFlow, OpenCV, ROS\nCheck out the skills section for the full list!";
         }
 
         // Projects related
-        if (msg.includes('project') || msg.includes('portfolio') || msg.includes('work')) {
-            return "George has built some impressive projects! Check out SLIVER Pizzeria (full-stack restaurant platform), Vintage Wine (mobile wine app), and multiple robotics projects. Want to see a specific type of project?";
+        if (msg.includes('project') || msg.includes('portfolio')) {
+            return "George has built impressive projects including:\n💼 Client Work: SLIVER Pizzeria (Next.js + FastAPI), Vintage Wine (React Native + AI)\n🤖 Robotics: Deep Learning Drone, Search & Sample Rover, Robotic Arm\n📊 Data: IoT AWS Spark Integration, Real-time Analytics\n🌐 Full-Stack: Expense Tracker, Todo App, Bitcoin Ticker\nWant to see a specific type?";
         }
 
         // Education related
-        if (msg.includes('education') || msg.includes('degree') || msg.includes('university')) {
-            return "George holds a B.S. in Computer Engineering from Pennsylvania State University with a Minor in Nanotechnology. He also has Udacity Nanodegrees in Robotic Software Engineering and Full Stack Web Development!";
+        if (msg.includes('education') || msg.includes('degree') || msg.includes('university') || msg.includes('school')) {
+            return "George holds a B.S. in Computer Engineering from Pennsylvania State University with a Minor in Nanotechnology and a Certificate in International Engineering. He also completed Udacity Nanodegrees in Robotic Software Engineering and Full Stack Web Development. Plus, he was Team Leader for CMU Robotics Institute Summer Scholar Program!";
         }
 
         // Contact related
         if (msg.includes('contact') || msg.includes('reach') || msg.includes('email') || msg.includes('hire')) {
-            return "You can connect with George on LinkedIn (linkedin.com/in/georgefouche) or check out his GitHub (github.com/georgeerol). He's currently open to new opportunities!";
+            return "You can connect with George:\n📧 Email: fouliex@gmail.com\n💼 LinkedIn: linkedin.com/in/georgefouche\n💻 GitHub: github.com/georgeerol\n🌐 Portfolio: georgeerol.github.io\nHe's currently open to new opportunities!";
         }
 
         // Location related
-        if (msg.includes('location') || msg.includes('where')) {
+        if (msg.includes('location') || msg.includes('where') || msg.includes('based')) {
             return "George is based in the San Francisco Bay Area and is open to new opportunities!";
         }
 
-        // Gaming AI related
-        if (msg.includes('game') || msg.includes('gaming') || msg.includes('ai')) {
-            return "George recently worked at Series Entertainment, a Gaming AI startup! He specializes in Backend Gaming AI and has built interactive game demos. Check out the mini arcade games in the hero section!";
+        // Series Entertainment / Gaming AI
+        if (msg.includes('series') || msg.includes('gaming') || msg.includes('game') || msg.includes('pixelberry') || msg.includes('choices')) {
+            return "At Series Entertainment (Nov 2024 - Oct 2025), George was Sr. Software Engineer and sole Data Engineer for Pixelberry Studio. He:\n🎮 Architected real-time & batch ETL pipelines for billions of Choices Game events\n⚙️ Developed Game State, CMS, and VIP Subscription systems\n📊 Advised GaaS team on data strategy for monetization\nTech: Java Spring, Python, SQS, Redshift, DynamoDB, AWS";
+        }
+
+        // Data Engineering specific
+        if (msg.includes('data engineering') || msg.includes('etl') || msg.includes('pipeline') || msg.includes('spark')) {
+            return "George has deep Data Engineering experience:\n✅ Built real-time & batch ETL pipelines for billions of events\n✅ Architected event-driven systems for big data\n✅ Created PySpark pipelines integrating multiple databases\n✅ Managed data validation pipelines and workflows\nCompanies: Series Entertainment, Sphere Technology, GE Power\nTech: Apache Spark, PySpark, Kafka, Redshift, Cassandra";
+        }
+
+        // Robotics specific
+        if (msg.includes('robot') || msg.includes('ros') || msg.includes('cmu') || msg.includes('carnegie')) {
+            return "George has strong Robotics background:\n🤖 CMU Robotics Institute Team Leader (2010-2012)\n🤖 Built autonomous recharging stations for robots\n🤖 Udacity Robotic Software Engineer Nanodegree\n🤖 Projects: Deep Learning Drone, Search & Sample Rover, 6-DOF Robotic Arm\nTech: ROS, TensorFlow, OpenCV, Python";
+        }
+
+        // AI/ML specific
+        if (msg.includes('ai') || msg.includes('machine learning') || msg.includes('ml') || msg.includes('deep learning')) {
+            return "George has extensive AI/ML experience:\n✅ Worked at 2 AI Startups (Series Entertainment, CalypsoAI)\n✅ Built systems for government AI trust & safety\n✅ Trained neural networks for drones & self-driving cars\n✅ Computer vision projects with OpenCV & TensorFlow\n✅ Currently specializes in Backend Gaming AI\nCheck out his Robotics & AI projects section!";
+        }
+
+        // Recent work
+        if (msg.includes('recent') || msg.includes('current') || msg.includes('latest')) {
+            return "George's most recent role was Sr. Software Engineer at Series Entertainment (Gaming AI Startup) from Nov 2024 - Oct 2025. He was the Backend lead and sole Data Engineer for Pixelberry Studio, working on the Choices game with billions of events. Before that: Sphere Technology Solutions (Cybersecurity) and CalypsoAI (AI Startup).";
+        }
+
+        // Companies
+        if (msg.includes('company') || msg.includes('companies') || msg.includes('employer')) {
+            return "George has worked at:\n🎮 Series Entertainment - Gaming AI Startup (2024-2025)\n🔒 Sphere Technology Solutions - Cybersecurity (2022-2024)\n🤖 CalypsoAI - AI Startup (2020-2022)\n🏭 General Electric - Multiple divisions (2013-2020)\nAcross Gaming, Cybersecurity, AI, and Enterprise environments!";
         }
 
         // Client work
-        if (msg.includes('client') || msg.includes('sliver') || msg.includes('vintage')) {
-            return "George has built production applications for real businesses! Check out SLIVER Pizzeria (Next.js + FastAPI restaurant platform) and Vintage Wine (React Native mobile app with AI recommendations).";
+        if (msg.includes('client') || msg.includes('sliver') || msg.includes('vintage') || msg.includes('pizzeria') || msg.includes('wine')) {
+            return "George has built production applications for real businesses:\n🍕 SLIVER Pizzeria - Full-stack restaurant platform (Next.js 14, FastAPI, PostgreSQL) with admin dashboard\n🍷 Vintage Wine - Mobile wine club app (React Native, Flask) with AI-powered recommendations and Stripe integration\nBoth are live in production serving real customers!";
         }
 
         // Default response
-        return "That's a great question! You can ask me about George's experience, skills, projects, education, or how to contact him. What would you like to know?";
+        return "That's a great question! I can tell you about George's:\n💼 Experience (10+ years in Backend, Data Engineering, Robotics/AI)\n🛠️ Skills (Java, Python, Spark, AWS, TensorFlow, ROS)\n🚀 Projects (Client work, Robotics, Data pipelines)\n🎓 Education (Penn State, Udacity, CMU)\n📧 Contact info\nWhat would you like to know?";
     }
 }
 
