@@ -206,7 +206,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
         <div class="demo-item">
           <h5>🌐 Web Experience</h5>
           <video autoplay muted loop playsinline class="demo-video">
-            <source src="./images/WebDec3.mp4" type="video/mp4">
+            <source src="./images/WebDec3.mp4#t=8" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
@@ -236,7 +236,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       
       <div class="demo-item">
         <video autoplay muted loop playsinline class="demo-video project-image">
-          <source src="./images/adminDec3.mp4" type="video/mp4">
+          <source src="./images/adminDec3.mp4#t=3" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       </div>
