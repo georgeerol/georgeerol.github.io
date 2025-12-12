@@ -24,6 +24,35 @@ class AIAssistant {
     }
 
     // ==========================================
+    // ANALYTICS TRACKING (Google Analytics 4)
+    // ==========================================
+    
+    trackEvent(eventName, params = {}) {
+        if (typeof gtag === 'function') {
+            gtag('event', eventName, {
+                'event_category': 'AI Chatbot',
+                ...params
+            });
+        }
+    }
+
+    trackQuestion(question, topic) {
+        this.trackEvent('chatbot_question', {
+            'question': question.substring(0, 100),
+            'topic_detected': topic || 'unknown',
+            'section_viewing': this.currentSection || 'none'
+        });
+    }
+
+    trackQuickAction(action) {
+        this.trackEvent('chatbot_quick_action', { 'action': action });
+    }
+
+    trackSuggestionClick(suggestion) {
+        this.trackEvent('chatbot_suggestion_click', { 'suggestion': suggestion.substring(0, 100) });
+    }
+
+    // ==========================================
     // PHASE 2: TIME-BASED GREETINGS
     // ==========================================
     
@@ -113,9 +142,9 @@ class AIAssistant {
                 "What tech did he use?"
             ],
             greeting: [
-                "What's George's background?",
-                "Show me his projects",
-                "What skills does he have?"
+                "What's George's personal story?",
+                "What languages does he speak?",
+                "Tell me about his experience"
             ],
             thanks: [
                 "Tell me more about projects",
@@ -123,14 +152,29 @@ class AIAssistant {
                 "What's his experience?"
             ],
             who: [
-                "What's his experience?",
-                "What skills does he have?",
+                "What's his personal story?",
+                "What languages does he speak?",
+                "What's his experience?"
+            ],
+            personalStory: [
+                "What languages does he speak?",
+                "Where is he now?",
+                "Tell me about his experience"
+            ],
+            languages: [
+                "What's his personal story?",
+                "Where is he from?",
+                "Tell me about his skills"
+            ],
+            easterEgg: [
+                "Tell me about George",
+                "What are his skills?",
                 "Show me his projects"
             ],
             default: [
                 "What's George's experience?",
                 "What skills does he have?",
-                "Show me his projects"
+                "What's his personal story?"
             ]
         };
         
@@ -302,16 +346,49 @@ class AIAssistant {
     
     getKeywordMappings() {
         return {
+            // Easter eggs FIRST to catch fun queries before other topics
+            easterEgg: [
+                'tell me a joke', 'a joke', 'make me laugh', 'funny joke', 'joke',
+                'who built you', 'who made you', 'who created you',
+                'favorite pizza', 'favorite food',
+                'secret', 'easter egg', 'surprise me', 'hidden',
+                'meaning of life', 'are you real', 'are you a bot',
+                'are you ai', 'are you human', 'beep boop'
+            ],
+            // More specific topics next
+            personalStory: [
+                'personal story', 'his story', 'your story', 'george\'s story',
+                'his journey', 'personal journey', 'life journey',
+                'origin', 'born', 'raised', 'grew up', 'where is he from', 
+                'where from', 'hometown', 'haiti', 'haitian', 'immigrant', 'esl student'
+            ],
+            languages: [
+                'what language', 'speak french', 'speak creole', 'bilingual',
+                'trilingual', 'multilingual', 'parle', 'parlez', 'francais',
+                'how many languages', 'does he speak'
+            ],
             experience: [
-                'experience', 'background', 'work', 'job', 'career', 'employment',
-                'worked', 'role', 'position', 'history', 'professional', 'resume',
-                'cv', 'journey', 'path', 'trajectory', 'employed', 'working'
+                'experience', 'background', 'work history', 'job', 'career', 'employment',
+                'worked', 'role', 'position', 'professional', 'resume',
+                'cv', 'career path', 'trajectory', 'employed', 'working',
+                'achievements', 'accomplishments', 'leadership', 'team lead', 'lead',
+                'senior', 'manager', 'years of experience', 'how long'
             ],
             skills: [
-                'skill', 'skills', 'technology', 'technologies', 'tech', 'stack',
-                'programming', 'languages', 'tools', 'frameworks', 'expertise',
-                'proficient', 'know', 'capable', 'abilities', 'competencies',
-                'specialize', 'specialization', 'technical', 'coding'
+                'skill', 'skills', 'technology', 'technologies', 'tech stack',
+                'programming', 'tools', 'frameworks', 'expertise',
+                'proficient', 'capable', 'abilities', 'competencies',
+                'specialize', 'specialization', 'technical', 'coding', 'tech',
+                'cloud', 'cloud platform', 'aws', 'azure', 'gcp', 'docker', 'kubernetes',
+                'infrastructure', 'devops', 'database', 'databases', 'java', 'python',
+                'javascript', 'react', 'spring boot', 'flask', 'api', 'backend', 'frontend',
+                // Additional tech keywords
+                'graphql', 'rest', 'grpc', 'websocket', 'microservice',
+                'mysql', 'postgres', 'sqlite', 'elasticsearch', 'redis', 'mongodb',
+                'jenkins', 'gitlab', 'github actions', 'ci/cd', 'cicd',
+                'terraform', 'ansible', 'nginx', 'linux', 'git',
+                'tdd', 'bdd', 'clean code', 'solid', 'design pattern', 'architecture',
+                'system design', 'scalable', 'distributed'
             ],
             projects: [
                 'project', 'projects', 'portfolio', 'built', 'created', 'developed',
@@ -321,17 +398,19 @@ class AIAssistant {
             education: [
                 'education', 'degree', 'university', 'school', 'college', 'study',
                 'studied', 'graduated', 'graduation', 'academic', 'certificate',
-                'certification', 'training', 'learn', 'learned', 'nanodegree',
+                'certification', 'training', 'nanodegree',
                 'penn state', 'pennsylvania', 'udacity', 'cmu', 'carnegie'
             ],
             contact: [
                 'contact', 'reach', 'email', 'hire', 'connect', 'touch',
                 'message', 'linkedin', 'github', 'available', 'opportunity',
-                'opportunities', 'hiring', 'recruit', 'phone', 'call'
+                'opportunities', 'hiring', 'recruit', 'phone', 'call',
+                'can he help', 'how to hire', 'interested in hiring',
+                'freelance', 'consulting', 'contractor', 'open to work'
             ],
             location: [
-                'location', 'where', 'based', 'live', 'located', 'city',
-                'area', 'region', 'bay area', 'san francisco', 'california', 'sf'
+                'location', 'where is he based', 'where does he live', 'located', 'city',
+                'area', 'region', 'bay area', 'san francisco', 'california'
             ],
             gaming: [
                 'series', 'gaming', 'game', 'games', 'pixelberry', 'choices',
@@ -358,8 +437,8 @@ class AIAssistant {
             ],
             companies: [
                 'company', 'companies', 'employer', 'employers', 'worked at',
-                'organization', 'firm', 'startup', 'corporation', 'ge', 'general electric',
-                'sphere', 'calypso', 'calyps'
+                'organization', 'firm', 'startup', 'corporation', 'general electric',
+                'ge power', 'sphere', 'calypso', 'calyps', 'series entertainment'
             ],
             clientWork: [
                 'client', 'clients', 'sliver', 'vintage', 'pizzeria', 'pizza',
@@ -370,17 +449,18 @@ class AIAssistant {
                 'go on', 'continue', 'expand', 'deeper', 'specifically', 'example',
                 'examples', 'like what', 'such as', 'instance'
             ],
-            greeting: [
-                'hello', 'hi', 'hey', 'greetings', 'howdy', 'sup', 'yo',
-                'good morning', 'good afternoon', 'good evening', 'whats up'
-            ],
             thanks: [
-                'thanks', 'thank you', 'appreciate', 'helpful', 'great', 'awesome',
-                'perfect', 'excellent', 'wonderful', 'nice'
+                'thanks', 'thank you', 'appreciate', 'helpful', 'great help',
+                'perfect', 'excellent', 'wonderful'
+            ],
+            greeting: [
+                'hello', 'hi', 'hey', 'greetings', 'howdy', 'sup',
+                'good morning', 'good afternoon', 'good evening', 'whats up'
             ],
             who: [
                 'who is', 'who are', 'who\'s', 'about george', 'about him',
-                'tell me about', 'introduce', 'introduction'
+                'tell me about', 'introduce', 'introduction', 'summary', 'bio',
+                'strengths', 'unique', 'why hire', 'why should i hire', 'what makes him'
             ]
         };
     }
@@ -605,8 +685,45 @@ class AIAssistant {
                 {
                     level: 1,
                     responses: [
-                        "George Erol Fouché is a **Senior Software Engineer with 10+ years** of experience! 👨🏿‍💻\n\nHe specializes in:\n• Backend Development (Java, Python)\n• Data Engineering (Spark, Kafka, AWS)\n• Robotics & AI (ROS, TensorFlow, OpenCV)\n\nMost recently, he was at Series Entertainment (Gaming AI) as Sr. Software Engineer and sole Data Engineer for Pixelberry Studio.",
-                        "Let me introduce George! 🌟\n\n**George Erol Fouché** is a versatile software engineer based in the San Francisco Bay Area. With over a decade of experience, he's worked across:\n\n• Gaming AI startups\n• Cybersecurity companies\n• AI/ML startups\n• Fortune 500 enterprises (GE)\n\nHe holds a B.S. in Computer Engineering from Penn State and has led robotics projects at CMU."
+                        "George Erol Fouché is a **Senior Software Engineer with 10+ years** of experience! 👨🏿‍💻\n\nHe specializes in:\n• Backend Development (Java, Python)\n• Data Engineering (Spark, Kafka, AWS)\n• Robotics & AI (ROS, TensorFlow, OpenCV)\n\nMost recently, he was at Series Entertainment (Gaming AI) as Sr. Software Engineer and sole Data Engineer for Pixelberry Studio.\n\nFun fact: He's trilingual! 🌍",
+                        "Let me introduce George! 🌟\n\n**George Erol Fouché** is a versatile software engineer based in the San Francisco Bay Area. With over a decade of experience, he's worked across:\n\n• Gaming AI startups\n• Cybersecurity companies\n• AI/ML startups\n• Fortune 500 enterprises (GE)\n\nHe holds a B.S. in Computer Engineering from Penn State and has led robotics projects at CMU.\n\nAsk me about his inspiring personal journey! 🇭🇹"
+                    ]
+                }
+            ],
+            personalStory: [
+                {
+                    level: 1,
+                    responses: [
+                        "George has an inspiring story! 🌟\n\nHe was **born in New York** and **raised in Haiti**. At age 16, he returned to the United States as an ESL student. Coming from Haiti to California felt like *\"making it to the NBA — but in software engineering.\"* 🏀\n\nThat experience shaped his **ambition, discipline, and work ethic** that drives his success today.\n\nOh, and he's **trilingual**: English, French, and Haitian Creole! 🌍",
+                        "Here's George's journey! 🇭🇹➡️🇺🇸\n\n**Born**: New York\n**Raised**: Haiti\n**Returned to US**: Age 16 as an ESL student\n\nHe describes coming from Haiti to California as *\"making it to the NBA of software engineering.\"* That drive and determination helped him become a Senior Software Engineer with 10+ years of experience.\n\n**Languages**: English 🇺🇸 | French 🇫🇷 | Haitian Creole 🇭🇹"
+                    ]
+                },
+                {
+                    level: 2,
+                    responses: [
+                        "George's story is truly remarkable! 🌟\n\nImagine: A young man from Haiti arriving in California at 16, learning English as a second language, and going on to:\n\n📚 Earn a Computer Engineering degree from Penn State\n🤖 Lead robotics projects at CMU\n🎮 Work at gaming, AI, and cybersecurity startups\n🏭 Spend 7 years at GE\n💼 Become a Senior Software Engineer with 10+ years experience\n\nHis journey proves that with **ambition, discipline, and hard work**, anything is possible.\n\nAnd yes — he speaks **three languages** fluently: English, French, and Haitian Creole! 🌍"
+                    ]
+                }
+            ],
+            languages: [
+                {
+                    level: 1,
+                    responses: [
+                        "George is **trilingual**! 🌍\n\n🇺🇸 **English** - Fluent (professional)\n🇫🇷 **French** - Fluent\n🇭🇹 **Haitian Creole** - Native\n\nHe learned English after moving from Haiti to California at age 16. Now he's fully fluent in all three languages!",
+                        "Oui, il parle français! 🇫🇷\n\nGeorge speaks **three languages**:\n• English (fluent)\n• French (fluent)\n• Haitian Creole (native)\n\nGrowing up in Haiti and later moving to the US gave him this multilingual advantage. Great for working with international teams!"
+                    ]
+                }
+            ],
+            easterEgg: [
+                {
+                    level: 1,
+                    responses: [
+                        "🤖 *beep boop* You found an Easter egg!\n\nHere's a software engineering joke:\n\nWhy do programmers prefer dark mode?\n\nBecause light attracts bugs! 🐛\n\n...I'll see myself out. 😄",
+                        "Ah, curious one! 🔍\n\nI was built by George himself! He coded me to help visitors learn about his work. I'm powered by JavaScript and a lot of keyword matching... and maybe a little ✨ magic ✨.\n\nNo LLMs were harmed in my creation. 🤖",
+                        "🍕 George's favorite pizza?\n\nWell, he did build the SLIVER Pizzeria website, so I'd guess he's a fan of their vegetarian sourdough crust pizza!\n\nBut honestly, you'd have to ask him directly. Want his contact info?",
+                        "The secret to George's success? 🤫\n\n1. Born in NY, raised in Haiti\n2. Came to California at 16 as an ESL student\n3. Treated it like \"making it to the NBA\"\n4. Never stopped learning\n5. 10+ years of building cool stuff\n\nNow THAT'S a power-up! 🎮",
+                        "Am I real? 🤔\n\nI'm as real as the JavaScript that runs me! I'm George's AI assistant, here to tell you about his awesome career.\n\nBut no, I can't pass the Turing test... yet. 😉\n\nWhat would you like to know about George?",
+                        "42! 🌌\n\nAh, I see you're a person of culture! But the real answer to life, the universe, and everything is probably... learning to code. 💻\n\nOr maybe it's just 42. Douglas Adams knew what was up.\n\nAnyway, what can I tell you about George?"
                     ]
                 }
             ],
@@ -827,17 +944,19 @@ class AIAssistant {
         this.isOpen = !this.isOpen;
         const chatWindow = document.getElementById('aiChatWindow');
         const button = document.getElementById('aiAssistantButton');
-        
+
         if (this.isOpen) {
             chatWindow.classList.add('open');
             button.classList.add('hidden');
-            
+            this.trackEvent('chatbot_opened');
+
             // Remove proactive tooltip if exists
             const tooltip = document.querySelector('.ai-proactive-tooltip');
             if (tooltip) tooltip.remove();
         } else {
             chatWindow.classList.remove('open');
             button.classList.remove('hidden');
+            this.trackEvent('chatbot_closed');
         }
     }
 
@@ -982,10 +1101,11 @@ class AIAssistant {
         suggestionsDiv.querySelectorAll('.suggestion-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 const question = btn.textContent;
+                this.trackSuggestionClick(question);
                 suggestionsDiv.remove();
                 this.addMessage(question, 'user');
                 this.showTypingIndicator();
-                
+
                 setTimeout(() => {
                     this.hideTypingIndicator();
                     const response = this.getResponse(question);
@@ -1047,6 +1167,7 @@ class AIAssistant {
         setTimeout(() => {
             this.hideTypingIndicator();
             const response = this.getResponse(message);
+            this.trackQuestion(message, response.topic);
             this.addMessage(response.text, 'bot', response.topic);
         }, thinkTime);
     }
@@ -1069,6 +1190,7 @@ class AIAssistant {
         
         const message = actionMessages[action] || action;
         this.addMessage(message, 'user');
+        this.trackQuickAction(action);
         
         this.showTypingIndicator();
         
