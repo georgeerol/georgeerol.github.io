@@ -53,6 +53,101 @@ class AIAssistant {
     }
 
     // ==========================================
+    // CONTENT MODERATION
+    // ==========================================
+    
+    getBlockedPatterns() {
+        // Patterns that indicate inappropriate content
+        // Using partial matches to catch variations
+        return [
+            // Profanity (common variations)
+            'fuck', 'shit', 'damn', 'ass', 'bitch', 'bastard', 'crap',
+            'dick', 'cock', 'pussy', 'cunt', 'whore', 'slut',
+            // Slurs and hate speech
+            'nigger', 'nigga', 'faggot', 'retard', 'spic', 'chink', 'kike',
+            // Threats and harassment
+            'kill you', 'kill him', 'die', 'murder', 'attack', 'hurt you',
+            'hack', 'ddos', 'exploit', 'inject', 'sql injection', 'xss',
+            // Inappropriate requests
+            'nude', 'naked', 'porn', 'sex',
+            // Spam patterns
+            'buy now', 'click here', 'free money', 'bitcoin scam'
+        ];
+    }
+
+    detectInappropriateContent(message) {
+        const lowerMessage = message.toLowerCase();
+        const blockedPatterns = this.getBlockedPatterns();
+        
+        for (const pattern of blockedPatterns) {
+            if (lowerMessage.includes(pattern)) {
+                return {
+                    isInappropriate: true,
+                    reason: 'blocked_word'
+                };
+            }
+        }
+        
+        // Check for excessive caps (yelling)
+        const capsRatio = (message.match(/[A-Z]/g) || []).length / message.length;
+        if (message.length > 10 && capsRatio > 0.7) {
+            return {
+                isInappropriate: true,
+                reason: 'excessive_caps'
+            };
+        }
+        
+        // Check for spam-like repetition
+        const repeatedChars = /(.)\1{4,}/;
+        if (repeatedChars.test(message)) {
+            return {
+                isInappropriate: true,
+                reason: 'spam'
+            };
+        }
+        
+        return { isInappropriate: false };
+    }
+
+    triggerAngryState() {
+        const avatar = document.querySelector('.ai-avatar-icon');
+        const header = document.querySelector('.ai-chat-header');
+        
+        if (avatar) avatar.classList.add('angry');
+        if (header) header.classList.add('angry');
+        
+        // Track the incident
+        this.trackEvent('chatbot_inappropriate_content');
+        
+        // Remove angry state after animation
+        setTimeout(() => {
+            if (avatar) avatar.classList.remove('angry');
+            if (header) header.classList.remove('angry');
+        }, 2000);
+    }
+
+    getInappropriateResponse(reason) {
+        const responses = {
+            blocked_word: [
+                "I appreciate you reaching out, but I'd prefer to keep our conversation professional. How can I help you learn about George's work? 🙂",
+                "Let's keep things professional! I'm happy to tell you about George's projects, skills, or experience.",
+                "I'm designed to be helpful and professional. What would you like to know about George's background?"
+            ],
+            excessive_caps: [
+                "No need to shout! 😊 I can hear you just fine. What would you like to know about George?",
+                "I got your message! Let's chat normally. What can I help you with?"
+            ],
+            spam: [
+                "That looks like an accidental input. What would you like to know about George?",
+                "Let me help you with something meaningful! Ask me about George's projects or experience."
+            ]
+        };
+        
+        const options = responses[reason] || responses.blocked_word;
+        return options[Math.floor(Math.random() * options.length)];
+    }
+
+    // ==========================================
     // PHASE 2: TIME-BASED GREETINGS
     // ==========================================
     
@@ -1171,6 +1266,18 @@ class AIAssistant {
         
         this.addMessage(message, 'user');
         input.value = '';
+        
+        // Check for inappropriate content
+        const contentCheck = this.detectInappropriateContent(message);
+        if (contentCheck.isInappropriate) {
+            this.triggerAngryState();
+            
+            setTimeout(() => {
+                const response = this.getInappropriateResponse(contentCheck.reason);
+                this.addMessage(response, 'bot');
+            }, 500);
+            return;
+        }
         
         this.showTypingIndicator();
         
