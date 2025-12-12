@@ -341,13 +341,25 @@ class AIAssistant {
             experience: [
                 'experience', 'background', 'work history', 'job', 'career', 'employment',
                 'worked', 'role', 'position', 'professional', 'resume',
-                'cv', 'career path', 'trajectory', 'employed', 'working'
+                'cv', 'career path', 'trajectory', 'employed', 'working',
+                'achievements', 'accomplishments', 'leadership', 'team lead', 'lead',
+                'senior', 'manager', 'years of experience', 'how long'
             ],
             skills: [
                 'skill', 'skills', 'technology', 'technologies', 'tech stack',
                 'programming', 'tools', 'frameworks', 'expertise',
                 'proficient', 'capable', 'abilities', 'competencies',
-                'specialize', 'specialization', 'technical', 'coding', 'tech'
+                'specialize', 'specialization', 'technical', 'coding', 'tech',
+                'cloud', 'cloud platform', 'aws', 'azure', 'gcp', 'docker', 'kubernetes',
+                'infrastructure', 'devops', 'database', 'databases', 'java', 'python',
+                'javascript', 'react', 'spring boot', 'flask', 'api', 'backend', 'frontend',
+                // Additional tech keywords
+                'graphql', 'rest', 'grpc', 'websocket', 'microservice',
+                'mysql', 'postgres', 'sqlite', 'elasticsearch', 'redis', 'mongodb',
+                'jenkins', 'gitlab', 'github actions', 'ci/cd', 'cicd',
+                'terraform', 'ansible', 'nginx', 'linux', 'git',
+                'tdd', 'bdd', 'clean code', 'solid', 'design pattern', 'architecture',
+                'system design', 'scalable', 'distributed'
             ],
             projects: [
                 'project', 'projects', 'portfolio', 'built', 'created', 'developed',
@@ -363,7 +375,9 @@ class AIAssistant {
             contact: [
                 'contact', 'reach', 'email', 'hire', 'connect', 'touch',
                 'message', 'linkedin', 'github', 'available', 'opportunity',
-                'opportunities', 'hiring', 'recruit', 'phone', 'call'
+                'opportunities', 'hiring', 'recruit', 'phone', 'call',
+                'can he help', 'how to hire', 'interested in hiring',
+                'freelance', 'consulting', 'contractor', 'open to work'
             ],
             location: [
                 'location', 'where is he based', 'where does he live', 'located', 'city',
@@ -416,7 +430,8 @@ class AIAssistant {
             ],
             who: [
                 'who is', 'who are', 'who\'s', 'about george', 'about him',
-                'tell me about', 'introduce', 'introduction'
+                'tell me about', 'introduce', 'introduction', 'summary', 'bio',
+                'strengths', 'unique', 'why hire', 'why should i hire', 'what makes him'
             ]
         };
     }
