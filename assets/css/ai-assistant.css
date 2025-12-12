@@ -489,3 +489,246 @@
   color: var(--accent-color);
 }
 
+/* ============================================
+   HEADER ACTIONS (Clear Chat Button)
+   ============================================ */
+
+.ai-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ai-clear-btn {
+  background: rgba(255,255,255,0.15);
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: white;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+}
+
+.ai-clear-btn:hover {
+  background: rgba(255,255,255,0.25);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* ============================================
+   SUGGESTED QUESTIONS
+   ============================================ */
+
+.ai-suggestions {
+  padding: 12px 0;
+  animation: fadeInUp 0.3s ease;
+}
+
+.suggestions-label {
+  font-size: 0.8em;
+  color: var(--text-light);
+  margin: 0 0 10px 0;
+  font-weight: 500;
+}
+
+.suggestions-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.suggestion-btn {
+  background: var(--secondary-color);
+  border: 1px solid var(--border-color);
+  padding: 8px 14px;
+  border-radius: 18px;
+  font-size: 0.82em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--text-dark);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.suggestion-btn:hover {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(3, 102, 214, 0.25);
+}
+
+[data-theme="dark"] .suggestion-btn:hover {
+  box-shadow: 0 4px 12px rgba(88, 166, 255, 0.25);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   PROACTIVE TOOLTIP
+   ============================================ */
+
+.ai-proactive-tooltip {
+  position: absolute;
+  bottom: 85px;
+  right: 0;
+  width: 280px;
+  background: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+  padding: 16px;
+  transform: translateY(20px) scale(0.9);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  border: 2px solid var(--border-color);
+  z-index: 1001;
+}
+
+.ai-proactive-tooltip.visible {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.ai-proactive-tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  right: 25px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid var(--card-bg);
+}
+
+.tooltip-content {
+  position: relative;
+}
+
+.tooltip-content p {
+  margin: 0 0 12px 0;
+  font-size: 0.95em;
+  color: var(--text-dark);
+  line-height: 1.5;
+}
+
+.tooltip-close {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 24px;
+  height: 24px;
+  background: var(--secondary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--text-light);
+  transition: all 0.2s ease;
+  border: 1px solid var(--border-color);
+}
+
+.tooltip-close:hover {
+  background: var(--text-light);
+  color: white;
+}
+
+.tooltip-cta {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.tooltip-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(3, 102, 214, 0.35);
+}
+
+/* Tooltip animation */
+@keyframes tooltipPulse {
+  0%, 100% {
+    box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+  }
+  50% {
+    box-shadow: 0 10px 40px rgba(3, 102, 214, 0.35);
+  }
+}
+
+.ai-proactive-tooltip.visible {
+  animation: tooltipPulse 2s ease-in-out infinite;
+}
+
+/* ============================================
+   MOBILE ADJUSTMENTS FOR NEW FEATURES
+   ============================================ */
+
+@media (max-width: 768px) {
+  .ai-proactive-tooltip {
+    width: 250px;
+    right: -5px;
+    bottom: 75px;
+    padding: 14px;
+  }
+  
+  .tooltip-content p {
+    font-size: 0.9em;
+  }
+  
+  .tooltip-cta {
+    font-size: 0.85em;
+    padding: 9px 16px;
+  }
+  
+  .suggestions-buttons {
+    gap: 6px;
+  }
+  
+  .suggestion-btn {
+    font-size: 0.78em;
+    padding: 6px 12px;
+  }
+  
+  .ai-clear-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 480px) {
+  .ai-proactive-tooltip {
+    width: 220px;
+    right: 0;
+    padding: 12px;
+  }
+  
+  .suggestion-btn {
+    font-size: 0.75em;
+    padding: 5px 10px;
+  }
+}
+
