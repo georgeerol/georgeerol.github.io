@@ -1134,12 +1134,24 @@ class AIAssistant {
         `;
         messagesContainer.appendChild(typingDiv);
         typingDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        
+        // Animate the header avatar while thinking
+        const avatar = document.querySelector('.ai-avatar-icon');
+        if (avatar) {
+            avatar.classList.add('thinking');
+        }
     }
 
     hideTypingIndicator() {
         const indicator = document.getElementById('typingIndicator');
         if (indicator) {
             indicator.remove();
+        }
+        
+        // Stop avatar animation
+        const avatar = document.querySelector('.ai-avatar-icon');
+        if (avatar) {
+            avatar.classList.remove('thinking');
         }
     }
 
