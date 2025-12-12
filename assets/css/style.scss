@@ -493,65 +493,6 @@ body {
   border-bottom: none;
 }
 
-/* My Journey Section */
-.my-journey {
-  margin-top: 25px;
-  padding: 20px;
-  background: linear-gradient(135deg, var(--card-bg) 0%, rgba(3, 102, 214, 0.03) 100%);
-  border-radius: var(--border-radius);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  border-left: 4px solid var(--primary-color);
-  transition: background 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.my-journey::before {
-  content: '🌍';
-  position: absolute;
-  right: 15px;
-  top: 15px;
-  font-size: 2em;
-  opacity: 0.15;
-}
-
-[data-theme="dark"] .my-journey {
-  background: linear-gradient(135deg, var(--card-bg) 0%, rgba(88, 166, 255, 0.05) 100%);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-}
-
-.my-journey h4 {
-  color: var(--primary-color);
-  margin-bottom: 12px;
-  font-size: 1.1em;
-}
-
-.my-journey p {
-  color: var(--text-dark);
-  line-height: 1.7;
-  margin-bottom: 12px;
-}
-
-.my-journey p:last-child {
-  margin-bottom: 0;
-}
-
-.my-journey em {
-  color: var(--primary-color);
-  font-style: italic;
-  font-weight: 500;
-}
-
-.languages-badge {
-  display: inline-block;
-  background: var(--secondary-color);
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 0.95em;
-  border: 1px solid var(--border-color);
-  margin-top: 5px;
-}
-
 /* Skills Grid - HORIZONTAL SIDE-BY-SIDE */
 .skills-grid {
   display: grid;
