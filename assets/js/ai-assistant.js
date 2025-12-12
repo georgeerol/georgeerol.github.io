@@ -1088,8 +1088,8 @@ class AIAssistant {
                 }
             });
         } else {
-            // User messages appear instantly
-            messageContent.innerHTML = this.formatMessage(text);
+            // User messages appear instantly (escaped for XSS protection)
+            messageContent.innerHTML = this.formatMessage(text, true);
         }
         
         // Scroll to show the new message
@@ -1100,7 +1100,19 @@ class AIAssistant {
         this.messages.push({ text, sender, timestamp: Date.now() });
     }
 
-    formatMessage(text) {
+    // Security: Escape HTML to prevent XSS attacks
+    escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+    }
+
+    formatMessage(text, isUserMessage = false) {
+        // Always escape user input first to prevent XSS
+        if (isUserMessage) {
+            return this.escapeHtml(text);
+        }
+        // Bot messages are safe (we control them), but still escape any user-echoed content
         return text
             .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
             .replace(/\n/g, '<br>');
