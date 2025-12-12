@@ -1,0 +1,648 @@
+// AI Assistant Chatbot for George Erol Fouché Portfolio
+// Enhanced with conversation memory, synonyms, and natural responses
+
+class AIAssistant {
+    constructor() {
+        this.isOpen = false;
+        this.messages = [];
+        this.conversationHistory = [];
+        this.lastTopic = null;
+        this.topicDepth = {}; // Track how deep we've gone into each topic
+        this.init();
+    }
+
+    init() {
+        this.createWidget();
+        this.setupEventListeners();
+        this.addWelcomeMessage();
+    }
+
+    // ==========================================
+    // PHASE 1: EXPANDED KEYWORD SYNONYMS
+    // ==========================================
+    
+    getKeywordMappings() {
+        return {
+            experience: [
+                'experience', 'background', 'work', 'job', 'career', 'employment',
+                'worked', 'role', 'position', 'history', 'professional', 'resume',
+                'cv', 'journey', 'path', 'trajectory', 'employed', 'working'
+            ],
+            skills: [
+                'skill', 'skills', 'technology', 'technologies', 'tech', 'stack',
+                'programming', 'languages', 'tools', 'frameworks', 'expertise',
+                'proficient', 'know', 'capable', 'abilities', 'competencies',
+                'specialize', 'specialization', 'technical', 'coding'
+            ],
+            projects: [
+                'project', 'projects', 'portfolio', 'built', 'created', 'developed',
+                'made', 'build', 'work samples', 'examples', 'showcase', 'demos',
+                'applications', 'apps', 'websites', 'systems'
+            ],
+            education: [
+                'education', 'degree', 'university', 'school', 'college', 'study',
+                'studied', 'graduated', 'graduation', 'academic', 'certificate',
+                'certification', 'training', 'learn', 'learned', 'nanodegree',
+                'penn state', 'pennsylvania', 'udacity', 'cmu', 'carnegie'
+            ],
+            contact: [
+                'contact', 'reach', 'email', 'hire', 'connect', 'touch',
+                'message', 'linkedin', 'github', 'available', 'opportunity',
+                'opportunities', 'hiring', 'recruit', 'phone', 'call'
+            ],
+            location: [
+                'location', 'where', 'based', 'live', 'located', 'city',
+                'area', 'region', 'bay area', 'san francisco', 'california', 'sf'
+            ],
+            gaming: [
+                'series', 'gaming', 'game', 'games', 'pixelberry', 'choices',
+                'entertainment', 'studio', 'gaas', 'game development'
+            ],
+            dataEngineering: [
+                'data engineering', 'data engineer', 'etl', 'pipeline', 'pipelines',
+                'spark', 'kafka', 'redshift', 'data processing', 'big data',
+                'streaming', 'batch', 'data warehouse', 'analytics'
+            ],
+            robotics: [
+                'robot', 'robotics', 'ros', 'autonomous', 'drone', 'rover',
+                'manipulation', 'perception', 'slam', 'navigation', 'sensor',
+                'actuator', 'kinematics', 'motion planning'
+            ],
+            ai: [
+                'ai', 'artificial intelligence', 'machine learning', 'ml',
+                'deep learning', 'neural', 'tensorflow', 'pytorch', 'opencv',
+                'computer vision', 'nlp', 'model', 'training'
+            ],
+            recent: [
+                'recent', 'current', 'latest', 'now', 'today', 'currently',
+                'present', 'last', 'newest', '2024', '2025'
+            ],
+            companies: [
+                'company', 'companies', 'employer', 'employers', 'worked at',
+                'organization', 'firm', 'startup', 'corporation', 'ge', 'general electric',
+                'sphere', 'calypso', 'calyps'
+            ],
+            clientWork: [
+                'client', 'clients', 'sliver', 'vintage', 'pizzeria', 'pizza',
+                'wine', 'barnyard', 'freelance', 'consulting', 'contract'
+            ],
+            followUp: [
+                'more', 'detail', 'details', 'elaborate', 'explain', 'tell me more',
+                'go on', 'continue', 'expand', 'deeper', 'specifically', 'example',
+                'examples', 'like what', 'such as', 'instance'
+            ],
+            greeting: [
+                'hello', 'hi', 'hey', 'greetings', 'howdy', 'sup', 'yo',
+                'good morning', 'good afternoon', 'good evening', 'whats up'
+            ],
+            thanks: [
+                'thanks', 'thank you', 'appreciate', 'helpful', 'great', 'awesome',
+                'perfect', 'excellent', 'wonderful', 'nice'
+            ],
+            who: [
+                'who is', 'who are', 'who\'s', 'about george', 'about him',
+                'tell me about', 'introduce', 'introduction'
+            ]
+        };
+    }
+
+    // Detect topic from message using expanded synonyms
+    detectTopic(message) {
+        const msg = message.toLowerCase();
+        const mappings = this.getKeywordMappings();
+        
+        for (const [topic, keywords] of Object.entries(mappings)) {
+            for (const keyword of keywords) {
+                if (msg.includes(keyword)) {
+                    return topic;
+                }
+            }
+        }
+        return null;
+    }
+
+    // ==========================================
+    // PHASE 3: RESPONSE VARIATIONS
+    // ==========================================
+    
+    getResponseVariations() {
+        return {
+            experience: [
+                {
+                    level: 1,
+                    responses: [
+                        "George is a **Senior Software Engineer with 10+ years** of experience! He specializes in Backend Development, Data Engineering, and Robotics/AI. Most recently, he was at Series Entertainment (Gaming AI Startup) as the sole Data Engineer for Pixelberry Studio. 🎮\n\nWant to hear about specific roles or companies?",
+                        "With over a decade in software engineering, George has built expertise across Gaming AI, Cybersecurity, Enterprise, and Startups. His most recent role was Sr. Software Engineer at Series Entertainment, working on the Choices mobile game. 🚀\n\nI can tell you more about any specific period!",
+                        "George brings 10+ years of hands-on experience spanning Backend Development, Data Engineering, and AI/Robotics. He's worked at gaming startups, cybersecurity firms, AI companies, and Fortune 500 giants like GE. 💼\n\nAsk me about any specific company or role!"
+                    ]
+                },
+                {
+                    level: 2,
+                    responses: [
+                        "Here's George's career journey in more detail:\n\n🎮 **Series Entertainment** (2024-2025)\nSr. Software Engineer & sole Data Engineer for Pixelberry Studio. Built ETL pipelines for billions of Choices game events.\n\n🔒 **Sphere Technology** (2022-2024)\nLead architect for cybersecurity solutions.\n\n🤖 **CalypsoAI** (2020-2022)\nSole US Engineer at this AI startup, building government AI trust & safety systems.\n\n🏭 **General Electric** (2013-2020)\nProgressed through Data Engineering, Mobile, and IoT roles.\n\nWant specifics on any of these?",
+                        "Let me break down George's professional timeline:\n\n**Recent (2020-2025)**: Startup focus - Gaming AI at Series Entertainment, Cybersecurity at Sphere Technology, AI Trust at CalypsoAI\n\n**Earlier (2013-2020)**: Enterprise experience at General Electric across multiple divisions\n\n**Foundation**: CMU Robotics Institute experience + Penn State Computer Engineering degree\n\nWhich era interests you most?"
+                    ]
+                }
+            ],
+            skills: [
+                {
+                    level: 1,
+                    responses: [
+                        "George's tech toolkit is impressive! 🛠️\n\n**Backend**: Java Spring Boot, Python Flask, Microservices\n**Data**: Apache Spark, Kafka, Redshift, Cassandra\n**Cloud**: AWS, Azure\n**AI/Robotics**: TensorFlow, OpenCV, ROS\n\nWant me to dive deeper into any area?",
+                        "Here's what George works with daily:\n\n🔧 **Languages**: Java, Python, SQL\n📊 **Data Tools**: Spark, PySpark, Kafka, SQS\n☁️ **Cloud**: AWS (DynamoDB, Redshift, S3), Azure\n🤖 **AI/ML**: TensorFlow, OpenCV, Deep Learning\n\nAsk about any specific technology!",
+                        "George is a full-stack polyglot! His expertise spans:\n\n• **Backend Development** - Java Spring Boot, Python Flask, REST APIs\n• **Data Engineering** - Big data pipelines, ETL, streaming\n• **Cloud & DevOps** - AWS, Docker, Kubernetes\n• **AI & Robotics** - Computer vision, deep learning, ROS\n\nWhich area would you like to explore?"
+                    ]
+                },
+                {
+                    level: 2,
+                    responses: [
+                        "Let's go deeper on George's technical skills:\n\n**Backend & APIs**\n• Java Spring Boot (enterprise-grade)\n• Python Flask/FastAPI\n• REST API design\n• Microservices architecture\n\n**Data Engineering**\n• Apache Spark & PySpark\n• Kafka, SQS for streaming\n• Redshift, Cassandra, PostgreSQL, DynamoDB\n• ETL pipeline design\n\n**Cloud & Infrastructure**\n• AWS (extensive) - Lambda, EC2, S3, etc.\n• Azure experience\n• Docker, Kubernetes\n• CI/CD pipelines\n\n**AI/ML & Robotics**\n• TensorFlow, deep learning\n• OpenCV, computer vision\n• ROS (Robot Operating System)\n• SLAM, path planning\n\nAnything specific you'd like to know?"
+                    ]
+                }
+            ],
+            projects: [
+                {
+                    level: 1,
+                    responses: [
+                        "George has built some amazing projects! 🚀\n\n**💼 Client Work**: SLIVER Pizzeria (Next.js + FastAPI), Vintage Wine app (React Native + AI)\n\n**🤖 Robotics**: Deep Learning Drone, Search & Sample Rover, Robotic Arm control\n\n**📊 Data**: IoT AWS Spark, Real-time Flink analytics\n\n**🌐 Full-Stack**: Todo App, Expense Tracker\n\nWhich category interests you?",
+                        "Here's George's project portfolio:\n\n🍕 **SLIVER Pizzeria** - Full restaurant platform with admin dashboard\n🍷 **Vintage Wine** - Mobile wine club with AI recommendations\n🚁 **Deep Learning Drone** - Neural network for follow-me feature\n🔍 **Search Rover** - Autonomous navigation & mapping\n⚡ **IoT AWS Spark** - Real-time vehicle data processing\n\nWant details on any of these?",
+                        "George's portfolio spans multiple domains:\n\n• **Production Apps**: Built real apps for SLIVER Pizzeria and Barnyard Wine Bar\n• **Robotics/AI**: Drones, rovers, robotic arms, self-driving car simulations\n• **Data Pipelines**: End-to-end big data systems\n• **Web/Mobile**: Full-stack applications\n\nI can elaborate on any project!"
+                    ]
+                },
+                {
+                    level: 2,
+                    responses: [
+                        "Let me give you more project details:\n\n**🍕 SLIVER Pizzeria** (Client Work)\n• Next.js 14 + TypeScript frontend\n• FastAPI + PostgreSQL backend\n• Admin dashboard with JWT auth\n• Deployed on Railway\n• Live: sliverpizzeria-web-production.up.railway.app\n\n**🍷 Vintage Wine** (Client Work)\n• React Native (Expo) mobile app\n• Flask backend with Stripe integration\n• AI-powered wine recommendations\n• Epic Society wine club subscriptions\n\n**🚁 Deep Learning Drone**\n• Custom neural network architecture\n• Real-time object tracking\n• Simulation environment\n• Applications to autonomous vehicles\n\nWant technical details on implementation?"
+                    ]
+                }
+            ],
+            education: [
+                {
+                    level: 1,
+                    responses: [
+                        "George has a strong educational foundation! 🎓\n\n**Penn State University**\n• B.S. Computer Engineering\n• Minor in Nanotechnology\n• Certificate in International Engineering\n\n**Udacity Nanodegrees**\n• Robotic Software Engineer\n• Full Stack Web Developer\n\n**CMU Robotics Institute**\n• Summer Scholar Program Team Leader\n\nWant to know more about any of these?",
+                        "Education highlights:\n\n📚 **B.S. Computer Engineering** - Pennsylvania State University\n🔬 **Minor**: Nanotechnology\n🌍 **Certificate**: International Engineering\n🤖 **Udacity**: Robotic Software Engineer Nanodegree\n🌐 **Udacity**: Full Stack Web Developer Nanodegree\n\nPlus team leadership at CMU Robotics Institute!"
+                    ]
+                },
+                {
+                    level: 2,
+                    responses: [
+                        "More details on George's education:\n\n**Penn State (Main Campus)**\nComputer Engineering gave him a strong foundation in both hardware and software, with coursework in digital systems, embedded programming, and computer architecture.\n\n**Nanotechnology Minor**\nUnique specialization in materials science at the nanoscale - great for understanding sensors and advanced manufacturing.\n\n**CMU Robotics Institute (2010-2012)**\nAs Team Leader for the Summer Scholar Program, George led projects building autonomous recharging stations for robots. This sparked his passion for robotics!\n\n**Continuous Learning**\nThe Udacity nanodegrees demonstrate his commitment to staying current - ROS, deep learning, TensorFlow, modern web development."
+                    ]
+                }
+            ],
+            contact: [
+                {
+                    level: 1,
+                    responses: [
+                        "Here's how to reach George! 📬\n\n📧 **Email**: fouliex@gmail.com\n💼 **LinkedIn**: linkedin.com/in/georgefouche\n💻 **GitHub**: github.com/georgeerol\n🌐 **Portfolio**: georgeerol.github.io\n📍 **Location**: San Francisco Bay Area\n\n✨ **Status**: Open to new opportunities!",
+                        "Ready to connect with George?\n\n• **Email**: fouliex@gmail.com\n• **LinkedIn**: linkedin.com/in/georgefouche\n• **GitHub**: github.com/georgeerol\n\nHe's based in the SF Bay Area and currently open to new opportunities! 🚀",
+                        "Let's get you connected! 🤝\n\n**Best ways to reach George:**\n📧 fouliex@gmail.com\n💼 LinkedIn: georgefouche\n💻 GitHub: georgeerol\n\n📍 San Francisco Bay Area\n✅ Open to opportunities!"
+                    ]
+                }
+            ],
+            location: [
+                {
+                    level: 1,
+                    responses: [
+                        "George is based in the **San Francisco Bay Area**, California! 📍\n\nHe's open to both local opportunities and remote work. The Bay Area has been home base for his work at gaming, AI, and tech companies.",
+                        "📍 **San Francisco Bay Area**, California\n\nGeorge has been in the heart of tech innovation, working with startups and established companies alike. He's open to new opportunities in the area or remote!"
+                    ]
+                }
+            ],
+            gaming: [
+                {
+                    level: 1,
+                    responses: [
+                        "George's gaming industry experience is exciting! 🎮\n\nAt **Series Entertainment** (Nov 2024 - Oct 2025), he was:\n• Sr. Software Engineer\n• Sole Data Engineer for **Pixelberry Studio**\n• Working on the **Choices** mobile game\n\nHe built real-time and batch ETL pipelines processing **billions of game events**!\n\nWant technical details?",
+                        "Gaming AI is George's most recent focus! 🕹️\n\n**Series Entertainment** hired him as Sr. Software Engineer to:\n• Architect data pipelines for Choices game analytics\n• Build Game State and CMS systems\n• Develop VIP Subscription features\n• Advise on monetization data strategy\n\nTech stack: Java Spring, Python, SQS, Redshift, DynamoDB"
+                    ]
+                },
+                {
+                    level: 2,
+                    responses: [
+                        "Deep dive into George's gaming work:\n\n**Pixelberry Studio - Choices Game**\nChoices is a narrative mobile game with millions of players. George handled:\n\n📊 **Data Engineering**\n• Real-time ETL for billions of player events\n• Batch processing pipelines\n• Analytics for player behavior\n\n⚙️ **Backend Development**\n• Game State management system\n• Content Management System (CMS)\n• VIP Subscription service\n\n💰 **Business Impact**\n• Advised GaaS team on data-driven monetization\n• Built systems to understand player engagement\n\n**Tech Stack**\nJava Spring Boot, Python, AWS SQS, Redshift, DynamoDB, Cassandra"
+                    ]
+                }
+            ],
+            dataEngineering: [
+                {
+                    level: 1,
+                    responses: [
+                        "Data Engineering is one of George's core strengths! 📊\n\nHe's built pipelines at multiple companies:\n• **Series Entertainment**: Billions of game events\n• **Sphere Technology**: Cybersecurity data flows\n• **GE Power**: Industrial IoT analytics\n\nTools: Apache Spark, Kafka, Redshift, Cassandra, DynamoDB\n\nWant to hear about specific projects?",
+                        "George is a seasoned Data Engineer! ⚡\n\n**What he builds:**\n• Real-time streaming pipelines\n• Batch ETL processes\n• Data validation & quality systems\n• Analytics infrastructure\n\n**His toolkit:**\n• Apache Spark & PySpark\n• Kafka, AWS SQS\n• Redshift, Cassandra, PostgreSQL\n• AWS Glue, Lambda\n\nAsk about any specific technology or project!"
+                    ]
+                },
+                {
+                    level: 2,
+                    responses: [
+                        "Let's explore George's data engineering work:\n\n**Architecture Patterns**\n• Event-driven microservices\n• Lambda architecture (batch + streaming)\n• Data lake + warehouse hybrids\n\n**Notable Projects**\n\n🎮 **Gaming Analytics** (Series)\n• Real-time player event processing\n• Billions of events daily\n• Player behavior analytics\n\n🚗 **IoT AWS Spark** (Personal)\n• Vehicle performance monitoring\n• GPS, weather, traffic integration\n• 35-mile SF to Dublin use case\n\n⚡ **E2E Spark Flow** (Personal)\n• Docker + Airflow + Kafka + Spark + Cassandra\n• Complete data lifecycle management\n\nWant implementation details?"
+                    ]
+                }
+            ],
+            robotics: [
+                {
+                    level: 1,
+                    responses: [
+                        "Robotics is where George's passion started! 🤖\n\n**Background:**\n• CMU Robotics Institute Team Leader\n• Udacity Robotic Software Engineer Nanodegree\n\n**Projects:**\n🚁 Deep Learning Drone Simulator\n🔍 Search & Sample Rover\n🦾 6-DOF Robotic Arm Pick & Drop\n🗺️ SLAM Mapping Robot\n\nWant details on any of these?",
+                        "George's robotics journey is impressive! 🦾\n\nIt started at **CMU Robotics Institute** where he led a team building autonomous recharging stations for robots.\n\nHis projects include:\n• Neural network-powered drones\n• Autonomous rovers with computer vision\n• Robotic arm manipulation\n• SLAM-based navigation\n\nAll using ROS, OpenCV, TensorFlow, and more!"
+                    ]
+                },
+                {
+                    level: 2,
+                    responses: [
+                        "Deep dive into George's robotics work:\n\n**🚁 Deep Learning Drone Simulator**\nTrained a neural network for \"follow me\" feature. The drone tracks and follows a target person using real-time object detection. Applicable to autonomous vehicles and industrial robotics.\n\n**🔍 Search & Sample Rover**\nAutonomous rover that navigates terrains using camera-based perception. Uses computer vision for path planning and sample collection - inspired by Mars rovers!\n\n**🦾 Robotic Arm Pick & Drop**\n6-DOF robotic arm control using forward and inverse kinematics. Built with ROS for precise manipulation tasks.\n\n**🗺️ SLAM Mapping**\nCustom robot that maps environments while localizing itself. Uses sensor fusion and probabilistic algorithms.\n\n**Tech Stack**: ROS, Gazebo, TensorFlow, OpenCV, Python, C++\n\nWant to see the GitHub repos?"
+                    ]
+                }
+            ],
+            ai: [
+                {
+                    level: 1,
+                    responses: [
+                        "George has deep AI/ML experience! 🧠\n\n**Startup Experience:**\n• Series Entertainment - Gaming AI\n• CalypsoAI - Government AI Trust & Safety\n\n**Projects:**\n• Deep learning for drone tracking\n• Behavioral cloning for self-driving\n• Computer vision with OpenCV\n• Neural networks with TensorFlow\n\nInterested in any specific area?",
+                        "AI & Machine Learning highlights:\n\n🎮 **Gaming AI** at Series Entertainment\n🔒 **AI Safety** at CalypsoAI (government clients)\n🚁 **Computer Vision** for drone following\n🚗 **Behavioral Cloning** for autonomous driving\n🦾 **Object Recognition** for robotic manipulation\n\nTools: TensorFlow, OpenCV, deep learning, CNNs\n\nWant technical details on any of these?"
+                    ]
+                }
+            ],
+            recent: [
+                {
+                    level: 1,
+                    responses: [
+                        "George's most recent role was at **Series Entertainment**! 🎮\n\n**Position**: Sr. Software Engineer (Nov 2024 - Oct 2025)\n**Focus**: Backend & Data Engineering for Pixelberry Studio\n**Product**: Choices mobile game\n\n**Key work:**\n• ETL pipelines for billions of events\n• Game State & CMS systems\n• VIP Subscription features\n• Data strategy consulting\n\nHe's now open to new opportunities!",
+                        "What George has been up to recently:\n\n**2024-2025**: Series Entertainment (Gaming AI)\n• Sr. Software Engineer\n• Sole Data Engineer for Pixelberry Studio\n• Built systems for Choices game analytics\n\n**2022-2024**: Sphere Technology (Cybersecurity)\n• Lead architect for security solutions\n\n**Now**: Open to exciting new opportunities! 🚀"
+                    ]
+                }
+            ],
+            companies: [
+                {
+                    level: 1,
+                    responses: [
+                        "George has worked across diverse companies:\n\n🎮 **Series Entertainment** (2024-2025)\nGaming AI Startup - Pixelberry Studio\n\n🔒 **Sphere Technology Solutions** (2022-2024)\nCybersecurity\n\n🤖 **CalypsoAI** (2020-2022)\nAI Startup - Government AI Safety\n\n🏭 **General Electric** (2013-2020)\nFortune 500 - Multiple divisions\n\nWant details on any specific company?",
+                        "George's employer history:\n\n**Startups**: Series Entertainment, CalypsoAI\n**Cybersecurity**: Sphere Technology Solutions\n**Enterprise**: General Electric (7 years!)\n\nHe's experienced both the fast-paced startup world and structured enterprise environments. Which would you like to know more about?"
+                    ]
+                },
+                {
+                    level: 2,
+                    responses: [
+                        "Detailed company breakdown:\n\n**🎮 Series Entertainment**\nGaming AI startup. George was sole Data Engineer for Pixelberry Studio (makers of Choices). Built data infrastructure processing billions of player events.\n\n**🔒 Sphere Technology Solutions**\nCybersecurity company. George served as lead architect, designing secure systems and data pipelines.\n\n**🤖 CalypsoAI**\nAI startup focused on government clients. As the sole US-based engineer, George built AI trust and safety systems for government applications.\n\n**🏭 General Electric** (2013-2020)\nSpent 7 years progressing through:\n• GE Aviation - Data Engineering\n• GE Digital - Mobile development\n• GE Power - IoT & Industrial analytics\n\nThis breadth gives George unique perspective across industries!"
+                    ]
+                }
+            ],
+            clientWork: [
+                {
+                    level: 1,
+                    responses: [
+                        "George has built production apps for real businesses! 💼\n\n**🍕 SLIVER Pizzeria**\nFull-stack restaurant platform for Bay Area pizzeria chain (6 locations)\n• Next.js 14 + FastAPI + PostgreSQL\n• Admin dashboard, Pizza of the Day feature\n• Live on Railway\n\n**🍷 Vintage Wine (Barnyard)**\nMobile wine club app\n• React Native + Flask\n• AI-powered recommendations\n• Stripe subscriptions\n\nWant details on either project?",
+                        "Client work showcase:\n\n🍕 **SLIVER Pizzeria** - Bay Area vegetarian pizzeria with 6 locations. George built their complete web platform with admin dashboard.\n\n🍷 **Vintage Wine** - Mobile app for Barnyard Wine Bar's Epic Society wine club. Features AI recommendations and Stripe payments.\n\nBoth are production apps serving real customers!"
+                    ]
+                },
+                {
+                    level: 2,
+                    responses: [
+                        "Deep dive into client projects:\n\n**🍕 SLIVER Pizzeria**\n*\"An experiment in culinary happiness\"*\n\n**Tech Stack:**\n• Frontend: Next.js 14, TypeScript, Tailwind CSS\n• Backend: FastAPI, SQLAlchemy, PostgreSQL\n• Auth: JWT-based authentication\n• Media: Cloudinary for images\n• Deployment: Docker + Railway\n\n**Features:**\n• Public website with 6 locations\n• Pizza of the Day management\n• Admin dashboard for staff\n• Delivery partner integration\n\n**Live:** sliverpizzeria-web-production.up.railway.app\n\n---\n\n**🍷 Vintage Wine / Barnyard**\n\n**Tech Stack:**\n• Mobile: React Native (Expo), TypeScript\n• Backend: Flask, SQLAlchemy, PostgreSQL\n• Payments: Stripe API\n• AI: Custom recommendation engine\n\n**Features:**\n• Wine discovery with tasting notes\n• Shopping cart & favorites\n• Epic Society wine club (Corks Crew & Curator tiers)\n• AI-powered wine suggestions\n• Member dashboard with shipment tracking"
+                    ]
+                }
+            ],
+            greeting: [
+                {
+                    level: 1,
+                    responses: [
+                        "Hey there! 👋 Great to meet you! I'm George's AI assistant. I can tell you all about his experience, skills, projects, or how to get in touch. What would you like to know?",
+                        "Hello! 😊 Welcome to George's portfolio! I'm here to help you learn about his background, technical skills, or impressive projects. What interests you?",
+                        "Hi! 🤖 Thanks for stopping by! I can share info about George's 10+ years of experience in Backend, Data Engineering, and Robotics. What would you like to explore?"
+                    ]
+                }
+            ],
+            thanks: [
+                {
+                    level: 1,
+                    responses: [
+                        "You're welcome! 😊 Happy to help! Is there anything else you'd like to know about George?",
+                        "Glad I could help! 🙌 Feel free to ask if you have more questions. George is always excited to connect with people!",
+                        "My pleasure! 🤗 Let me know if you want to dive deeper into any topic or if you're ready to reach out to George!"
+                    ]
+                }
+            ],
+            who: [
+                {
+                    level: 1,
+                    responses: [
+                        "George Erol Fouché is a **Senior Software Engineer with 10+ years** of experience! 👨🏿‍💻\n\nHe specializes in:\n• Backend Development (Java, Python)\n• Data Engineering (Spark, Kafka, AWS)\n• Robotics & AI (ROS, TensorFlow, OpenCV)\n\nMost recently, he was at Series Entertainment (Gaming AI) as Sr. Software Engineer and sole Data Engineer for Pixelberry Studio.\n\nWhat aspect of George would you like to know more about?",
+                        "Let me introduce George! 🌟\n\n**George Erol Fouché** is a versatile software engineer based in the San Francisco Bay Area. With over a decade of experience, he's worked across:\n\n• Gaming AI startups\n• Cybersecurity companies\n• AI/ML startups\n• Fortune 500 enterprises (GE)\n\nHe holds a B.S. in Computer Engineering from Penn State and has led robotics projects at CMU.\n\nWant to hear about his skills, projects, or experience?"
+                    ]
+                }
+            ],
+            default: [
+                {
+                    level: 1,
+                    responses: [
+                        "Great question! I can tell you about George's:\n\n💼 **Experience** - 10+ years across gaming, AI, cybersecurity\n🛠️ **Skills** - Java, Python, Spark, AWS, TensorFlow, ROS\n🚀 **Projects** - Client work, robotics, data pipelines\n🎓 **Education** - Penn State, Udacity, CMU\n📧 **Contact** - How to reach him\n\nWhat interests you most?",
+                        "I'm here to help! Here's what I know about George:\n\n• His professional **experience** and career journey\n• Technical **skills** and tools he uses\n• **Projects** he's built (clients, robotics, data)\n• **Education** and certifications\n• **Contact** information\n\nJust ask about any of these!",
+                        "Hmm, I'm not sure I understood that. 🤔 Try asking about:\n\n• \"What's George's experience?\"\n• \"What skills does he have?\"\n• \"Tell me about his projects\"\n• \"How can I contact George?\"\n\nOr use the quick action buttons below!"
+                    ]
+                }
+            ]
+        };
+    }
+
+    // Get a random response from variations
+    getRandomResponse(variations) {
+        return variations[Math.floor(Math.random() * variations.length)];
+    }
+
+    // ==========================================
+    // PHASE 2 & 4: CONVERSATION MEMORY & FOLLOW-UPS
+    // ==========================================
+
+    // Track conversation and detect follow-up requests
+    updateConversationMemory(topic, userMessage) {
+        this.conversationHistory.push({
+            topic,
+            message: userMessage,
+            timestamp: Date.now()
+        });
+        
+        // Keep only last 10 exchanges
+        if (this.conversationHistory.length > 10) {
+            this.conversationHistory.shift();
+        }
+        
+        // Update topic depth
+        if (topic && topic !== 'followUp' && topic !== 'greeting' && topic !== 'thanks') {
+            this.topicDepth[topic] = (this.topicDepth[topic] || 0) + 1;
+            this.lastTopic = topic;
+        }
+    }
+
+    // Check if this is a follow-up request
+    isFollowUpRequest(message) {
+        const followUpPatterns = [
+            'more', 'detail', 'details', 'elaborate', 'explain', 'tell me more',
+            'go on', 'continue', 'expand', 'deeper', 'specifically', 'example',
+            'examples', 'like what', 'such as', 'instance', 'how so', 'what about',
+            'and', 'also', 'yes', 'yeah', 'sure', 'okay', 'ok', 'please'
+        ];
+        
+        const msg = message.toLowerCase().trim();
+        
+        // Short messages that are likely follow-ups
+        if (msg.length < 20) {
+            for (const pattern of followUpPatterns) {
+                if (msg.includes(pattern)) {
+                    return true;
+                }
+            }
+        }
+        
+        return false;
+    }
+
+    // Get deeper response for follow-up
+    getFollowUpResponse() {
+        if (!this.lastTopic) {
+            return this.getRandomResponse(this.getResponseVariations().default[0].responses);
+        }
+        
+        const variations = this.getResponseVariations()[this.lastTopic];
+        if (!variations) {
+            return this.getRandomResponse(this.getResponseVariations().default[0].responses);
+        }
+        
+        // Get current depth for this topic
+        const depth = this.topicDepth[this.lastTopic] || 1;
+        
+        // Find the appropriate level response
+        const levelIndex = Math.min(depth, variations.length) - 1;
+        const levelVariations = variations[levelIndex];
+        
+        if (levelVariations && levelVariations.responses) {
+            // Increment depth for next follow-up
+            this.topicDepth[this.lastTopic] = depth + 1;
+            return this.getRandomResponse(levelVariations.responses);
+        }
+        
+        // If we've exhausted levels, give a wrap-up response
+        return `I've shared the main details about ${this.lastTopic}! Would you like to explore a different topic? I can tell you about George's experience, skills, projects, or how to contact him.`;
+    }
+
+    // ==========================================
+    // MAIN RESPONSE LOGIC
+    // ==========================================
+
+    getResponse(message) {
+        const msg = message.toLowerCase().trim();
+        
+        // Check for follow-up first
+        if (this.isFollowUpRequest(message) && this.lastTopic) {
+            this.updateConversationMemory('followUp', message);
+            return this.getFollowUpResponse();
+        }
+        
+        // Detect topic from message
+        const topic = this.detectTopic(message);
+        
+        if (topic) {
+            this.updateConversationMemory(topic, message);
+            const variations = this.getResponseVariations()[topic];
+            
+            if (variations && variations.length > 0) {
+                // Get appropriate level based on topic depth
+                const depth = this.topicDepth[topic] || 0;
+                const levelIndex = Math.min(depth, variations.length - 1);
+                return this.getRandomResponse(variations[levelIndex].responses);
+            }
+        }
+        
+        // Default response
+        this.updateConversationMemory(null, message);
+        return this.getRandomResponse(this.getResponseVariations().default[0].responses);
+    }
+
+    // ==========================================
+    // WIDGET CREATION & EVENT HANDLING
+    // ==========================================
+
+    createWidget() {
+        const widget = document.createElement('div');
+        widget.id = 'ai-assistant';
+        widget.className = 'ai-assistant';
+        widget.innerHTML = `
+            <!-- Floating Button -->
+            <div class="ai-assistant-button" id="aiAssistantButton">
+                <div class="ai-robot-icon">🤖</div>
+                <div class="pulse-ring"></div>
+            </div>
+
+            <!-- Chat Window -->
+            <div class="ai-chat-window" id="aiChatWindow">
+                <div class="ai-chat-header">
+                    <div class="ai-chat-header-content">
+                        <div class="ai-avatar-icon">🤖</div>
+                        <div class="ai-header-text">
+                            <h4>AI Assistant</h4>
+                            <span class="status-online">Online</span>
+                        </div>
+                    </div>
+                    <button class="ai-close-btn" id="aiCloseBtn">✕</button>
+                </div>
+
+                <div class="ai-chat-messages" id="aiChatMessages">
+                    <!-- Messages will be added here -->
+                </div>
+
+                <div class="ai-quick-actions" id="aiQuickActions">
+                    <button class="quick-action-btn" data-action="experience">💼 Experience</button>
+                    <button class="quick-action-btn" data-action="skills">🛠️ Skills</button>
+                    <button class="quick-action-btn" data-action="projects">🚀 Projects</button>
+                    <button class="quick-action-btn" data-action="contact">📧 Contact</button>
+                </div>
+
+                <div class="ai-chat-input">
+                    <input type="text" id="aiChatInput" placeholder="Ask me anything about George..." />
+                    <button id="aiSendBtn">➤</button>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(widget);
+    }
+
+    setupEventListeners() {
+        const button = document.getElementById('aiAssistantButton');
+        const closeBtn = document.getElementById('aiCloseBtn');
+        const sendBtn = document.getElementById('aiSendBtn');
+        const input = document.getElementById('aiChatInput');
+        const quickActions = document.querySelectorAll('.quick-action-btn');
+
+        button.addEventListener('click', () => this.toggleChat());
+        closeBtn.addEventListener('click', () => this.toggleChat());
+        sendBtn.addEventListener('click', () => this.handleUserMessage());
+        input.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') this.handleUserMessage();
+        });
+
+        quickActions.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const action = e.target.getAttribute('data-action');
+                this.handleQuickAction(action);
+            });
+        });
+    }
+
+    toggleChat() {
+        this.isOpen = !this.isOpen;
+        const chatWindow = document.getElementById('aiChatWindow');
+        const button = document.getElementById('aiAssistantButton');
+        
+        if (this.isOpen) {
+            chatWindow.classList.add('open');
+            button.classList.add('hidden');
+        } else {
+            chatWindow.classList.remove('open');
+            button.classList.remove('hidden');
+        }
+    }
+
+    addWelcomeMessage() {
+        setTimeout(() => {
+            this.addMessage("Hi! 👋 I'm George's AI assistant. I can tell you about his experience, skills, projects, or how to get in touch. What would you like to know?", 'bot');
+        }, 500);
+    }
+
+    addMessage(text, sender = 'bot') {
+        const messagesContainer = document.getElementById('aiChatMessages');
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `ai-message ${sender}-message`;
+        
+        const messageContent = document.createElement('div');
+        messageContent.className = 'message-content';
+        
+        // Support basic markdown-style formatting
+        let formattedText = text
+            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+            .replace(/\n/g, '<br>');
+        
+        messageContent.innerHTML = formattedText;
+        
+        messageDiv.appendChild(messageContent);
+        messagesContainer.appendChild(messageDiv);
+        
+        // Scroll to show the new message
+        setTimeout(() => {
+            messageDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+
+        this.messages.push({ text, sender, timestamp: Date.now() });
+    }
+
+    // Typing indicator for more natural feel
+    showTypingIndicator() {
+        const messagesContainer = document.getElementById('aiChatMessages');
+        const typingDiv = document.createElement('div');
+        typingDiv.className = 'ai-message bot-message typing-indicator';
+        typingDiv.id = 'typingIndicator';
+        typingDiv.innerHTML = `
+            <div class="message-content">
+                <span class="typing-dot">.</span>
+                <span class="typing-dot">.</span>
+                <span class="typing-dot">.</span>
+            </div>
+        `;
+        messagesContainer.appendChild(typingDiv);
+        typingDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    hideTypingIndicator() {
+        const indicator = document.getElementById('typingIndicator');
+        if (indicator) {
+            indicator.remove();
+        }
+    }
+
+    handleUserMessage() {
+        const input = document.getElementById('aiChatInput');
+        const message = input.value.trim();
+        
+        if (!message) return;
+        
+        this.addMessage(message, 'user');
+        input.value = '';
+        
+        // Show typing indicator
+        this.showTypingIndicator();
+        
+        // Simulate thinking time (varies by response length)
+        const thinkTime = 400 + Math.random() * 600;
+        
+        setTimeout(() => {
+            this.hideTypingIndicator();
+            const response = this.getResponse(message);
+            this.addMessage(response, 'bot');
+        }, thinkTime);
+    }
+
+    handleQuickAction(action) {
+        // Map quick actions to topic queries
+        const actionMessages = {
+            experience: "Tell me about George's experience",
+            skills: "What skills does George have?",
+            projects: "Show me George's projects",
+            contact: "How can I contact George?"
+        };
+        
+        const message = actionMessages[action] || action;
+        this.addMessage(message, 'user');
+        
+        this.showTypingIndicator();
+        
+        setTimeout(() => {
+            this.hideTypingIndicator();
+            const response = this.getResponse(message);
+            this.addMessage(response, 'bot');
+        }, 500);
+    }
+}
+
+// Initialize AI Assistant when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    new AIAssistant();
+});
