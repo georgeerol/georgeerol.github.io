@@ -24,6 +24,35 @@ class AIAssistant {
     }
 
     // ==========================================
+    // ANALYTICS TRACKING (Google Analytics 4)
+    // ==========================================
+    
+    trackEvent(eventName, params = {}) {
+        if (typeof gtag === 'function') {
+            gtag('event', eventName, {
+                'event_category': 'AI Chatbot',
+                ...params
+            });
+        }
+    }
+
+    trackQuestion(question, topic) {
+        this.trackEvent('chatbot_question', {
+            'question': question.substring(0, 100),
+            'topic_detected': topic || 'unknown',
+            'section_viewing': this.currentSection || 'none'
+        });
+    }
+
+    trackQuickAction(action) {
+        this.trackEvent('chatbot_quick_action', { 'action': action });
+    }
+
+    trackSuggestionClick(suggestion) {
+        this.trackEvent('chatbot_suggestion_click', { 'suggestion': suggestion.substring(0, 100) });
+    }
+
+    // ==========================================
     // PHASE 2: TIME-BASED GREETINGS
     // ==========================================
     
@@ -915,17 +944,19 @@ class AIAssistant {
         this.isOpen = !this.isOpen;
         const chatWindow = document.getElementById('aiChatWindow');
         const button = document.getElementById('aiAssistantButton');
-        
+
         if (this.isOpen) {
             chatWindow.classList.add('open');
             button.classList.add('hidden');
-            
+            this.trackEvent('chatbot_opened');
+
             // Remove proactive tooltip if exists
             const tooltip = document.querySelector('.ai-proactive-tooltip');
             if (tooltip) tooltip.remove();
         } else {
             chatWindow.classList.remove('open');
             button.classList.remove('hidden');
+            this.trackEvent('chatbot_closed');
         }
     }
 
@@ -1070,10 +1101,11 @@ class AIAssistant {
         suggestionsDiv.querySelectorAll('.suggestion-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 const question = btn.textContent;
+                this.trackSuggestionClick(question);
                 suggestionsDiv.remove();
                 this.addMessage(question, 'user');
                 this.showTypingIndicator();
-                
+
                 setTimeout(() => {
                     this.hideTypingIndicator();
                     const response = this.getResponse(question);
@@ -1135,6 +1167,7 @@ class AIAssistant {
         setTimeout(() => {
             this.hideTypingIndicator();
             const response = this.getResponse(message);
+            this.trackQuestion(message, response.topic);
             this.addMessage(response.text, 'bot', response.topic);
         }, thinkTime);
     }
@@ -1157,6 +1190,7 @@ class AIAssistant {
         
         const message = actionMessages[action] || action;
         this.addMessage(message, 'user');
+        this.trackQuickAction(action);
         
         this.showTypingIndicator();
         
