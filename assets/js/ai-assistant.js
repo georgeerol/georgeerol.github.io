@@ -437,8 +437,8 @@ class AIAssistant {
             ],
             companies: [
                 'company', 'companies', 'employer', 'employers', 'worked at',
-                'organization', 'firm', 'startup', 'corporation', 'ge', 'general electric',
-                'sphere', 'calypso', 'calyps'
+                'organization', 'firm', 'startup', 'corporation', 'general electric',
+                'ge power', 'sphere', 'calypso', 'calyps', 'series entertainment'
             ],
             clientWork: [
                 'client', 'clients', 'sliver', 'vintage', 'pizzeria', 'pizza',
@@ -449,13 +449,13 @@ class AIAssistant {
                 'go on', 'continue', 'expand', 'deeper', 'specifically', 'example',
                 'examples', 'like what', 'such as', 'instance'
             ],
-            greeting: [
-                'hello', 'hi', 'hey', 'greetings', 'howdy', 'sup', 'yo',
-                'good morning', 'good afternoon', 'good evening', 'whats up'
-            ],
             thanks: [
-                'thanks', 'thank you', 'appreciate', 'helpful', 'great', 'awesome',
-                'perfect', 'excellent', 'wonderful', 'nice'
+                'thanks', 'thank you', 'appreciate', 'helpful', 'great help',
+                'perfect', 'excellent', 'wonderful'
+            ],
+            greeting: [
+                'hello', 'hi', 'hey', 'greetings', 'howdy', 'sup',
+                'good morning', 'good afternoon', 'good evening', 'whats up'
             ],
             who: [
                 'who is', 'who are', 'who\'s', 'about george', 'about him',
