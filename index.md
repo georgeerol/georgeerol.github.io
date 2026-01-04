@@ -19,8 +19,8 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
     <!-- Dark Mode Toggle -->
     <div class="theme-toggle" onclick="toggleTheme()">
       <div class="theme-toggle-slider">
-        <span class="theme-icon">☀️</span>
-        <span class="theme-icon">🌙</span>
+        <span class="theme-icon"><i data-lucide="sun" class="lucide-icon"></i></span>
+        <span class="theme-icon"><i data-lucide="moon" class="lucide-icon"></i></span>
       </div>
     </div>
   </nav>
@@ -49,9 +49,9 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       
       <!-- Call to Action Buttons -->
       <div class="hero-actions">
-        <a href="#robotics" class="btn btn-primary">🚀 View Projects</a>
-        <a href="https://github.com/georgeerol" class="btn btn-outline" target="_blank" rel="noopener noreferrer">📂 GitHub</a>
-        <a href="#contact" class="btn btn-outline">📧 Contact</a>
+        <a href="#robotics" class="btn btn-primary"><i data-lucide="rocket" class="lucide-icon"></i> View Projects</a>
+        <a href="https://github.com/georgeerol" class="btn btn-outline" target="_blank" rel="noopener noreferrer"><i data-lucide="github" class="lucide-icon"></i> GitHub</a>
+        <a href="#contact" class="btn btn-outline"><i data-lucide="mail" class="lucide-icon"></i> Contact</a>
       </div>
     </div>
     
@@ -197,7 +197,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
         </div>
         
         <div class="project-links">
-          <a href="https://sliverpizzeria-web-production.up.railway.app/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">🚀 Live Demo</a>
+          <a href="https://sliverpizzeria-web-production.up.railway.app/" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i data-lucide="rocket" class="lucide-icon"></i> Live Demo</a>
           <a href="https://www.sliverpizzeria.com/" class="btn btn-outline" target="_blank" rel="noopener noreferrer">🍕 Current Site</a>
         </div>
       </div>
@@ -242,8 +242,8 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       </div>
       
       <div class="project-links">
-        <a href="https://sliverpizzeria-web-production.up.railway.app/admin" class="btn btn-primary" target="_blank" rel="noopener noreferrer">🔐 Admin Panel</a>
-        <a href="https://sliverpizzeria-api-production.up.railway.app/docs" class="btn btn-outline" target="_blank" rel="noopener noreferrer">📚 API Docs</a>
+        <a href="https://sliverpizzeria-web-production.up.railway.app/admin" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i data-lucide="lock" class="lucide-icon"></i> Admin Panel</a>
+        <a href="https://sliverpizzeria-api-production.up.railway.app/docs" class="btn btn-outline" target="_blank" rel="noopener noreferrer"><i data-lucide="book-open" class="lucide-icon"></i> API Docs</a>
       </div>
     </div>
     
@@ -265,7 +265,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       </div>
       
       <div class="project-links">
-        <a href="https://sliverpizzeria-api-production.up.railway.app/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">⚡ Backend API</a>
+        <a href="https://sliverpizzeria-api-production.up.railway.app/" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i data-lucide="zap" class="lucide-icon"></i> Backend API</a>
       </div>
     </div>
   </div>
@@ -321,7 +321,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
         </div>
         
         <div class="project-links">
-          <a href="https://barnyardwinebar.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">🍷 Live Website</a>
+          <a href="https://barnyardwinebar.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i data-lucide="external-link" class="lucide-icon"></i> Live Website</a>
         </div>
       </div>
       
@@ -361,7 +361,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       </ul>
       
       <div class="project-links">
-        <a href="https://barnyardwinebar.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">🌐 Visit Site</a>
+        <a href="https://barnyardwinebar.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i data-lucide="globe" class="lucide-icon"></i> Visit Site</a>
       </div>
     </div>
     
@@ -382,7 +382,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       </ul>
       
       <div class="project-links">
-        <a href="https://barnyardwinebar.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">🍷 Join Club</a>
+        <a href="https://barnyardwinebar.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i data-lucide="users" class="lucide-icon"></i> Join Club</a>
       </div>
     </div>
   </div>
@@ -437,7 +437,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       <img src="./images/FollowMeGif.gif" alt="Deep Learning Drone Simulator" class="project-image">
       
       <div class="project-links">
-        <a href="https://github.com/fouliex/DeepLearningDroneSimulator" class="btn btn-primary" target="_blank" rel="noopener noreferrer">🔗 View GitHub</a>
+        <a href="https://github.com/fouliex/DeepLearningDroneSimulator" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i data-lucide="github" class="lucide-icon"></i> View GitHub</a>
       </div>
     </div>
     
@@ -465,7 +465,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       <img src="./images/rover_image.gif" alt="Search And Sample Rover" class="project-image">
       
       <div class="project-links">
-        <a href="https://github.com/fouliex/SearchAndSampleRoverProject" class="btn btn-primary" target="_blank" rel="noopener noreferrer">🔗 View GitHub</a>
+        <a href="https://github.com/fouliex/SearchAndSampleRoverProject" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i data-lucide="github" class="lucide-icon"></i> View GitHub</a>
       </div>
     </div>
     
@@ -494,7 +494,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       <img src="./images/PR2.gif" alt="Robotic Perception" class="project-image">
       
       <div class="project-links">
-        <a href="https://github.com/fouliex/RoboticPerception" class="btn btn-primary" target="_blank" rel="noopener noreferrer">🔗 View GitHub</a>
+        <a href="https://github.com/fouliex/RoboticPerception" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i data-lucide="github" class="lucide-icon"></i> View GitHub</a>
       </div>
     </div>
     
@@ -522,7 +522,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       <img src="./images/PickAndDrop.gif" alt="Robotic Arm Pick and Drop" class="project-image">
       
       <div class="project-links">
-        <a href="https://github.com/fouliex/RoboticArmPickAndDrop" class="btn btn-primary" target="_blank" rel="noopener noreferrer">🔗 View GitHub</a>
+        <a href="https://github.com/fouliex/RoboticArmPickAndDrop" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i data-lucide="github" class="lucide-icon"></i> View GitHub</a>
       </div>
     </div>
     
@@ -550,7 +550,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       <img src="./images/SelfDrivingCarBehavioralCloning.gif" alt="Self-Driving Car Behavioral Cloning" class="project-image">
       
       <div class="project-links">
-        <a href="https://github.com/fouliex/SelfDrivingCarBehavioralCloning" class="btn btn-primary" target="_blank" rel="noopener noreferrer">🔗 View GitHub</a>
+        <a href="https://github.com/fouliex/SelfDrivingCarBehavioralCloning" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i data-lucide="github" class="lucide-icon"></i> View GitHub</a>
       </div>
     </div>
     
@@ -591,7 +591,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       <img src="./images/SystemArchitecture.png" alt="IOT AWS SPARK Architecture" class="project-image">
       
       <div class="project-links">
-        <a href="https://github.com/georgeerol/IotAwsSpark" class="btn btn-primary" target="_blank" rel="noopener noreferrer">🔗 View GitHub</a>
+        <a href="https://github.com/georgeerol/IotAwsSpark" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i data-lucide="github" class="lucide-icon"></i> View GitHub</a>
       </div>
     </div>
     
@@ -621,7 +621,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       <img src="./images/SparkFlowArchitecture.png" alt="E2E Spark Flow Architecture" class="project-image">
       
       <div class="project-links">
-        <a href="https://github.com/georgeerol/E2ESparkFlow" class="btn btn-primary" target="_blank" rel="noopener noreferrer">🔗 View GitHub</a>
+        <a href="https://github.com/georgeerol/E2ESparkFlow" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i data-lucide="github" class="lucide-icon"></i> View GitHub</a>
       </div>
     </div>
     
@@ -649,7 +649,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       <img src="./images/CommercingWithFlinkArchitecture.png" alt="Commercing With Flink Architecture" class="project-image">
       
       <div class="project-links">
-        <a href="https://github.com/georgeerol/CommercingWithFlink" class="btn btn-primary" target="_blank" rel="noopener noreferrer">🔗 View GitHub</a>
+        <a href="https://github.com/georgeerol/CommercingWithFlink" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i data-lucide="github" class="lucide-icon"></i> View GitHub</a>
       </div>
     </div>
   </div>
@@ -689,7 +689,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       </div>
       
       <div class="project-links">
-        <a href="https://github.com/georgeerol/ToDoApp" class="btn btn-primary" target="_blank" rel="noopener noreferrer">🔗 View GitHub</a>
+        <a href="https://github.com/georgeerol/ToDoApp" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i data-lucide="github" class="lucide-icon"></i> View GitHub</a>
       </div>
     </div>
     
@@ -717,7 +717,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       <img src="./images/ExpensePage.png" alt="Expense Application" class="project-image">
       
       <div class="project-links">
-        <a href="https://github.com/georgeerol/ExpenseApp" class="btn btn-primary" target="_blank" rel="noopener noreferrer">🔗 View GitHub</a>
+        <a href="https://github.com/georgeerol/ExpenseApp" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i data-lucide="github" class="lucide-icon"></i> View GitHub</a>
       </div>
     </div>
     
@@ -749,7 +749,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       </div>
       
       <div class="project-links">
-        <a href="https://github.com/georgeerol/ProjectManagementApp" class="btn btn-primary" target="_blank" rel="noopener noreferrer">🔗 View GitHub</a>
+        <a href="https://github.com/georgeerol/ProjectManagementApp" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i data-lucide="github" class="lucide-icon"></i> View GitHub</a>
       </div>
     </div>
   </div>
@@ -786,7 +786,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       <img src="./images/Clima.png" alt="Weather App" class="project-image">
       
       <div class="project-links">
-        <a href="https://github.com/georgeerol/AndroidAndIOSApps" class="btn btn-primary" target="_blank" rel="noopener noreferrer">🔗 View GitHub</a>
+        <a href="https://github.com/georgeerol/AndroidAndIOSApps" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i data-lucide="github" class="lucide-icon"></i> View GitHub</a>
       </div>
     </div>
     
@@ -814,7 +814,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       <img src="./images/BitcoinTicker.png" alt="Bitcoin Ticker" class="project-image">
       
       <div class="project-links">
-        <a href="https://github.com/georgeerol/AndroidAndIOSApps" class="btn btn-primary" target="_blank" rel="noopener noreferrer">🔗 View GitHub</a>
+        <a href="https://github.com/georgeerol/AndroidAndIOSApps" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i data-lucide="github" class="lucide-icon"></i> View GitHub</a>
       </div>
     </div>
   </div>
@@ -826,7 +826,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
   <p>I'm always interested in discussing new opportunities, innovative projects, or just connecting with fellow tech enthusiasts!</p>
   
   <div class="contact-links">
-    <a href="https://www.linkedin.com/in/georgefouche/" target="_blank" rel="noopener noreferrer">💼 LinkedIn</a>
-    <a href="https://github.com/georgeerol" target="_blank" rel="noopener noreferrer">💻 GitHub</a>
+    <a href="https://www.linkedin.com/in/georgefouche/" target="_blank" rel="noopener noreferrer"><i data-lucide="linkedin" class="lucide-icon"></i> LinkedIn</a>
+    <a href="https://github.com/georgeerol" target="_blank" rel="noopener noreferrer"><i data-lucide="github" class="lucide-icon"></i> GitHub</a>
   </div>
 </section>

@@ -49,6 +49,9 @@
     
     <!-- Enhanced SEO with Jekyll SEO Tag -->
     {% seo %}
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 </head>
 
 <body>
@@ -61,6 +64,15 @@
     <!-- Custom JavaScript -->
     <script src="{{ '/assets/js/portfolio.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/ai-assistant.js' | relative_url }}"></script>
+    
+    <!-- Initialize Lucide Icons -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        });
+    </script>
     
     <!-- Analytics (if needed) -->
     {% if site.google_analytics %}
