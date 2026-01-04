@@ -37,6 +37,33 @@
   --about-bg: #161b22;
 }
 
+/* Lucide Icon Styles */
+.lucide-icon {
+  width: 1.1em;
+  height: 1.1em;
+  vertical-align: middle;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
+.btn .lucide-icon {
+  margin-right: 0.4em;
+}
+
+.theme-toggle .lucide-icon {
+  width: 14px;
+  height: 14px;
+  color: white;
+}
+
+.contact-links .lucide-icon {
+  margin-right: 0.5em;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif !important;
   line-height: 1.6;
