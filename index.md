@@ -408,7 +408,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
 <!-- Robotics Projects -->
 <section id="robotics" class="projects-section">
   <div class="section-header">
-    <h2>🤖 Robotics & AI Projects</h2>
+    <h2><i data-lucide="bot" class="lucide-icon"></i> Robotics & AI Projects</h2>
   </div>
   
   <div class="project-grid">
@@ -561,7 +561,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
 <!-- Data Pipeline Projects - SECOND -->
 <section id="data-pipeline" class="projects-section">
   <div class="section-header">
-    <h2>🚀 Data Pipeline Projects</h2>
+    <h2><i data-lucide="rocket" class="lucide-icon"></i> Data Pipeline Projects</h2>
   </div>
   
   <div class="project-grid">
@@ -658,7 +658,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
 <!-- Full Stack Projects -->
 <section id="fullstack" class="projects-section">
   <div class="section-header">
-    <h2>🌐 Full Stack Web Development</h2>
+    <h2><i data-lucide="globe" class="lucide-icon"></i> Full Stack Web Development</h2>
   </div>
   
   <div class="project-grid">
@@ -758,7 +758,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
 <!-- Mobile Projects - LAST -->
 <section id="mobile" class="projects-section">
   <div class="section-header">
-    <h2>📱 Mobile Development</h2>
+    <h2><i data-lucide="smartphone" class="lucide-icon"></i> Mobile Development</h2>
   </div>
   
   <div class="project-grid">
@@ -822,7 +822,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
 
 <!-- Contact Section -->
 <section id="contact" class="contact-section">
-  <h2>📫 Let's Connect</h2>
+  <h2><i data-lucide="mail" class="lucide-icon"></i> Let's Connect</h2>
   <p>I'm always interested in discussing new opportunities, innovative projects, or just connecting with fellow tech enthusiasts!</p>
   
   <div class="contact-links">
