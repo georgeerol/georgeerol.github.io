@@ -822,7 +822,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
 
 <!-- Contact Section -->
 <section id="contact" class="contact-section">
-  <h2>📫 Let's Connect</h2>
+  <h2><i data-lucide="mail" class="lucide-icon"></i> Let's Connect</h2>
   <p>I'm always interested in discussing new opportunities, innovative projects, or just connecting with fellow tech enthusiasts!</p>
   
   <div class="contact-links">
