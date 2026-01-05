@@ -57,8 +57,8 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
     
     <div class="hero-details">
       <div class="status-badge">
-        <p class="current-role">🔍 Open to New Opportunities</p>
-        <p class="location">📍 San Francisco Bay Area</p>
+        <p class="current-role"><i data-lucide="target" class="lucide-icon"></i> Open to New Opportunities</p>
+        <p class="location"><i data-lucide="map-pin" class="lucide-icon"></i> San Francisco Bay Area</p>
       </div>
       
       <!-- Quick Stats -->
@@ -102,7 +102,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
 
     <div class="skills-grid">
       <div class="skill-category">
-        <h4>🤖 Robotics & AI</h4>
+        <h4><i data-lucide="bot" class="lucide-icon"></i> Robotics & AI</h4>
         <div class="tech-badges">
           <span class="tech-badge">ROS</span>
           <span class="tech-badge">Computer Vision</span>
@@ -114,7 +114,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       </div>
       
       <div class="skill-category">
-        <h4>🔧 Data Engineering</h4>
+        <h4><i data-lucide="database" class="lucide-icon"></i> Data Engineering</h4>
         <div class="tech-badges">
           <span class="tech-badge">Apache Spark</span>
           <span class="tech-badge">Kafka</span>
@@ -126,7 +126,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       </div>
       
       <div class="skill-category">
-        <h4>🌐 Backend Development</h4>
+        <h4><i data-lucide="globe" class="lucide-icon"></i> Backend Development</h4>
         <div class="tech-badges">
           <span class="tech-badge">Java Spring Boot</span>
           <span class="tech-badge">Python Flask</span>
@@ -138,7 +138,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       </div>
       
       <div class="skill-category">
-        <h4>📱 Mobile & Frontend</h4>
+        <h4><i data-lucide="smartphone" class="lucide-icon"></i> Mobile & Frontend</h4>
         <div class="tech-badges">
           <span class="tech-badge">Android</span>
           <span class="tech-badge">iOS</span>
