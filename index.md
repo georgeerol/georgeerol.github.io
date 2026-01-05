@@ -154,7 +154,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
 <!-- CLIENT WORK SECTION - LEADING WITH REAL PRODUCTION APPS -->
 <section id="client-work" class="projects-section">
   <div class="section-header">
-    <h2>💼 Client Work</h2>
+    <h2><i data-lucide="briefcase" class="lucide-icon"></i> Client Work</h2>
     <p class="section-subtitle">Production Applications Built for Real Businesses</p>
   </div>
 
@@ -169,7 +169,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       <div class="featured-content">
         <div class="client-header">
           <img src="./images/sliver-logo.png" alt="SLIVER Pizzeria Logo" class="client-logo">
-          <div class="client-badge">🏢 Client Project</div>
+          <div class="client-badge"><i data-lucide="building-2" class="lucide-icon"></i> Client Project</div>
         </div>
         <h3 class="project-title">Web Platform & Operations Dashboard</h3>
         <div class="tech-badges">
@@ -204,14 +204,14 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       
       <div class="featured-media">
         <div class="demo-item">
-          <h5>🌐 Web Experience</h5>
+          <h5><i data-lucide="globe" class="lucide-icon"></i> Web Experience</h5>
           <video autoplay muted loop playsinline class="demo-video">
             <source src="./images/WebDec3.mp4#t=8" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
         <div class="demo-item">
-          <h5>📱 Mobile Responsive</h5>
+          <h5><i data-lucide="smartphone" class="lucide-icon"></i> Mobile Responsive</h5>
           <video autoplay muted loop playsinline class="demo-video">
             <source src="./images/MobileDec3.mp4" type="video/mp4">
             Your browser does not support the video tag.
@@ -277,10 +277,10 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       <h4>About SLIVER Pizzeria</h4>
       <p><em>"An experiment in culinary happiness"</em> — SLIVER offers a healthier alternative focusing on fresh produce, 100% vegetarian with sourdough crust pizza. Family owned & operated with 6 Bay Area locations serving Berkeley, Oakland, Lafayette, and Fremont.</p>
       <div class="tech-badges location-badges">
-        <span class="tech-badge">📍 Berkeley (2)</span>
-        <span class="tech-badge">📍 Oakland (2)</span>
-        <span class="tech-badge">📍 Lafayette</span>
-        <span class="tech-badge">📍 Fremont</span>
+        <span class="tech-badge"><i data-lucide="map-pin" class="lucide-icon"></i> Berkeley (2)</span>
+        <span class="tech-badge"><i data-lucide="map-pin" class="lucide-icon"></i> Oakland (2)</span>
+        <span class="tech-badge"><i data-lucide="map-pin" class="lucide-icon"></i> Lafayette</span>
+        <span class="tech-badge"><i data-lucide="map-pin" class="lucide-icon"></i> Fremont</span>
       </div>
     </div>
   </div>
@@ -296,7 +296,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       <div class="featured-content">
         <div class="client-header">
           <img src="./images/TheBarnyardLogo.png" alt="The Barnyard Wine Bar Logo" class="client-logo">
-          <div class="client-badge vintage-badge">🏢 Client Project</div>
+          <div class="client-badge vintage-badge"><i data-lucide="building-2" class="lucide-icon"></i> Client Project</div>
         </div>
         <h3 class="project-title">Vintage — Wine Recommendation & Club</h3>
         <div class="tech-badges">
@@ -327,14 +327,14 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       
       <div class="featured-media">
         <div class="demo-item">
-          <h5>🍷 Wine Discovery & Cart</h5>
+          <h5><i data-lucide="wine" class="lucide-icon"></i> Wine Discovery & Cart</h5>
           <video autoplay muted loop playsinline class="demo-video mobile-demo">
             <source src="./images/Vintage.web.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
         <div class="demo-item">
-          <h5>🤖 AI Recommendations</h5>
+          <h5><i data-lucide="bot" class="lucide-icon"></i> AI Recommendations</h5>
           <video autoplay muted loop playsinline class="demo-video mobile-demo">
             <source src="./images/VintageAI.web.mp4" type="video/mp4">
             Your browser does not support the video tag.
