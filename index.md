@@ -394,10 +394,10 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       <h4>About Barnyard Wine Bar</h4>
       <p><em>"Where every glass tells a story"</em> — Barnyard Wine Bar brings curated wine experiences to wine enthusiasts through their Epic Society wine club. Members enjoy personalized selections, exclusive tastings, and a community of fellow wine lovers.</p>
       <div class="tech-badges location-badges vintage-badges">
-        <span class="tech-badge">🍇 Curated Wines</span>
-        <span class="tech-badge">📦 Monthly Shipments</span>
-        <span class="tech-badge">🎉 Member Events</span>
-        <span class="tech-badge">💳 Stripe Payments</span>
+        <span class="tech-badge"><i data-lucide="wine" class="lucide-icon"></i> Curated Wines</span>
+        <span class="tech-badge"><i data-lucide="package" class="lucide-icon"></i> Monthly Shipments</span>
+        <span class="tech-badge"><i data-lucide="party-popper" class="lucide-icon"></i> Member Events</span>
+        <span class="tech-badge"><i data-lucide="credit-card" class="lucide-icon"></i> Stripe Payments</span>
       </div>
     </div>
   </div>
