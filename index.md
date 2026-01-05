@@ -261,7 +261,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       <p class="project-overview">Production-ready infrastructure with containerized development, automated deployments, and cloud-native architecture for scalability and reliability.</p>
       
       <div class="demo-item">
-        <img src="./images/railway-deploy.png" alt="Railway Deployment - SLIVER Pizzeria Production" class="demo-video project-image">
+        <img src="./images/railway-deploy.png" alt="Railway Deployment - SLIVER Pizzeria Production" class="demo-video project-image" loading="lazy" width="2054" height="1026">
       </div>
       
       <div class="project-links">
@@ -434,7 +434,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
         </ul>
       </div>
       
-      <img src="./images/FollowMeGif.gif" alt="Deep Learning Drone Simulator" class="project-image">
+      <img src="./images/FollowMeGif.gif" alt="Deep Learning Drone Simulator" class="project-image" loading="lazy" width="640" height="334">
       
       <div class="project-links">
         <a href="https://github.com/fouliex/DeepLearningDroneSimulator" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i data-lucide="github" class="lucide-icon"></i> View GitHub</a>
@@ -462,7 +462,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
         </ul>
       </div>
       
-      <img src="./images/rover_image.gif" alt="Search And Sample Rover" class="project-image">
+      <img src="./images/rover_image.gif" alt="Search And Sample Rover" class="project-image" loading="lazy" width="960" height="540">
       
       <div class="project-links">
         <a href="https://github.com/fouliex/SearchAndSampleRoverProject" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i data-lucide="github" class="lucide-icon"></i> View GitHub</a>
@@ -491,7 +491,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
         </ul>
       </div>
       
-      <img src="./images/PR2.gif" alt="Robotic Perception" class="project-image">
+      <img src="./images/PR2.gif" alt="Robotic Perception" class="project-image" loading="lazy" width="600" height="319">
       
       <div class="project-links">
         <a href="https://github.com/fouliex/RoboticPerception" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i data-lucide="github" class="lucide-icon"></i> View GitHub</a>
@@ -519,7 +519,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
         </ul>
       </div>
       
-      <img src="./images/PickAndDrop.gif" alt="Robotic Arm Pick and Drop" class="project-image">
+      <img src="./images/PickAndDrop.gif" alt="Robotic Arm Pick and Drop" class="project-image" loading="lazy" width="1280" height="720">
       
       <div class="project-links">
         <a href="https://github.com/fouliex/RoboticArmPickAndDrop" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i data-lucide="github" class="lucide-icon"></i> View GitHub</a>
@@ -547,7 +547,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
         </ul>
       </div>
       
-      <img src="./images/SelfDrivingCarBehavioralCloning.gif" alt="Self-Driving Car Behavioral Cloning" class="project-image">
+      <img src="./images/SelfDrivingCarBehavioralCloning.gif" alt="Self-Driving Car Behavioral Cloning" class="project-image" loading="lazy" width="1000" height="570">
       
       <div class="project-links">
         <a href="https://github.com/fouliex/SelfDrivingCarBehavioralCloning" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i data-lucide="github" class="lucide-icon"></i> View GitHub</a>
@@ -588,7 +588,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
         </ul>
       </div>
       
-      <img src="./images/SystemArchitecture.png" alt="IOT AWS SPARK Architecture" class="project-image">
+      <img src="./images/SystemArchitecture.png" alt="IOT AWS SPARK Architecture" class="project-image" loading="lazy" width="1781" height="833">
       
       <div class="project-links">
         <a href="https://github.com/georgeerol/IotAwsSpark" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i data-lucide="github" class="lucide-icon"></i> View GitHub</a>
@@ -618,7 +618,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
         </ul>
       </div>
       
-      <img src="./images/SparkFlowArchitecture.png" alt="E2E Spark Flow Architecture" class="project-image">
+      <img src="./images/SparkFlowArchitecture.png" alt="E2E Spark Flow Architecture" class="project-image" loading="lazy" width="1551" height="740">
       
       <div class="project-links">
         <a href="https://github.com/georgeerol/E2ESparkFlow" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i data-lucide="github" class="lucide-icon"></i> View GitHub</a>
@@ -646,7 +646,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
         </ul>
       </div>
       
-      <img src="./images/CommercingWithFlinkArchitecture.png" alt="Commercing With Flink Architecture" class="project-image">
+      <img src="./images/CommercingWithFlinkArchitecture.png" alt="Commercing With Flink Architecture" class="project-image" loading="lazy" width="1485" height="582">
       
       <div class="project-links">
         <a href="https://github.com/georgeerol/CommercingWithFlink" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i data-lucide="github" class="lucide-icon"></i> View GitHub</a>
@@ -684,8 +684,8 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       </div>
       
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-        <img src="./images/LoginPage.png" alt="Todo App Login" class="project-image">
-        <img src="./images/ToDoPage.png" alt="Todo App Main" class="project-image">
+        <img src="./images/LoginPage.png" alt="Todo App Login" class="project-image" loading="lazy" width="1005" height="695">
+        <img src="./images/ToDoPage.png" alt="Todo App Main" class="project-image" loading="lazy" width="1004" height="694">
       </div>
       
       <div class="project-links">
@@ -714,7 +714,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
         </ul>
       </div>
       
-      <img src="./images/ExpensePage.png" alt="Expense Application" class="project-image">
+      <img src="./images/ExpensePage.png" alt="Expense Application" class="project-image" loading="lazy" width="2874" height="1438">
       
       <div class="project-links">
         <a href="https://github.com/georgeerol/ExpenseApp" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i data-lucide="github" class="lucide-icon"></i> View GitHub</a>
@@ -743,9 +743,9 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       </div>
       
       <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px;">
-        <img src="./images/HomePage.png" alt="PM App Home" class="project-image">
-        <img src="./images/EmployeesPage.png" alt="PM App Employees" class="project-image">
-        <img src="./images/ProjectsPage.png" alt="PM App Projects" class="project-image">
+        <img src="./images/HomePage.png" alt="PM App Home" class="project-image" loading="lazy" width="2854" height="1536">
+        <img src="./images/EmployeesPage.png" alt="PM App Employees" class="project-image" loading="lazy" width="2878" height="1472">
+        <img src="./images/ProjectsPage.png" alt="PM App Projects" class="project-image" loading="lazy" width="2870" height="980">
       </div>
       
       <div class="project-links">
@@ -783,7 +783,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
         </ul>
       </div>
       
-      <img src="./images/Clima.png" alt="Weather App" class="project-image">
+      <img src="./images/Clima.png" alt="Weather App" class="project-image" loading="lazy" width="2340" height="996">
       
       <div class="project-links">
         <a href="https://github.com/georgeerol/AndroidAndIOSApps" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i data-lucide="github" class="lucide-icon"></i> View GitHub</a>
@@ -811,7 +811,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
         </ul>
       </div>
       
-      <img src="./images/BitcoinTicker.png" alt="Bitcoin Ticker" class="project-image">
+      <img src="./images/BitcoinTicker.png" alt="Bitcoin Ticker" class="project-image" loading="lazy" width="1408" height="1134">
       
       <div class="project-links">
         <a href="https://github.com/georgeerol/AndroidAndIOSApps" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i data-lucide="github" class="lucide-icon"></i> View GitHub</a>
