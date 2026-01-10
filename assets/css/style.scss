@@ -1855,3 +1855,40 @@ body {
   z-index: 60 !important;
   position: relative !important;
 }
+
+/* ========================================
+   ACCESSIBILITY & UX IMPROVEMENTS
+   ======================================== */
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus Visible - High visibility for keyboard users */
+:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Enhanced button focus */
+.btn:focus-visible {
+  /* Using fallback for old browsers and CSS variables for theming */
+  box-shadow: 0 0 0 4px rgba(3, 102, 214, 0.4);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--primary-color), transparent 60%);
+  outline: none; /* Shadow handles the visual indication */
+  z-index: 10;
+}
