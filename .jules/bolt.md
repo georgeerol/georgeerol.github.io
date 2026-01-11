@@ -1,0 +1,3 @@
+## 2026-01-11 - [Optimize Critical Rendering Path]
+**Learning:** Adding `defer` to render-blocking scripts in the `<head>` is a high-impact optimization, but it changes execution order. You MUST ensure that any dependent inline scripts or subsequent scripts are wrapped in `DOMContentLoaded` listeners.
+**Action:** When adding `defer`, always grep for usages of the deferred library (e.g., `lucide`) and verify they are safe (i.e., inside `DOMContentLoaded` or `window.onload`). Also, be careful about removing `preconnect` links; if resources are used (even conditionally), removing them can be a regression.
