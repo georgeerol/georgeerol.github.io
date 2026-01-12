@@ -117,6 +117,18 @@ body {
   transition: all 0.3s ease;
   margin-left: 20px;
   animation: themeTogglePulse 3s ease-in-out infinite;
+
+  /* Reset button styles */
+  appearance: none;
+  -webkit-appearance: none;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  margin: 0 0 0 20px; /* Keep margin-left: 20px */
+  background: var(--secondary-color); /* Explicitly set background */
+  padding: 5px; /* Explicitly set padding */
+  border: 2px solid var(--border-color); /* Explicitly set border */
 }
 
 @keyframes themeTogglePulse {
@@ -131,6 +143,12 @@ body {
 .theme-toggle:hover {
   border-color: var(--primary-color);
   animation: none; /* Stop pulsing on hover */
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 4px;
+  animation: none;
 }
 
 .theme-toggle-slider {
