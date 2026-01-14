@@ -117,6 +117,16 @@ body {
   transition: all 0.3s ease;
   margin-left: 20px;
   animation: themeTogglePulse 3s ease-in-out infinite;
+  font-family: inherit;
+  color: inherit;
+  line-height: inherit;
+  appearance: none;
+}
+
+.theme-toggle:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 2px;
+  animation: none;
 }
 
 @keyframes themeTogglePulse {
