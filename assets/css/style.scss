@@ -12,6 +12,7 @@
 /* Light/Dark mode variables */
 :root {
   --primary-color: #0366d6;
+  --focus-ring-color: rgba(3, 102, 214, 0.5);
   --secondary-color: #f1f8ff;
   --accent-color: #28a745;
   --text-dark: #24292e;
@@ -26,6 +27,7 @@
 
 [data-theme="dark"] {
   --primary-color: #58a6ff;
+  --focus-ring-color: rgba(88, 166, 255, 0.5);
   --secondary-color: #1e2731;
   --accent-color: #56d364;
   --text-dark: #f0f6fc;

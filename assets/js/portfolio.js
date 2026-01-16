@@ -83,6 +83,17 @@ function loadTheme() {
 // Initialize theme on page load
 document.addEventListener('DOMContentLoaded', function() {
     loadTheme();
+
+    // Add keyboard accessibility for theme toggle
+    const themeToggle = document.querySelector('.theme-toggle');
+    if (themeToggle) {
+        themeToggle.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleTheme();
+            }
+        });
+    }
     
     // Start demo after a short delay
     setTimeout(startThemeDemo, 3000);
