@@ -9,6 +9,12 @@
   box-sizing: border-box;
 }
 
+/* Accessibility: Enhanced Focus States */
+:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
 /* Light/Dark mode variables */
 :root {
   --primary-color: #0366d6;
