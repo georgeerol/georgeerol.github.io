@@ -51,7 +51,10 @@
     {% seo %}
     
     <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script defer src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script defer src="{{ '/assets/js/portfolio.js' | relative_url }}"></script>
+    <script defer src="{{ '/assets/js/ai-assistant.js' | relative_url }}"></script>
 </head>
 
 <body>
@@ -60,10 +63,6 @@
             {{ content }}
         </div>
     </div>
-    
-    <!-- Custom JavaScript -->
-    <script src="{{ '/assets/js/portfolio.js' | relative_url }}"></script>
-    <script src="{{ '/assets/js/ai-assistant.js' | relative_url }}"></script>
     
     <!-- Initialize Lucide Icons -->
     <script>

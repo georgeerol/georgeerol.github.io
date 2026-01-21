@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- SEO Meta Tags -->
+    <title>George Erol Fouché Portfolio</title>
+
+    <meta name="theme-color" content="#0366d6">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/ai-assistant.css">
+
+    <!-- Lucide Icons -->
+    <script defer src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script defer src="/assets/js/portfolio.js"></script>
+    <script defer src="/assets/js/ai-assistant.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="main-content">
+            <h1>Test Content</h1>
+            <p>This is a test to verify script loading.</p>
+            <i data-lucide="camera"></i>
+        </div>
+    </div>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+                document.body.classList.add('lucide-loaded');
+            } else {
+                console.error('Lucide not defined');
+            }
+        });
+    </script>
+</body>
+</html>
