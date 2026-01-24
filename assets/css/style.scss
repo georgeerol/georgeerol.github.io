@@ -37,6 +37,12 @@
   --about-bg: #161b22;
 }
 
+/* Global Focus Styles for Accessibility */
+:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 3px;
+}
+
 /* Lucide Icon Styles */
 .lucide-icon {
   width: 1.1em;
