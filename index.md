@@ -17,7 +17,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
     <a href="#contact">Contact</a>
     
     <!-- Dark Mode Toggle -->
-    <div class="theme-toggle" onclick="toggleTheme()">
+    <div class="theme-toggle" onclick="toggleTheme()" role="button" tabindex="0" aria-label="Toggle dark mode" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleTheme(); }">
       <div class="theme-toggle-slider">
         <span class="theme-icon"><i data-lucide="sun" class="lucide-icon"></i></span>
         <span class="theme-icon"><i data-lucide="moon" class="lucide-icon"></i></span>
