@@ -27,7 +27,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
 </div>
 
 <!-- Enhanced Hero Section -->
-<div class="hero-section">
+<div id="main-content" class="hero-section" tabindex="-1">
   <div class="hero-content">
     <div class="hero-left">
       <div class="hero-profile">
