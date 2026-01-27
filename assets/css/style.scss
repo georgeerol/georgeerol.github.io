@@ -37,6 +37,23 @@
   --about-bg: #161b22;
 }
 
+/* Skip Link */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  padding: 10px 20px;
+  background: var(--primary-color);
+  color: white;
+  z-index: 1000;
+  text-decoration: none;
+  border-radius: 0 0 8px 0;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
 /* Lucide Icon Styles */
 .lucide-icon {
   width: 1.1em;
