@@ -9,6 +9,27 @@
   box-sizing: border-box;
 }
 
+/* Skip to content link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  padding: 10px 20px;
+  background: var(--primary-color);
+  color: white;
+  z-index: 10000;
+  text-decoration: none;
+  border-radius: 0 0 5px 0;
+  transition: top 0.3s;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: 2px solid white;
+  outline-offset: -2px;
+}
+
 /* Light/Dark mode variables */
 :root {
   --primary-color: #0366d6;
