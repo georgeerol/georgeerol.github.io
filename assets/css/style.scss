@@ -1855,3 +1855,52 @@ body {
   z-index: 60 !important;
   position: relative !important;
 }
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 110px;
+  right: 30px;
+  background: var(--primary-color);
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.back-to-top:focus-visible {
+  outline: 3px solid var(--accent-color);
+  outline-offset: 3px;
+}
+
+/* Adjust for mobile */
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 100px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+  }
+}
