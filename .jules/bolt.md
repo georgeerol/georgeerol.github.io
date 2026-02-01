@@ -1,0 +1,3 @@
+## 2024-05-22 - Phantom Optimizations
+**Learning:** Memory or documentation claimed that images in `index.md` were already optimized with `loading='lazy'` and `decoding='async'`, and the hero image with `fetchpriority='high'`. Upon inspection, none of these attributes were present. This highlights the importance of always verifying the actual code state rather than relying on external documentation or memory context, especially for performance audits.
+**Action:** Always use `grep` or `read_file` to verify the presence of optimizations before assuming they exist, even if documentation states otherwise.
