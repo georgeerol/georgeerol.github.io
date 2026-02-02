@@ -31,7 +31,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
   <div class="hero-content">
     <div class="hero-left">
       <div class="hero-profile">
-        <img src="./images/me.jpeg" alt="George Erol Fouché" class="profile-image">
+        <img fetchpriority="high" decoding="async" src="./images/me.jpeg" alt="George Erol Fouché" class="profile-image">
       </div>
     </div>
     
@@ -168,7 +168,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
     <div class="project-card featured-card">
       <div class="featured-content">
         <div class="client-header">
-          <img src="./images/sliver-logo.png" alt="SLIVER Pizzeria Logo" class="client-logo">
+          <img loading="lazy" decoding="async" src="./images/sliver-logo.png" alt="SLIVER Pizzeria Logo" class="client-logo">
           <div class="client-badge"><i data-lucide="building-2" class="lucide-icon"></i> Client Project</div>
         </div>
         <h3 class="project-title">Web Platform & Operations Dashboard</h3>
@@ -261,7 +261,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       <p class="project-overview">Production-ready infrastructure with containerized development, automated deployments, and cloud-native architecture for scalability and reliability.</p>
       
       <div class="demo-item">
-        <img src="./images/railway-deploy.png" alt="Railway Deployment - SLIVER Pizzeria Production" class="demo-video project-image">
+        <img loading="lazy" decoding="async" src="./images/railway-deploy.png" alt="Railway Deployment - SLIVER Pizzeria Production" class="demo-video project-image">
       </div>
       
       <div class="project-links">
@@ -272,7 +272,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
   
   <!-- SLIVER Brand Info -->
   <div class="client-info-card sliver-info">
-    <img src="./images/sliver-mini-logo.png" alt="SLIVER Pizzeria Logo" class="client-logo sliver-logo-img">
+    <img loading="lazy" decoding="async" src="./images/sliver-mini-logo.png" alt="SLIVER Pizzeria Logo" class="client-logo sliver-logo-img">
     <div class="client-details">
       <h4>About SLIVER Pizzeria</h4>
       <p><em>"An experiment in culinary happiness"</em> — SLIVER offers a healthier alternative focusing on fresh produce, 100% vegetarian with sourdough crust pizza. Family owned & operated with 6 Bay Area locations serving Berkeley, Oakland, Lafayette, and Fremont.</p>
@@ -295,7 +295,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
     <div class="project-card featured-card vintage-featured">
       <div class="featured-content">
         <div class="client-header">
-          <img src="./images/TheBarnyardLogo.png" alt="The Barnyard Wine Bar Logo" class="client-logo">
+          <img loading="lazy" decoding="async" src="./images/TheBarnyardLogo.png" alt="The Barnyard Wine Bar Logo" class="client-logo">
           <div class="client-badge vintage-badge"><i data-lucide="building-2" class="lucide-icon"></i> Client Project</div>
         </div>
         <h3 class="project-title">Vintage — Wine Recommendation & Club</h3>
@@ -389,7 +389,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
   
   <!-- Vintage Brand Info -->
   <div class="client-info-card vintage-info">
-    <img src="./images/TheBarnyardLogo.png" alt="The Barnyard Wine Bar Logo" class="client-logo vintage-logo-img">
+    <img loading="lazy" decoding="async" src="./images/TheBarnyardLogo.png" alt="The Barnyard Wine Bar Logo" class="client-logo vintage-logo-img">
     <div class="client-details">
       <h4>About Barnyard Wine Bar</h4>
       <p><em>"Where every glass tells a story"</em> — Barnyard Wine Bar brings curated wine experiences to wine enthusiasts through their Epic Society wine club. Members enjoy personalized selections, exclusive tastings, and a community of fellow wine lovers.</p>
@@ -434,7 +434,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
         </ul>
       </div>
       
-      <img src="./images/FollowMeGif.gif" alt="Deep Learning Drone Simulator" class="project-image">
+      <img loading="lazy" decoding="async" src="./images/FollowMeGif.gif" alt="Deep Learning Drone Simulator" class="project-image">
       
       <div class="project-links">
         <a href="https://github.com/fouliex/DeepLearningDroneSimulator" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i data-lucide="github" class="lucide-icon"></i> View GitHub</a>
@@ -462,7 +462,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
         </ul>
       </div>
       
-      <img src="./images/rover_image.gif" alt="Search And Sample Rover" class="project-image">
+      <img loading="lazy" decoding="async" src="./images/rover_image.gif" alt="Search And Sample Rover" class="project-image">
       
       <div class="project-links">
         <a href="https://github.com/fouliex/SearchAndSampleRoverProject" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i data-lucide="github" class="lucide-icon"></i> View GitHub</a>
@@ -491,7 +491,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
         </ul>
       </div>
       
-      <img src="./images/PR2.gif" alt="Robotic Perception" class="project-image">
+      <img loading="lazy" decoding="async" src="./images/PR2.gif" alt="Robotic Perception" class="project-image">
       
       <div class="project-links">
         <a href="https://github.com/fouliex/RoboticPerception" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i data-lucide="github" class="lucide-icon"></i> View GitHub</a>
@@ -519,7 +519,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
         </ul>
       </div>
       
-      <img src="./images/PickAndDrop.gif" alt="Robotic Arm Pick and Drop" class="project-image">
+      <img loading="lazy" decoding="async" src="./images/PickAndDrop.gif" alt="Robotic Arm Pick and Drop" class="project-image">
       
       <div class="project-links">
         <a href="https://github.com/fouliex/RoboticArmPickAndDrop" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i data-lucide="github" class="lucide-icon"></i> View GitHub</a>
@@ -547,7 +547,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
         </ul>
       </div>
       
-      <img src="./images/SelfDrivingCarBehavioralCloning.gif" alt="Self-Driving Car Behavioral Cloning" class="project-image">
+      <img loading="lazy" decoding="async" src="./images/SelfDrivingCarBehavioralCloning.gif" alt="Self-Driving Car Behavioral Cloning" class="project-image">
       
       <div class="project-links">
         <a href="https://github.com/fouliex/SelfDrivingCarBehavioralCloning" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i data-lucide="github" class="lucide-icon"></i> View GitHub</a>
@@ -588,7 +588,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
         </ul>
       </div>
       
-      <img src="./images/SystemArchitecture.png" alt="IOT AWS SPARK Architecture" class="project-image">
+      <img loading="lazy" decoding="async" src="./images/SystemArchitecture.png" alt="IOT AWS SPARK Architecture" class="project-image">
       
       <div class="project-links">
         <a href="https://github.com/georgeerol/IotAwsSpark" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i data-lucide="github" class="lucide-icon"></i> View GitHub</a>
@@ -618,7 +618,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
         </ul>
       </div>
       
-      <img src="./images/SparkFlowArchitecture.png" alt="E2E Spark Flow Architecture" class="project-image">
+      <img loading="lazy" decoding="async" src="./images/SparkFlowArchitecture.png" alt="E2E Spark Flow Architecture" class="project-image">
       
       <div class="project-links">
         <a href="https://github.com/georgeerol/E2ESparkFlow" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i data-lucide="github" class="lucide-icon"></i> View GitHub</a>
@@ -646,7 +646,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
         </ul>
       </div>
       
-      <img src="./images/CommercingWithFlinkArchitecture.png" alt="Commercing With Flink Architecture" class="project-image">
+      <img loading="lazy" decoding="async" src="./images/CommercingWithFlinkArchitecture.png" alt="Commercing With Flink Architecture" class="project-image">
       
       <div class="project-links">
         <a href="https://github.com/georgeerol/CommercingWithFlink" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i data-lucide="github" class="lucide-icon"></i> View GitHub</a>
@@ -684,8 +684,8 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       </div>
       
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-        <img src="./images/LoginPage.png" alt="Todo App Login" class="project-image">
-        <img src="./images/ToDoPage.png" alt="Todo App Main" class="project-image">
+        <img loading="lazy" decoding="async" src="./images/LoginPage.png" alt="Todo App Login" class="project-image">
+        <img loading="lazy" decoding="async" src="./images/ToDoPage.png" alt="Todo App Main" class="project-image">
       </div>
       
       <div class="project-links">
@@ -714,7 +714,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
         </ul>
       </div>
       
-      <img src="./images/ExpensePage.png" alt="Expense Application" class="project-image">
+      <img loading="lazy" decoding="async" src="./images/ExpensePage.png" alt="Expense Application" class="project-image">
       
       <div class="project-links">
         <a href="https://github.com/georgeerol/ExpenseApp" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i data-lucide="github" class="lucide-icon"></i> View GitHub</a>
@@ -743,9 +743,9 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       </div>
       
       <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px;">
-        <img src="./images/HomePage.png" alt="PM App Home" class="project-image">
-        <img src="./images/EmployeesPage.png" alt="PM App Employees" class="project-image">
-        <img src="./images/ProjectsPage.png" alt="PM App Projects" class="project-image">
+        <img loading="lazy" decoding="async" src="./images/HomePage.png" alt="PM App Home" class="project-image">
+        <img loading="lazy" decoding="async" src="./images/EmployeesPage.png" alt="PM App Employees" class="project-image">
+        <img loading="lazy" decoding="async" src="./images/ProjectsPage.png" alt="PM App Projects" class="project-image">
       </div>
       
       <div class="project-links">
@@ -783,7 +783,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
         </ul>
       </div>
       
-      <img src="./images/Clima.png" alt="Weather App" class="project-image">
+      <img loading="lazy" decoding="async" src="./images/Clima.png" alt="Weather App" class="project-image">
       
       <div class="project-links">
         <a href="https://github.com/georgeerol/AndroidAndIOSApps" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i data-lucide="github" class="lucide-icon"></i> View GitHub</a>
@@ -811,7 +811,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
         </ul>
       </div>
       
-      <img src="./images/BitcoinTicker.png" alt="Bitcoin Ticker" class="project-image">
+      <img loading="lazy" decoding="async" src="./images/BitcoinTicker.png" alt="Bitcoin Ticker" class="project-image">
       
       <div class="project-links">
         <a href="https://github.com/georgeerol/AndroidAndIOSApps" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i data-lucide="github" class="lucide-icon"></i> View GitHub</a>
