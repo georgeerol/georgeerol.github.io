@@ -1855,3 +1855,9 @@ body {
   z-index: 60 !important;
   position: relative !important;
 }
+
+/* Focus styles for accessibility */
+:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 3px;
+}
