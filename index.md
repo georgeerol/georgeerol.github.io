@@ -86,7 +86,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
   
   <div class="about-content">
     <div class="about-text">
-      <p>I'm a <strong>Senior Software Engineer with 10+ years</strong> of experience specializing in <strong>Backend Development</strong>, <strong>Data Engineering</strong>, and <strong>Robotics/AI</strong>. Most recently at Series Entertainment (Gaming AI Startup), I have a proven track record of leading teams and delivering scalable solutions across Gaming, AI, Cybersecurity, and Enterprise environments.</p>
+      <p>I'm an <strong>AI Platform and Forward Deployed Engineer with 12+ years</strong> of experience building production AI, backend, data, and infrastructure systems. Proven track record of leading teams and delivering scalable, secure solutions across Supply Chain, Gaming, AI, and Cybersecurity Startups, as well as Big Data, Mobile, and IoT Enterprise Environments.</p>
       
       <div class="credentials">
         <h4>🎓 Education & Certifications</h4>
