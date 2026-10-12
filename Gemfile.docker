@@ -1,0 +1,13 @@
+source "https://rubygems.org"
+
+gem "jekyll", "~> 4.3"
+
+group :jekyll_plugins do
+  gem "jekyll-feed", "~> 0.15"
+  gem "jekyll-sitemap", "~> 1.4"
+  gem "jekyll-seo-tag", "~> 2.8"
+end
+
+# Use the default jekyll-sass-converter 3.x that uses sass-embedded
+# This avoids native sassc build issues in containers
+

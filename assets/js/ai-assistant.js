@@ -584,9 +584,9 @@ class AIAssistant {
                 {
                     level: 1,
                     responses: [
-                        "George is a **Senior Software Engineer with 10+ years** of experience! He specializes in Backend Development, Data Engineering, and Robotics/AI. Most recently, he was at Series Entertainment (Gaming AI Startup) as the sole Data Engineer for Pixelberry Studio. 🎮",
+                        "George is a **Senior Software Engineer with 12+ years** of experience! He specializes in Backend Development, Data Engineering, and Robotics/AI. Most recently, he was at Series Entertainment (Gaming AI Startup) as the sole Data Engineer for Pixelberry Studio. 🎮",
                         "With over a decade in software engineering, George has built expertise across Gaming AI, Cybersecurity, Enterprise, and Startups. His most recent role was Sr. Software Engineer at Series Entertainment, working on the Choices mobile game. 🚀",
-                        "George brings 10+ years of hands-on experience spanning Backend Development, Data Engineering, and AI/Robotics. He's worked at gaming startups, cybersecurity firms, AI companies, and Fortune 500 giants like GE. 💼"
+                        "George brings 12+ years of hands-on experience spanning Backend Development, Data Engineering, and AI/Robotics. He's worked at gaming startups, cybersecurity firms, AI companies, and Fortune 500 giants like GE. 💼"
                     ]
                 },
                 {
@@ -762,7 +762,7 @@ class AIAssistant {
                     responses: [
                         "Hey there! 👋 Great to meet you! I'm George's AI assistant. I can tell you all about his experience, skills, projects, or how to get in touch. What would you like to know?",
                         "Hello! 😊 Welcome to George's portfolio! I'm here to help you learn about his background, technical skills, or impressive projects. What interests you?",
-                        "Hi! 🤖 Thanks for stopping by! I can share info about George's 10+ years of experience in Backend, Data Engineering, and Robotics. What would you like to explore?"
+                        "Hi! 🤖 Thanks for stopping by! I can share info about George's 12+ years of experience in Backend, Data Engineering, and Robotics. What would you like to explore?"
                     ]
                 }
             ],
@@ -780,7 +780,7 @@ class AIAssistant {
                 {
                     level: 1,
                     responses: [
-                        "George Erol Fouché is a **Senior Software Engineer with 10+ years** of experience! 👨🏿‍💻\n\nHe specializes in:\n• Backend Development (Java, Python)\n• Data Engineering (Spark, Kafka, AWS)\n• Robotics & AI (ROS, TensorFlow, OpenCV)\n\nMost recently, he was at Series Entertainment (Gaming AI) as Sr. Software Engineer and sole Data Engineer for Pixelberry Studio.\n\nFun fact: He's trilingual! 🌍",
+                        "George Erol Fouché is a **Senior Software Engineer with 12+ years** of experience! 👨🏿‍💻\n\nHe specializes in:\n• Backend Development (Java, Python)\n• Data Engineering (Spark, Kafka, AWS)\n• Robotics & AI (ROS, TensorFlow, OpenCV)\n\nMost recently, he was at Series Entertainment (Gaming AI) as Sr. Software Engineer and sole Data Engineer for Pixelberry Studio.\n\nFun fact: He's trilingual! 🌍",
                         "Let me introduce George! 🌟\n\n**George Erol Fouché** is a versatile software engineer based in the San Francisco Bay Area. With over a decade of experience, he's worked across:\n\n• Gaming AI startups\n• Cybersecurity companies\n• AI/ML startups\n• Fortune 500 enterprises (GE)\n\nHe holds a B.S. in Computer Engineering from Penn State and has led robotics projects at CMU.\n\nAsk me about his inspiring personal journey! 🇭🇹"
                     ]
                 }
@@ -790,13 +790,13 @@ class AIAssistant {
                     level: 1,
                     responses: [
                         "George has an inspiring story! 🌟\n\nHe was **born in New York** and **raised in Haiti**. At age 16, he returned to the United States as an ESL student. Coming from Haiti to California felt like *\"making it to the NBA — but in software engineering.\"* 🏀\n\nThat experience shaped his **ambition, discipline, and work ethic** that drives his success today.\n\nOh, and he's **trilingual**: English, French, and Haitian Creole! 🌍",
-                        "Here's George's journey! 🇭🇹➡️🇺🇸\n\n**Born**: New York\n**Raised**: Haiti\n**Returned to US**: Age 16 as an ESL student\n\nHe describes coming from Haiti to California as *\"making it to the NBA of software engineering.\"* That drive and determination helped him become a Senior Software Engineer with 10+ years of experience.\n\n**Languages**: English 🇺🇸 | French 🇫🇷 | Haitian Creole 🇭🇹"
+                        "Here's George's journey! 🇭🇹➡️🇺🇸\n\n**Born**: New York\n**Raised**: Haiti\n**Returned to US**: Age 16 as an ESL student\n\nHe describes coming from Haiti to California as *\"making it to the NBA of software engineering.\"* That drive and determination helped him become a Senior Software Engineer with 12+ years of experience.\n\n**Languages**: English 🇺🇸 | French 🇫🇷 | Haitian Creole 🇭🇹"
                     ]
                 },
                 {
                     level: 2,
                     responses: [
-                        "George's story is truly remarkable! 🌟\n\nImagine: A young man from Haiti arriving in California at 16, learning English as a second language, and going on to:\n\n📚 Earn a Computer Engineering degree from Penn State\n🤖 Lead robotics projects at CMU\n🎮 Work at gaming, AI, and cybersecurity startups\n🏭 Spend 7 years at GE\n💼 Become a Senior Software Engineer with 10+ years experience\n\nHis journey proves that with **ambition, discipline, and hard work**, anything is possible.\n\nAnd yes — he speaks **three languages** fluently: English, French, and Haitian Creole! 🌍"
+                        "George's story is truly remarkable! 🌟\n\nImagine: A young man from Haiti arriving in California at 16, learning English as a second language, and going on to:\n\n📚 Earn a Computer Engineering degree from Penn State\n🤖 Lead robotics projects at CMU\n🎮 Work at gaming, AI, and cybersecurity startups\n🏭 Spend 7 years at GE\n💼 Become a Senior Software Engineer with 12+ years experience\n\nHis journey proves that with **ambition, discipline, and hard work**, anything is possible.\n\nAnd yes — he speaks **three languages** fluently: English, French, and Haitian Creole! 🌍"
                     ]
                 }
             ],
@@ -816,7 +816,7 @@ class AIAssistant {
                         "🤖 *beep boop* You found an Easter egg!\n\nHere's a software engineering joke:\n\nWhy do programmers prefer dark mode?\n\nBecause light attracts bugs! 🐛\n\n...I'll see myself out. 😄",
                         "Ah, curious one! 🔍\n\nI was built by George himself! He coded me to help visitors learn about his work. I'm powered by JavaScript and a lot of keyword matching... and maybe a little ✨ magic ✨.\n\nNo LLMs were harmed in my creation. 🤖",
                         "🍕 George's favorite pizza?\n\nWell, he did build the SLIVER Pizzeria website, so I'd guess he's a fan of their vegetarian sourdough crust pizza!\n\nBut honestly, you'd have to ask him directly. Want his contact info?",
-                        "The secret to George's success? 🤫\n\n1. Born in NY, raised in Haiti\n2. Came to California at 16 as an ESL student\n3. Treated it like \"making it to the NBA\"\n4. Never stopped learning\n5. 10+ years of building cool stuff\n\nNow THAT'S a power-up! 🎮",
+                        "The secret to George's success? 🤫\n\n1. Born in NY, raised in Haiti\n2. Came to California at 16 as an ESL student\n3. Treated it like \"making it to the NBA\"\n4. Never stopped learning\n5. 12+ years of building cool stuff\n\nNow THAT'S a power-up! 🎮",
                         "Am I real? 🤔\n\nI'm as real as the JavaScript that runs me! I'm George's AI assistant, here to tell you about his awesome career.\n\nBut no, I can't pass the Turing test... yet. 😉\n\nWhat would you like to know about George?",
                         "42! 🌌\n\nAh, I see you're a person of culture! But the real answer to life, the universe, and everything is probably... learning to code. 💻\n\nOr maybe it's just 42. Douglas Adams knew what was up.\n\nAnyway, what can I tell you about George?"
                     ]
@@ -826,7 +826,7 @@ class AIAssistant {
                 {
                     level: 1,
                     responses: [
-                        "Great question! I can tell you about George's:\n\n💼 **Experience** - 10+ years across gaming, AI, cybersecurity\n🛠️ **Skills** - Java, Python, Spark, AWS, TensorFlow, ROS\n🚀 **Projects** - Client work, robotics, data pipelines\n🎓 **Education** - Penn State, Udacity, CMU\n📧 **Contact** - How to reach him\n\nWhat interests you most?",
+                        "Great question! I can tell you about George's:\n\n💼 **Experience** - 12+ years across gaming, AI, cybersecurity\n🛠️ **Skills** - Java, Python, Spark, AWS, TensorFlow, ROS\n🚀 **Projects** - Client work, robotics, data pipelines\n🎓 **Education** - Penn State, Udacity, CMU\n📧 **Contact** - How to reach him\n\nWhat interests you most?",
                         "I'm here to help! Here's what I know about George:\n\n• His professional **experience** and career journey\n• Technical **skills** and tools he uses\n• **Projects** he's built (clients, robotics, data)\n• **Education** and certifications\n• **Contact** information\n\nJust ask about any of these!",
                         "Hmm, I'm not sure I understood that. 🤔 Try asking about:\n\n• \"What's George's experience?\"\n• \"What skills does he have?\"\n• \"Tell me about his projects\"\n• \"How can I contact George?\"\n\nOr use the quick action buttons below!"
                     ]

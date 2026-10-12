@@ -132,4 +132,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 **Built with ❤️ using Jekyll and GitHub Pages**
 
-*Portfolio showcasing 10+ years of software engineering expertise across multiple domains.*
+*Portfolio showcasing 12+ years of software engineering expertise across multiple domains.*
