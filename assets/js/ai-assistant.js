@@ -173,8 +173,8 @@ class AIAssistant {
         const suggestions = {
             experience: [
                 "What companies has he worked at?",
-                "Tell me about his gaming work",
-                "What's his most recent role?"
+                "What does he do at BackOps?",
+                "Tell me about his gaming work"
             ],
             skills: [
                 "What about data engineering?",
@@ -227,7 +227,7 @@ class AIAssistant {
                 "How can I contact him?"
             ],
             companies: [
-                "Tell me about Series Entertainment",
+                "Tell me about BackOps",
                 "What about GE?",
                 "Any startup experience?"
             ],
@@ -528,7 +528,9 @@ class AIAssistant {
             ],
             recent: [
                 'recent', 'current', 'latest', 'now', 'today', 'currently',
-                'present', 'last', 'newest', '2024', '2025'
+                'present', 'last', 'newest', '2025', '2026',
+                'backops', 'back ops', 'martin brower', 'supply chain',
+                'forward deployed', 'fde', 'voice ai', 'sms ai', 'ai platform'
             ],
             companies: [
                 'company', 'companies', 'employer', 'employers', 'worked at',
@@ -584,16 +586,16 @@ class AIAssistant {
                 {
                     level: 1,
                     responses: [
-                        "George is a **Senior Software Engineer with 12+ years** of experience! He specializes in Backend Development, Data Engineering, and Robotics/AI. Most recently, he was at Series Entertainment (Gaming AI Startup) as the sole Data Engineer for Pixelberry Studio. 🎮",
-                        "With over a decade in software engineering, George has built expertise across Gaming AI, Cybersecurity, Enterprise, and Startups. His most recent role was Sr. Software Engineer at Series Entertainment, working on the Choices mobile game. 🚀",
-                        "George brings 12+ years of hands-on experience spanning Backend Development, Data Engineering, and AI/Robotics. He's worked at gaming startups, cybersecurity firms, AI companies, and Fortune 500 giants like GE. 💼"
+                        "George is an **AI Platform and Forward Deployed Engineer with 12+ years** of experience building production AI, backend, data, and infrastructure systems. He's currently a Sr. AI Platform Engineer / FDE at **BackOps**, a Supply Chain AI startup. 🚀",
+                        "With 12+ years in software engineering, George has delivered scalable, secure solutions across Supply Chain, Gaming, AI, and Cybersecurity startups, as well as Big Data, Mobile, and IoT enterprise environments. 💼",
+                        "George brings 12+ years of hands-on experience spanning production AI, backend, data, and infrastructure. He's worked at supply chain AI, gaming, AI, and cybersecurity startups, plus 7 years at GE. 🏭"
                     ]
                 },
                 {
                     level: 2,
                     responses: [
-                        "Here's George's career journey in more detail:\n\n🎮 **Series Entertainment** (2024-2025)\nSr. Software Engineer & sole Data Engineer for Pixelberry Studio. Built ETL pipelines for billions of Choices game events.\n\n🔒 **Sphere Technology** (2022-2024)\nLead architect for cybersecurity solutions.\n\n🤖 **CalypsoAI** (2020-2022)\nSole US Engineer at this AI startup, building government AI trust & safety systems.\n\n🏭 **General Electric** (2013-2020)\nProgressed through Data Engineering, Mobile, and IoT roles.",
-                        "Let me break down George's professional timeline:\n\n**Recent (2020-2025)**: Startup focus - Gaming AI at Series Entertainment, Cybersecurity at Sphere Technology, AI Trust at CalypsoAI\n\n**Earlier (2013-2020)**: Enterprise experience at General Electric across multiple divisions\n\n**Foundation**: CMU Robotics Institute experience + Penn State Computer Engineering degree"
+                        "Here's George's career journey in more detail:\n\n🚚 **BackOps** (2026-Present)\nSr. AI Platform Engineer / FDE. Engineer #7. Led architecture and engineering direction for Martin Brower, one of BackOps' biggest enterprise customers.\n\n🎮 **Series Entertainment** (2024-2025)\nSr. Software Engineer & sole Data Engineer for Pixelberry Studio. Built ETL pipelines for billions of Choices game events.\n\n🔒 **Sphere Technology** (2022-2024)\nLead architect for a high-traffic, event-driven system.\n\n🤖 **CalypsoAI** (2020-2022)\nSole US Software Engineer, developing products so government agencies can trust AI.\n\n🏭 **General Electric** (2013-2020)\nGE Power, GE Digital, and GE Healthcare.",
+                        "Let me break down George's professional timeline:\n\n**Now (2026-Present)**: AI Platform & Forward Deployed Engineering at BackOps (Supply Chain AI)\n\n**Startups (2020-2025)**: Gaming AI at Series Entertainment, Cybersecurity at Sphere Technology, AI Trust at CalypsoAI\n\n**Enterprise (2013-2020)**: General Electric across GE Power, GE Digital, and GE Healthcare\n\n**Foundation**: CMU Robotics Institute research + Penn State Computer Engineering degree"
                     ]
                 }
             ],
@@ -712,8 +714,8 @@ class AIAssistant {
                 {
                     level: 1,
                     responses: [
-                        "George has deep AI/ML experience! 🧠\n\n**Startup Experience:**\n• Series Entertainment - Gaming AI\n• CalypsoAI - Government AI Trust & Safety\n\n**Projects:**\n• Deep learning for drone tracking\n• Behavioral cloning for self-driving\n• Computer vision with OpenCV\n• Neural networks with TensorFlow",
-                        "AI & Machine Learning highlights:\n\n🎮 **Gaming AI** at Series Entertainment\n🔒 **AI Safety** at CalypsoAI (government clients)\n🚁 **Computer Vision** for drone following\n🚗 **Behavioral Cloning** for autonomous driving\n🦾 **Object Recognition** for robotic manipulation\n\nTools: TensorFlow, OpenCV, deep learning, CNNs"
+                        "George builds production AI! 🧠\n\n**Current:**\n• BackOps - Architected and owned the production Voice and SMS AI platform (agents, APIs, dashboards, monitoring, infrastructure)\n\n**Earlier:**\n• Series Entertainment - Gaming AI\n• CalypsoAI - Products so government agencies can trust AI\n\n**Projects:**\n• Deep learning for drone tracking\n• Behavioral cloning for self-driving",
+                        "AI highlights:\n\n🚚 **Voice & SMS AI** at BackOps (Supply Chain AI)\n🎮 **Gaming AI** at Series Entertainment\n🔒 **AI Trust** at CalypsoAI (government agencies)\n🚁 **Computer Vision** for drone following\n🚗 **Behavioral Cloning** for autonomous driving\n\nTools: Voice AI, LLM, Python, FastAPI, TensorFlow, OpenCV"
                     ]
                 }
             ],
@@ -721,8 +723,8 @@ class AIAssistant {
                 {
                     level: 1,
                     responses: [
-                        "George's most recent role was at **Series Entertainment**! 🎮\n\n**Position**: Sr. Software Engineer (Nov 2024 - Oct 2025)\n**Focus**: Backend & Data Engineering for Pixelberry Studio\n**Product**: Choices mobile game\n\n**Key work:**\n• ETL pipelines for billions of events\n• Game State & CMS systems\n• VIP Subscription features\n• Data strategy consulting\n\nHe's now open to new opportunities!",
-                        "What George has been up to recently:\n\n**2024-2025**: Series Entertainment (Gaming AI)\n• Sr. Software Engineer\n• Sole Data Engineer for Pixelberry Studio\n• Built systems for Choices game analytics\n\n**2022-2024**: Sphere Technology (Cybersecurity)\n• Lead architect for security solutions\n\n**Now**: Open to exciting new opportunities! 🚀"
+                        "George is currently at **BackOps**, a Supply Chain AI startup! 🚚\n\n**Position**: Sr. AI Platform Engineer / Forward Deployed Engineer (Feb 2026 - Present)\n\n**Key work:**\n• Engineer #7, as the company grew from Series A to Series B in six months\n• Led architecture and engineering direction for Martin Brower, one of BackOps' biggest enterprise customers\n• Architected and owned the production Voice and SMS AI platform\n• Built platform infrastructure and internal tooling that helped FDEs deliver customer solutions faster\n\nTech: Python, FastAPI, TypeScript, Next.js, Voice AI, LLM, AWS",
+                        "What George has been up to recently:\n\n**2026-Present**: BackOps (Supply Chain AI)\n• Sr. AI Platform Engineer / FDE\n• Voice and SMS AI platform for Martin Brower\n• Platform infrastructure and FDE tooling\n\n**2024-2025**: Series Entertainment (Gaming AI)\n• Sr. Software Engineer\n• Sole Data Engineer for Pixelberry Studio\n• ETL pipelines for billions of Choices game events 🚀"
                     ]
                 }
             ],
@@ -730,14 +732,14 @@ class AIAssistant {
                 {
                     level: 1,
                     responses: [
-                        "George has worked across diverse companies:\n\n🎮 **Series Entertainment** (2024-2025)\nGaming AI Startup - Pixelberry Studio\n\n🔒 **Sphere Technology Solutions** (2022-2024)\nCybersecurity\n\n🤖 **CalypsoAI** (2020-2022)\nAI Startup - Government AI Safety\n\n🏭 **General Electric** (2013-2020)\nFortune 500 - Multiple divisions",
-                        "George's employer history:\n\n**Startups**: Series Entertainment, CalypsoAI\n**Cybersecurity**: Sphere Technology Solutions\n**Enterprise**: General Electric (7 years!)\n\nHe's experienced both the fast-paced startup world and structured enterprise environments."
+                        "George has worked across diverse companies:\n\n🚚 **BackOps** (2026-Present)\nSupply Chain AI Startup\n\n🎮 **Series Entertainment** (2024-2025)\nGaming AI Startup - Pixelberry Studio\n\n🔒 **Sphere Technology Solutions** (2022-2024)\nCybersecurity Startup\n\n🤖 **CalypsoAI** (2020-2022)\nAI Startup\n\n🏭 **General Electric** (2013-2020)\nGE Power, GE Digital, GE Healthcare",
+                        "George's employer history:\n\n**Startups**: BackOps (Supply Chain AI), Series Entertainment (Gaming AI), Sphere Technology Solutions (Cybersecurity), CalypsoAI (AI)\n**Enterprise**: General Electric (7 years!)\n\nHe's experienced both the fast-paced startup world and structured enterprise environments."
                     ]
                 },
                 {
                     level: 2,
                     responses: [
-                        "Detailed company breakdown:\n\n**🎮 Series Entertainment**\nGaming AI startup. George was sole Data Engineer for Pixelberry Studio (makers of Choices). Built data infrastructure processing billions of player events.\n\n**🔒 Sphere Technology Solutions**\nCybersecurity company. George served as lead architect, designing secure systems and data pipelines.\n\n**🤖 CalypsoAI**\nAI startup focused on government clients. As the sole US-based engineer, George built AI trust and safety systems for government applications.\n\n**🏭 General Electric** (2013-2020)\nSpent 7 years progressing through:\n• GE Aviation - Data Engineering\n• GE Digital - Mobile development\n• GE Power - IoT & Industrial analytics\n\nThis breadth gives George unique perspective across industries!"
+                        "Detailed company breakdown:\n\n**🚚 BackOps**\nSupply Chain AI startup. Engineer #7. George leads architecture and engineering direction for Martin Brower and owns the production Voice and SMS AI platform.\n\n**🎮 Series Entertainment**\nGaming AI startup. George was sole Data Engineer for Pixelberry Studio (makers of Choices). Built real-time and batch ETL pipelines for billions of game events.\n\n**🔒 Sphere Technology Solutions**\nCybersecurity startup. George was lead architect for a high-traffic, event-driven system in Java.\n\n**🤖 CalypsoAI**\nAI startup. As the sole US Software Engineer, George developed products to ensure government agencies can trust AI technology.\n\n**🏭 General Electric** (2013-2020)\nSpent 7 years across:\n• GE Power - Data and AI/Analytics, Full-Stack\n• GE Digital - Mobile Platform\n• GE Healthcare - IoT\n\nThis breadth gives George unique perspective across industries!"
                     ]
                 }
             ],
@@ -780,8 +782,8 @@ class AIAssistant {
                 {
                     level: 1,
                     responses: [
-                        "George Erol Fouché is a **Senior Software Engineer with 12+ years** of experience! 👨🏿‍💻\n\nHe specializes in:\n• Backend Development (Java, Python)\n• Data Engineering (Spark, Kafka, AWS)\n• Robotics & AI (ROS, TensorFlow, OpenCV)\n\nMost recently, he was at Series Entertainment (Gaming AI) as Sr. Software Engineer and sole Data Engineer for Pixelberry Studio.\n\nFun fact: He's trilingual! 🌍",
-                        "Let me introduce George! 🌟\n\n**George Erol Fouché** is a versatile software engineer based in the San Francisco Bay Area. With over a decade of experience, he's worked across:\n\n• Gaming AI startups\n• Cybersecurity companies\n• AI/ML startups\n• Fortune 500 enterprises (GE)\n\nHe holds a B.S. in Computer Engineering from Penn State and has led robotics projects at CMU.\n\nAsk me about his inspiring personal journey! 🇭🇹"
+                        "George Erol Fouché is an **AI Platform and Forward Deployed Engineer with 12+ years** of experience! 👨🏿‍💻\n\nHe builds production:\n• AI (Voice and SMS AI, LLM)\n• Backend (Python FastAPI/Flask, Java Spring)\n• Data (Spark, Kafka, Redshift)\n• Infrastructure (AWS, Azure, Docker, Kubernetes)\n\nHe's currently a Sr. AI Platform Engineer / FDE at BackOps, a Supply Chain AI startup.\n\nFun fact: He's trilingual! 🌍",
+                        "Let me introduce George! 🌟\n\n**George Erol Fouché** is an AI Platform and Forward Deployed Engineer based in the San Francisco Bay Area. With 12+ years of experience, he's worked across:\n\n• Supply Chain AI (BackOps)\n• Gaming AI (Series Entertainment)\n• Cybersecurity (Sphere Technology Solutions)\n• AI (CalypsoAI)\n• Enterprise (General Electric)\n\nHe holds a B.S. in Computer Engineering from Penn State and has led robotics projects at CMU.\n\nAsk me about his inspiring personal journey! 🇭🇹"
                     ]
                 }
             ],
@@ -790,13 +792,13 @@ class AIAssistant {
                     level: 1,
                     responses: [
                         "George has an inspiring story! 🌟\n\nHe was **born in New York** and **raised in Haiti**. At age 16, he returned to the United States as an ESL student. Coming from Haiti to California felt like *\"making it to the NBA — but in software engineering.\"* 🏀\n\nThat experience shaped his **ambition, discipline, and work ethic** that drives his success today.\n\nOh, and he's **trilingual**: English, French, and Haitian Creole! 🌍",
-                        "Here's George's journey! 🇭🇹➡️🇺🇸\n\n**Born**: New York\n**Raised**: Haiti\n**Returned to US**: Age 16 as an ESL student\n\nHe describes coming from Haiti to California as *\"making it to the NBA of software engineering.\"* That drive and determination helped him become a Senior Software Engineer with 12+ years of experience.\n\n**Languages**: English 🇺🇸 | French 🇫🇷 | Haitian Creole 🇭🇹"
+                        "Here's George's journey! 🇭🇹➡️🇺🇸\n\n**Born**: New York\n**Raised**: Haiti\n**Returned to US**: Age 16 as an ESL student\n\nHe describes coming from Haiti to California as *\"making it to the NBA of software engineering.\"* That drive and determination helped him become an AI Platform and Forward Deployed Engineer with 12+ years of experience.\n\n**Languages**: English 🇺🇸 | French 🇫🇷 | Haitian Creole 🇭🇹"
                     ]
                 },
                 {
                     level: 2,
                     responses: [
-                        "George's story is truly remarkable! 🌟\n\nImagine: A young man from Haiti arriving in California at 16, learning English as a second language, and going on to:\n\n📚 Earn a Computer Engineering degree from Penn State\n🤖 Lead robotics projects at CMU\n🎮 Work at gaming, AI, and cybersecurity startups\n🏭 Spend 7 years at GE\n💼 Become a Senior Software Engineer with 12+ years experience\n\nHis journey proves that with **ambition, discipline, and hard work**, anything is possible.\n\nAnd yes — he speaks **three languages** fluently: English, French, and Haitian Creole! 🌍"
+                        "George's story is truly remarkable! 🌟\n\nImagine: A young man from Haiti arriving in California at 16, learning English as a second language, and going on to:\n\n📚 Earn a Computer Engineering degree from Penn State\n🤖 Lead robotics projects at CMU\n🚚 Work at supply chain AI, gaming, AI, and cybersecurity startups\n🏭 Spend 7 years at GE\n💼 Become an AI Platform and Forward Deployed Engineer with 12+ years experience\n\nHis journey proves that with **ambition, discipline, and hard work**, anything is possible.\n\nAnd yes — he speaks **three languages** fluently: English, French, and Haitian Creole! 🌍"
                     ]
                 }
             ],
