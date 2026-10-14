@@ -1,8 +1,8 @@
 ---
 layout: default
-title: "George Erol Fouché - Software Engineer Portfolio"
-description: "Experienced software engineer specializing in data engineering, robotics, and full-stack development"
-keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, machine learning, IoT, big data"
+image: /images/me.jpeg
+description: "AI Platform and Forward Deployed Engineer with 12+ years of experience building production AI, backend, data, and infrastructure systems"
+keywords: "AI platform engineer, forward deployed engineer, voice AI, LLM, backend, data engineering, Python, FastAPI, Java Spring, AWS, Spark, Kafka"
 ---
 
 <!-- Navigation -->
@@ -37,9 +37,9 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
     
     <div class="hero-main">
       <h1>George Erol Fouché</h1>
-      <p class="hero-subtitle">Senior Software Engineer | 12+ Years Experience</p>
+      <p class="hero-subtitle">AI Platform & Forward Deployed Engineer | 12+ Years Experience</p>
       <div class="hero-specialization-container">
-        <p class="hero-specialization">Backend Gaming AI & Data Engineering</p>
+        <p class="hero-specialization">Production AI, Backend, Data & Infrastructure</p>
         <div class="mini-arcade">
           <canvas id="pongGame" width="100" height="70"></canvas>
           <canvas id="snakeGame" width="100" height="70"></canvas>
@@ -49,7 +49,7 @@ keywords: "software engineer, data engineering, robotics, Apache Spark, AWS, mac
       
       <!-- Call to Action Buttons -->
       <div class="hero-actions">
-        <a href="#robotics" class="btn btn-primary"><i data-lucide="rocket" class="lucide-icon"></i> View Projects</a>
+        <a href="#client-work" class="btn btn-primary"><i data-lucide="rocket" class="lucide-icon"></i> View Projects</a>
         <a href="https://github.com/georgeerol" class="btn btn-outline" target="_blank" rel="noopener noreferrer">{% include icons/github.svg %} GitHub</a>
         <a href="#contact" class="btn btn-outline"><i data-lucide="mail" class="lucide-icon"></i> Contact</a>
       </div>
