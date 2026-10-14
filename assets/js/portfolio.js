@@ -1,14 +1,14 @@
-// Theme-aware demo animation system
+// Theme-aware hero animation colors (Voice AI, Data Pipeline, AI Agents)
 let themeAwareColors = {
     light: {
-        pong: { paddle: '#0366d6', ball: '#28a745', trail: 'rgba(40, 167, 69, 0.3)' },
-        snake: { body: '#28a745', food: '#dc3545', trail: 'rgba(40, 167, 69, 0.2)' },
-        pixel: { character: ['#ff6b35', '#ffd23f', '#06ffa5', '#b19cd9', '#ffb3ba'] }
+        voice: { caller: '#79b8ff', agent: '#0366d6', label: 'rgba(121, 184, 255, 0.85)' },
+        pipeline: { stage: '#28a745', raw: '#85e89d', processed: '#ffd33d', line: 'rgba(40, 167, 69, 0.45)', label: 'rgba(133, 232, 157, 0.85)' },
+        agents: { hub: '#ff6b35', node: '#ffb38a', pulse: '#ffd23f', edge: 'rgba(255, 107, 53, 0.35)', label: 'rgba(255, 179, 138, 0.9)' }
     },
     dark: {
-        pong: { paddle: '#58a6ff', ball: '#7c3aed', trail: 'rgba(124, 58, 237, 0.4)' },
-        snake: { body: '#7c3aed', food: '#f59e0b', trail: 'rgba(124, 58, 237, 0.3)' },
-        pixel: { character: ['#f59e0b', '#fbbf24', '#34d399', '#a78bfa', '#fb7185'] }
+        voice: { caller: '#a5d6ff', agent: '#58a6ff', label: 'rgba(165, 214, 255, 0.85)' },
+        pipeline: { stage: '#7c3aed', raw: '#c4b5fd', processed: '#34d399', line: 'rgba(124, 58, 237, 0.5)', label: 'rgba(196, 181, 253, 0.85)' },
+        agents: { hub: '#f59e0b', node: '#fcd34d', pulse: '#fde68a', edge: 'rgba(245, 158, 11, 0.35)', label: 'rgba(252, 211, 77, 0.9)' }
     }
 };
 
@@ -25,7 +25,7 @@ function startThemeDemo() {
     
     if (!miniArcade || !themeToggle) return;
     
-    // Step 1: Flash games to show theme awareness
+    // Step 1: Flash animations to show theme awareness
     miniArcade.classList.add('demo-sequence');
     
     setTimeout(() => {
@@ -64,7 +64,7 @@ function toggleTheme() {
     // Add a subtle animation effect
     document.body.style.transition = 'background 0.3s ease, color 0.3s ease';
     
-    // Flash games to show theme change
+    // Flash animations to show theme change
     const miniArcade = document.querySelector('.mini-arcade');
     if (miniArcade) {
         miniArcade.classList.add('demo-sequence');
@@ -136,410 +136,259 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Pong Game Animation
-function initPongGame() {
-    const canvas = document.getElementById('pongGame');
-    if (!canvas) return;
-    
-    const ctx = canvas.getContext('2d');
+// ==========================================
+// Hero animations: Voice AI, Data Pipeline, AI Agents
+// ==========================================
+
+const HERO_ANIM_BG = '#0b0f14';
+const prefersReducedMotion = window.matchMedia &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// Scale the canvas for high-DPI screens while drawing in the logical
+// size given by the HTML width/height attributes.
+function setupHeroCanvas(id) {
+    const canvas = document.getElementById(id);
+    if (!canvas) return null;
     const width = canvas.width;
     const height = canvas.height;
-    
-    // Game objects
-    const ball = {
-        x: width / 2,
-        y: height / 2,
-        radius: 3,
-        dx: 1.5,
-        dy: 1.2,
-        trail: []
-    };
-    
-    const paddle1 = {
-        x: 10,
-        y: height / 2 - 15,
-        width: 3,
-        height: 30,
-        dy: 0
-    };
-    
-    const paddle2 = {
-        x: width - 13,
-        y: height / 2 - 15,
-        width: 3,
-        height: 30,
-        dy: 0
-    };
-    
-    // AI for paddles
-    function updatePaddles() {
-        // Simple AI - follow the ball
-        const paddle1Center = paddle1.y + paddle1.height / 2;
-        const paddle2Center = paddle2.y + paddle2.height / 2;
-        
-        // Left paddle
-        if (ball.y < paddle1Center - 5) {
-            paddle1.dy = -1;
-        } else if (ball.y > paddle1Center + 5) {
-            paddle1.dy = 1;
-        } else {
-            paddle1.dy = 0;
-        }
-        
-        // Right paddle
-        if (ball.y < paddle2Center - 5) {
-            paddle2.dy = -1;
-        } else if (ball.y > paddle2Center + 5) {
-            paddle2.dy = 1;
-        } else {
-            paddle2.dy = 0;
-        }
-        
-        // Update positions
-        paddle1.y += paddle1.dy;
-        paddle2.y += paddle2.dy;
-        
-        // Keep paddles in bounds
-        paddle1.y = Math.max(0, Math.min(height - paddle1.height, paddle1.y));
-        paddle2.y = Math.max(0, Math.min(height - paddle2.height, paddle2.y));
-    }
-    
-    function updateBall() {
-        // Add current position to trail
-        ball.trail.push({ x: ball.x, y: ball.y });
-        if (ball.trail.length > 8) {
-            ball.trail.shift();
-        }
-        
-        ball.x += ball.dx;
-        ball.y += ball.dy;
-        
-        // Bounce off top and bottom
-        if (ball.y <= ball.radius || ball.y >= height - ball.radius) {
-            ball.dy = -ball.dy;
-        }
-        
-        // Check paddle collisions
-        if (ball.x <= paddle1.x + paddle1.width + ball.radius &&
-            ball.y >= paddle1.y && ball.y <= paddle1.y + paddle1.height) {
-            ball.dx = Math.abs(ball.dx);
-            ball.x = paddle1.x + paddle1.width + ball.radius;
-        }
-        
-        if (ball.x >= paddle2.x - ball.radius &&
-            ball.y >= paddle2.y && ball.y <= paddle2.y + paddle2.height) {
-            ball.dx = -Math.abs(ball.dx);
-            ball.x = paddle2.x - ball.radius;
-        }
-        
-        // Reset if ball goes off screen
-        if (ball.x < 0 || ball.x > width) {
-            ball.x = width / 2;
-            ball.y = height / 2;
-            ball.dx = (Math.random() > 0.5 ? 1 : -1) * 1.5;
-            ball.dy = (Math.random() - 0.5) * 2;
-            ball.trail = [];
-        }
-    }
-    
-    function draw() {
-        const colors = getThemeColors().pong;
-        
-        // Clear canvas with slight fade effect
-        ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
-        ctx.fillRect(0, 0, width, height);
-        
-        // Draw center line
-        ctx.strokeStyle = colors.trail;
-        ctx.setLineDash([5, 5]);
-        ctx.beginPath();
-        ctx.moveTo(width / 2, 0);
-        ctx.lineTo(width / 2, height);
-        ctx.stroke();
-        ctx.setLineDash([]);
-        
-        // Draw ball trail
-        ball.trail.forEach((pos, index) => {
-            const alpha = (index + 1) / ball.trail.length * 0.3;
-            const trailColor = colors.trail.replace('0.3)', `${alpha})`).replace('0.4)', `${alpha})`);
-            ctx.fillStyle = trailColor;
-            ctx.beginPath();
-            ctx.arc(pos.x, pos.y, ball.radius * 0.8, 0, Math.PI * 2);
-            ctx.fill();
+    const dpr = window.devicePixelRatio || 1;
+    canvas.width = width * dpr;
+    canvas.height = height * dpr;
+    const ctx = canvas.getContext('2d');
+    ctx.scale(dpr, dpr);
+    return { ctx, width, height };
+}
+
+function drawHeroLabel(ctx, text, color) {
+    ctx.font = '500 7px "JetBrains Mono", monospace';
+    ctx.fillStyle = color;
+    ctx.textBaseline = 'top';
+    ctx.fillText(text, 5, 4);
+}
+
+// Runs step() every frame. With reduced motion, renders one settled
+// frame and only redraws when the theme changes.
+function runHeroAnimation(step) {
+    if (prefersReducedMotion) {
+        for (let i = 0; i < 150; i++) step();
+        new MutationObserver(step).observe(document.documentElement, {
+            attributes: true,
+            attributeFilter: ['data-theme']
         });
-        
-        // Draw ball
-        ctx.fillStyle = colors.ball;
+        return;
+    }
+    (function frame() {
+        step();
+        requestAnimationFrame(frame);
+    })();
+}
+
+// Voice AI: waveform that alternates between a caller turn and an agent reply
+function initVoiceAnimation() {
+    const setup = setupHeroCanvas('voiceAiAnim');
+    if (!setup) return;
+    const { ctx, width, height } = setup;
+
+    const bars = 15;
+    const gap = 2;
+    const barWidth = (width - 20 - gap * (bars - 1)) / bars;
+    const turnLength = 170; // frames per conversational turn
+    let t = 0;
+
+    function step() {
+        const colors = getThemeColors().voice;
+        ctx.fillStyle = HERO_ANIM_BG;
+        ctx.fillRect(0, 0, width, height);
+        drawHeroLabel(ctx, 'voice ai', colors.label);
+
+        const turn = Math.floor(t / turnLength) % 2; // 0 = caller, 1 = agent
+        const local = (t % turnLength) / turnLength;
+        const envelope = local < 0.78 ? Math.sin((local / 0.78) * Math.PI) : 0;
+        const mid = height / 2 + 5;
+        const maxHeight = height - 28;
+
+        ctx.fillStyle = turn === 0 ? colors.caller : colors.agent;
+        for (let i = 0; i < bars; i++) {
+            const syllables = 0.55 + 0.45 * Math.sin(t * 0.22 + i * 0.9) * Math.sin(t * 0.07 + i * 0.4);
+            const shape = Math.sin(((i + 0.5) / bars) * Math.PI);
+            const barHeight = Math.max(2, envelope * syllables * shape * maxHeight);
+            ctx.fillRect(10 + i * (barWidth + gap), mid - barHeight / 2, barWidth, barHeight);
+        }
+
+        // Speaker indicator
         ctx.beginPath();
-        ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
+        ctx.arc(width - 8, 7, 2, 0, Math.PI * 2);
         ctx.fill();
-        
-        // Draw paddles
-        ctx.fillStyle = colors.paddle;
-        ctx.fillRect(paddle1.x, paddle1.y, paddle1.width, paddle1.height);
-        ctx.fillRect(paddle2.x, paddle2.y, paddle2.width, paddle2.height);
+
+        t++;
     }
-    
-    function gameLoop() {
-        updatePaddles();
-        updateBall();
-        draw();
-        requestAnimationFrame(gameLoop);
-    }
-    
-    // Start the game
-    gameLoop();
+
+    runHeroAnimation(step);
 }
 
-// Initialize Pong game when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
-    setTimeout(initPongGame, 500); // Small delay to ensure canvas is ready
-});
+// Data pipeline: packets flow source -> transform -> sink and change once processed
+function initPipelineAnimation() {
+    const setup = setupHeroCanvas('dataPipelineAnim');
+    if (!setup) return;
+    const { ctx, width, height } = setup;
 
-// Snake Game Animation
-function initSnakeGame() {
-    const canvas = document.getElementById('snakeGame');
-    if (!canvas) return;
-    
-    const ctx = canvas.getContext('2d');
-    const gridSize = 6;
-    
-    let snake = [{x: 45, y: 30}];
-    let food = {x: 60, y: 42};
-    let dx = gridSize;
-    let dy = 0;
-    
-    function drawSnake() {
-        const colors = getThemeColors().snake;
-        ctx.fillStyle = colors.body;
-        snake.forEach(segment => {
-            ctx.fillRect(segment.x, segment.y, gridSize-1, gridSize-1);
-        });
-    }
-    
-    function drawFood() {
-        const colors = getThemeColors().snake;
-        ctx.fillStyle = colors.food;
-        ctx.fillRect(food.x, food.y, gridSize-1, gridSize-1);
-    }
-    
-    function moveSnake() {
-        const head = {x: snake[0].x + dx, y: snake[0].y + dy};
-        
-        // Wrap around edges
-        if (head.x >= canvas.width) head.x = 0;
-        if (head.x < 0) head.x = canvas.width - gridSize;
-        if (head.y >= canvas.height) head.y = 0;
-        if (head.y < 0) head.y = canvas.height - gridSize;
-        
-        snake.unshift(head);
-        
-        // Check food collision
-        if (head.x === food.x && head.y === food.y) {
-            food = {
-                x: Math.floor(Math.random() * (canvas.width / gridSize)) * gridSize,
-                y: Math.floor(Math.random() * (canvas.height / gridSize)) * gridSize
-            };
-        } else {
-            snake.pop();
-        }
-    }
-    
-    function changeDirection() {
-        const directions = [
-            {dx: gridSize, dy: 0},
-            {dx: -gridSize, dy: 0},
-            {dx: 0, dy: gridSize},
-            {dx: 0, dy: -gridSize}
-        ];
-        const newDir = directions[Math.floor(Math.random() * directions.length)];
-        dx = newDir.dx;
-        dy = newDir.dy;
-    }
-    
-    function gameLoop() {
-        ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-        
-        moveSnake();
-        drawSnake();
-        drawFood();
-        
-        setTimeout(() => requestAnimationFrame(gameLoop), 200);
-    }
-    
-    // Change direction periodically
-    setInterval(changeDirection, 2000);
-    gameLoop();
-}
+    const y = height / 2 + 5;
+    const stages = [16, width / 2, width - 16];
+    const stageSize = 12;
+    const packets = [];
+    const glow = [0, 0, 0];
+    let t = 0;
 
-// Pixel Character Animation
-function initPixelCharacterGame() {
-    const canvas = document.getElementById('pixelCharacterGame');
-    if (!canvas) return;
-    
-    const ctx = canvas.getContext('2d');
-    const width = canvas.width;
-    const height = canvas.height;
-    
-    // Character properties
-    const character = {
-        x: 20,
-        y: height - 20,
-        width: 12,
-        height: 16,
-        direction: 1,
-        animationFrame: 0,
-        colors: getThemeColors().pixel.character
-    };
-    
-    // Floating particles
-    const particles = [];
-    
-    // Character sprite patterns (simple pixel art)
-    const sprites = {
-        idle: [
-            [0,1,1,0],
-            [1,1,1,1],
-            [0,1,1,0],
-            [0,1,1,0],
-            [1,0,0,1]
-        ],
-        walk1: [
-            [0,1,1,0],
-            [1,1,1,1],
-            [0,1,1,0],
-            [1,1,0,0],
-            [0,0,1,1]
-        ],
-        walk2: [
-            [0,1,1,0],
-            [1,1,1,1],
-            [0,1,1,0],
-            [0,0,1,1],
-            [1,1,0,0]
-        ]
-    };
-    
-    function createParticle() {
-        const colors = getThemeColors().pixel.character;
-        particles.push({
-            x: character.x + Math.random() * character.width,
-            y: character.y + Math.random() * character.height,
-            dx: (Math.random() - 0.5) * 2,
-            dy: -Math.random() * 2,
-            life: 30,
-            color: colors[Math.floor(Math.random() * colors.length)]
-        });
-    }
-    
-    function updateCharacter() {
-        // Move character
-        character.x += character.direction * 0.5;
-        
-        // Bounce off edges
-        if (character.x <= 0 || character.x >= width - character.width) {
-            character.direction *= -1;
+    function step() {
+        const colors = getThemeColors().pipeline;
+
+        if (t % 22 === 0) {
+            packets.push({ x: 2, speed: 0.55 + Math.random() * 0.35 });
         }
-        
-        // Update animation frame
-        character.animationFrame = (character.animationFrame + 1) % 60;
-        
-        // Create particles occasionally
-        if (Math.random() < 0.3) {
-            createParticle();
-        }
-    }
-    
-    function updateParticles() {
-        for (let i = particles.length - 1; i >= 0; i--) {
-            const particle = particles[i];
-            particle.x += particle.dx;
-            particle.y += particle.dy;
-            particle.life--;
-            
-            if (particle.life <= 0) {
-                particles.splice(i, 1);
-            }
-        }
-    }
-    
-    function drawCharacter() {
-        const pixelSize = 2;
-        let currentSprite;
-        const colors = getThemeColors().pixel.character;
-        
-        // Choose sprite based on animation
-        if (character.animationFrame < 20) {
-            currentSprite = sprites.idle;
-        } else if (character.animationFrame < 40) {
-            currentSprite = sprites.walk1;
-        } else {
-            currentSprite = sprites.walk2;
-        }
-        
-        // Draw character sprite
-        ctx.fillStyle = colors[Math.floor(character.animationFrame / 15) % colors.length];
-        
-        currentSprite.forEach((row, y) => {
-            row.forEach((pixel, x) => {
-                if (pixel) {
-                    ctx.fillRect(
-                        character.x + x * pixelSize,
-                        character.y + y * pixelSize,
-                        pixelSize,
-                        pixelSize
-                    );
-                }
-            });
-        });
-        
-        // Draw eyes
-        ctx.fillStyle = '#000';
-        ctx.fillRect(character.x + 2, character.y + 2, 1, 1);
-        ctx.fillRect(character.x + 6, character.y + 2, 1, 1);
-    }
-    
-    function drawParticles() {
-        particles.forEach(particle => {
-            const alpha = particle.life / 30;
-            ctx.fillStyle = particle.color + Math.floor(alpha * 255).toString(16).padStart(2, '0');
-            ctx.fillRect(particle.x, particle.y, 1, 1);
-        });
-    }
-    
-    function drawBackground() {
-        // Create a subtle pixel ground
-        ctx.fillStyle = '#4a5568';
-        for (let x = 0; x < width; x += 4) {
-            if (Math.random() < 0.1) {
-                ctx.fillRect(x, height - 2, 2, 2);
-            }
-        }
-    }
-    
-    function gameLoop() {
-        // Clear with fade effect
-        ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+
+        ctx.fillStyle = HERO_ANIM_BG;
         ctx.fillRect(0, 0, width, height);
-        
-        drawBackground();
-        updateCharacter();
-        updateParticles();
-        drawCharacter();
-        drawParticles();
-        
-        requestAnimationFrame(gameLoop);
+        drawHeroLabel(ctx, 'pipeline', colors.label);
+
+        // Connecting line
+        ctx.strokeStyle = colors.line;
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(stages[0], y);
+        ctx.lineTo(stages[2], y);
+        ctx.stroke();
+
+        // Packets
+        for (let i = packets.length - 1; i >= 0; i--) {
+            const packet = packets[i];
+            packet.x += packet.speed;
+            stages.forEach((sx, s) => {
+                if (Math.abs(packet.x - sx) < 1) glow[s] = 1;
+            });
+            if (packet.x > width) {
+                packets.splice(i, 1);
+                continue;
+            }
+            ctx.fillStyle = packet.x > stages[1] ? colors.processed : colors.raw;
+            ctx.beginPath();
+            ctx.arc(packet.x, y, 1.6, 0, Math.PI * 2);
+            ctx.fill();
+        }
+
+        // Stages
+        stages.forEach((sx, s) => {
+            const half = stageSize / 2;
+            ctx.fillStyle = HERO_ANIM_BG;
+            ctx.fillRect(sx - half, y - half, stageSize, stageSize);
+            ctx.strokeStyle = colors.stage;
+            ctx.lineWidth = 1.5;
+            ctx.strokeRect(sx - half, y - half, stageSize, stageSize);
+            if (glow[s] > 0) {
+                ctx.globalAlpha = glow[s] * 0.6;
+                ctx.fillStyle = colors.stage;
+                ctx.fillRect(sx - half, y - half, stageSize, stageSize);
+                ctx.globalAlpha = 1;
+                glow[s] = Math.max(0, glow[s] - 0.06);
+            }
+        });
+
+        t++;
     }
-    
-    gameLoop();
+
+    runHeroAnimation(step);
 }
 
-// Initialize all games when DOM is loaded
+// AI agents: an orchestrator dispatches work to agents, which light up and reply
+function initAgentsAnimation() {
+    const setup = setupHeroCanvas('aiAgentsAnim');
+    if (!setup) return;
+    const { ctx, width, height } = setup;
+
+    const hub = { x: width / 2, y: height / 2 + 5, glow: 0 };
+    const agents = [];
+    const count = 5;
+    for (let i = 0; i < count; i++) {
+        const angle = -Math.PI / 2 + (i / count) * Math.PI * 2;
+        agents.push({
+            x: hub.x + Math.cos(angle) * 34,
+            y: hub.y + Math.sin(angle) * 21,
+            glow: 0
+        });
+    }
+    const pulses = [];
+    let t = 0;
+
+    function step() {
+        const colors = getThemeColors().agents;
+
+        if (t % 38 === 0) {
+            pulses.push({ agent: Math.floor(Math.random() * count), progress: 0, outbound: true });
+        }
+
+        ctx.fillStyle = HERO_ANIM_BG;
+        ctx.fillRect(0, 0, width, height);
+        drawHeroLabel(ctx, 'agents', colors.label);
+
+        // Edges
+        ctx.strokeStyle = colors.edge;
+        ctx.lineWidth = 1;
+        agents.forEach(agent => {
+            ctx.beginPath();
+            ctx.moveTo(hub.x, hub.y);
+            ctx.lineTo(agent.x, agent.y);
+            ctx.stroke();
+        });
+
+        // Pulses travel hub -> agent, then the agent replies
+        for (let i = pulses.length - 1; i >= 0; i--) {
+            const pulse = pulses[i];
+            pulse.progress += 0.035;
+            const agent = agents[pulse.agent];
+            if (pulse.progress >= 1) {
+                pulses.splice(i, 1);
+                if (pulse.outbound) {
+                    agent.glow = 1;
+                    pulses.push({ agent: pulse.agent, progress: 0, outbound: false });
+                } else {
+                    hub.glow = 1;
+                }
+                continue;
+            }
+            const p = pulse.outbound ? pulse.progress : 1 - pulse.progress;
+            ctx.fillStyle = colors.pulse;
+            ctx.beginPath();
+            ctx.arc(hub.x + (agent.x - hub.x) * p, hub.y + (agent.y - hub.y) * p, 1.6, 0, Math.PI * 2);
+            ctx.fill();
+        }
+
+        // Nodes
+        function drawNode(node, radius, color) {
+            if (node.glow > 0) {
+                ctx.globalAlpha = node.glow * 0.5;
+                ctx.fillStyle = color;
+                ctx.beginPath();
+                ctx.arc(node.x, node.y, radius + node.glow * 4, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.globalAlpha = 1;
+                node.glow = Math.max(0, node.glow - 0.04);
+            }
+            ctx.fillStyle = color;
+            ctx.beginPath();
+            ctx.arc(node.x, node.y, radius, 0, Math.PI * 2);
+            ctx.fill();
+        }
+        agents.forEach(agent => drawNode(agent, 3, colors.node));
+        drawNode(hub, 5, colors.hub);
+
+        t++;
+    }
+
+    runHeroAnimation(step);
+}
+
+// Initialize hero animations when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
-    setTimeout(() => {
-        initPongGame();
-        initSnakeGame();
-        initPixelCharacterGame();
-    }, 500);
+    initVoiceAnimation();
+    initPipelineAnimation();
+    initAgentsAnimation();
 });

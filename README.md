@@ -8,7 +8,7 @@ A modern, responsive portfolio website showcasing software engineering projects 
 
 - **🎨 Modern Design**: Clean, professional layout with dark/light theme toggle
 - **📱 Fully Responsive**: Optimized for all device sizes
-- **🤖 Interactive Games**: Mini arcade games (Pong, Snake, Pixel Character) with theme-aware colors
+- **🤖 Hero Animations**: Voice AI, data pipeline, and AI agent animations with theme-aware colors
 - **⚡ Fast Loading**: Optimized for GitHub Pages with compressed assets
 - **🔍 SEO Optimized**: Enhanced meta tags, structured data, and social media previews
 - **🎯 Accessible**: Semantic HTML with proper navigation
@@ -63,7 +63,7 @@ This site is optimized for **GitHub Pages** deployment:
 ## 🎮 Interactive Features
 
 - **Theme Toggle**: Light/dark mode with persistent storage
-- **Mini Games**: Theme-aware arcade games in hero section
+- **Hero Animations**: Theme-aware Voice AI, data pipeline, and AI agent animations
 - **Smooth Scrolling**: Enhanced navigation experience
 - **Parallax Effects**: Subtle animations on scroll
 - **Progressive Enhancement**: Works with JavaScript disabled
