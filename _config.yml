@@ -1,5 +1,6 @@
-title: George Erol Fouché | Software Engineer
-description: Data Engineer & Robotics Specialist | Building innovative solutions with big data, IoT, autonomous systems, and full-stack development
+title: George Erol Fouché
+tagline: AI Platform & Forward Deployed Engineer
+description: AI Platform and Forward Deployed Engineer with 12+ years of experience building production AI, backend, data, and infrastructure systems
 
 # Social links
 github_username: georgeerol
@@ -30,7 +31,7 @@ plugins:
   - jekyll-seo-tag
 
 # Additional metadata
-keywords: "software engineer, data engineering, robotics, full-stack developer, Apache Spark, AWS, machine learning, IoT, big data"
+keywords: "AI platform engineer, forward deployed engineer, voice AI, LLM, backend, data engineering, Python, FastAPI, Java Spring, AWS, Spark, Kafka"
 
 # SEO tag settings
 seo:
