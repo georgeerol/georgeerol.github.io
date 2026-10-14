@@ -41,9 +41,9 @@ keywords: "AI platform engineer, forward deployed engineer, voice AI, LLM, backe
       <div class="hero-specialization-container">
         <p class="hero-specialization">Production AI, Backend, Data & Infrastructure</p>
         <div class="mini-arcade">
-          <canvas id="pongGame" width="100" height="70"></canvas>
-          <canvas id="snakeGame" width="100" height="70"></canvas>
-          <canvas id="pixelCharacterGame" width="100" height="70"></canvas>
+          <canvas id="voiceAiAnim" width="100" height="70" role="img" aria-label="Voice AI waveform animation"></canvas>
+          <canvas id="dataPipelineAnim" width="100" height="70" role="img" aria-label="Data pipeline animation"></canvas>
+          <canvas id="aiAgentsAnim" width="100" height="70" role="img" aria-label="AI agents network animation"></canvas>
         </div>
       </div>
       

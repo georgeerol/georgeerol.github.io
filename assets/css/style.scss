@@ -317,36 +317,36 @@ body {
   height: 70px;
 }
 
-/* Light mode game colors */
+/* Light mode animation colors */
 [data-theme="light"] .mini-arcade canvas:nth-child(1) {
   border-color: #0366d6;
   box-shadow: 0 3px 6px rgba(3, 102, 214, 0.3);
 }
 
-/* Pong - Blue */
+/* Voice AI - Blue */
 
 [data-theme="light"] .mini-arcade canvas:nth-child(2) {
   border-color: #28a745;
   box-shadow: 0 3px 6px rgba(40, 167, 69, 0.3);
 }
 
-/* Snake - Green */
+/* Data Pipeline - Green */
 
 [data-theme="light"] .mini-arcade canvas:nth-child(3) {
   border-color: #ff6b35;
   box-shadow: 0 3px 6px rgba(255, 107, 53, 0.3);
 }
 
-/* Pixel Character - Orange */
+/* AI Agents - Orange */
 
-/* Dark mode game colors */
+/* Dark mode animation colors */
 [data-theme="dark"] .mini-arcade canvas:nth-child(1) {
   border-color: #58a6ff;
   box-shadow: 0 3px 6px rgba(88, 166, 255, 0.4);
   background: rgba(88, 166, 255, 0.1);
 }
 
-/* Pong - Lighter Blue */
+/* Voice AI - Lighter Blue */
 
 [data-theme="dark"] .mini-arcade canvas:nth-child(2) {
   border-color: #7c3aed;
@@ -354,7 +354,7 @@ body {
   background: rgba(124, 58, 237, 0.1);
 }
 
-/* Snake - Purple */
+/* Data Pipeline - Purple */
 
 [data-theme="dark"] .mini-arcade canvas:nth-child(3) {
   border-color: #f59e0b;
@@ -362,7 +362,7 @@ body {
   background: rgba(245, 158, 11, 0.1);
 }
 
-/* Pixel Character - Amber */
+/* AI Agents - Amber */
 
 /* Demo animation effects */
 .mini-arcade.demo-sequence canvas {
