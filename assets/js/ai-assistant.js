@@ -483,7 +483,8 @@ class AIAssistant {
                 'jenkins', 'gitlab', 'github actions', 'ci/cd', 'cicd',
                 'terraform', 'ansible', 'nginx', 'linux', 'git',
                 'tdd', 'bdd', 'clean code', 'solid', 'design pattern', 'architecture',
-                'system design', 'scalable', 'distributed'
+                'system design', 'scalable', 'distributed',
+                'fastapi', 'typescript', 'next.js', 'nextjs', 'rabbitmq', 'cassandra', 'dynamodb'
             ],
             projects: [
                 'project', 'projects', 'portfolio', 'built', 'created', 'developed',
@@ -524,7 +525,8 @@ class AIAssistant {
             ai: [
                 'ai', 'artificial intelligence', 'machine learning', 'ml',
                 'deep learning', 'neural', 'tensorflow', 'pytorch', 'opencv',
-                'computer vision', 'nlp', 'model', 'training'
+                'computer vision', 'nlp', 'model', 'training',
+                'llm', 'large language model', 'agent', 'agents', 'voice ai'
             ],
             recent: [
                 'recent', 'current', 'latest', 'now', 'today', 'currently',
@@ -603,15 +605,15 @@ class AIAssistant {
                 {
                     level: 1,
                     responses: [
-                        "George's tech toolkit is impressive! 🛠️\n\n**Backend**: Java Spring Boot, Python Flask, Microservices\n**Data**: Apache Spark, Kafka, Redshift, Cassandra\n**Cloud**: AWS, Azure\n**AI/Robotics**: TensorFlow, OpenCV, ROS",
-                        "Here's what George works with daily:\n\n🔧 **Languages**: Java, Python, SQL\n📊 **Data Tools**: Spark, PySpark, Kafka, SQS\n☁️ **Cloud**: AWS (DynamoDB, Redshift, S3), Azure\n🤖 **AI/ML**: TensorFlow, OpenCV, Deep Learning",
-                        "George is a full-stack polyglot! His expertise spans:\n\n• **Backend Development** - Java Spring Boot, Python Flask, REST APIs\n• **Data Engineering** - Big data pipelines, ETL, streaming\n• **Cloud & DevOps** - AWS, Docker, Kubernetes\n• **AI & Robotics** - Computer vision, deep learning, ROS"
+                        "George\'s tech toolkit! 🛠️\n\n**AI & Platform**: Voice AI, LLM, Python, FastAPI\n**Backend**: Java Spring, Python Flask, FastAPI\n**Data**: Apache Spark, Kafka, Redshift, Cassandra\n**Frontend**: TypeScript, Next.js, Vue\n**Cloud**: AWS, Azure, Docker, Kubernetes",
+                        "Here\'s what George works with:\n\n🤖 **AI**: Voice AI, LLM\n🔧 **Languages**: Python, Java, TypeScript\n📊 **Data Tools**: Spark, PySpark, Kafka, SQS, RabbitMQ\n☁️ **Cloud**: AWS (DynamoDB, Redshift, Aurora), Azure",
+                        "George\'s expertise spans:\n\n• **AI Platform** - Production Voice and SMS AI, LLM\n• **Backend Development** - Python FastAPI/Flask, Java Spring\n• **Data Engineering** - Real-time and batch ETL pipelines\n• **Cloud & Infrastructure** - AWS, Azure, Docker, Kubernetes"
                     ]
                 },
                 {
                     level: 2,
                     responses: [
-                        "Let's go deeper on George's technical skills:\n\n**Backend & APIs**\n• Java Spring Boot (enterprise-grade)\n• Python Flask/FastAPI\n• REST API design\n• Microservices architecture\n\n**Data Engineering**\n• Apache Spark & PySpark\n• Kafka, SQS for streaming\n• Redshift, Cassandra, PostgreSQL, DynamoDB\n• ETL pipeline design\n\n**Cloud & Infrastructure**\n• AWS (extensive) - Lambda, EC2, S3, etc.\n• Azure experience\n• Docker, Kubernetes\n• CI/CD pipelines\n\n**AI/ML & Robotics**\n• TensorFlow, deep learning\n• OpenCV, computer vision\n• ROS (Robot Operating System)\n• SLAM, path planning"
+                        "Let\'s go deeper on George\'s technical skills:\n\n**AI & Platform**\n• Production Voice and SMS AI\n• LLM agents, APIs, dashboards, monitoring\n• Python, FastAPI\n\n**Backend & APIs**\n• Java Spring / Spring Boot\n• Python Flask / FastAPI\n• Java Enterprise, C++11\n\n**Data Engineering**\n• Apache Spark & PySpark\n• Kafka, SQS, RabbitMQ\n• Redshift, Cassandra, DynamoDB, Aurora, Postgres, MySQL\n\n**Frontend & Mobile**\n• TypeScript, Next.js, Vue\n• Android, cross-platform Java SDKs\n\n**Cloud & Infrastructure**\n• AWS, Azure\n• Docker, Kubernetes"
                     ]
                 }
             ],
@@ -684,14 +686,14 @@ class AIAssistant {
                 {
                     level: 1,
                     responses: [
-                        "Data Engineering is one of George's core strengths! 📊\n\nHe's built pipelines at multiple companies:\n• **Series Entertainment**: Billions of game events\n• **Sphere Technology**: Cybersecurity data flows\n• **GE Power**: Industrial IoT analytics\n\nTools: Apache Spark, Kafka, Redshift, Cassandra, DynamoDB",
-                        "George is a seasoned Data Engineer! ⚡\n\n**What he builds:**\n• Real-time streaming pipelines\n• Batch ETL processes\n• Data validation & quality systems\n• Analytics infrastructure\n\n**His toolkit:**\n• Apache Spark & PySpark\n• Kafka, AWS SQS\n• Redshift, Cassandra, PostgreSQL\n• AWS Glue, Lambda"
+                        "Data Engineering is one of George\'s core strengths! 📊\n\nHe\'s built pipelines at multiple companies:\n• **Series Entertainment**: Real-time and batch ETL for billions of game events\n• **Sphere Technology**: High-traffic, event-driven system for big data to UI dashboards\n• **CalypsoAI**: Data validation pipelines and RabbitMQ workflows\n• **GE Power**: PySpark pipelines for energy analytics\n\nTools: Apache Spark, Kafka, Redshift, Cassandra, DynamoDB",
+                        "George is a seasoned Data Engineer! ⚡\n\n**What he builds:**\n• Real-time streaming pipelines\n• Batch ETL processes\n• Data validation pipelines\n• Analytics infrastructure\n\n**His toolkit:**\n• Apache Spark & PySpark\n• Kafka, AWS SQS, RabbitMQ\n• Redshift, Cassandra, DynamoDB, Aurora, Postgres"
                     ]
                 },
                 {
                     level: 2,
                     responses: [
-                        "Let's explore George's data engineering work:\n\n**Architecture Patterns**\n• Event-driven microservices\n• Lambda architecture (batch + streaming)\n• Data lake + warehouse hybrids\n\n**Notable Projects**\n\n🎮 **Gaming Analytics** (Series)\n• Real-time player event processing\n• Billions of events daily\n• Player behavior analytics\n\n🚗 **IoT AWS Spark** (Personal)\n• Vehicle performance monitoring\n• GPS, weather, traffic integration\n• 35-mile SF to Dublin use case\n\n⚡ **E2E Spark Flow** (Personal)\n• Docker + Airflow + Kafka + Spark + Cassandra\n• Complete data lifecycle management"
+                        "Let's explore George's data engineering work:\n\n**Architecture Patterns**\n• Event-driven microservices\n• Lambda architecture (batch + streaming)\n• Data lake + warehouse hybrids\n\n**Notable Projects**\n\n🎮 **Gaming Analytics** (Series)\n• Real-time player event processing\n• Billions of Choices game events\n• Player behavior analytics\n\n🚗 **IoT AWS Spark** (Personal)\n• Vehicle performance monitoring\n• GPS, weather, traffic integration\n• 35-mile SF to Dublin use case\n\n⚡ **E2E Spark Flow** (Personal)\n• Docker + Airflow + Kafka + Spark + Cassandra\n• Complete data lifecycle management"
                     ]
                 }
             ],
@@ -764,7 +766,7 @@ class AIAssistant {
                     responses: [
                         "Hey there! 👋 Great to meet you! I'm George's AI assistant. I can tell you all about his experience, skills, projects, or how to get in touch. What would you like to know?",
                         "Hello! 😊 Welcome to George's portfolio! I'm here to help you learn about his background, technical skills, or impressive projects. What interests you?",
-                        "Hi! 🤖 Thanks for stopping by! I can share info about George's 12+ years of experience in Backend, Data Engineering, and Robotics. What would you like to explore?"
+                        "Hi! 🤖 Thanks for stopping by! I can share info about George\'s 12+ years building production AI, backend, data, and infrastructure systems. What would you like to explore?"
                     ]
                 }
             ],
@@ -828,7 +830,7 @@ class AIAssistant {
                 {
                     level: 1,
                     responses: [
-                        "Great question! I can tell you about George's:\n\n💼 **Experience** - 12+ years across gaming, AI, cybersecurity\n🛠️ **Skills** - Java, Python, Spark, AWS, TensorFlow, ROS\n🚀 **Projects** - Client work, robotics, data pipelines\n🎓 **Education** - Penn State, Udacity, CMU\n📧 **Contact** - How to reach him\n\nWhat interests you most?",
+                        "Great question! I can tell you about George\'s:\n\n💼 **Experience** - 12+ years across supply chain AI, gaming, AI, cybersecurity, and enterprise\n🛠️ **Skills** - Voice AI, LLM, Python, FastAPI, Java, Spark, AWS\n🚀 **Projects** - Client work, robotics, data pipelines\n🎓 **Education** - Penn State, Udacity, CMU\n📧 **Contact** - How to reach him\n\nWhat interests you most?",
                         "I'm here to help! Here's what I know about George:\n\n• His professional **experience** and career journey\n• Technical **skills** and tools he uses\n• **Projects** he's built (clients, robotics, data)\n• **Education** and certifications\n• **Contact** information\n\nJust ask about any of these!",
                         "Hmm, I'm not sure I understood that. 🤔 Try asking about:\n\n• \"What's George's experience?\"\n• \"What skills does he have?\"\n• \"Tell me about his projects\"\n• \"How can I contact George?\"\n\nOr use the quick action buttons below!"
                     ]
